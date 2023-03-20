@@ -6,7 +6,7 @@
 	<!-- Jotaro -->
 
 	<ThingDef ParentName="BaseBear">
-		<defName>JoJoris_Jotaro</defName>
+		<defName>MSSMeme_JoJoris_Jotaro</defName>
 		<label>Jotaris</label>
 		<description>Jotoris is the third in a long line of Jojoris'. Jotoris is arrogant, hot headed, and angry at the world - and rumours say he has a secret special power that only a select few can see.</description>
 		<statBases>
@@ -19,9 +19,9 @@
 	</ThingDef>
 
 	<PawnKindDef ParentName="BearBase">
-		<defName>JoJoris_Jotaro</defName>
+		<defName>MSSMeme_JoJoris_Jotaro</defName>
 		<label>Jotoris</label>
-		<race>JoJoris_Jotaro</race>
+		<race>MSSMeme_JoJoris_Jotaro</race>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -74,7 +74,7 @@
 	<!-- Dio -->
 
 	<ThingDef ParentName="BaseBear">
-		<defName>Jojoris_Dio</defName>
+		<defName>MSSMeme_Jojoris_Dio</defName>
 		<label>Jio</label>
 		<description>You thought it was Joris, but it was actually me, Jio!</description>
 		<statBases>
@@ -87,9 +87,9 @@
 	</ThingDef>
 
 	<PawnKindDef ParentName="BearBase">
-		<defName>Jojoris_Dio</defName>
+		<defName>MSSMeme_Jojoris_Dio</defName>
 		<label>Jio</label>
-		<race>Jojoris_Dio</race>
+		<race>MSSMeme_Jojoris_Dio</race>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>

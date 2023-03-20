@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+	<FT_BlocksConcrete.description>packs of conk creet dust baybee. Conk creet is a strong building material but ugly to look at baybee.</FT_BlocksConcrete.description>
+	<FT_BlocksConcrete.label>conk creet baybee</FT_BlocksConcrete.label>
+	<FT_BlocksConcrete.stuffProps.stuffAdjective>conk creet baybee</FT_BlocksConcrete.stuffProps.stuffAdjective>
+
+	<FT_ReinforcedConcreteBag.description>bags of solid concrete powder with steel bars. Concrete is a strong building material but ugly to look at baybee.</FT_ReinforcedConcreteBag.description>
+	<FT_ReinforcedConcreteBag.label>rebar conk creet baybee</FT_ReinforcedConcreteBag.label>
+	<FT_ReinforcedConcreteBag.stuffProps.stuffAdjective>rebar conk creet baybee</FT_ReinforcedConcreteBag.stuffProps.stuffAdjective>
+
+	<FT_WoodConcrete.description>a mixture of cloth and concrete made into plank-shaped, able to make things which wood can make, but even better because it is more durable and fire-proofed.</FT_WoodConcrete.description>
+	<FT_WoodConcrete.label>fiber conk creet baybee</FT_WoodConcrete.label>
+	<FT_WoodConcrete.stuffProps.stuffAdjective>fiber conk creet baybee</FT_WoodConcrete.stuffProps.stuffAdjective>
+
+	<FT_ConcreteCompressed.description>Bags of solid concrete dust.they are packed-ready for storage or trade.</FT_ConcreteCompressed.description>
+	<FT_ConcreteCompressed.label>packed conk creet baybee</FT_ConcreteCompressed.label>
+	<FT_ConcreteCompressed.stuffProps.stuffAdjective>packed conk creet baybee</FT_ConcreteCompressed.stuffProps.stuffAdjective>
+</LanguageData>

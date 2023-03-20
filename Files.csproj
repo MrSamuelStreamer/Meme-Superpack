@@ -11,7 +11,7 @@
 	<OutputPath>.\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <ReleaseFiles Include="About\**;Common\**;1.4\**;loadFolders.xml" Exclude="About\About-Debug.xml;About\About-Release.xml;About\About.xml;1.4\Source\**" />
+    <ReleaseFiles Include="About\**;Common\**;1.4\**;loadFolders.xml;Compatibility\**" Exclude="About\About-Debug.xml;About\About-Release.xml;About\About.xml;1.4\Source\**" />
     <AboutFiles Include="About\About-Debug.xml;About\About-Release.xml" />
     <None Include=".gitignore;.gitattributes" />
   </ItemGroup>

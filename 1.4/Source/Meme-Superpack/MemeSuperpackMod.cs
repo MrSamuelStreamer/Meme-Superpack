@@ -1,4 +1,6 @@
-﻿using HarmonyLib;
+﻿using System.Collections.Generic;
+using System.Linq;
+using HarmonyLib;
 using UnityEngine;
 using Verse;
 
@@ -10,7 +12,7 @@ namespace MSS.MemeSuperpack
 
 		public MemeSuperpackMod(ModContentPack content) : base(content)
 		{
-			Log.Message("Hello world from Meme-Superpack");
+			Log.Debug("Hello world from Meme-Superpack");
 
 			// initialize settings
 			settings = GetSettings<Settings>();
@@ -33,5 +35,10 @@ namespace MSS.MemeSuperpack
 		{
 			return "Meme-Superpack";
 		}
+
+		public static List<PawnKindDef> CECompatiblePawnKinds() =>
+			DefDatabase<PawnKindDef>.AllDefsListForReading
+				.Where(d => d.GetModExtension<CECompatibility>()?.CECompatible ?? false)
+				.ToList();
 	}
 }
