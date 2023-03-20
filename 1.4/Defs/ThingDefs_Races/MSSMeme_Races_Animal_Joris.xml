@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Various types of Joris -->
+<Defs>
+
+	<!-- MSSMeme_ILikeBuildJoris -->
+
+	<ThingDef ParentName="BaseBear">
+		<defName>MSSMeme_ILikeBuildJoris</defName>
+		<label>I like build base Joris</label>
+		<description>I like build Joris are a curious and friendly breed of Joris. Those in their vicinity find themselves feeling an inescapable urge to build base good.\n\nThe desire to build base can lead those nearby to ignore their own needs in favour of the urge to build ever more impressive base..</description>
+		<statBases>
+			<ComfyTemperatureMin>-55</ComfyTemperatureMin>
+		</statBases>
+		<race>
+			<wildness>0.25</wildness>
+			<useMeatFrom>Bear_Grizzly</useMeatFrom>
+			<trainability>Advanced</trainability>
+			<manhunterOnTameFailChance>0.0</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0.1</manhunterOnDamageChance>
+			<hediffGiverSets>
+				<li>MSSMeme_ILikeBuildBaseGiver</li>
+			</hediffGiverSets>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="BearBase">
+		<defName>MSSMeme_ILikeBuildJoris</defName>
+		<label>I like build base Joris</label>
+		<race>MSSMeme_ILikeBuildJoris</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Base_Joris/JE_PerfectlyNormalJoris</texPath>
+					<drawSize>1.4</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.4, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Base_Joris/JE_PerfectlyNormalJoris</texPath>
+					<drawSize>2</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.6, 0.45, 0.45)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Base_Joris/JE_PerfectlyNormalJoris</texPath>
+					<drawSize>2.7</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.8, 0.6, 0.6)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>2.7</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

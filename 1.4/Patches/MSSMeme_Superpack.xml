@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/TerrainDef[defName="Concrete"]/uiIconPath</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/TerrainDef[defName="Concrete"]</xpath>
+			<value>
+				<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[defName="Concrete"]</xpath>
+			<value>
+				<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/TerrainDef[defName="PavedTile"]/uiIconPath</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/TerrainDef[defName="PavedTile"]</xpath>
+			<value>
+				<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/TerrainDef[defName="PavedTile"]</xpath>
+			<value>
+				<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
+			</value>
+		</nomatch>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef/stuffProps[stuffAdjective="concrete"]/stuffAdjective</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef/stuffProps[stuffAdjective="concrete"]/stuffAdjective</xpath>
+			<value>
+				<stuffAdjective>conk creet baybee</stuffAdjective>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

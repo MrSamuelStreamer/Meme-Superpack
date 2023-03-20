@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<HediffGiverSetDef>
+		<defName>MSSMeme_ILikeBuildBaseGiver</defName>
+		<hediffGivers>
+			<li Class="HediffGiver_Refresh">
+				<hediff>MSSMeme_ILikeBuildBaseSource</hediff>
+			</li>
+		</hediffGivers>
+	</HediffGiverSetDef>
+</Defs>

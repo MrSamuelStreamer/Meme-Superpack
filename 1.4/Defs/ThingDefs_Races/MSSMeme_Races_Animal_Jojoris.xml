@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Various types of Joris -->
+<Defs>
+
+	<!-- Jotaro -->
+
+	<ThingDef ParentName="BaseBear">
+		<defName>MSSMeme_JoJoris_Jotaro</defName>
+		<label>Jotaris</label>
+		<description>Jotoris is the third in a long line of Jojoris'. Jotoris is arrogant, hot headed, and angry at the world - and rumours say he has a secret special power that only a select few can see.</description>
+		<statBases>
+			<ComfyTemperatureMin>-55</ComfyTemperatureMin>
+		</statBases>
+		<race>
+			<wildness>0.85</wildness>
+			<useMeatFrom>Bear_Grizzly</useMeatFrom>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="BearBase">
+		<defName>MSSMeme_JoJoris_Jotaro</defName>
+		<label>Jotoris</label>
+		<race>MSSMeme_JoJoris_Jotaro</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/JO_Jotaro/JO_Jotaro</texPath>
+					<drawSize>1.4</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.4, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/JO_Jotaro/JO_Jotaro</texPath>
+					<drawSize>2</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.6, 0.45, 0.45)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/JO_Jotaro/JO_Jotaro</texPath>
+					<drawSize>2.7</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.8, 0.6, 0.6)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>2.7</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<!-- Dio -->
+
+	<ThingDef ParentName="BaseBear">
+		<defName>MSSMeme_Jojoris_Dio</defName>
+		<label>Jio</label>
+		<description>You thought it was Joris, but it was actually me, Jio!</description>
+		<statBases>
+			<ComfyTemperatureMin>-55</ComfyTemperatureMin>
+		</statBases>
+		<race>
+			<wildness>0.85</wildness>
+			<useMeatFrom>Bear_Grizzly</useMeatFrom>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="BearBase">
+		<defName>MSSMeme_Jojoris_Dio</defName>
+		<label>Jio</label>
+		<race>MSSMeme_Jojoris_Dio</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/JO_Dio/JO_Dio</texPath>
+					<drawSize>1.4</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.4, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/JO_Dio/JO_Dio</texPath>
+					<drawSize>2</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.6, 0.45, 0.45)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/JO_Dio/JO_Dio</texPath>
+					<drawSize>2.7</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.8, 0.6, 0.6)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>2.7</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>
