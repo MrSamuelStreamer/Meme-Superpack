@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TraitDef>
+    <defName>DwarvenLuck</defName>
+    <commonality>0.3</commonality>
+    <degreeDatas>
+      <li>
+        <label>luck of the dwarves</label>
+        <description>[PAWN_nameDef] is cursed with terrible luck. [PAWN_pronoun] takes far more damage than the average person should, seems to get ill all the time, and is just generally plagued with all kinds of misfortune. All of this, despite [PAWN_possessive] attempts to cope via stress-eating, obviously has [PAWN_nameDef] on a hair trigger at all times, ready to snap at whatever misfortune life throws at [PAWN_possessive]. At least they are a VERY fast worker in order to make the most of their assuredly short life.
+
+
+Also Sam, I cannot believe you put your best crafter who also had half the HP of a regular pawn in a crappy warcasket.</description>
+        <statOffsets>
+          <FixBrokenDownBuildingSuccessChance>-5.0</FixBrokenDownBuildingSuccessChance>
+          <HuntingStealth>-20.0</HuntingStealth>
+          <PawnTrapSpringChance>10</PawnTrapSpringChance>
+          <MeleeDodgeChance>-5</MeleeDodgeChance>
+          <AnimalGatherYield>-0.25</AnimalGatherYield>
+          <MiningYield>-0.25</MiningYield>
+          <ConstructSuccessChance>-0.25</ConstructSuccessChance>
+          <PlantHarvestYield>-0.25</PlantHarvestYield>
+          <MedicalTendQuality>-0.25</MedicalTendQuality>
+          <MentalBreakThreshold>0.20</MentalBreakThreshold>
+          <WorkSpeedGlobal>0.75</WorkSpeedGlobal>
+        </statOffsets>
+        <randomDiseaseMtbDays>30</randomDiseaseMtbDays>
+        <hungerRateFactor>1.5</hungerRateFactor>
+        <statFactors>
+          <IncomingDamageFactor>1.15</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>Toughness</li>
+    </exclusionTags>
+  </TraitDef>
+
+</Defs>
