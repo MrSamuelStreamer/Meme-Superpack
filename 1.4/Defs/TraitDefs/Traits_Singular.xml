@@ -36,4 +36,29 @@ Also Sam, I cannot believe you put your best crafter who also had half the HP of
     </exclusionTags>
   </TraitDef>
 
+
+
+  <TraitDef>
+    <defName>DoomedByIcewolf</defName>
+    <commonality>0.3</commonality>
+    <degreeDatas>
+      <li>
+        <label>Icewolf's fortune</label>
+        <description>[PAWN_nameDef] seems to be cursed with a doomed existence. [PAWN_pronoun] seems to nearly die from even the smallest paper cut, and they always seem to be victim to a variety of unfortunate events. It's honestly a miracle that they even managed to live as long as they have.</description>
+        <statOffsets>
+          <HuntingStealth>-200.0</HuntingStealth>
+          <PawnTrapSpringChance>1000</PawnTrapSpringChance>
+          <MeleeDodgeChance>-20</MeleeDodgeChance>
+          <MentalBreakThreshold>0.20</MentalBreakThreshold>
+        </statOffsets>
+        <randomDiseaseMtbDays>15</randomDiseaseMtbDays>
+        <statFactors>
+          <IncomingDamageFactor>2</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </degreeDatas>
+    <exclusionTags>
+      <li>Toughness</li>
+    </exclusionTags>
+  </TraitDef>
 </Defs>
