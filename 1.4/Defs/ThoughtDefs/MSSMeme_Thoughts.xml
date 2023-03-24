@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<ThoughtDef>
+		<defName>MSSMeme_RimRim_Watched_Good</defName>
+		<validWhileDespawned>true</validWhileDespawned>
+		<thoughtClass>Thought_AttendedRitual</thoughtClass>
+		<doNotApplyToQuestLodgers>false</doNotApplyToQuestLodgers>
+		<durationDays>1</durationDays>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>recent RimRim (Inspirational)</label>
+				<description>I recently enjoyed some RimRim. My life feels complete.</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+		<replaceThoughts>
+			<li>MSSMeme_RimRim_Watched_Meh</li>
+			<li>MSSMeme_RimRim_Watched_Poor</li>
+		</replaceThoughts>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>MSSMeme_RimRim_Watched_Meh</defName>
+		<validWhileDespawned>true</validWhileDespawned>
+		<doNotApplyToQuestLodgers>false</doNotApplyToQuestLodgers>
+		<durationDays>1</durationDays>
+		<thoughtClass>Thought_AttendedRitual</thoughtClass>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>recent RimRim (Decent)</label>
+				<description>I recently watched some RimRim.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+		<replaceThoughts>
+			<li>MSSMeme_RimRim_Watched_Good</li>
+			<li>MSSMeme_RimRim_Watched_Poor</li>
+		</replaceThoughts>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>MSSMeme_RimRim_Watched_Poor</defName>
+		<validWhileDespawned>true</validWhileDespawned>
+		<doNotApplyToQuestLodgers>false</doNotApplyToQuestLodgers>
+		<durationDays>1</durationDays>
+		<thoughtClass>Thought_AttendedRitual</thoughtClass>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>recent RimRim (Poor)</label>
+				<description>I recently enjoyed some RimRim. It was a bad episode, I've left several annoyed comments.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+		<replaceThoughts>
+			<li>MSSMeme_RimRim_Watched_Meh</li>
+			<li>MSSMeme_RimRim_Watched_Good</li>
+		</replaceThoughts>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>MSSMeme_RimRim_Missed</defName>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<workerClass>MSS.MemeSuperpack.RimRim.ThoughtWorker_RimRimDemanded</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<doNotApplyToQuestLodgers>false</doNotApplyToQuestLodgers>
+		<nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<nullifyingOwnTales>
+			<li>MSSMeme_WatchedRimRim</li>
+		</nullifyingOwnTales>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>where RimRim</label>
+				<description>WHERE RIMRIM! My dissapointment is immesurable and my day is ruined.</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+</Defs>

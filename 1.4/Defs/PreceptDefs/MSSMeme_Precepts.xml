@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<IssueDef>
+		<defName>MSSMeme_RimRimIssue</defName>
+		<iconPath>UI/Icons/Rituals/DateRitual</iconPath>
+		<label>RimRim</label>
+	</IssueDef>
+
+	<PreceptDef>
+		<defName>MSSMeme_RimRim_Demanded</defName>
+		<issue>MSSMeme_RimRimIssue</issue>
+		<label>demanded</label>
+		<description>RimRim is a basic right, to not watch RimRim on a Television every day is a disaster of unimaginable proportions.</description>
+		<iconPath>UI/Icons/Rituals/DateRitual</iconPath>
+		<selectionWeight>1.0</selectionWeight>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<alsoAdds>MSSMeme_RimRim_Ritual</alsoAdds>
+		<impact>Medium</impact>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>MSSMeme_RimRim_Missed</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<PreceptDef>
+		<defName>MSSMeme_RimRim_Irrelevant</defName>
+		<issue>MSSMeme_RimRimIssue</issue>
+		<label>irrelevant</label>
+		<impact>Low</impact>
+		<description>RimRim... Meh.</description>
+		<iconPath>UI/Icons/Rituals/DateRitual</iconPath>
+		<selectionWeight>0.0</selectionWeight>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+	</PreceptDef>
+
+	<PreceptDef>
+		<defName>MSSMeme_RimRim_Ritual</defName>
+		<issue>Ritual</issue>
+		<label>watch rimrim</label>
+		<nameMaker>MSSMeme_NamerRitualRimRim</nameMaker>
+		<description>RimRims will gather to watch their favourite streamer then spew vitriol into the video comments.</description>
+		<iconPath>UI/Icons/Rituals/DateRitual</iconPath>
+		<useRepeatPenalty>false</useRepeatPenalty>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<selectionWeight>1.0</selectionWeight>
+		<ignoreNameUniqueness>true</ignoreNameUniqueness>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<ritualPatternBase>MSSMeme_RimRimViewing</ritualPatternBase>
+		<visible>true</visible>
+		<mergeRitualGizmosFromAllIdeos>true</mergeRitualGizmosFromAllIdeos>
+	</PreceptDef>
+
+</Defs>
