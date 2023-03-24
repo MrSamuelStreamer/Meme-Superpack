@@ -36,9 +36,8 @@
 		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
 	</PreceptDef>
 
-	<PreceptDef>
+	<PreceptDef ParentName="FestivalBase">
 		<defName>MSSMeme_RimRim_Ritual</defName>
-		<issue>Ritual</issue>
 		<label>watch rimrim</label>
 		<nameMaker>MSSMeme_NamerRitualRimRim</nameMaker>
 		<description>RimRims will gather to watch their favourite streamer then spew vitriol into the video comments.</description>
