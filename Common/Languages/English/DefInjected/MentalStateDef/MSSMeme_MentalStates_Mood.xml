@@ -7,7 +7,7 @@
 	<InsultingSpree.recoveryMessage>{0} is no longer on a comments section rant. For now at least.</InsultingSpree.recoveryMessage>
 	<InsultingSpree.baseInspectLine>Mental state: Comments section rant</InsultingSpree.baseInspectLine>
 
-
+	<TargetedInsultingSpree.label>Comments section rant</TargetedInsultingSpree.label>
 	<TargetedInsultingSpree.beginLetter>{0} has fixated [PAWN_possessive] rage about being constantly told warcaskets are not compatible with Yayo's Combat on {1}.\n\n[PAWN_pronoun] will follow {1} around, ranting about how [PAWN_pronoun] already knows this already. {1} will not appreciate being the target of this rant.</TargetedInsultingSpree.beginLetter>
 	<TargetedInsultingSpree.baseInspectLine>Mental state: Comments section rant against {0}</TargetedInsultingSpree.baseInspectLine>
 </LanguageData>
