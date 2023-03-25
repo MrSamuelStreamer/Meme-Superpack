@@ -9,7 +9,7 @@ namespace MSS.MemeSuperpack.HarmonyPatches
 		[HarmonyPostfix]
 		public static TaggedString Postfix(TaggedString result)
 		{
-			return result
+			return result == null ? result : result
 				.Replace("concrete", "conk creet baybee")
 				.Replace("Concrete", "Conk creet baybee")
 				.Replace("cement", "cement (das conk creet baybee)")
@@ -23,7 +23,7 @@ namespace MSS.MemeSuperpack.HarmonyPatches
 		[HarmonyPostfix]
 		public static TaggedString Postfix(TaggedString result)
 		{
-			return result
+			return result == null ? result : result
 				.Replace("concrete", "conk creet baybee")
 				.Replace("Concrete", "Conk creet baybee")
 				.Replace("cement", "cement (das conk creet baybee)")

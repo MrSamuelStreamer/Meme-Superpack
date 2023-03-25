@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<IssueDef>
+		<defName>MSSMeme_RimRimIssue</defName>
+		<iconPath>UI/Icons/Rituals/DateRitual</iconPath>
+		<label>RimRim</label>
+	</IssueDef>
+
+	<PreceptDef>
+		<defName>MSSMeme_RimRim_Demanded</defName>
+		<issue>MSSMeme_RimRimIssue</issue>
+		<label>demanded</label>
+		<description>RimRim is a basic right, to not watch RimRim on a Television every day is a disaster of unimaginable proportions.</description>
+		<iconPath>UI/Icons/Rituals/DateRitual</iconPath>
+		<selectionWeight>1.0</selectionWeight>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<alsoAdds>MSSMeme_RimRim_Ritual</alsoAdds>
+		<impact>Medium</impact>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>MSSMeme_RimRim_Missed</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<PreceptDef>
+		<defName>MSSMeme_RimRim_Irrelevant</defName>
+		<issue>MSSMeme_RimRimIssue</issue>
+		<label>irrelevant</label>
+		<impact>Low</impact>
+		<description>RimRim... Meh.</description>
+		<iconPath>UI/Icons/Rituals/DateRitual</iconPath>
+		<selectionWeight>0.0</selectionWeight>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+	</PreceptDef>
+
+	<PreceptDef ParentName="FestivalBase">
+		<defName>MSSMeme_RimRim_Ritual</defName>
+		<label>watch rimrim</label>
+		<nameMaker>MSSMeme_NamerRitualRimRim</nameMaker>
+		<description>RimRims will gather to watch their favourite streamer then spew vitriol into the video comments.</description>
+		<iconPath>UI/Icons/Rituals/DateRitual</iconPath>
+		<useRepeatPenalty>false</useRepeatPenalty>
+		<preceptClass>Precept_Ritual</preceptClass>
+		<selectionWeight>1.0</selectionWeight>
+		<ignoreNameUniqueness>true</ignoreNameUniqueness>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<ritualPatternBase>MSSMeme_RimRimViewing</ritualPatternBase>
+		<visible>true</visible>
+		<mergeRitualGizmosFromAllIdeos>true</mergeRitualGizmosFromAllIdeos>
+	</PreceptDef>
+
+	<RulePackDef>
+		<defName>MSSMeme_NamerRoleWaifu</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_roleName(p=4)->Waifu</li>
+				<li>r_roleName(p=2)->[memeAdjective] Waifu</li>
+				<li>r_roleName->Waifu of [chosenTheme]</li>
+				<li>r_roleName->Waifu of [memeConcept]</li>
+				<li>r_roleName->Waifu of [chosenIdeoName]</li>
+				<li>r_roleName->[chosenAdjective] Waifu</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+
+	<!-- Waifus -->
+	<IssueDef>
+		<defName>MSSMeme_WaifuIssue</defName>
+		<iconPath>UI/Icons/Rituals/DateRitual</iconPath>
+		<label>Waifus</label>
+	</IssueDef>
+
+  <PreceptDef ParentName="PreceptRoleSingleBase">
+    <defName>MSSMeme_IdeoRole_Waifu</defName>
+    <label>waifu</label>
+    <description>Every community has to have a waifu for the art channel to draw.</description>
+    <iconPath>UI/Roles/SpecialistAnimals</iconPath>
+    <nameMaker>MSSMeme_NamerRoleWaifu</nameMaker>
+    <displayOrderInImpact>100</displayOrderInImpact>
+    <restrictToSupremeGenderChance>0</restrictToSupremeGenderChance>
+    <convertPowerFactor>3</convertPowerFactor>
+    <canRemoveInUI>true</canRemoveInUI>
+	  <roleRequirements Inherit="false">
+		  <li Class="RoleRequirement_SameIdeo">
+			  <labelKey>RoleRequirementLabelSameIdeo</labelKey>
+		  </li>
+		  <li Class="MSS.MemeSuperpack.Roles.RoleRequirement_SpecificGender">
+			  <labelKey>MSSMeme_RoleRequirementLabelSpecificGender</labelKey>
+				<gender>Female</gender>
+		  </li>
+		  <li Class="MSS.MemeSuperpack.Roles.RoleRequirement_MinStatAny">
+			  <stats>
+				  <PawnBeauty>2.0</PawnBeauty>
+			  </stats>
+		  </li>
+	  </roleRequirements>
+    <grantedAbilities>
+      <li>Counsel</li>
+      <li>Reassure</li>
+		  <li>CombatCommand</li>
+    </grantedAbilities>
+    <roleRequiredWorkTags>
+			<li>Caring</li>
+			<li>Social</li>
+		</roleRequiredWorkTags>
+    <roleTags><li>Waifu</li></roleTags>
+		<ignoreNameUniqueness>true</ignoreNameUniqueness>
+		<impact>Low</impact>
+	  <roleEffects>
+		  <li Class="RoleEffect_PawnStatOffset">
+			  <statDef>PawnBeauty</statDef>
+			  <modifier>0.69</modifier>
+		  </li>
+		  <li Class="RoleEffect_PawnStatOffset">
+			  <statDef>SocialImpact</statDef>
+			  <modifier>0.7</modifier>
+		  </li>
+		  <li Class="RoleEffect_PawnStatOffset" MayRequire="Ludeon.RimWorld.Ideology">
+			  <statDef>SlaveSuppressionOffset</statDef>
+			  <modifier>0.9</modifier>
+		  </li>
+		  <li Class="RoleEffect_GiveThoughtOnTend">
+			  <thoughtDef>MSSMeme_TendedByWaifu</thoughtDef>
+		  </li>
+		  <li Class="RoleEffect_HuntingRevengeChanceFactor">
+			  <factor>3</factor>
+		  </li>
+	  </roleEffects>
+	  <roleDisabledWorkTags>
+		  <li>ManualDumb</li>
+		  <li>Mining</li>
+	  </roleDisabledWorkTags>
+  </PreceptDef>
+
+	<PreceptDef>
+		<defName>MSSMeme_Waifus_Revered</defName>
+		<issue>MSSMeme_WaifuIssue</issue>
+		<!-- <preceptClass>MSS.MemeSuperpack.Waifu.PreceptWithNotifyWaifuDeath</preceptClass> -->
+		<label>revered</label>
+		<iconPath>UI/Icons/Xenotypes/Custom/CustomXenotypeIcon1</iconPath>
+		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
+		<description>Waifus should be worshipped. Believers will be happy if there is a waifu in the colony.</description>
+		<impact>Medium</impact>
+		<displayOrderInIssue>10</displayOrderInIssue>
+		<defaultSelectionWeight>1</defaultSelectionWeight>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>MSSMeme_Waifu_Revered_Opinion</thought>
+			</li>
+			<li Class="PreceptComp_KnowsMemoryThought">
+				<eventDef>MSSMeme_WaifuDied</eventDef>
+				<thought>MSSMeme_WaifuDied_Revered</thought>
+			</li>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>MSSMeme_Waifu_Present</thought>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<PreceptDef>
+		<defName>MSSMeme_Waifus_Indifferent</defName>
+		<issue>MSSMeme_WaifuIssue</issue>
+		<label>indifferent</label>
+		<description>What's a waifu.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>20</displayOrderInIssue>
+		<defaultSelectionWeight>0</defaultSelectionWeight>
+	</PreceptDef>
+
+
+</Defs>

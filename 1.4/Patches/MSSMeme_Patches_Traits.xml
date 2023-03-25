@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/TraitDef[defName = "Neurotic"]/degreeDatas/li[1]/label</xpath>
+		<value>
+			<label>Streamer</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/TraitDef[defName = "Neurotic"]/degreeDatas/li[2]/label</xpath>
+		<value>
+			<label>Streamer (extreme)</label>
+		</value>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<PawnRelationDef>
+		<defName>MSSMeme_Arcadius</defName>
+		<label>Y-chromosomal Adam</label>
+		<importance>100</importance>
+		<implied>false</implied>
+		<reflexive>true</reflexive>
+		<removeOnDeath>false</removeOnDeath>
+		<opinionOffset>30</opinionOffset>
+		<romanceChanceFactor>5.0</romanceChanceFactor>
+		<incestOpinionOffset>10</incestOpinionOffset>
+		<inbredChanceOnChild>0</inbredChanceOnChild>
+		<familyByBloodRelation>true</familyByBloodRelation>
+
+		<!-- Because it's forced in code and we don't want 2 Y-Chromozomal Adams -->
+		<generationChanceFactor>0</generationChanceFactor>
+	</PawnRelationDef>
+
+</Defs>

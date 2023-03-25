@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+	<MSSMeme_RoleRequirementStat>Stat</MSSMeme_RoleRequirementStat>
+	<MSSMeme_RoleRequirementStatAny>Any of stats</MSSMeme_RoleRequirementStatAny>
+	<MSSMeme_RoleRequirementLabelSpecificGender>Must be {0}</MSSMeme_RoleRequirementLabelSpecificGender>
+</LanguageData>
