@@ -3,23 +3,24 @@
 
 <!-- STUFF -->
 
-	<ThingDef ParentName="ResourceBase">
-		<defName>MSSMeme_SuperCoal</defName>
-		<label>compound coal</label>
-		<description>My god... a use for all of that coal! By combining all of the coal types together into one, a magnificent material was created. It is an ideal material for making anything, from weaponry to armor to buildings. That stockpile will be cleaner than ever before! Just make sure that it doesn't catch on fire. Seriously. It's a super dense chunk of flammable coal. The explosion will be as magnificent as it is destructive.</description>
-		<graphicData>
-			<texPath>Things/Item/Resource/MSSMeme_SuperCoal</texPath>
-			<graphicClass>Graphic_StackCount</graphicClass>
-		</graphicData>
-		<soundInteract>Metal_Drop</soundInteract>
-		<soundDrop>Metal_Drop</soundDrop>
-		<healthAffectsPrice>false</healthAffectsPrice>
+  <ThingDef ParentName="ResourceBase">
+    <defName>MSSMeme_SuperCoal</defName>
+    <label>compound coal</label>
+    <description>My god... a use for all of that coal! By combining all of the coal types together into one, a magnificent material was created. It is an ideal material for making anything, from weaponry to armor to buildings. That stockpile will be cleaner than ever before! Just make sure that it doesn't catch on fire. Seriously. It's a super dense chunk of flammable coal. The explosion will be as magnificent as it is destructive.</description>
+    <possessionCount>20</possessionCount>
     <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Item/Resource/MSSMeme_SuperCoal</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <healthAffectsPrice>false</healthAffectsPrice>
     <statBases>
       <MaxHitPoints>50</MaxHitPoints>
       <MarketValue>15</MarketValue>
       <Mass>0.25</Mass>
-      <Flammability>0</Flammability>
+      <Flammability>3</Flammability>
       <StuffPower_Armor_Sharp>2.5</StuffPower_Armor_Sharp>
       <StuffPower_Armor_Blunt>1.85</StuffPower_Armor_Blunt>
       <StuffPower_Armor_Heat>0.25</StuffPower_Armor_Heat>
@@ -28,53 +29,48 @@
       <SharpDamageMultiplier>1.5</SharpDamageMultiplier>
       <BluntDamageMultiplier>1.5</BluntDamageMultiplier>
     </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <burnableByRecipe>false</burnableByRecipe>
+    <smeltable>true</smeltable>
     <comps>
       <li Class="CompProperties_Explosive">
-        <explosiveRadius>20.1</explosiveRadius>
-        <explosiveDamageType>Flame</explosiveDamageType>
-        <explosiveExpandPerStackcount>0.037</explosiveExpandPerStackcount>
+        <explosiveRadius>20.9</explosiveRadius>
+        <explosiveDamageType>Bomb</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.7</explosiveExpandPerStackcount>
         <startWickOnDamageTaken>
           <li>Flame</li>
         </startWickOnDamageTaken>
-        <startWickHitPointsPercent>0.75</startWickHitPointsPercent>
+        <startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+        <chanceToStartFire>1.0</chanceToStartFire>
         <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
         <preExplosionSpawnChance>1</preExplosionSpawnChance>
-        <wickTicks>70~150</wickTicks>
-      </li>
-      <li>
-        <compClass>CompEquippable</compClass>
+        <wickTicks>60~120</wickTicks>
       </li>
     </comps>
-		<thingCategories>
-			<li>ResourcesRaw</li>
-		</thingCategories>
-		<smeltable>true</smeltable>
-		<stuffProps>
-			<categories>
-				<li>Metallic</li>
-			</categories>
-			<commonality>0.001</commonality>
-			<constructEffect>ConstructMetal</constructEffect>
-			<color>(255,225,117)</color>
-			<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
-			<soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
-			<soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
-			<statOffsets>
-			  <Beauty>10</Beauty>
-			</statOffsets>
-			<stuffAdjective>compound coal</stuffAdjective>
-			<appearance>Smooth</appearance>
-			<statFactors>
-        <MaxHitPoints>6.5</MaxHitPoints>
-        <Beauty>4</Beauty>
+    <stuffProps>
+      <categories>
+        <li>Metallic</li>
+      </categories>
+      <appearance>Metal</appearance>
+      <commonality>0.0001</commonality>
+      <constructEffect>ConstructMetal</constructEffect>
+      <color>(70,70,70)</color>
+      <soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Metal_Sharp</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Metal_Blunt</soundMeleeHitBlunt>
+      <statFactors>
+        <MaxHitPoints>4</MaxHitPoints>
+        <Beauty>1</Beauty>
         <Flammability>5</Flammability>
         <WorkToMake>3</WorkToMake>
-				<WorkToBuild>3</WorkToBuild>
-        <DoorOpenSpeed>1.3</DoorOpenSpeed>
-        <MeleeWeapon_CooldownMultiplier>0.7</MeleeWeapon_CooldownMultiplier>
-			</statFactors>
-		</stuffProps>
-	</ThingDef>
+        <WorkToBuild>3</WorkToBuild>
+        <MeleeWeapon_CooldownMultiplier>0.5</MeleeWeapon_CooldownMultiplier>
+      </statFactors>
+    </stuffProps>
+    <allowedArchonexusCount>69420</allowedArchonexusCount>
+  </ThingDef>
 
 
 	<RecipeDef>
