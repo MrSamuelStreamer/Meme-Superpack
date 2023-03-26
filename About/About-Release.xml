@@ -16,16 +16,50 @@
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
 			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
 		</li>
+
+		<!-- Optional Requirements -->
+		<li>
+			<packageId>VanillaExpanded.VCEF</packageId>
+			<displayName>>Vanilla Fishing Expanded</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/1914064942</steamWorkshopUrl>
+			<downloadUrl>https://github.com/Vanilla-Expanded/VanillaFishingExpanded</downloadUrl>
+		</li>
+		<li>
+			<packageId>>OskarPotocki.VFE.Pirates</packageId>
+			<displayName>>Vanilla Factions Expanded - Pirates</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2723801948</steamWorkshopUrl>
+			<downloadUrl>https://github.com/Vanilla-Expanded/VanillaFactionsExpanded-Pirates</downloadUrl>
+		</li>
+
+		<!-- Not real requirements -->
+		<li>
+			<packageId>cnknnugsbt.mod</packageId>
+			<displayName>BT's Nuggies</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2835897119</steamWorkshopUrl>
+		</li>
 		<li>
 			<packageId>Taggerung.GrignrHappensBy</packageId>
 			<displayName>Grignr Happens By</displayName>
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2932093508</steamWorkshopUrl>
 			<downloadUrl>https://github.com/feldoh/Grignr-Happens-By/releases/latest</downloadUrl>
 		</li>
+		<li>
+			<packageId>aoba.fortress.industrial</packageId>
+			<displayName>Fortifications - Industrial</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2561619583</steamWorkshopUrl>
+			<downloadUrl>https://github.com/AobaKuma/Fortification-Industrial</downloadUrl>
+		</li>
 	</modDependencies>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Ideology</li>
 		<li>Ludeon.RimWorld.Royalty</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>Taggerung.GrignrHappensBy</li>
+		<li>cnknnugsbt.mod</li>
+		<li>>OskarPotocki.VFE.Pirates</li>
+		<li>VanillaExpanded.VCEF</li>
+		<li>brrainz.harmony</li>
+		<li>aoba.fortress.industrial</li>
 	</loadAfter>
 </ModMetaData>
