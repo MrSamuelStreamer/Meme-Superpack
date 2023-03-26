@@ -41,7 +41,7 @@
 		<label>watch rimrim</label>
 		<nameMaker>MSSMeme_NamerRitualRimRim</nameMaker>
 		<description>RimRims will gather to watch their favourite streamer then spew vitriol into the video comments.</description>
-		<iconPath>UI/Icons/Rituals/DateRitual</iconPath>
+		<iconPath>Ideology/RimRim</iconPath>
 		<useRepeatPenalty>false</useRepeatPenalty>
 		<preceptClass>Precept_Ritual</preceptClass>
 		<selectionWeight>1.0</selectionWeight>
@@ -70,7 +70,7 @@
 	<!-- Waifus -->
 	<IssueDef>
 		<defName>MSSMeme_WaifuIssue</defName>
-		<iconPath>UI/Icons/Rituals/DateRitual</iconPath>
+		<iconPath>Ideology/Waifu</iconPath>
 		<label>Waifus</label>
 	</IssueDef>
 
@@ -78,7 +78,7 @@
     <defName>MSSMeme_IdeoRole_Waifu</defName>
     <label>waifu</label>
     <description>Every community has to have a waifu for the art channel to draw.</description>
-    <iconPath>UI/Roles/SpecialistAnimals</iconPath>
+    <iconPath>Ideology/Waifu</iconPath>
     <nameMaker>MSSMeme_NamerRoleWaifu</nameMaker>
     <displayOrderInImpact>100</displayOrderInImpact>
     <restrictToSupremeGenderChance>0</restrictToSupremeGenderChance>
@@ -141,7 +141,7 @@
 		<issue>MSSMeme_WaifuIssue</issue>
 		<!-- <preceptClass>MSS.MemeSuperpack.Waifu.PreceptWithNotifyWaifuDeath</preceptClass> -->
 		<label>revered</label>
-		<iconPath>UI/Icons/Xenotypes/Custom/CustomXenotypeIcon1</iconPath>
+		<iconPath>Ideology/Waifu</iconPath>
 		<countsTowardsPreceptLimit>false</countsTowardsPreceptLimit>
 		<description>Waifus should be worshipped. Believers will be happy if there is a waifu in the colony.</description>
 		<impact>Medium</impact>
@@ -166,6 +166,7 @@
 		<issue>MSSMeme_WaifuIssue</issue>
 		<label>indifferent</label>
 		<description>What's a waifu.</description>
+		<iconPath>Ideology/Waifu</iconPath>
 		<impact>Low</impact>
 		<displayOrderInIssue>20</displayOrderInIssue>
 		<defaultSelectionWeight>0</defaultSelectionWeight>
