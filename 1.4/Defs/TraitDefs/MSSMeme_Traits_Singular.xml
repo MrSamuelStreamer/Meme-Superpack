@@ -8,7 +8,7 @@
 		<degreeDatas>
 			<li>
 				<label>luck of the dwarves</label>
-				<description>[PAWN_nameDef] is cursed with terrible luck. [PAWN_pronoun] takes far more damage than the average person should, seems to get ill all the time, and is just generally plagued with all kinds of misfortune. All of this, despite [PAWN_possessive] attempts to cope via stress-eating, obviously has [PAWN_nameDef] on a hair trigger at all times, ready to snap at whatever misfortune life throws at [PAWN_possessive]. At least they are a VERY fast worker in order to make the most of their assuredly short life.\n\nAlso Sam, if you're reading this, I cannot believe you put your best crafter who also had half the HP of a regular pawn in a crappy warcasket.</description>
+				<description>[PAWN_nameDef] is cursed with terrible luck. [PAWN_pronoun] takes far more damage than the average person should, seems to get ill all the time, and is just generally plagued with all kinds of misfortune. All of this, despite [PAWN_possessive] attempts to cope via stress-eating, obviously has [PAWN_nameDef] on a hair trigger at all times, ready to snap at whatever misfortune life throws at [PAWN_possessive]. At least [PAWN_pronoun] is a VERY fast worker in order to make the most of [PAWN_objective] assuredly short life.\n\nAlso Sam, if you're reading this, I cannot believe you put your best crafter who also had half the HP of a regular pawn in a crappy warcasket.</description>
 				<statOffsets>
 					<FixBrokenDownBuildingSuccessChance>-5.0</FixBrokenDownBuildingSuccessChance>
 					<HuntingStealth>-20.0</HuntingStealth>
