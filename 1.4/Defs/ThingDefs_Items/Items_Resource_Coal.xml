@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MSSMeme_Coal</defName>
+		<label>coal</label>
+		<description>A lump of carbon, best used as fuel for workbenches. What workbenches those may be, I will not say.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/MSSMeme_Coal</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>2.3</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>2.0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>0.5</deepCommonality>
+		<deepCountPerPortion>45</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MSSMeme_LiquidCoal</defName>
+		<label>liquid coal</label>
+		<description>A jerry can of liquid coal. Best used as fuel for workbenches. What workbenches those may be, I will not say. How is coal liquid you ask? Well, coal liquefaction is actually a process that turns coal into fuels/petrochemicals, and... I'm going a bit off-topic. Right, anyways, it's very explosive.</description>
+		<possessionCount>20</possessionCount>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Resource/MSSMeme_LiquidCoal</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<stackLimit>150</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<MarketValue>2.3</MarketValue>
+			<Mass>0.05</Mass>
+			<Flammability>2.0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>0.5</deepCommonality>
+		<deepCountPerPortion>45</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3.1</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.037</explosiveExpandPerStackcount>
+				<startWickOnDamageTaken>
+					<li>Flame</li>
+				</startWickOnDamageTaken>
+				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+				<preExplosionSpawnChance>1</preExplosionSpawnChance>
+				<wickTicks>70~150</wickTicks>
+			</li>
+		</comps>
+		<allowedArchonexusCount>69</allowedArchonexusCount>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MSSMeme_CoalPlate</defName>
+		<label>sheet coal</label>
+		<description>Coal that oddly breaks into relatively durable sheets. Despite their appearance, they cannot be used as building or crafting materials.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/MSSMeme_CoalPlates</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<color>(30,30,30)</color>
+		</graphicData>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>2.3</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>2.0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>0.5</deepCommonality>
+		<deepCountPerPortion>45</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MSSMeme_BituminousCoal</defName>
+		<label>bituminous coal</label>
+		<description>A decent quality coal containing a compound called bitumen. It is highly valued for smelting iron into steel, though it doesn't seem to have much use on a rimworld filled with derelict structures chock full of steel. This basically makes it regular coal, but it's totally different I swear!</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/MSSMeme_Coal</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>2.3</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>2.0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>0.5</deepCommonality>
+		<deepCountPerPortion>45</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MSSMeme_LigniteCoal</defName>
+		<label>lignite coal</label>
+		<description>A low quality coal with a low percentage of carbon in its makeup. Its only real use is for power generation, but since you have no idea what all of these coals are used for anyways, this makes it just as useful as bituminous and anthracite coal. Hooray!</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/MSSMeme_Coal</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>2.3</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>2.0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>0.5</deepCommonality>
+		<deepCountPerPortion>45</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MSSMeme_AnthraciteCoal</defName>
+		<label>anthracite coal</label>
+		<description>A high quality coal rich in carbon. It is highly useful for power generation and metallurgy. Unfortunately, it appears that all the generators you know of cannot burn this coal properly, and there's no need for metallurgy on a rimworld filled with steel and plasteel. This basically makes it the same as regular coal. Lucky you!</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/MSSMeme_Coal</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>2.3</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>2.0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>0.5</deepCommonality>
+		<deepCountPerPortion>45</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MSSMeme_CoalcaCoala</defName>
+		<label>coalca coala</label>
+		<description>A refreshing bottle of Coalca Coala (try saying that five times fast)! How that ore deposit broke apart into bottles filled with Coalca Coala is anyone's guess. Why not crack out a cold one and try it? Just don't drink it and smoke at the same time.</description>
+		<possessionCount>20</possessionCount>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Resource/MSSMeme_CoalcaCoala</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<equippedAngleOffset>-150</equippedAngleOffset>
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<MarketValue>2.3</MarketValue>
+			<Mass>0.05</Mass>
+			<Flammability>2.0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>0.5</deepCommonality>
+		<deepCountPerPortion>45</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+		<ingestible>
+			<foodType>Fluid, Processed</foodType>
+			<ingestSound>Ingest_Beer</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<tasteThought>DrankCoalcaCoala</tasteThought>
+			<preferability>NeverForNutrition</preferability>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<chairSearchRadius>25</chairSearchRadius>
+			<canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+			<tableDesired>false</tableDesired>
+		</ingestible>
+		<equipmentType>Primary</equipmentType>
+		<techLevel>Neolithic</techLevel>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>3.1</explosiveRadius>
+				<explosiveDamageType>Flame</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.037</explosiveExpandPerStackcount>
+				<startWickOnDamageTaken>
+					<li>Flame</li>
+				</startWickOnDamageTaken>
+				<startWickHitPointsPercent>0.333</startWickHitPointsPercent>
+				<preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
+				<preExplosionSpawnChance>1</preExplosionSpawnChance>
+				<wickTicks>70~150</wickTicks>
+			</li>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+		</comps>
+		<weaponClasses>
+			<li>Melee</li>
+			<li>MeleeBlunt</li>
+		</weaponClasses>
+		<tools>
+			<li>
+				<label>bottle</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>neck</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>9</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+		</tools>
+		<allowedArchonexusCount>69</allowedArchonexusCount>
+	</ThingDef>
+
+	<ThoughtDef>
+		<defName>DrankCoalcaCoala</defName>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>drank Coalca Coala</label>
+				<description>That was absolutely vile. It had a taste I can only describe as dirt. Why was I dumb enough to drink this?</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MSSMeme_SuperCucoalmber</defName>
+		<label>super cucoalmber</label>
+		<description>A spa cucowlber... I mean a super cucolmbah... GAH, SUPER C.U.C.O.A.L.M.B.E.R! Right, anyways a super cucoalmber is an abomination in the face of god. An unholy matrimony between living being and pure carbon, anyone that touches it swears the can feel it move in their hands. Despite your best efforts, you cannot seem to find a workbench or power generator to burn this accursed creature to ash.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/MSSMeme_SuperCucoalmber</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>2.3</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>2.0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>0.5</deepCommonality>
+		<deepCountPerPortion>45</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MSSMeme_FirefoamCoal</defName>
+		<label>firefoam coal</label>
+		<description>Hah! No avoiding fire foam poppers now! Whenever these take sufficient damage from fire or otherwise, they will explode in a burst of sticky white foam. How firefoam formed naturally inside a complex array of machinery embedded inside a rock is one of the great mysteries of the universe, up there with why Sam doesn't build firefoam poppers after five million of his stockpiles burn down every series.</description>
+		<possessionCount>20</possessionCount>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Resource/MSSMeme_FirefoamCoal</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>25</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<MarketValue>2.3</MarketValue>
+			<Mass>0.05</Mass>
+			<Flammability>2.0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>0.5</deepCommonality>
+		<deepCountPerPortion>45</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>9.9</explosiveRadius>
+				<explosiveDamageType>Extinguish</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<postExplosionSpawnThingDef>Filth_FireFoam</postExplosionSpawnThingDef>
+				<postExplosionSpawnChance>1</postExplosionSpawnChance>
+				<postExplosionSpawnThingCount>3</postExplosionSpawnThingCount>
+				<applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+				<explosionEffect>ExtinguisherExplosion</explosionEffect>
+				<wickTicks>30~60</wickTicks>
+			</li>
+		</comps>
+		<allowedArchonexusCount>69</allowedArchonexusCount>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MSSMeme_LowResCoal</defName>
+		<label>low quality coal</label>
+		<description>This coal is horrifically low quality, even for vanilla Rimworld sprites standards. It appears this art is horribly trying to mimic a very popular building game. Comments about the art range from, "Oh god, this looks really ugly," to, "Man, this is really ruining my immersion," to, "Hey, what is that weird pattern on top of the light gray cube texture?"</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/MSSMeme_LowResCoal</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<MarketValue>2.3</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>2.0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>0.5</deepCommonality>
+		<deepCountPerPortion>45</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MSSMeme_CoalDust</defName>
+		<label>coal dust</label>
+		<description>Whoops, looks like the miner hit the coal ore a bit TOO hard, pulverizing the coal into a fine dust. I would say that it is functionally useless, but honestly I think it's still just as useful as most other coals, despite its condition.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/MSSMeme_CoalDust</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>75</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<MarketValue>2.3</MarketValue>
+			<Mass>0.1</Mass>
+			<Flammability>2.0</Flammability>
+			<DeteriorationRate>1.0</DeteriorationRate>
+		</statBases>
+		<thingCategories>
+			<li>ResourcesRaw</li>
+		</thingCategories>
+		<deepCommonality>0.5</deepCommonality>
+		<deepCountPerPortion>45</deepCountPerPortion>
+		<deepLumpSizeRange>5~10</deepLumpSizeRange>
+	</ThingDef>
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>MSSMeme_FoolsSteel</defName>
+		<label>steel</label>
+		<description>Uh oh. Upon closer inspection, you notice that the steel is infested with very angry steel termites. What are steel termites? They are termites enhanced with NANOMACHINES SON! THEIR JAWS HARDEN IN RESPONSE TO PHYSICAL TRAUMA! For that reason, they really like eating steel, and thus this batch of steel is too chewed up to use for anything. It's effectively junk, except for trying to pawn it off to unsuspecting traders.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Steel</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundDrop>Metal_Drop</soundDrop>
+		<statBases>
+			<MarketValue>1.9</MarketValue>
+			<Mass>0.5</Mass>
+		</statBases>
+		<useHitPoints>false</useHitPoints>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<thingCategories>
+			<li>ItemsMisc</li>
+		</thingCategories>
+		<deepCommonality>0.5</deepCommonality>
+		<deepCountPerPortion>45</deepCountPerPortion>
+		<deepLumpSizeRange>20~30</deepLumpSizeRange>
+		<burnableByRecipe>false</burnableByRecipe>
+		<allowedArchonexusCount>80</allowedArchonexusCount>
+	</ThingDef>
+
+</Defs>
