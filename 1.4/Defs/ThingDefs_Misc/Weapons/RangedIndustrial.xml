@@ -27,7 +27,7 @@
       <Steel>420</Steel>
       <ComponentIndustrial>69</ComponentIndustrial>
     </costList>
-    <techLevel>Industrial</techLevel>
+    <techLevel>Ultra</techLevel>
     <equippedStatOffsets>
       <MoveSpeed>-2.0</MoveSpeed>
       <ShootingAccuracyPawn>-500</ShootingAccuracyPawn>
