@@ -52,6 +52,11 @@
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2561619583</steamWorkshopUrl>
 			<downloadUrl>https://github.com/AobaKuma/Fortification-Industrial</downloadUrl>
 		</li>
+		<li>
+			<packageId>statistno1.arcadiusgift</packageId>
+			<displayName>Arcadius' gift</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2588279677</steamWorkshopUrl>
+		</li>
 	</modDependencies>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
@@ -64,5 +69,6 @@
 		<li>VanillaExpanded.VCEF</li>
 		<li>brrainz.harmony</li>
 		<li>aoba.fortress.industrial</li>
+		<li>statistno1.arcadiusgift</li>
 	</loadAfter>
 </ModMetaData>
