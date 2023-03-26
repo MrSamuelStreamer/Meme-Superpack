@@ -28,7 +28,7 @@
 			<downloadUrl>https://github.com/Vanilla-Expanded/VanillaFishingExpanded</downloadUrl>
 		</li>
 		<li>
-			<packageId>>OskarPotocki.VFE.Pirates</packageId>
+			<packageId>OskarPotocki.VFE.Pirates</packageId>
 			<displayName>>Vanilla Factions Expanded - Pirates</displayName>
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2723801948</steamWorkshopUrl>
 			<downloadUrl>https://github.com/Vanilla-Expanded/VanillaFactionsExpanded-Pirates</downloadUrl>
@@ -65,7 +65,7 @@
 		<li>Ludeon.RimWorld.Biotech</li>
 		<li>Taggerung.GrignrHappensBy</li>
 		<li>cnknnugsbt.mod</li>
-		<li>>OskarPotocki.VFE.Pirates</li>
+		<li>OskarPotocki.VFE.Pirates</li>
 		<li>VanillaExpanded.VCEF</li>
 		<li>brrainz.harmony</li>
 		<li>aoba.fortress.industrial</li>

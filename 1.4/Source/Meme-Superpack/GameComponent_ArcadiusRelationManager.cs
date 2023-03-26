@@ -11,6 +11,10 @@ public class GameComponent_ArcadiusRelationManager : GameComponent
 	public static Pawn CachedArcadius;
 	public static bool GeneratingArcadius = false;
 
+	public GameComponent_ArcadiusRelationManager(Game game)
+	{
+	}
+
 	public static Pawn GetArcadius()
 	{
 		if (CachedArcadius != null) return CachedArcadius;
@@ -18,16 +22,6 @@ public class GameComponent_ArcadiusRelationManager : GameComponent
 		    GameComponent_ArcadiusRelationManager arcManager)
 			CachedArcadius = arcManager.Arcadius;
 		return CachedArcadius;
-	}
-
-	public override void ExposeData()
-	{
-		Scribe_References.Look(ref Arcadius, "pawn");
-	}
-
-	public override void LoadedGame()
-	{
-		if (Arcadius == null) GenerateArcadius();
 	}
 
 	public override void StartedNewGame()
@@ -69,7 +63,10 @@ public class GameComponent_ArcadiusRelationManager : GameComponent
 		return Arcadius;
 	}
 
-	public GameComponent_ArcadiusRelationManager(Game game)
+	public override void ExposeData()
 	{
+		Scribe_References.Look(ref Arcadius, "pawn");
+		if (Scribe.mode != LoadSaveMode.PostLoadInit) return;
+		if (Arcadius is null) GenerateArcadius();
 	}
 }

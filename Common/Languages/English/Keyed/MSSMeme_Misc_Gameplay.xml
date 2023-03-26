@@ -4,4 +4,12 @@
 	<MSSMeme_RoleRequirementStat>Stat</MSSMeme_RoleRequirementStat>
 	<MSSMeme_RoleRequirementStatAny>Any of stats</MSSMeme_RoleRequirementStatAny>
 	<MSSMeme_RoleRequirementLabelSpecificGender>Must be {0}</MSSMeme_RoleRequirementLabelSpecificGender>
+
+	<!-- Gaslighting -->
+	<MSSMeme_GaslightingStarted>Gaslighting</MSSMeme_GaslightingStarted>
+	<MSSMeme_GaslightingEnded>Gaslighting Ended</MSSMeme_GaslightingEnded>
+	<MSSMeme_Gaslighting_Start>A commenter is loudly and continuously complaining that you have no idea what you're doing because {0}. They're arguing so hard you're beginning to doubt yourself and wonder if they're actually right.\n\nSurely not!\n\n\n... unless...</MSSMeme_Gaslighting_Start>
+	<MSSMeme_Gaslighting_End>Having finally been shouted down, the commenter has stopped insisting that {0}. You feel vindicated and like the world is a little less insane.\n\nIt's a good job you haven't just rebuilt half the base to accomodate their nonsense...</MSSMeme_Gaslighting_End>
+
+	<MSSMeme_GaslightingTopic_DarkSolar>solar panels only work in the dark</MSSMeme_GaslightingTopic_DarkSolar>
 </LanguageData>

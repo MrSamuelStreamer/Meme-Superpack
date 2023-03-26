@@ -6,7 +6,7 @@ namespace MSS.MemeSuperpack;
 
 public static class DebugActions
 {
-	[DebugAction("General", "Reset AllFather - Arcadius", false, false, false, 0, false, allowedGameStates = AllowedGameStates.PlayingOnMap)]
+	[DebugAction("Memes", "Reset AllFather - Arcadius", false, false, false, 0, false, allowedGameStates = AllowedGameStates.PlayingOnMap)]
 	private static void ReApplyYChromosomalAdam()
 	{
 		if (GameComponent_ArcadiusRelationManager.GetArcadius() is not {} arcadius) return;
@@ -17,5 +17,19 @@ public static class DebugActions
 		{
 			p.relations.AddDirectRelation(MemeSuperPackDefOf.MSSMeme_Arcadius, arcadius);
 		}
+	}
+
+	[DebugAction("Memes", "Gaslighting - DarkSolar", false, false, false, 0, false,
+		allowedGameStates = AllowedGameStates.PlayingOnMap)]
+	private static void ForceDarkSolar()
+	{
+		GameComponent_MemeTracker.Instance.StartGasLighting(GameComponent_MemeTracker.GaslightingTopic.DarkSolar);
+	}
+
+	[DebugAction("Memes", "Gaslighting - Stop", false, false, false, 0, false,
+		allowedGameStates = AllowedGameStates.PlayingOnMap)]
+	private static void StopGaslighting()
+	{
+		GameComponent_MemeTracker.Instance.EndGaslighting();
 	}
 }
