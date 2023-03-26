@@ -13,7 +13,7 @@
     <defName>MSSMeme_RimRim</defName>
     <label>RimRim</label>
     <description>Each little RimRim is so totally focused on getting their daily RimRim and drawing art of channel waifus it's a wonder anything gets done.</description>
-    <iconPath>UI/Icons/Rituals/DateRitual</iconPath>
+    <iconPath>Ideology/RimRim</iconPath>
     <allowDuringTutorial>false</allowDuringTutorial>
     <groupDef>MSSMeme_RimRim</groupDef>
     <impact>2</impact>
