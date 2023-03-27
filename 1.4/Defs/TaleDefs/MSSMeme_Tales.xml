@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<TaleDef>
+		<defName>MSSMeme_PoliceAreHere</defName>
+		<label>police</label>
+		<taleClass>Tale_SinglePawn</taleClass>
+		<type>Volatile</type>
+		<baseInterest>20</baseInterest>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->the time the police visited [PAWN_nameDef]'s [Community]</li>
+				<li>tale_noun->the time flashing police lights kept [PAWN_nameDef]'s [Community] awake</li>
+				<li>tale_noun->[PAWN_nameDef]'s [Community] irritated by the bobbies</li>
+				<li>image->the sky flashing red and blue [circumstance_phrase]</li>
+				<li>image->the shadows of bobbies running everywhere [circumstance_phrase]</li>
+				<li>image->irritating lights [circumstance_group]</li>
+				<li>circumstance_phrase->over a [TerrainFeature]</li>
+				<li>circumstance_phrase->illuminating a [TerrainFeature]</li>
+				<li>circumstance_phrase->flickering over a [Community]</li>
+				<li>circumstance_phrase->flashing over a [Community]</li>
+				<li>circumstance_phrase->shining between a [TerrainFeature] and a [TerrainFeature]</li>
+				<li>desc_sentence->Below, [PAWN_nameDef] tries to ignore it and plays [Game] with an annoyed look.</li>
+				<li>desc_sentence->[PAWN_nameDef] watches with barely concealed rage on [PAWN_possessive] face.</li>
+				<li>desc_sentence->[Quantity_adjphrase] [PersonJob]s rubber-neck to see if it's something interesting.</li>
+				<li>desc_sentence->[PAWN_nameDef] sits near a [TerrainFeature], trying to get some kip.</li>
+				<li>desc_sentence->[Quantity_adjphrase] [Animal]s shuffle in panic.</li>
+				<li>desc_sentence->The [Enemy] has long gone, but the bobbies remain.</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+
+</Defs>

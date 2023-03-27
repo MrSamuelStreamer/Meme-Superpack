@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<IncidentDef>
+		<defName>MSSMeme_PoliceAreHere</defName>
+		<label>police</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_Police</workerClass>
+		<gameCondition>MSSMeme_PoliceAreHere</gameCondition>
+		<letterLabel>Police</letterLabel>
+		<letterDef>NegativeEvent</letterDef>
+		<baseChance>1.2</baseChance>
+		<minRefireDays>5</minRefireDays>
+		<durationDays>0.125~0.35</durationDays>
+		<tale>MSSMeme_PoliceAreHere</tale>
+	</IncidentDef>
+
+</Defs>
