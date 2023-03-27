@@ -30,8 +30,11 @@ public class GameComponent_MemeTracker : GameComponent
 	public override void GameComponentTick()
 	{
 		base.GameComponentTick();
+
+		var ticksGame = Find.TickManager.TicksGame;
+
 		// Check 3 times a day
-		if (Find.TickManager.TicksGame % 20000 != 0) return;
+		if (ticksGame % 20000 != 0) return;
 
 		// Start gaslighting 1% chance
 		if (CurrentGaslightingTopic == GaslightingTopic.None && Rand.Chance(0.01f) &&
@@ -39,7 +42,7 @@ public class GameComponent_MemeTracker : GameComponent
 		     CurrentGaslightingTopic != GaslightingTopic.None)) StartGasLighting();
 
 		// Disable current topic if running for at least 3 days 10% chance
-		if (CurrentGaslightingTopic == GaslightingTopic.None || Find.TickManager.TicksGame <= GaslightingLastStartTick + 180000 ||
+		if (CurrentGaslightingTopic == GaslightingTopic.None || ticksGame <= GaslightingLastStartTick + 180000 ||
 		    !Rand.Chance(0.1f)) return;
 		EndGaslighting();
 	}

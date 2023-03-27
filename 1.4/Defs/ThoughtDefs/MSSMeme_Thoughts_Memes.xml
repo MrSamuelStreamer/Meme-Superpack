@@ -27,4 +27,17 @@
 		</stages>
 	</ThoughtDef>
 
+	<ThoughtDef>
+		<defName>MSSMeme_PoliceThought</defName>
+		<workerClass>ThoughtWorker_GameCondition</workerClass>
+		<gameCondition>MSSMeme_PoliceAreHere</gameCondition>
+		<stages>
+			<li>
+				<label>police again</label>
+				<description>the sodding police are back... AGAIN!</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
 </Defs>
