@@ -3,7 +3,6 @@
   <Operation Class="PatchOperationSequence">
     <success>Normal</success>
     <operations>
-    <!-- "HumanFactionBase" is no longer a thing since 1.3, thusly factions are added by bunch, not simply all human, and then exclude undesired. This is chosen in versions of the mod for 1.3 and after. -->
       <li Class="PatchOperationAdd">
         <xpath>/Defs/FactionDef[@Name = "OutlanderFactionBase"]/caravanTraderKinds</xpath>
         <value>
