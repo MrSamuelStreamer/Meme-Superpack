@@ -438,5 +438,11 @@
 				</butcherBodyPart>
 			</li>
 		</lifeStages>
+		<modExtensions Inherit="False">
+			<li Class="MSS.MemeSuperpack.CECompatibility">
+				<CECompatible>true</CECompatible>
+				<CECompatibilityRating>0.3</CECompatibilityRating>
+			</li>
+		</modExtensions>
 	</PawnKindDef>
 </Defs>

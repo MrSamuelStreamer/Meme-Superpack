@@ -10,11 +10,13 @@
 		<displayCategory>Ability</displayCategory>
 		<abilities>
 			<li>MSSMeme_ComeElephant</li>
+			<li>MSSMeme_CarryElephant</li>
 			<li>MSSMeme_CombatElephant</li>
 			<li>MSSMeme_CombustionElephant</li>
 		</abilities>
 		<descriptionHyperlinks>
 			<AbilityDef>MSSMeme_ComeElephant</AbilityDef>
+			<AbilityDef>MSSMeme_CarryElephant</AbilityDef>
 			<AbilityDef>MSSMeme_CombatElephant</AbilityDef>
 			<AbilityDef>MSSMeme_CombustionElephant</AbilityDef>
 		</descriptionHyperlinks>
