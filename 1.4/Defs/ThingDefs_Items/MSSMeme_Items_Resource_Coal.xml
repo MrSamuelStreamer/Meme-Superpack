@@ -281,7 +281,7 @@
 	<ThingDef ParentName="ResourceBase">
 		<defName>MSSMeme_SuperCucoalmber</defName>
 		<label>super cucoalmber</label>
-		<description>A spa cucowlber... I mean a super cucolmbah... GAH, SUPER C.U.C.O.A.L.M.B.E.R! Right, anyways a super cucoalmber is an abomination in the face of god. An unholy matrimony between living being and pure carbon, anyone that touches it swears the can feel it move in their hands. Despite your best efforts, you cannot seem to find a workbench or power generator to burn this accursed creature to ash.</description>
+		<description>A supa cucowlber... I mean a super cucolmbah... GAH, SUPER C.U.C.O.A.L.M.B.E.R! Right, anyways a super cucoalmber is an abomination in the face of god. An unholy matrimony between living being and pure carbon, anyone that touches it swears the can feel it move in their hands. Despite your best efforts, you cannot seem to find a workbench or power generator to burn this accursed creature to ash.</description>
 		<graphicData>
 			<texPath>Things/Item/Resource/MSSMeme_SuperCucoalmber</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
