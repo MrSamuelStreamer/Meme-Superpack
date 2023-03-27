@@ -39,7 +39,7 @@
         <defaultProjectile>MEMEBullet_Ottomatic</defaultProjectile>
         <warmupTime>0.01</warmupTime>
         <range>30.9</range>
-        <burstShotCount>999</burstShotCount>
+        <burstShotCount>69</burstShotCount>
         <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
         <soundCast>Shot_Minigun</soundCast>
         <soundCastTail>GunTail_Medium</soundCastTail>
