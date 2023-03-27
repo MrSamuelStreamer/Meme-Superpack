@@ -78,7 +78,7 @@
     <defName>MSSMeme_IdeoRole_Waifu</defName>
     <label>waifu</label>
     <description>Every community has to have a waifu for the art channel to draw.</description>
-    <iconPath>Ideology/Waifu</iconPath>
+    <iconPath>Ideology/AnneGuine</iconPath>
     <nameMaker>MSSMeme_NamerRoleWaifu</nameMaker>
     <displayOrderInImpact>100</displayOrderInImpact>
     <restrictToSupremeGenderChance>0</restrictToSupremeGenderChance>
