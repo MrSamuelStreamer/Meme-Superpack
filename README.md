@@ -7,7 +7,7 @@ A lot of the "requirements" aren't really requirements, this is just a superpack
 * Visandar for the excellent Meme and Precept art as well as art for a lot of the items like some of the coal and the super cucumber.
 * DetVisor for the gun texture.
 * Sargb for the Joris Base.
-* CatLover366 For a lot of XML work.
+* CatLover366 For a lot of XML work and the bowl texture.
 * Feldoh for the C# and some XML.
 
 ## Disclaimers
