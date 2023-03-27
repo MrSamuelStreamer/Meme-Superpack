@@ -368,7 +368,7 @@
 		</statBases>
 		<race>
 			<baseHungerRate>1.8</baseHungerRate>
-			<baseBodySize>18.0</baseBodySize>
+			<baseBodySize>10.0</baseBodySize>
 			<baseHealthScale>4.20</baseHealthScale>
 			<foodType>VegetarianRoughAnimal</foodType>
 			<leatherDef>Leather_Elephant</leatherDef>
