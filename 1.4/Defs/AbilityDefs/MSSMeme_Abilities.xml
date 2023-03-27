@@ -135,6 +135,7 @@
 				<fightWithSummoner>false</fightWithSummoner>
 				<fightTarget>false</fightTarget>
 				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+				<manhunterChance>0.0</manhunterChance>
 				<possiblePawnKinds>
 					<li>MSSMeme_CarryElephant</li>
 				</possiblePawnKinds>
