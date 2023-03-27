@@ -4,7 +4,7 @@
 	<HediffGiverSetDef>
 		<defName>MSSMeme_ILikeBuildBaseGiver</defName>
 		<hediffGivers>
-			<li Class="HediffGiver_Refresh">
+			<li Class="MSS.MemeSuperpack.Hediff.HediffGiver_EnsureHediff">
 				<hediff>MSSMeme_ILikeBuildBaseSource</hediff>
 			</li>
 		</hediffGivers>

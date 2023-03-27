@@ -9,6 +9,7 @@ namespace MSS.MemeSuperpack
 		[MayRequireIdeology] public static ThoughtDef MSSMeme_RimRim_Watched_Meh;
 		[MayRequireIdeology] public static ThoughtDef MSSMeme_RimRim_Watched_Poor;
 		[MayRequireIdeology] public static ThoughtDef MSSMeme_RimRim_Missed;
+		[MayRequireIdeology] public static ThoughtDef MSSMeme_AwakeThought;
 
 		[MayRequireIdeology] public static PreceptDef MSSMeme_RimRim_Demanded;
 		[MayRequireIdeology] public static PreceptDef MSSMeme_IdeoRole_Waifu;
