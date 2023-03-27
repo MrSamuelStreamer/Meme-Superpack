@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<ThingDef ParentName="RockBase">
+		<defName>MSSMeme_MineableCoalOne</defName>
+		<label>coal</label>
+		<description>Compact coal ready to be mined. No I will not elaborate.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(90,90,90)</color>
+			<colorTwo>(50,50,50)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>MSSMeme_Coal</mineableThing>
+			<mineableYield>25</mineableYield>
+			<mineableScatterCommonality>.2</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~20</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="RockBase">
+		<defName>MSSMeme_MineableCoalTwo</defName>
+		<label>coal</label>
+		<description>Compact coal ready to be mined. No I will not elaborate.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(90,90,90)</color>
+			<colorTwo>(50,50,50)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>MSSMeme_LiquidCoal</mineableThing>
+			<mineableYield>25</mineableYield>
+			<mineableScatterCommonality>.2</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~20</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="RockBase">
+		<defName>MSSMeme_MineableCoalThree</defName>
+		<label>coal</label>
+		<description>Compact coal ready to be mined. No I will not elaborate.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(90,90,90)</color>
+			<colorTwo>(50,50,50)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>MSSMeme_CoalPlate</mineableThing>
+			<mineableYield>25</mineableYield>
+			<mineableScatterCommonality>.2</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~20</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="RockBase">
+		<defName>MSSMeme_MineableCoalFour</defName>
+		<label>coal</label>
+		<description>Compact coal ready to be mined. No I will not elaborate.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(90,90,90)</color>
+			<colorTwo>(50,50,50)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>MSSMeme_BituminousCoal</mineableThing>
+			<mineableYield>25</mineableYield>
+			<mineableScatterCommonality>.2</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~20</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="RockBase">
+		<defName>MSSMeme_MineableCoalFive</defName>
+		<label>coal</label>
+		<description>Compact coal ready to be mined. No I will not elaborate.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(90,90,90)</color>
+			<colorTwo>(50,50,50)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>MSSMeme_LigniteCoal</mineableThing>
+			<mineableYield>25</mineableYield>
+			<mineableScatterCommonality>.2</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~20</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="RockBase">
+		<defName>MSSMeme_MineableCoalSix</defName>
+		<label>coal</label>
+		<description>Compact coal ready to be mined. No I will not elaborate.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(90,90,90)</color>
+			<colorTwo>(50,50,50)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>MSSMeme_AnthraciteCoal</mineableThing>
+			<mineableYield>25</mineableYield>
+			<mineableScatterCommonality>.2</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~20</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="RockBase">
+		<defName>MSSMeme_MineableCoalSeven</defName>
+		<label>coal</label>
+		<description>Compact coal ready to be mined. No I will not elaborate.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(90,90,90)</color>
+			<colorTwo>(50,50,50)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>MSSMeme_CoalcaCoala</mineableThing>
+			<mineableYield>25</mineableYield>
+			<mineableScatterCommonality>.2</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~20</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="RockBase">
+		<defName>MSSMeme_MineableCoalEight</defName>
+		<label>coal</label>
+		<description>Compact coal ready to be mined. No I will not elaborate.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(90,90,90)</color>
+			<colorTwo>(50,50,50)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>MSSMeme_SuperCucoalmber</mineableThing>
+			<mineableYield>25</mineableYield>
+			<mineableScatterCommonality>.2</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~20</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="RockBase">
+		<defName>MSSMeme_MineableCoalNine</defName>
+		<label>coal</label>
+		<description>Compact coal ready to be mined. No I will not elaborate.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(90,90,90)</color>
+			<colorTwo>(50,50,50)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>MSSMeme_FirefoamCoal</mineableThing>
+			<mineableYield>25</mineableYield>
+			<mineableScatterCommonality>.2</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~20</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="RockBase">
+		<defName>MSSMeme_MineableCoalTen</defName>
+		<label>coal</label>
+		<description>Compact coal ready to be mined. No I will not elaborate.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(90,90,90)</color>
+			<colorTwo>(50,50,50)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>MSSMeme_LowResCoal</mineableThing>
+			<mineableYield>25</mineableYield>
+			<mineableScatterCommonality>.2</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~20</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="RockBase">
+		<defName>MSSMeme_MineableCoalEleven</defName>
+		<label>coal</label>
+		<description>Compact coal ready to be mined. No I will not elaborate.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(90,90,90)</color>
+			<colorTwo>(50,50,50)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1000</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>MSSMeme_CoalDust</mineableThing>
+			<mineableYield>25</mineableYield>
+			<mineableScatterCommonality>.2</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>15~20</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+
+	<ThingDef ParentName="RockBase">
+		<defName>MSSMeme_MineableFoolsSteel</defName>
+		<label>compacted steel</label>
+		<description>The remains of some ancient, collapsed structure. Rich in what looks to be steel.</description>
+		<graphicData>
+			<texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<color>(114,92,83)</color>
+			<colorTwo>(155,133,107)</colorTwo>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>1500</MaxHitPoints>
+		</statBases>
+		<building>
+			<isResourceRock>true</isResourceRock>
+			<mineableThing>MSSMeme_FoolsSteel</mineableThing>
+			<mineableYield>40</mineableYield>
+			<mineableScatterCommonality>1</mineableScatterCommonality>
+			<mineableScatterLumpSizeRange>30~40</mineableScatterLumpSizeRange>
+		</building>
+	</ThingDef>
+
+
+</Defs>
