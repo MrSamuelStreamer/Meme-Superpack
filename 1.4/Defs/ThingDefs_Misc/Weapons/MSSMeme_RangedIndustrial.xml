@@ -37,7 +37,7 @@
 			<li>
 				<verbClass>Verb_Shoot</verbClass>
 				<hasStandardCommand>true</hasStandardCommand>
-				<defaultProjectile>MEMEBullet_Ottomatic</defaultProjectile>
+				<defaultProjectile>MSSMeme_Bullet_Ottomatic</defaultProjectile>
 				<warmupTime>0.01</warmupTime>
 				<range>30.9</range>
 				<burstShotCount>69</burstShotCount>
@@ -59,7 +59,7 @@
 		</tools>
 	</ThingDef>
 	<ThingDef ParentName="BaseBullet">
-		<defName>MEMEBullet_Ottomatic</defName>
+		<defName>MSSMeme_Bullet_Ottomatic</defName>
 		<label>Ottomatic bullet</label>
 		<graphicData>
 			<texPath>Things/Projectile/Charge_Small</texPath>
