@@ -8,6 +8,7 @@
 			<li>MSSMeme_Caravan_Outlander_CoalOne</li>
 			<li>MSSMeme_Caravan_Outlander_CoalTwo</li>
 			<li>MSSMeme_Caravan_Outlander_Bowl</li>
+			<li>MSSMeme_Caravan_Outlander_Pyramid</li>
 		</value>
 	</Operation>
 
@@ -30,6 +31,7 @@
 				<li>MSSMeme_Caravan_Neolithic_CoalOne</li>
 				<li>MSSMeme_Caravan_Neolithic_CoalTwo</li>
 				<li>MSSMeme_Caravan_Neolithic_Bowl</li>
+				<li>MSSMeme_Caravan_Outlander_Pyramid</li>
 			</value>
 		</match>
 	</Operation>
