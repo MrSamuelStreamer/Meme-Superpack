@@ -16,7 +16,7 @@ public class ElephantPatches
 			if (p.def.defName != "MSSMeme_CarryElephant") return true;
 
 			// Mass of a pyramid
-			__result = MassUtility.CanEverCarryAnything(p) ? 100000 : 0;
+			__result = MassUtility.CanEverCarryAnything(p) ? 420000 : 0;
 
 			if (explanation == null) return false;
 			if (explanation.Length > 0)

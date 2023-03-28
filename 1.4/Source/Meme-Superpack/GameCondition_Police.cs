@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using RimWorld;
 using UnityEngine;
 using Verse;
+using Verse.AI;
 
 namespace MSS.MemeSuperpack;
 
@@ -32,6 +33,19 @@ public class GameCondition_Police : GameCondition
 		}
 	}
 
+	public override void Init()
+	{
+		base.Init();
+		foreach (Pawn pawn in SingleMap.PlayerPawnsForStoryteller)
+		{
+			if (!pawn.RaceProps.IsFlesh || pawn.Dead || pawn.Downed || pawn.Deathresting || pawn.IsSelfShutdown() ||
+			    pawn.Awake()) return;
+			pawn.mindState.canSleepTick = Find.TickManager.TicksGame + 5000;
+			if (pawn.CurJob != null)
+				pawn.jobs.EndCurrentJob(JobCondition.InterruptForced);
+		}
+	}
+
 	public override int TransitionTicks => 200;
 
 	public override bool AllowEnjoyableOutsideNow(Map map) => false;
@@ -58,5 +72,4 @@ public class GameCondition_Police : GameCondition
 	{
 		if (TicksPassed % 100 == 0) _isRed = !_isRed;
 	}
-
 }
