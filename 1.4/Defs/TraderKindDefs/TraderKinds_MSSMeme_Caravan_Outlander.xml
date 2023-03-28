@@ -300,4 +300,65 @@
     </stockGenerators>
   </TraderKindDef>
 
+  <TraderKindDef>
+    <defName>MSSMeme_Caravan_Outlander_Pyramid</defName>
+    <label>pyramid trader</label>
+    <stockGenerators>
+
+      <!-- Resources -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>69~420</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>BlocksLimestone</thingDef>
+        <countRange>69~420</countRange>
+        <totalPriceRange>3~5</totalPriceRange>
+      </li>
+      <li MayRequire="Sarg.AlphaMemes" Class="StockGenerator_SingleDef">
+        <thingDef>AM_Pyramid</thingDef>
+        <countRange>2~5</countRange>
+      </li>
+      <li MayRequire="Sarg.AlphaMemes" Class="StockGenerator_SingleDef">
+        <thingDef>AM_GreatPyramid</thingDef>
+        <countRange>1~3</countRange>
+      </li>
+      <li MayRequire="Sarg.AlphaMemes" Class="StockGenerator_SingleDef">
+        <thingDef>AM_FuturisticPyramid</thingDef>
+        <countRange>0~1</countRange>
+      </li>
+
+      <!-- Drugs -->
+
+      
+      <!-- Techprints -->
+      <!-- none -->
+      
+      <!-- Weapons -->
+      <!-- none -->
+      
+      <!-- Apparel -->
+      
+      <!-- Implants -->
+      <!-- none -->
+      
+      <!-- Buildings -->
+      
+      <!-- Exotic -->
+      <!-- none -->
+      
+      <!-- Slaves -->
+      <!-- none -->
+      
+      <!-- Animals -->
+      
+      <!-- Buying -->
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+      <li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>MusicalInstrument</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>Drugs</tag></li>
+      
+    </stockGenerators>
+  </TraderKindDef>
+
 </Defs>
