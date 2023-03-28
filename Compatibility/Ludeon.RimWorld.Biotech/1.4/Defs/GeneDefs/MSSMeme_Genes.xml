@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
 
@@ -13,12 +13,14 @@
 			<li>MSSMeme_CarryElephant</li>
 			<li>MSSMeme_CombatElephant</li>
 			<li>MSSMeme_CombustionElephant</li>
+			<li>MSSMeme_CrazedElephant</li>
 		</abilities>
 		<descriptionHyperlinks>
 			<AbilityDef>MSSMeme_ComeElephant</AbilityDef>
 			<AbilityDef>MSSMeme_CarryElephant</AbilityDef>
 			<AbilityDef>MSSMeme_CombatElephant</AbilityDef>
 			<AbilityDef>MSSMeme_CombustionElephant</AbilityDef>
+			<AbilityDef>MSSMeme_CrazedElephant</AbilityDef>
 		</descriptionHyperlinks>
 		<biostatMet>-3</biostatMet>
 		<biostatCpx>1</biostatCpx>
