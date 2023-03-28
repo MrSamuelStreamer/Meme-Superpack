@@ -57,4 +57,44 @@
 			<li>Toughness</li>
 		</exclusionTags>
 	</TraitDef>
+
+	<TraitDef>
+		<defName>DerangedFanArtist</defName>
+		<commonality>0.5</commonality>
+		<forcedPassions>
+			<li>Artistic</li>
+			<li>Crafting</li>
+		</forcedPassions>
+		<degreeDatas>
+			<li>
+				<label>deranged fan artist</label>
+				<description>{PAWN_nameDef} is a fanatical artist constantly enamored with something {PAWN_pronoun} calls "shipping." {PAWN_pronoun} is especially obsessed with "shipping" characters in a certain fictional universe, to the point of an almost constant mental breakdown. But once {PAWN_pronoun} finally breaks, {PAWN_nameDef} has the uncanny ability to create frighteningly high quality items.</description>
+				<mentalBreakInspirationGainSet>
+					<li>Inspired_Creativity</li>
+				</mentalBreakInspirationGainSet>
+				<mentalBreakInspirationGainReasonText>Due to [PAWN_nameIndef] recovering from [PAWN_possessive] shipping induced mental breakdown, [PAWN_pronoun] has experienced an inspiration.</mentalBreakInspirationGainReasonText>
+				<mentalBreakInspirationGainChance>1</mentalBreakInspirationGainChance>
+				<allowedMeditationFocusTypes><li>Morbid</li></allowedMeditationFocusTypes>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>TorturedArtist</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<ThoughtDef>
+		<defName>MoodOffsetTorturedArtist</defName>
+		<workerClass>ThoughtWorker_AlwaysActive</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<requiredTraits>
+			<li>DerangedFanArtist</li>
+		</requiredTraits>
+		<stages>
+			<li>
+				<label>Deranged fan artist</label>
+				<description>Hmm, what should I draw? A classic Panne art? Perhaps some steamy Elon x Asimov yaoi art would also be good. But what if... Maria Chunk and 49? Mayhaps some Slush x Maxima (#JusticeForSlush)? Buggsy x Buggo is unconventional, yet has great potential. Corpo dommy mommy Frog is an excellent choice as well though. I could draw Cremebrulee, a waifu gone too soon. Or maybe I could even draw Arcadius and the rest of the Deadly Sins (but especially Arcadius)? ARRRRRRRRRRRGGGGGGGGGGH, I CAN'T DECIDE! THEY'RE ALL SO HOT!!!</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
 </Defs>
