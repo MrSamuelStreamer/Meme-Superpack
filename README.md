@@ -9,6 +9,7 @@ A lot of the "requirements" aren't really requirements, this is just a superpack
 * Sargb for the Joris Base.
 * CatLover366 for a lot of XML work and the bowl texture.
 * Feldoh for the C# and some XML.
+* Timespace for the Anne role texture.
 
 ## Disclaimers
 There are some references in this mod that are inspired by videos of other games than Rimworld played by Mr Samuel Streamer.
