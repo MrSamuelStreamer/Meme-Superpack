@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
 	<AbilityDef>
@@ -44,6 +44,54 @@
 				<possiblePawnKinds>
 					<li>MSSMeme_CombatElephant</li>
 				</possiblePawnKinds>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>MSSMeme_CrazedElephant</defName>
+		<label>crazed elephant</label>
+		<description>With a powerful bellow and psychic shout of COME ELEPHANT, call a CE compatible animal to fight your enemies for quite a few hours. Just be careful if you run out of enemies to fight.</description>
+		<iconPath>UI/Abilities/AnimalWarcall</iconPath>
+		<cooldownTicksRange>60000</cooldownTicksRange> <!-- 1 day -->
+		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+		<jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+		<groupAbility>true</groupAbility>
+		<statBases>
+			<Ability_Duration>500</Ability_Duration>
+		</statBases>
+		<charges>2</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<label>CE compatible warcall</label>
+			<warmupTime>2</warmupTime>
+			<range>49.9</range>
+			<drawAimPie>true</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<warmupEffecter>AnimalWarcall_Warmup</warmupEffecter>
+			<targetParams>
+				<canTargetLocations>false</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetHumans>false</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetSelf>false</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="MSS.MemeSuperpack.CompProperties_AbilityComeAnimal">
+				<compClass>MSS.MemeSuperpack.CompAbilityEffect_ComeAnimal</compClass>
+				<pawnsStayTicksMin>90000</pawnsStayTicksMin>
+				<pawnsStayTicksMax>180000</pawnsStayTicksMax>
+				<fightWithSummoner>true</fightWithSummoner>
+				<fightTarget>true</fightTarget>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+				<possiblePawnKinds>
+					<li>MSSMeme_CrazedElephant</li>
+				</possiblePawnKinds>
+				<manhunterChance>1</manhunterChance>
 			</li>
 		</comps>
 	</AbilityDef>
