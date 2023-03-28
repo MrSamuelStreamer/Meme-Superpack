@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+    <ThingCategoryDef>
+        <defName>MSSMeme_CoalBowls</defName>
+        <label>coal bowls</label>
+        <parent>Manufactured</parent>
+    </ThingCategoryDef>
+
+<!-- Bowl smelting recipe -->
+
+    <RecipeDef>
+        <defName>MSSMeme_SmeltCoalBowls</defName>
+        <label>smelt coal bowls</label>
+        <description>Use an extreme flame to try desperately to get rid of these damn bowls and get something useful, anything will do!</description>
+        <jobString>Sticking a bowl in the fire.</jobString>
+        <workAmount>1600</workAmount>
+        <workSpeedStat>SmeltingSpeed</workSpeedStat>
+        <effectWorking>Smelt</effectWorking>
+        <soundWorking>Recipe_Smelt</soundWorking>
+        <specialProducts>
+            <li>Smelted</li>
+        </specialProducts>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>MSSMeme_CoalBowls</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>MSSMeme_CoalBowls</li>
+            </categories>
+        </fixedIngredientFilter>
+    </RecipeDef>
+
+<!-- Bowls -->
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>MSSMeme_BowlOne</defName>
+    <label>coal bowl</label>
+    <description>A bowl made of coal. You could smelt it to get a small amount of whatever coal this bowl is made from, or you could scatter it somewhere. It is a nice looking bowl after all. Who knows, it may even have a use.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/MSSMeme_Bowl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(60,60,60)</color>
+    </graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<MarketValue>420</MarketValue>
+			<Mass>0.1</Mass>
+			<Beauty>8</Beauty>
+			<Flammability>2.0</Flammability>
+		</statBases>
+        <thingCategories>
+            <li>MSSMeme_CoalBowls</li>
+        </thingCategories>
+        <smeltable>true</smeltable>
+        <smeltProducts>
+            <MSSMeme_Coal>15</MSSMeme_Coal>
+        </smeltProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>MSSMeme_BowlTwo</defName>
+    <label>coal bowl</label>
+    <description>A bowl made of coal. You could smelt it to get a small amount of whatever coal this bowl is made from, or you could scatter it somewhere. It is a nice looking bowl after all. Who knows, it may even have a use.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/MSSMeme_Bowl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(60,60,60)</color>
+    </graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<MarketValue>420</MarketValue>
+			<Mass>0.1</Mass>
+			<Beauty>8</Beauty>
+			<Flammability>2.0</Flammability>
+		</statBases>
+        <thingCategories>
+            <li>MSSMeme_CoalBowls</li>
+        </thingCategories>
+        <smeltable>true</smeltable>
+        <smeltProducts>
+            <MSSMeme_LiquidCoal>15</MSSMeme_LiquidCoal>
+        </smeltProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>MSSMeme_BowlThree</defName>
+    <label>coal bowl</label>
+    <description>A bowl made of coal. You could smelt it to get a small amount of whatever coal this bowl is made from, or you could scatter it somewhere. It is a nice looking bowl after all. Who knows, it may even have a use.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/MSSMeme_Bowl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(60,60,60)</color>
+    </graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<MarketValue>420</MarketValue>
+			<Mass>0.1</Mass>
+			<Beauty>8</Beauty>
+			<Flammability>2.0</Flammability>
+		</statBases>
+        <thingCategories>
+            <li>MSSMeme_CoalBowls</li>
+        </thingCategories>
+        <smeltable>true</smeltable>
+        <smeltProducts>
+            <MSSMeme_CoalDust>15</MSSMeme_CoalDust>
+        </smeltProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>MSSMeme_BowlFour</defName>
+    <label>coal bowl</label>
+    <description>A bowl made of coal. You could smelt it to get a small amount of whatever coal this bowl is made from, or you could scatter it somewhere. It is a nice looking bowl after all. Who knows, it may even have a use.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/MSSMeme_Bowl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(60,60,60)</color>
+    </graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<MarketValue>420</MarketValue>
+			<Mass>0.1</Mass>
+			<Beauty>8</Beauty>
+			<Flammability>2.0</Flammability>
+		</statBases>
+        <thingCategories>
+            <li>MSSMeme_CoalBowls</li>
+        </thingCategories>
+        <smeltable>true</smeltable>
+        <smeltProducts>
+            <MSSMeme_CoalPlate>15</MSSMeme_CoalPlate>
+        </smeltProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>MSSMeme_BowlFive</defName>
+    <label>coal bowl</label>
+    <description>A bowl made of coal. You could smelt it to get a small amount of whatever coal this bowl is made from, or you could scatter it somewhere. It is a nice looking bowl after all. Who knows, it may even have a use.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/MSSMeme_Bowl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(60,60,60)</color>
+    </graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<MarketValue>420</MarketValue>
+			<Mass>0.1</Mass>
+			<Beauty>8</Beauty>
+			<Flammability>2.0</Flammability>
+		</statBases>
+        <thingCategories>
+            <li>MSSMeme_CoalBowls</li>
+        </thingCategories>
+        <smeltable>true</smeltable>
+        <smeltProducts>
+            <MSSMeme_BituminousCoal>15</MSSMeme_BituminousCoal>
+        </smeltProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>MSSMeme_BowlSix</defName>
+    <label>coal bowl</label>
+    <description>A bowl made of coal. You could smelt it to get a small amount of whatever coal this bowl is made from, or you could scatter it somewhere. It is a nice looking bowl after all. Who knows, it may even have a use.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/MSSMeme_Bowl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(60,60,60)</color>
+    </graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<MarketValue>420</MarketValue>
+			<Mass>0.1</Mass>
+			<Beauty>8</Beauty>
+			<Flammability>2.0</Flammability>
+		</statBases>
+        <thingCategories>
+            <li>MSSMeme_CoalBowls</li>
+        </thingCategories>
+        <smeltable>true</smeltable>
+        <smeltProducts>
+            <MSSMeme_LigniteCoal>15</MSSMeme_LigniteCoal>
+        </smeltProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>MSSMeme_BowlSeven</defName>
+    <label>coal bowl</label>
+    <description>A bowl made of coal. You could smelt it to get a small amount of whatever coal this bowl is made from, or you could scatter it somewhere. It is a nice looking bowl after all. Who knows, it may even have a use.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/MSSMeme_Bowl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(60,60,60)</color>
+    </graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<MarketValue>420</MarketValue>
+			<Mass>0.1</Mass>
+			<Beauty>8</Beauty>
+			<Flammability>2.0</Flammability>
+		</statBases>
+        <thingCategories>
+            <li>MSSMeme_CoalBowls</li>
+        </thingCategories>
+        <smeltable>true</smeltable>
+        <smeltProducts>
+            <MSSMeme_AnthraciteCoal>15</MSSMeme_AnthraciteCoal>
+        </smeltProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>MSSMeme_BowlEight</defName>
+    <label>coal bowl</label>
+    <description>A bowl made of coal. You could smelt it to get a small amount of whatever coal this bowl is made from, or you could scatter it somewhere. It is a nice looking bowl after all. Who knows, it may even have a use.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/MSSMeme_Bowl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(60,60,60)</color>
+    </graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<MarketValue>420</MarketValue>
+			<Mass>0.1</Mass>
+			<Beauty>8</Beauty>
+			<Flammability>2.0</Flammability>
+		</statBases>
+        <thingCategories>
+            <li>MSSMeme_CoalBowls</li>
+        </thingCategories>
+        <smeltable>true</smeltable>
+        <smeltProducts>
+            <MSSMeme_CoalcaCoala>15</MSSMeme_CoalcaCoala>
+        </smeltProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>MSSMeme_BowlNine</defName>
+    <label>coal bowl</label>
+    <description>A bowl made of coal. You could smelt it to get a small amount of whatever coal this bowl is made from, or you could scatter it somewhere. It is a nice looking bowl after all. Who knows, it may even have a use.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/MSSMeme_Bowl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(60,60,60)</color>
+    </graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<MarketValue>420</MarketValue>
+			<Mass>0.1</Mass>
+			<Beauty>8</Beauty>
+			<Flammability>2.0</Flammability>
+		</statBases>
+        <thingCategories>
+            <li>MSSMeme_CoalBowls</li>
+        </thingCategories>
+        <smeltable>true</smeltable>
+        <smeltProducts>
+            <MSSMeme_SuperCucoalmber>15</MSSMeme_SuperCucoalmber>
+        </smeltProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>MSSMeme_BowlTen</defName>
+    <label>coal bowl</label>
+    <description>A bowl made of coal. You could smelt it to get a small amount of whatever coal this bowl is made from, or you could scatter it somewhere. It is a nice looking bowl after all. Who knows, it may even have a use.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/MSSMeme_Bowl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(60,60,60)</color>
+    </graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<MarketValue>420</MarketValue>
+			<Mass>0.1</Mass>
+			<Beauty>8</Beauty>
+			<Flammability>2.0</Flammability>
+		</statBases>
+        <thingCategories>
+            <li>MSSMeme_CoalBowls</li>
+        </thingCategories>
+        <smeltable>true</smeltable>
+        <smeltProducts>
+            <MSSMeme_FirefoamCoal>15</MSSMeme_FirefoamCoal>
+        </smeltProducts>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>MSSMeme_BowlEleven</defName>
+    <label>coal bowl</label>
+    <description>A bowl made of coal. You could smelt it to get a small amount of whatever coal this bowl is made from, or you could scatter it somewhere. It is a nice looking bowl after all. Who knows, it may even have a use.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Resource/MSSMeme_Bowl</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(60,60,60)</color>
+    </graphicData>
+		<stackLimit>1</stackLimit>
+		<healthAffectsPrice>false</healthAffectsPrice>
+		<intricate>true</intricate> <!-- Not returned to player when product made of this is smelted. -->
+		<statBases>
+			<MaxHitPoints>20</MaxHitPoints>
+			<MarketValue>420</MarketValue>
+			<Mass>0.1</Mass>
+			<Beauty>8</Beauty>
+			<Flammability>2.0</Flammability>
+		</statBases>
+        <thingCategories>
+            <li>MSSMeme_CoalBowls</li>
+        </thingCategories>
+        <smeltable>true</smeltable>
+        <smeltProducts>
+            <MSSMeme_LowResCoal>15</MSSMeme_LowResCoal>
+        </smeltProducts>
+  </ThingDef>
+
+</Defs>

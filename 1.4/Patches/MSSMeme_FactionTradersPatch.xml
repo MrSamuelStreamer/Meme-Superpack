@@ -7,6 +7,7 @@
 		<value>
 			<li>MSSMeme_Caravan_Outlander_CoalOne</li>
 			<li>MSSMeme_Caravan_Outlander_CoalTwo</li>
+			<li>MSSMeme_Caravan_Outlander_Bowl</li>
 		</value>
 	</Operation>
 
@@ -15,6 +16,7 @@
 		<value>
 			<li>MSSMeme_Caravan_Neolithic_CoalOne</li>
 			<li>MSSMeme_Caravan_Neolithic_CoalTwo</li>
+			<li>MSSMeme_Caravan_Neolithic_Bowl</li>
 		</value>
 	</Operation>
 
@@ -27,6 +29,7 @@
 			<value>
 				<li>MSSMeme_Caravan_Neolithic_CoalOne</li>
 				<li>MSSMeme_Caravan_Neolithic_CoalTwo</li>
+				<li>MSSMeme_Caravan_Neolithic_Bowl</li>
 			</value>
 		</match>
 	</Operation>
