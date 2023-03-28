@@ -417,10 +417,13 @@
 		<thingCategories>
 			<li>ItemsMisc</li>
 		</thingCategories>
-		<deepCommonality>0.5</deepCommonality>
+		<deepCommonality>2</deepCommonality>
 		<deepCountPerPortion>45</deepCountPerPortion>
 		<deepLumpSizeRange>20~30</deepLumpSizeRange>
 		<burnableByRecipe>false</burnableByRecipe>
+		<stuffProps>
+			<color>(105,105,105)</color>
+		</stuffProps>
 		<allowedArchonexusCount>80</allowedArchonexusCount>
 	</ThingDef>
 
