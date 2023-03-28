@@ -3,7 +3,7 @@
 <Defs>
 
 	<TraitDef>
-		<defName>DwarvenLuck</defName>
+		<defName>MSSMeme_DwarvenLuck</defName>
 		<commonality>0.3</commonality>
 		<degreeDatas>
 			<li>
@@ -35,7 +35,7 @@
 	</TraitDef>
 
 	<TraitDef>
-		<defName>DoomedByIcewolf</defName>
+		<defName>MSSMeme_DoomedByIcewolf</defName>
 		<commonality>0.3</commonality>
 		<degreeDatas>
 			<li>
@@ -59,7 +59,7 @@
 	</TraitDef>
 
 	<TraitDef>
-		<defName>DerangedFanArtist</defName>
+		<defName>MSSMeme_DerangedFanArtist</defName>
 		<commonality>0.5</commonality>
 		<forcedPassions>
 			<li>Artistic</li>
@@ -87,7 +87,7 @@
 		<workerClass>ThoughtWorker_AlwaysActive</workerClass>
 		<validWhileDespawned>true</validWhileDespawned>
 		<requiredTraits>
-			<li>DerangedFanArtist</li>
+			<li>MSSMeme_DerangedFanArtist</li>
 		</requiredTraits>
 		<stages>
 			<li>
