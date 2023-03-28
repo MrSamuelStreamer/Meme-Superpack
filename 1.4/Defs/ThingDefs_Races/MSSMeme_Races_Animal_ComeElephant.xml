@@ -445,4 +445,86 @@
 			</li>
 		</modExtensions>
 	</PawnKindDef>
+
+	<!-- =========================== Angry Elephant ================================= -->
+
+	<ThingDef ParentName="MSSMeme_ComeElephantBase">
+		<defName>MSSMeme_CrazedElephant</defName>
+		<label>crazed elephant</label>
+		<description>A rare species of elephant obsessed with compatibility and extreme violence. It is known to respond to psychic summons and is unusually wild in combat.\n\nThis elephant let its obsession for compatibility consume it, removing what sense of reason an elephant possesses. It is rumored that any elephant that pursues the goal of perfect compatibility for too long becomes a crazed elephant.\n\nThis is one of many psy-sensitive elephants in the vocatus elephantus genus. An accomplished elephant summoner can summon enough crazed elephants to flatten a small army as well as themselves if they aren't careful.</description>
+		<statBases>
+			<MarketValue>1420</MarketValue>
+		</statBases>
+		<race>
+			<baseHungerRate>1.8</baseHungerRate>
+			<baseBodySize>4.5</baseBodySize>
+			<baseHealthScale>4.20</baseHealthScale>
+			<foodType>VegetarianRoughAnimal, CarnivoreAnimal</foodType>
+			<leatherDef>Leather_Elephant</leatherDef>
+			<wildness>0.99</wildness>
+			<manhunterOnDamageChance>1</manhunterOnDamageChance>
+		</race>
+	</ThingDef>
+
+	<PawnKindDef ParentName="MSSMeme_ComeElephantKindBase">
+		<defName>MSSMeme_CrazedElephant</defName>
+		<label>crazed elephant</label>
+		<race>MSSMeme_CombatElephant</race>
+		<combatPower>420</combatPower>
+		<ecoSystemWeight>2.0</ecoSystemWeight>
+		<canArriveManhunter>true</canArriveManhunter>
+		<wildGroupSize>2~3</wildGroupSize>
+		<lifeStages Inherit="False">
+			<li>
+				<label>combat elephant calf</label>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Elephant/Elephant</texPath>
+					<color>(200,0,0)</color>
+					<drawSize>1.8</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Elephant/Dessicated_Elephant</texPath>
+					<drawSize>1.8</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Elephant/Elephant</texPath>
+					<color>(200,0,0)</color>
+					<drawSize>2.6</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.45, 0.45)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Elephant/Dessicated_Elephant</texPath>
+					<drawSize>2.6</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Elephant/Elephant</texPath>
+					<color>(200,0,0)</color>
+					<drawSize>3.8</drawSize>
+					<shadowData>
+						<volume>(0.8, 0.6, 0.6)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Elephant/Dessicated_Elephant</texPath>
+					<drawSize>3.8</drawSize>
+				</dessicatedBodyGraphicData>
+				<butcherBodyPart>
+					<bodyPartGroup>TuskAttackTool</bodyPartGroup>
+					<thing>ElephantTusk</thing>
+				</butcherBodyPart>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
 </Defs>
