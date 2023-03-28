@@ -11,6 +11,9 @@ A lot of the "requirements" aren't really requirements, this is just a superpack
 * Feldoh for the C# and some XML.
 * Timespace for the Anne role texture.
 
+### "Netherworld Shanty"
+Kevin MacLeod ([incompetech.com](incompetech.com))<br>Licensed under [Creative Commons: By Attribution 3.0](http://creativecommons.org/licenses/by/3.0/)
+
 ## Disclaimers
 There are some references in this mod that are inspired by videos of other games than Rimworld played by Mr Samuel Streamer.
 This section is to record all the required disclaimers and list concepts where we have been inspired by or used content from these other games in-line with their usage requirements as best as we have been able to determine.

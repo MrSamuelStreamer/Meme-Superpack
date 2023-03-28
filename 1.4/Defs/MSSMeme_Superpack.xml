@@ -17,4 +17,10 @@
 			<li>taggerung.grignrhappensby</li>
 		</compatibleModPackageIds>
 	</MSS.MemeSuperpack.ModCECompatibilityList>
+
+	<SongDef>
+		<defName>MSSMeme_BuckoDrinkMusic</defName>
+		<clipPath>Songs/Netherworld_Shanty</clipPath>
+	</SongDef>
+
 </Defs>

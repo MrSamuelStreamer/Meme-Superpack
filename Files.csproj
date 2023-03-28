@@ -16,9 +16,9 @@
     <None Include=".gitignore;.gitattributes" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Common\Sounds" />
     <Folder Include="Common\Languages" />
     <Folder Include="1.4\Patches" />
+    <Folder Include="Common\Sounds" />
     <Folder Include="Compatibility\Ludeon.RimWorld.Biotech\1.4\Defs" />
     <Folder Include="Compatibility\Ludeon.RimWorld.Ideology\1.4\Defs" />
     <Folder Include="Compatibility\oskarpotocki.vfe.pirates\1.4\Defs" />
