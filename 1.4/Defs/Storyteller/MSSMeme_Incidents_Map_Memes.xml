@@ -13,10 +13,25 @@
 		<gameCondition>MSSMeme_PoliceAreHere</gameCondition>
 		<letterLabel>Police</letterLabel>
 		<letterDef>NegativeEvent</letterDef>
-		<baseChance>1.2</baseChance>
+		<baseChance>2</baseChance>
 		<minRefireDays>5</minRefireDays>
 		<durationDays>0.125~0.35</durationDays>
 		<tale>MSSMeme_PoliceAreHere</tale>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>MSSMeme_TerrainDasConkCreetBaybee</defName>
+		<letterDef>PositiveEvent</letterDef>
+		<label>conk creet baybee</label>
+		<letterText>Terrain?! Das Conk creet baybee!!!</letterText>
+		<letterLabel>conk creet baybee</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_TerrainDasConkCreetBaybee</workerClass>
+		<baseChance>1.1</baseChance>
+		<minRefireDays>15</minRefireDays>
 	</IncidentDef>
 
 </Defs>
