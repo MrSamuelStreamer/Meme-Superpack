@@ -9,7 +9,7 @@
 		<description>A shell filled with an honestly unreasonable amount of concrete. Seriously, how on earth did so much concrete fit into this shell. Can be fired from mortars and explodes when damaged. When detonated, the shell does negligible damage but places down concrete flooring in a sizable range.</description>
 		<possessionCount>1</possessionCount>
 		<graphicData>
-			<texPath>Things/Item/Resource/Shell/Shell_HighExplosive</texPath>
+			<texPath>Things/Item/Resource/Shell/MSSMeme_ILikeConcreteBaybee_Shell</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<comps>
