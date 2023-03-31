@@ -42,7 +42,7 @@
       <outcomeDoers>
         <li Class="IngestionOutcomeDoer_GiveHediff">
           <hediffDef>MSSMeme_WarcasketYayoHigh</hediffDef>
-          <severity>0.75</severity>
+          <severity>1.0</severity>
           <toleranceChemical>Psychite</toleranceChemical>
         </li>
         <li Class="IngestionOutcomeDoer_OffsetNeed">
