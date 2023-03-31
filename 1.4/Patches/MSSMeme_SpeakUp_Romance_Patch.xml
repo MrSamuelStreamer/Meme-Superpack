@@ -40,29 +40,36 @@
 				<!-- ===passion-based art seduction=== -->
 
 
-				<li>try_romance(RECIPIENT_shooting_passion!=None)->I know you like to go hunting, so I drew you slaying a [animal_grand] with a well placed shot [vital_bodypart]! Do... do you like it?</li>
+				<li>try_romance(RECIPIENT_shooting_passion!=None)->I know you like to go hunting, so I drew you slaying a [animal_grand] with a well placed shot [vital_bodypart]! [romantic_query]?</li>
 
-				<li>try_romance(RECIPIENT_melee_passion!=None)->I know you love to jump into the fray of combat, so I drew you as a [romantic_fighter] standing over [romantic_foes]! Do... do you like it?</li>
+				<li>try_romance(RECIPIENT_melee_passion!=None)->I know you love to jump into the fray of combat, so I drew you as a [romantic_fighter] standing over [romantic_foes]! [romantic_query]?</li>
 
-				<li>try_romance(RECIPIENT_construction_passion!=None)->I know you enjoy constructing buildings for the colony, so I decided to draw you building [building_grand]! Do... do you like it?</li>
+				<li>try_romance(RECIPIENT_construction_passion!=None)->I know you enjoy constructing buildings for the colony, so I decided to draw you building [building_grand]! [romantic_query]?</li>
 
-				<li>try_romance(RECIPIENT_mining_passion!=None)->I know you enjoy mining and prospecting, so I drew you discovering [miningdiscovery_grand]! Do... do you like it?</li>
+				<li>try_romance(RECIPIENT_mining_passion!=None)->I know you enjoy mining and prospecting, so I drew you discovering [miningdiscovery_grand]! [romantic_query]?</li>
 
-				<li>try_romance(RECIPIENT_cooking_passion!=None)->I know you love cooking, so I decided to draw you [cookingmeal_grand]! Do... do you like it?</li>
+				<li>try_romance(RECIPIENT_cooking_passion!=None)->I know you love cooking, so I decided to draw you [cookingmeal_grand]! [romantic_query]?</li>
 
-				<li>try_romance(RECIPIENT_plants_passion!=None)->I know you love to garden and work in the fields, so I drew you tending to [planting_grand]! Do... do you like it?</li>
+				<li>try_romance(RECIPIENT_plants_passion!=None)->I know you love to garden and work in the fields, so I drew you tending to [planting_grand]! [romantic_query]?</li>
 
-				<li>try_romance(RECIPIENT_animals_passion!=None)->I know you absolutely adore animals, so I drew you [romantic_animals_grand]! Do... do you like it?</li>
+				<li>try_romance(RECIPIENT_animals_passion!=None)->I know you absolutely adore animals, so I drew you [romantic_animals_grand]! [romantic_query]?</li>
 
-				<li>try_romance(RECIPIENT_crafting_passion!=None)->I know you have a great passion for workmanship, so I drew you [crafting_grand]! Do... do you like it?</li>
+				<li>try_romance(RECIPIENT_crafting_passion!=None)->I know you have a great passion for workmanship, so I drew you [crafting_grand]! [romantic_query]?</li>
 
-				<li>try_romance(RECIPIENT_artistic_passion!=None)->I know you are a passionate artist, so I drew you [artisticfeat_grand]! Do... do you like it?</li>
+				<li>try_romance(RECIPIENT_artistic_passion!=None)->I know you are a passionate artist, so I drew you [artisticfeat_grand]! [romantic_query]?</li>
 
-				<li>try_romance(RECIPIENT_medical_passion!=None)->I know you are invested in tending to the ill and saving lives, so I drew you [medical_grand]! Do... do you like it?</li>
+				<li>try_romance(RECIPIENT_medical_passion!=None)->I know you are invested in tending to the ill and saving lives, so I drew you [medical_grand]! [romantic_query]?</li>
 
-				<li>try_romance(RECIPIENT_social_passion!=None)->I know you are a fervent orator, so I drew you [social_feat]! Do... do you like it?</li>
+				<li>try_romance(RECIPIENT_social_passion!=None)->I know you are a fervent orator, so I drew you [social_feat]! [romantic_query]?</li>
 
-				<li>try_romance(RECIPIENT_intellectual_passion!=None)->I know you are an astute intellectual, so I drew you [intellectual_feat]! Do... do you like it?</li>
+				<li>try_romance(RECIPIENT_intellectual_passion!=None)->I know you are an astute intellectual, so I drew you [intellectual_feat]! [romantic_query]?</li>
+
+
+			<li>romantic_query->Do... do you like it</li>
+			<li>romantic_query->What... what do you think of it</li>
+			<li>romantic_query->Is... is it to your liking</li>
+			<li>romantic_query->How... how do you like it</li>
+			<li>romantic_query->Is... is it good</li>
 
 
 
@@ -91,7 +98,7 @@
 
 
 
-			<li>building_grand->a grand cathedral that attracts both the religious for its holiness and the agonistic for its beauty</li>
+			<li>building_grand->a grand cathedral that attracts both the religious for its holiness and the agnostic for its beauty</li>
 			<li>building_grand->a mighty fortress, all but impossible to breach</li>
 			<li>building_grand->a towering wall that can withstand even the mightiest of blows</li>
 			<li>building_grand->a monument that will be marveled at for generations</li>
