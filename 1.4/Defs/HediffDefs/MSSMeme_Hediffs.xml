@@ -21,7 +21,7 @@
 			<li>
 				<becomeVisible>true</becomeVisible>
 				<minSeverity>0</minSeverity>
-				<label>had my beauty sleep</label>
+				<label>Glowing from recently having had some beauty sleep.</label>
 				<socialFightChanceFactor>0.9</socialFightChanceFactor>
 				<statOffsets>
 					<PawnBeauty>0.3</PawnBeauty>
@@ -36,7 +36,7 @@
 			<li>
 				<becomeVisible>true</becomeVisible>
 				<minSeverity>12</minSeverity>
-				<label>getting sleepy</label>
+				<label>Awake, what an awful state of existance.</label>
 				<socialFightChanceFactor>1.2</socialFightChanceFactor>
 				<statOffsets>
 					<RestFallRateFactor>1.1</RestFallRateFactor>
@@ -59,7 +59,7 @@
 			<li>
 				<becomeVisible>true</becomeVisible>
 				<minSeverity>18</minSeverity>
-				<label>dead tired</label>
+				<label>Dead tired, barely sentient at this point really.</label>
 				<socialFightChanceFactor>2.5</socialFightChanceFactor>
 				<statOffsets>
 					<RestFallRateFactor>1.8</RestFallRateFactor>

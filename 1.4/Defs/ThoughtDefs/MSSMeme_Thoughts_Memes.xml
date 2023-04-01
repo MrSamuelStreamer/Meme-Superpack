@@ -10,7 +10,7 @@
 		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
 		<stages>
 			<li>
-				<label>recently slept</label>
+				<label>had my beauty sleep</label>
 				<description>I've slept recently, life is good</description>
 				<baseMoodEffect>2</baseMoodEffect>
 			</li>
