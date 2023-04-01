@@ -21,7 +21,7 @@
     <Folder Include="Common\Sounds" />
     <Folder Include="Compatibility\Ludeon.RimWorld.Biotech\1.4\Defs" />
     <Folder Include="Compatibility\Ludeon.RimWorld.Ideology\1.4\Defs" />
-    <Folder Include="Compatibility\oskarpotocki.vfe.pirates\1.4\Defs" />
+    <Folder Include="Compatibility\OskarPotocki.VFE.Pirates\1.4\Defs" />
   </ItemGroup>
   <Target Name="Clean" />
   <Target Name="Build">

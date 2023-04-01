@@ -8,6 +8,6 @@
 		<li IfModActive="Ludeon.RimWorld.Ideology">Compatibility/Ludeon.RimWorld.Ideology</li>
 		<li IfModActive="Ludeon.RimWorld.Ideology">Compatibility/Ludeon.RimWorld.Ideology/1.4</li>
 		<li IfModActive="Aoba.Fortress.Industrial">Compatibility/Aoba.Fortress.Industrial</li>
-		<li IfModActive="oskarpotocki.vfe.pirates">Compatibility/oskarpotocki.vfe.pirates/1.4</li>
+		<li IfModActive="OskarPotocki.VFE.Pirates">Compatibility/OskarPotocki.VFE.Pirates/1.4</li>
 	</v1.4>
 </loadFolders>
