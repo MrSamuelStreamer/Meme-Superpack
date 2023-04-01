@@ -44,7 +44,7 @@ public static class DebugActions
 		}
 		else
 		{
-			IncidentParms incidentParms = new IncidentParms()
+			IncidentParms incidentParms = new()
 			{
 				forced = true,
 				target = Find.World

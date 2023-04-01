@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -33,14 +32,7 @@ namespace MSS.MemeSuperpack
 
 		public bool PopulateStockpiles()
 		{
-			var stockpileLocations = Building_OrbitalTradeBeacon.AllPowered(parent.Map)
-				.Select(b => b.TradeableCells.RandomElementWithFallback(b.Position)).ToList();
-			stockpileLocations.AddRange(parent.Map.zoneManager.AllZones.Where(z =>
-					z is Zone_Stockpile s && s.AllContainedThings.Where(t => t.FlammableNow).Sum(t => t.MarketValue) > 200f)
-				.Select(z => z.Cells.RandomElementWithFallback(z.Position)));
-			stockpileLocations.Shuffle();
-			stockpileLocations.ForEach(_stockpileLocations.Push);
-			return stockpileLocations.Count > 0;
+			return StockpileUtility.FindStockpiles(parent.Map, ref _stockpileLocations);
 		}
 	}
 }

@@ -34,4 +34,19 @@
 		<minRefireDays>15</minRefireDays>
 	</IncidentDef>
 
+	<IncidentDef>
+		<defName>MSSMeme_StockpileFire</defName>
+		<letterDef>NegativeEvent</letterDef>
+		<label>firefoam popper check</label>
+		<letterText>A fire has started in one of your stockpiles again.\n\nThis premium service is to encourage you to build appropriate fire suppression systems.\n\nWe hope you'll learn to be ready for these fire drills, thank you, and have a nice day.</letterText>
+		<letterLabel>firefoam popper check</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_StockpileFire</workerClass>
+		<baseChance>1.1</baseChance>
+		<minRefireDays>7</minRefireDays>
+	</IncidentDef>
+
 </Defs>
