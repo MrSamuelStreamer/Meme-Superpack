@@ -10,6 +10,7 @@ A lot of the "requirements" aren't really requirements, this is just a superpack
 * CatLover366 for a lot of XML work and the bowl texture.
 * Feldoh for the C# and some XML.
 * Timespace for the Anne role texture.
+* The Art channel in Samuel Streamer's Discord for the sillier SpeakUp dialouge
 
 ### "Netherworld Shanty"
 Kevin MacLeod ([incompetech.com](incompetech.com))<br>Licensed under [Creative Commons: By Attribution 3.0](http://creativecommons.org/licenses/by/3.0/)
