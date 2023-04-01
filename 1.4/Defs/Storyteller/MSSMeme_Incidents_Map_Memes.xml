@@ -49,4 +49,19 @@
 		<minRefireDays>7</minRefireDays>
 	</IncidentDef>
 
+	<IncidentDef>
+		<defName>MSSMeme_OutOfSteel</defName>
+		<letterDef>NegativeEvent</letterDef>
+		<label>out of steel</label>
+		<letterText>That is confusing, are you going mad, you would have sworn blind that there was {0} steel in {1}.</letterText>
+		<letterLabel>out of steel?</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_OutOfSteel</workerClass>
+		<baseChance>1.1</baseChance>
+		<minRefireDays>30</minRefireDays>
+	</IncidentDef>
+
 </Defs>
