@@ -44,7 +44,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>/Defs/HediffGiverSetDef[defName="OrganicStandard"]/hediffGivers</xpath>
+		<xpath>/Defs/HediffGiverSetDef[defName="Human"]/hediffGivers</xpath>
 		<value>
 			<li Class="MSS.MemeSuperpack.Hediff.HediffGiver_EnsureHediff">
 				<hediff>MSSMeme_Awake</hediff>
