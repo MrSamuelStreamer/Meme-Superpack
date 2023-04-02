@@ -79,4 +79,19 @@
 		<minRefireDays>20</minRefireDays>
 	</IncidentDef>
 
+	<IncidentDef>
+		<defName>MSSMeme_Icewolf</defName>
+		<letterDef>NegativeEvent</letterDef>
+		<label>meteorite impact</label>
+		<letterText>A large meteorite is heading right for poor {0}. Look out!</letterText>
+		<letterLabel>Look Out</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_Icewolf</workerClass>
+		<baseChance>1.1</baseChance>
+		<minRefireDays>20</minRefireDays>
+	</IncidentDef>
+
 </Defs>
