@@ -64,4 +64,19 @@
 		<minRefireDays>30</minRefireDays>
 	</IncidentDef>
 
+	<IncidentDef>
+		<defName>MSSMeme_Homeless</defName>
+		<letterDef>NegativeEvent</letterDef>
+		<label>homeless again</label>
+		<letterText>Homeless again... Sigh.</letterText>
+		<letterLabel>homeless</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_Homeless</workerClass>
+		<baseChance>1.1</baseChance>
+		<minRefireDays>20</minRefireDays>
+	</IncidentDef>
+
 </Defs>
