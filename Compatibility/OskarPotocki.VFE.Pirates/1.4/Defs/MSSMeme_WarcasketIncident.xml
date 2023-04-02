@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<IncidentDef>
+		<defName>MSSMeme_WarcasketCompat</defName>
+		<letterDef>NegativeEvent</letterDef>
+		<label>warcasket compatibility</label>
+		<letterText>Warcaskets not cmpatible with yayo? Who ever heard of such nonsense.</letterText>
+		<letterLabel>Compatible With Yayo</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_Warcaskets</workerClass>
+		<baseChance>1.1</baseChance>
+		<minRefireDays>20</minRefireDays>
+	</IncidentDef>
+
+</Defs>
