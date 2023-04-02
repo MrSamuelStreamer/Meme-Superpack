@@ -12,7 +12,7 @@ namespace MSS.MemeSuperpack
 
 		private CompProperties_SpawnerFire Props => (CompProperties_SpawnerFire)props;
 
-		private bool CanSpawnFire => !(this.parent is Hive parent) || parent.CompDormant.Awake;
+		private bool CanSpawnFire => this.parent is not Hive parentThing || parentThing.CompDormant.Awake;
 
 		public override void CompTick()
 		{
