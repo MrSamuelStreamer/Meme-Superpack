@@ -16,6 +16,7 @@ public class GameComponent_MemeTracker : GameComponent
 
 	public GaslightingTopic CurrentGaslightingTopic = GaslightingTopic.None;
 	public int GaslightingLastStartTick = -1;
+	public bool grignrAttacked = false;
 
 	public GameComponent_MemeTracker(Game game)
 	{
@@ -41,10 +42,28 @@ public class GameComponent_MemeTracker : GameComponent
 		    (Enum.TryParse(Enum.GetNames(typeof(GaslightingTopic)).RandomElement(), out CurrentGaslightingTopic) &&
 		     CurrentGaslightingTopic != GaslightingTopic.None)) StartGasLighting();
 
+		if (!grignrAttacked && Rand.Chance(0.001f))
+		{
+			GrignrAttack();
+		}
+
 		// Disable current topic if running for at least 3 days 10% chance
 		if (CurrentGaslightingTopic == GaslightingTopic.None || ticksGame <= GaslightingLastStartTick + 180000 ||
 		    !Rand.Chance(0.1f)) return;
 		EndGaslighting();
+	}
+
+	public void GrignrAttack()
+	{
+		PawnKindDef grignrType = DefDatabase<PawnKindDef>.GetNamedSilentFail("Taggerung_ShardOfGrignr");
+		if (grignrType == null) return;
+		grignrAttacked = true;
+		Pawn grignr = PawnGenerator.GeneratePawn(grignrType,
+			Find.FactionManager.RandomEnemyFaction(allowNonHumanlike: false, allowHidden: true));
+		RCellFinder.TryFindRandomPawnEntryCell(out IntVec3 loc, Find.CurrentMap, 0.8f, true);
+		GenSpawn.Spawn(grignr, loc, Find.CurrentMap, Rot4.Random);
+		// grignr.mindState.forcedGotoPosition = RCellFinder.;
+		// grignr.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.Berserk);
 	}
 
 	public void StartGasLighting(GaslightingTopic forcedTopic = GaslightingTopic.None)

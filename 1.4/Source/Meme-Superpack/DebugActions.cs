@@ -34,6 +34,13 @@ public static class DebugActions
 		GameComponent_MemeTracker.Instance.EndGaslighting();
 	}
 
+	[DebugAction("Memes", "Grignr Attacks", false, false, false, 0, false,
+		allowedGameStates = AllowedGameStates.PlayingOnMap)]
+	private static void GrignrAttack()
+	{
+		GameComponent_MemeTracker.Instance.GrignrAttack();
+	}
+
 	[DebugAction("Memes", "Toggle Eclipse", false, false, false, 0, false,
 		allowedGameStates = AllowedGameStates.PlayingOnMap)]
 	private static void ToggleEclipse()

@@ -90,4 +90,16 @@
 		</match>
 	</Operation>
 
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Grignr Happens By</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef/xenotypeSet/xenotypeChances</xpath>
+			<value>
+				<Taggerung_Grignrson_Xenotype MayRequire="Ludeon.RimWorld.Biotech">0.005</Taggerung_Grignrson_Xenotype>
+			</value>
+		</match>
+	</Operation>
+
 </Patch>
