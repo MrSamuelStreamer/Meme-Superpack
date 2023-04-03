@@ -34,4 +34,64 @@
 		<minRefireDays>15</minRefireDays>
 	</IncidentDef>
 
+	<IncidentDef>
+		<defName>MSSMeme_StockpileFire</defName>
+		<letterDef>NegativeEvent</letterDef>
+		<label>firefoam popper check</label>
+		<letterText>A fire has started in one of your stockpiles again.\n\nThis premium service is to encourage you to build appropriate fire suppression systems.\n\nWe hope you'll learn to be ready for these fire drills, thank you, and have a nice day.</letterText>
+		<letterLabel>firefoam popper check</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_StockpileFire</workerClass>
+		<baseChance>1.1</baseChance>
+		<minRefireDays>7</minRefireDays>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>MSSMeme_OutOfSteel</defName>
+		<letterDef>NegativeEvent</letterDef>
+		<label>out of steel</label>
+		<letterText>That is confusing, are you going mad, you would have sworn blind that there was {0} steel in {1}.</letterText>
+		<letterLabel>out of steel?</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_OutOfSteel</workerClass>
+		<baseChance>1.1</baseChance>
+		<minRefireDays>30</minRefireDays>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>MSSMeme_Homeless</defName>
+		<letterDef>NegativeEvent</letterDef>
+		<label>homeless again</label>
+		<letterText>Homeless again... Sigh.</letterText>
+		<letterLabel>homeless</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_Homeless</workerClass>
+		<baseChance>1.1</baseChance>
+		<minRefireDays>20</minRefireDays>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>MSSMeme_Icewolf</defName>
+		<letterDef>NegativeEvent</letterDef>
+		<label>meteorite impact</label>
+		<letterText>A large meteorite is heading right for poor {0}. Look out!</letterText>
+		<letterLabel>Look Out</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_Icewolf</workerClass>
+		<baseChance>1.1</baseChance>
+		<minRefireDays>20</minRefireDays>
+	</IncidentDef>
+
 </Defs>

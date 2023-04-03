@@ -1,6 +1,7 @@
 using System;
 using RimWorld;
 using Verse;
+using Verse.AI.Group;
 
 namespace MSS.MemeSuperpack;
 
@@ -16,6 +17,7 @@ public class GameComponent_MemeTracker : GameComponent
 
 	public GaslightingTopic CurrentGaslightingTopic = GaslightingTopic.None;
 	public int GaslightingLastStartTick = -1;
+	public bool grignrAttacked = false;
 
 	public GameComponent_MemeTracker(Game game)
 	{
@@ -41,10 +43,34 @@ public class GameComponent_MemeTracker : GameComponent
 		    (Enum.TryParse(Enum.GetNames(typeof(GaslightingTopic)).RandomElement(), out CurrentGaslightingTopic) &&
 		     CurrentGaslightingTopic != GaslightingTopic.None)) StartGasLighting();
 
+		if (!grignrAttacked && Rand.Chance(0.001f))
+		{
+			GrignrAttack();
+		}
+
 		// Disable current topic if running for at least 3 days 10% chance
 		if (CurrentGaslightingTopic == GaslightingTopic.None || ticksGame <= GaslightingLastStartTick + 180000 ||
 		    !Rand.Chance(0.1f)) return;
 		EndGaslighting();
+	}
+
+	public void GrignrAttack()
+	{
+		PawnKindDef grignrType = DefDatabase<PawnKindDef>.GetNamedSilentFail("Taggerung_ShardOfGrignr");
+		if (grignrType == null) return;
+		grignrAttacked = true;
+		Faction faction = Find.FactionManager.RandomEnemyFaction(allowNonHumanlike: false, allowHidden: true);
+		Pawn grignr = PawnGenerator.GeneratePawn(grignrType, faction);
+		Map currentMap = Find.AnyPlayerHomeMap;
+		RCellFinder.TryFindRandomPawnEntryCell(out IntVec3 loc, currentMap, 0.8f, true);
+		GenSpawn.Spawn(grignr, loc, currentMap, Rot4.Random);
+
+		LordJob lordJob = new LordJob_AssaultColony(faction, false, false, false, false, false, false, true);
+		RCellFinder.TryFindRandomCellNearTheCenterOfTheMapWith(v => v.Standable(currentMap), currentMap,
+			out grignr.mindState.forcedGotoPosition);
+
+		Lord lord = LordMaker.MakeNewLord(faction, lordJob, currentMap, new[] { grignr });
+		grignr.guest.Recruitable = true;
 	}
 
 	public void StartGasLighting(GaslightingTopic forcedTopic = GaslightingTopic.None)
