@@ -27,6 +27,7 @@
 		<defName>MSSMeme_Nukes</defName>
 		<nukeDefs>
 			<li MayRequire="Aoba.Fortress.Industrial.NuclearDawn">FT_Shell_NuclearWarhead</li>
+			<li MayRequire="Dubwise.Rimatomics">FissionWarhead</li>
 			<li>Shell_AntigrainWarhead</li>
 		</nukeDefs>
 	</MSS.MemeSuperpack.Nukes>
