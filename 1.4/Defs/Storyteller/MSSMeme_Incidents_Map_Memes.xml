@@ -45,7 +45,7 @@
 			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MSS.MemeSuperpack.IncidentWorker_StockpileFire</workerClass>
-		<baseChance>1.1</baseChance>
+		<baseChance>0.6</baseChance>
 		<minRefireDays>7</minRefireDays>
 	</IncidentDef>
 
@@ -60,7 +60,7 @@
 			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MSS.MemeSuperpack.IncidentWorker_OutOfSteel</workerClass>
-		<baseChance>1.1</baseChance>
+		<baseChance>0.6</baseChance>
 		<minRefireDays>30</minRefireDays>
 	</IncidentDef>
 
@@ -75,7 +75,7 @@
 			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MSS.MemeSuperpack.IncidentWorker_Homeless</workerClass>
-		<baseChance>1.1</baseChance>
+		<baseChance>0.4</baseChance>
 		<minRefireDays>20</minRefireDays>
 	</IncidentDef>
 
