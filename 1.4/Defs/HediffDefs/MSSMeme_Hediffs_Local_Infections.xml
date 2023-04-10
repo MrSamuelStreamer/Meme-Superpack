@@ -23,7 +23,7 @@
 		</stages>
 		<comps>
 			<li Class="HediffCompProperties_TendDuration">
-				<baseTendDurationHours>48</baseTendDurationHours>
+				<baseTendDurationHours>12</baseTendDurationHours>
 				<disappearsAtTotalTendQuality>1.0</disappearsAtTotalTendQuality>
 			</li>
 		</comps>
@@ -47,7 +47,7 @@
 		</stages>
 		<comps>
 			<li Class="HediffCompProperties_TendDuration">
-				<baseTendDurationHours>48</baseTendDurationHours>
+				<baseTendDurationHours>12</baseTendDurationHours>
 				<disappearsAtTotalTendQuality>1.0</disappearsAtTotalTendQuality>
 			</li>
 		</comps>
