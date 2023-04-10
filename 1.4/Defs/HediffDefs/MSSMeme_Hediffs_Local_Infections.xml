@@ -12,7 +12,7 @@
 		<isBad>false</isBad>
 		<stages>
 			<li>
-				<painOffset>.5</painOffset>
+				<painOffset>0.5</painOffset>
 				<capMods>
 					<li>
 						<capacity>Manipulation</capacity>
@@ -32,7 +32,7 @@
 	<HediffDef ParentName="InfectionBase">
 		<defName>MSSMeme_Ligma</defName>
 		<label>ligma</label>
-		<description>"It is so sad that Joe died of Ligma."\n\n"Who's Joe?"\n\n"Joe should put deez nutz in your mouth."\n\nThe sheer cringe that this joke generated inside this pawn's brain has manifested into a physical force, crippling them. The physical pain can be treated with medicine, though the mental scars of such a terrible joke will remain (no there are no gameplay effects that represent this, don't worry).</description>
+		<description>"It is so sad that Joe died of Ligma."\n\n"Who's Joe?"\n\n"Joe should put deez nutz in your mouth."\n\nThe sheer cringe that this joke generated inside this pawn's brain has manifested into a physical force, crippling them. The physical pain can be treated with medicine, though the mental scars of such a terrible joke will remain (no there are no gameplay effects that represent this... yet).</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<makesSickThought>true</makesSickThought>
 		<tendable>true</tendable>

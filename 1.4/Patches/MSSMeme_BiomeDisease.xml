@@ -2,7 +2,7 @@
 
 <Patch>
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/BiomeDef[defName="TemperateForest" or defName="TemperateSwamp" or defName="TropicalRainforest" or defName="TropicalSwamp" or defName="BorealForest" or defName="ColdBog" or defName="Tundra" or defName="IceSheet" or defName="SeaIce" or defName="AridShrubland" or defName="Desert" or defName="ExtremeDesert"]/diseases</xpath>
+		<xpath>Defs/BiomeDef/diseases</xpath>
 		<value>
 			<li>
 				<diseaseInc>MSSMeme_SitKid_Disease</diseaseInc>
@@ -12,7 +12,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/BiomeDef[defName="TemperateForest" or defName="TemperateSwamp" or defName="TropicalRainforest" or defName="TropicalSwamp" or defName="BorealForest" or defName="ColdBog" or defName="Tundra" or defName="IceSheet" or defName="SeaIce" or defName="AridShrubland" or defName="Desert" or defName="ExtremeDesert"]/diseases</xpath>
+		<xpath>Defs/BiomeDef/diseases</xpath>
 		<value>
 			<li>
 				<diseaseInc>MSSMeme_Ligma_Disease</diseaseInc>
@@ -22,7 +22,7 @@
 	</Operation>
 
 	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/BiomeDef[defName="TemperateForest" or defName="TemperateSwamp" or defName="TropicalRainforest" or defName="TropicalSwamp" or defName="BorealForest" or defName="ColdBog" or defName="Tundra" or defName="IceSheet" or defName="SeaIce" or defName="AridShrubland" or defName="Desert" or defName="ExtremeDesert"]/diseaseMtbDays</xpath>
+		<xpath>Defs/BiomeDef/diseaseMtbDays</xpath>
 		<value>
 			<diseaseMtbDays>30</diseaseMtbDays>
 		</value>

@@ -1,40 +1,26 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <Patch>
 
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[defName = "MultiAnalyzer"]/costList</xpath>
 		<value>
-			<costList>
-			  <Steel>40</Steel>
-			  <Plasteel>50</Plasteel>
-			  <Gold>20</Gold>
-			  <ComponentIndustrial>8</ComponentIndustrial>
-			  <MSSMeme_CoalPlate>69</MSSMeme_CoalPlate>
-			  <MSSMeme_AnthraciteCoal>69</MSSMeme_AnthraciteCoal>
-			</costList>
+			<MSSMeme_CoalPlate>69</MSSMeme_CoalPlate>
+			<MSSMeme_AnthraciteCoal>69</MSSMeme_AnthraciteCoal>
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[defName = "FabricationBench"]/costList</xpath>
 		<value>
-			<costList>
-			  <Steel>200</Steel>
-			  <ComponentIndustrial>12</ComponentIndustrial>
-			  <ComponentSpacer>2</ComponentSpacer>
-			  <MSSMeme_SuperCucoalmber>420</MSSMeme_SuperCucoalmber>
-			</costList>
+			<MSSMeme_SuperCucoalmber>420</MSSMeme_SuperCucoalmber>
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationReplace">
+	<Operation Class="PatchOperationAdd">
 		<xpath>/Defs/ThingDef[defName = "HiTechResearchBench"]/costList</xpath>
 		<value>
-			<costList>
-			  <Steel>100</Steel>
-			  <ComponentIndustrial>10</ComponentIndustrial>
-			  <MSSMeme_Coal>69</MSSMeme_Coal>
-			</costList>
+			<MSSMeme_Coal>69</MSSMeme_Coal>
 		</value>
 	</Operation>
 </Patch>
