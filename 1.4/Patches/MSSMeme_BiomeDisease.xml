@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef/diseases</xpath>
+		<value>
+			<li>
+				<diseaseInc>MSSMeme_SitKid_Disease</diseaseInc>
+				<commonality>690</commonality>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BiomeDef/diseases</xpath>
+		<value>
+			<li>
+				<diseaseInc>MSSMeme_Ligma_Disease</diseaseInc>
+				<commonality>690</commonality>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/BiomeDef/diseaseMtbDays</xpath>
+		<value>
+			<diseaseMtbDays>30</diseaseMtbDays>
+		</value>
+	</Operation>
+</Patch>

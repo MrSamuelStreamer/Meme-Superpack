@@ -9,4 +9,11 @@
 		<letterLabel>Disease (skill issue)</letterLabel>
 	</IncidentDef>
 
+	<IncidentDef ParentName="DiseaseIncident">
+		<defName>MSSMeme_Ligma_Disease</defName>
+		<label>ligma</label>
+		<diseaseIncident>MSSMeme_Ligma</diseaseIncident>
+		<letterLabel>Disease (ligma)</letterLabel>
+	</IncidentDef>
+
 </Defs>

@@ -5,27 +5,51 @@
 	<HediffDef ParentName="InfectionBase">
 		<defName>MSSMeme_SitKid</defName>
 		<label>Bullshititis</label>
-		<description>This pawn suffers from a severe case of skill issue. This case of skill issue is so agonizing, it will immobilize any mere mortal from anguish. Even if someone were to overcome the pain, they will be too preoccupied with coping and seething to do any work properly. This condition can eventually go away with medical treatment.</description>
+		<description>This pawn suffers from a severe case of skill issue. This case of skill issue is so agonizing, it will nearly immobilize any mere mortal from the sheer anguish inflicted. Even if someone were to overcome the pain, they will be too preoccupied with coping and seething to do any work properly. This condition can eventually go away with medical treatment.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<makesSickThought>true</makesSickThought>
 		<tendable>true</tendable>
+		<isBad>false</isBad>
 		<stages>
 			<li>
-				<painOffset>1</painOffset>
+				<painOffset>0.5</painOffset>
 				<capMods>
 					<li>
 						<capacity>Manipulation</capacity>
-						<setMax>0.1</setMax>
+						<setMax>0.25</setMax>
 					</li>
 				</capMods>
 			</li>
 		</stages>
 		<comps>
 			<li Class="HediffCompProperties_TendDuration">
-				<baseTendDurationHours>48</baseTendDurationHours>
-				<disappearsAtTotalTendQuality>2</disappearsAtTotalTendQuality>
+				<baseTendDurationHours>12</baseTendDurationHours>
+				<disappearsAtTotalTendQuality>1.0</disappearsAtTotalTendQuality>
 			</li>
 		</comps>
 	</HediffDef>
 
+	<HediffDef ParentName="InfectionBase">
+		<defName>MSSMeme_Ligma</defName>
+		<label>ligma</label>
+		<description>"It is so sad that Joe died of Ligma."\n\n"Who's Joe?"\n\n"Joe should put deez nutz in your mouth."\n\nThe sheer cringe that this joke generated inside this pawn's brain has manifested into a physical force, crippling them. The physical pain can be treated with medicine, though the mental scars of such a terrible joke will remain (no there are no gameplay effects that represent this... yet).</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<makesSickThought>true</makesSickThought>
+		<tendable>true</tendable>
+		<isBad>false</isBad>
+		<stages>
+			<li>
+				<painOffset>.5</painOffset>
+				<statOffsets>
+					<MoveSpeed>-69</MoveSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_TendDuration">
+				<baseTendDurationHours>12</baseTendDurationHours>
+				<disappearsAtTotalTendQuality>1.0</disappearsAtTotalTendQuality>
+			</li>
+		</comps>
+	</HediffDef>
 </Defs>
