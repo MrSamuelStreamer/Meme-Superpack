@@ -15,8 +15,8 @@
 				<painOffset>0.5</painOffset>
 				<capMods>
 					<li>
-						<capacity>Manipulation</capacity>
-						<setMax>0.25</setMax>
+						<capacity>Moving</capacity>
+						<setMax>0.420</setMax>
 					</li>
 				</capMods>
 			</li>
