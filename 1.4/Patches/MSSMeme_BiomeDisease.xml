@@ -15,7 +15,7 @@
 		<xpath>Defs/BiomeDef[defName="TemperateForest" or defName="TemperateSwamp" or defName="TropicalRainforest" or defName="TropicalSwamp" or defName="BorealForest" or defName="ColdBog" or defName="Tundra" or defName="IceSheet" or defName="SeaIce" or defName="AridShrubland" or defName="Desert" or defName="ExtremeDesert"]/diseases</xpath>
 		<value>
 			<li>
-				<diseaseInc>MSSMeme_Ligma</diseaseInc>
+				<diseaseInc>MSSMeme_Ligma_Disease</diseaseInc>
 				<commonality>690</commonality>
 			</li>
 		</value>
