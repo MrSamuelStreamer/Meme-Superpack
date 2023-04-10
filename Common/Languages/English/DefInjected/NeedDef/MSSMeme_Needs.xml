@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+	<Food.label>nuggies</Food.label>
+	<Food.description>Nuggies is the amount of nutritious nuggs a creature has consumed recently. If it is at zero, a creature will become increasingly malnourished and eventually die.</Food.description>
+
+	<Outdoors.label>touch grass</Outdoors.label>
+	<Outdoors.description>This expresses the need get outside and touch grass, something unfamiliar to many gamers. It is harmed by long periods inside, especially underground. It improves when someone spends time under the sky, especially outdoors. It's not about the size of the rooms, but the need to be outside from time to time. Lack of grass touching is a significant challenge for people who dwell in underground bases.</Outdoors.description>
+</LanguageData>
