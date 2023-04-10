@@ -6,4 +6,7 @@
 
 	<Outdoors.label>touch grass</Outdoors.label>
 	<Outdoors.description>This expresses the need get outside and touch grass, something unfamiliar to many gamers. It is harmed by long periods inside, especially underground. It improves when someone spends time under the sky, especially outdoors. It's not about the size of the rooms, but the need to be outside from time to time. Lack of grass touching is a significant challenge for people who dwell in underground bases.</Outdoors.description>
+
+	<Mood.label>sanity</Mood.label>
+	<Mood.description>Sanity represents stressed someone is and their current capacity for hanging on to what remains of their marbles. If sanity gets too low, through reading the comments section or being told Warcaskets don't work with yayo, the person may suffer a mental break. Depending on how low their mood is, someone who has a mental break just throw a little tantrum like hiding in their room for a day, or they might just break down completely and go kick a nuke.</Mood.description>
 </LanguageData>
