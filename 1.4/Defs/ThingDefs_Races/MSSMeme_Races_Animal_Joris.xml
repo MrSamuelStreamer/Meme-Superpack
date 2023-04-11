@@ -19,7 +19,7 @@
 			<manhunterOnTameFailChance>0.0</manhunterOnTameFailChance>
 			<manhunterOnDamageChance>0.1</manhunterOnDamageChance>
 			<hediffGiverSets>
-				<li>MSSMeme_ILikeBuildBaseGiver</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">MSSMeme_ILikeBuildBaseGiver</li>
 			</hediffGiverSets>
 		</race>
 		<comps>
@@ -122,7 +122,7 @@
 			<manhunterOnTameFailChance>0.01</manhunterOnTameFailChance>
 			<manhunterOnDamageChance>0.9</manhunterOnDamageChance>
 			<hediffGiverSets>
-				<li>MSSMeme_ILikeBuildBaseGiver</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">MSSMeme_ILikeBuildBaseGiver</li>
 			</hediffGiverSets>
 		</race>
 		<comps>

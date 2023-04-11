@@ -6,6 +6,7 @@ A lot of the "requirements" aren't really requirements, this is just a superpack
 ## Credit
 * Visandar for the excellent Meme and Precept art as well as art for a lot of the items like some of the coal and the super cucumber.
 * DetVisor for the gun texture.
+* Elseud for the come elephant ability texture.
 * [bruz.art](https://www.instagram.com/bruz.art/) for the Joris "Cement? That's Con Creet Baybee" art
 * Sargb for the Joris Base.
 * CatLover366 for a lot of XML work and the bowl texture.

@@ -5,10 +5,10 @@
 		<defName>MSSMeme_CombatElephant</defName>
 		<label>combat elephant</label>
 		<description>With a powerful bellow and psychic shout of COME ELEPHANT, call a CE compatible animal to fight your enemies for a few hours.</description>
-		<iconPath>UI/Abilities/AnimalWarcall</iconPath>
+		<iconPath>UI/Icons/Abilities/MSSMeme_ComeElephant_DarkRed</iconPath>
 		<cooldownTicksRange>60000</cooldownTicksRange> <!-- 1 day -->
 		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
-		<jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+		<jobDef>CastAbilityOnThing</jobDef>
 		<groupAbility>true</groupAbility>
 		<statBases>
 			<Ability_Duration>500</Ability_Duration>
@@ -22,7 +22,7 @@
 			<range>49.9</range>
 			<drawAimPie>true</drawAimPie>
 			<requireLineOfSight>false</requireLineOfSight>
-			<warmupEffecter>AnimalWarcall_Warmup</warmupEffecter>
+			<warmupEffecter MayRequire="Ludeon.RimWorld.Biotech">AnimalWarcall_Warmup</warmupEffecter>
 			<targetParams>
 				<canTargetLocations>false</canTargetLocations>
 				<canTargetPawns>true</canTargetPawns>
@@ -52,10 +52,10 @@
 		<defName>MSSMeme_CrazedElephant</defName>
 		<label>crazed elephant</label>
 		<description>With a powerful bellow and psychic shout of COME ELEPHANT, call a CE compatible animal to fight your enemies for quite a few hours. Just be careful if you run out of enemies to fight.</description>
-		<iconPath>UI/Abilities/AnimalWarcall</iconPath>
+		<iconPath>UI/Icons/Abilities/MSSMeme_ComeElephant_VeryRed</iconPath>
 		<cooldownTicksRange>60000</cooldownTicksRange> <!-- 1 day -->
 		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
-		<jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+		<jobDef>CastAbilityOnThing</jobDef>
 		<groupAbility>true</groupAbility>
 		<statBases>
 			<Ability_Duration>500</Ability_Duration>
@@ -69,7 +69,7 @@
 			<range>49.9</range>
 			<drawAimPie>true</drawAimPie>
 			<requireLineOfSight>false</requireLineOfSight>
-			<warmupEffecter>AnimalWarcall_Warmup</warmupEffecter>
+			<warmupEffecter MayRequire="Ludeon.RimWorld.Biotech">AnimalWarcall_Warmup</warmupEffecter>
 			<targetParams>
 				<canTargetLocations>false</canTargetLocations>
 				<canTargetPawns>true</canTargetPawns>
@@ -100,10 +100,10 @@
 		<defName>MSSMeme_CombustionElephant</defName>
 		<label>combustion elephant</label>
 		<description>With a powerful bellow and psychic shout of COME ELEPHANT, call a CE Compatible Combustion elephant to fight your enemies for a few hours.</description>
-		<iconPath>UI/Abilities/AnimalWarcall</iconPath>
+		<iconPath>UI/Icons/Abilities/MSSMeme_ComeElephant_Orange</iconPath>
 		<cooldownTicksRange>60000</cooldownTicksRange> <!-- 1 day -->
 		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
-		<jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+		<jobDef>CastAbilityOnThing</jobDef>
 		<groupAbility>true</groupAbility>
 		<statBases>
 			<Ability_Duration>500</Ability_Duration>
@@ -117,7 +117,7 @@
 			<range>49.9</range>
 			<drawAimPie>true</drawAimPie>
 			<requireLineOfSight>false</requireLineOfSight>
-			<warmupEffecter>AnimalWarcall_Warmup</warmupEffecter>
+			<warmupEffecter MayRequire="Ludeon.RimWorld.Biotech">AnimalWarcall_Warmup</warmupEffecter>
 			<targetParams>
 				<canTargetLocations>false</canTargetLocations>
 				<canTargetPawns>true</canTargetPawns>
@@ -147,10 +147,10 @@
 		<defName>MSSMeme_CarryElephant</defName>
 		<label>carry elephant</label>
 		<description>With a powerful bellow and psychic shout of COME ELEPHANT, call a CE Compatible Carry elephant to come and lug some stuff around for a while.</description>
-		<iconPath>UI/Abilities/AnimalWarcall</iconPath>
+		<iconPath>UI/Icons/Abilities/MSSMeme_ComeElephant_LightBlue</iconPath>
 		<cooldownTicksRange>60000</cooldownTicksRange> <!-- 1 day -->
 		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
-		<jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+		<jobDef>CastAbilityOnThing</jobDef>
 		<groupAbility>true</groupAbility>
 		<statBases>
 			<Ability_Duration>500</Ability_Duration>
@@ -164,7 +164,7 @@
 			<range>49.9</range>
 			<drawAimPie>true</drawAimPie>
 			<requireLineOfSight>false</requireLineOfSight>
-			<warmupEffecter>AnimalWarcall_Warmup</warmupEffecter>
+			<warmupEffecter MayRequire="Ludeon.RimWorld.Biotech">AnimalWarcall_Warmup</warmupEffecter>
 			<targetParams>
 				<canTargetLocations>false</canTargetLocations>
 				<canTargetPawns>true</canTargetPawns>
@@ -195,10 +195,10 @@
 		<defName>MSSMeme_ComeElephant</defName>
 		<label>come elephant</label>
 		<description>With a psychic chant of come elephant, call a CE compatible animal to your vicinity.</description>
-		<iconPath>UI/Abilities/AnimalWarcall</iconPath>
+		<iconPath>UI/Icons/Abilities/MSSMeme_ComeElephant_White</iconPath>
 		<cooldownTicksRange>420000~690000</cooldownTicksRange>
 		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
-		<jobDef>CastAbilityOnThingWithoutWeaponInterruptible</jobDef>
+		<jobDef>CastAbilityOnThing</jobDef>
 		<groupAbility>true</groupAbility>
 		<statBases>
 			<Ability_Duration>500</Ability_Duration>
@@ -212,7 +212,7 @@
 			<range>49.9</range>
 			<drawAimPie>true</drawAimPie>
 			<requireLineOfSight>false</requireLineOfSight>
-			<warmupEffecter>AnimalWarcall_Warmup</warmupEffecter>
+			<warmupEffecter MayRequire="Ludeon.RimWorld.Biotech">AnimalWarcall_Warmup</warmupEffecter>
 			<targetParams>
 				<canTargetLocations>true</canTargetLocations>
 				<canTargetPawns>true</canTargetPawns>

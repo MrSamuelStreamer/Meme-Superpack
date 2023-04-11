@@ -4,7 +4,7 @@
 	<HediffGiverSetDef>
 		<defName>MSSMeme_ILikeBuildBaseGiver</defName>
 		<hediffGivers>
-			<li Class="MSS.MemeSuperpack.Hediff.HediffGiver_EnsureHediff">
+			<li MayRequire="Ludeon.RimWorld.Ideology" Class="MSS.MemeSuperpack.Hediff.HediffGiver_EnsureHediff">
 				<hediff>MSSMeme_ILikeBuildBaseSource</hediff>
 			</li>
 		</hediffGivers>

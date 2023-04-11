@@ -16,13 +16,13 @@ namespace MSS.MemeSuperpack
 
 		[MayRequireIdeology] public static HistoryEventDef MSSMeme_WaifuDied;
 
-		[MayRequireIdeology] public static PawnRelationDef MSSMeme_Arcadius;
+		public static PawnRelationDef MSSMeme_Arcadius;
 
 		public static ThoughtDef MSSMeme_AwakeThought;
 
 		public static SongDef MSSMeme_BuckoDrinkMusic;
 
-		public static TaleDef MSSMeme_WatchedRimRim;
+		[MayRequireIdeology] public static TaleDef MSSMeme_WatchedRimRim;
 
 		static MemeSuperPackDefOf()
 		{
