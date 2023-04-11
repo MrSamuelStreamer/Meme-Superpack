@@ -14,7 +14,7 @@
 		<letterLabel>Police</letterLabel>
 		<letterDef>NegativeEvent</letterDef>
 		<baseChance>2</baseChance>
-		<minRefireDays>5</minRefireDays>
+		<minRefireDays>7</minRefireDays>
 		<durationDays>0.125~0.35</durationDays>
 		<tale>MSSMeme_PoliceAreHere</tale>
 	</IncidentDef>
@@ -46,7 +46,7 @@
 		</targetTags>
 		<workerClass>MSS.MemeSuperpack.IncidentWorker_StockpileFire</workerClass>
 		<baseChance>0.6</baseChance>
-		<minRefireDays>7</minRefireDays>
+		<minRefireDays>30</minRefireDays>
 	</IncidentDef>
 
 	<IncidentDef>
@@ -76,7 +76,7 @@
 		</targetTags>
 		<workerClass>MSS.MemeSuperpack.IncidentWorker_Homeless</workerClass>
 		<baseChance>0.4</baseChance>
-		<minRefireDays>20</minRefireDays>
+		<minRefireDays>60</minRefireDays>
 	</IncidentDef>
 
 	<IncidentDef>
