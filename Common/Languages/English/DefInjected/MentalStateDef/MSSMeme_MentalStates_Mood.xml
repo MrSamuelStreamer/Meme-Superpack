@@ -3,11 +3,24 @@
 
 <LanguageData>
 	<InsultingSpree.label>Comments section rant</InsultingSpree.label>
+	<InsultingSpree.beginLetterLabel>Comments rant</InsultingSpree.beginLetterLabel>
 	<InsultingSpree.beginLetter>{0} is on a rant about the comments section.\n\n[PAWN_pronoun] will wander around, randomly ranting about how [PAWN_pronoun] is tired of YouTube comments telling [PAWN_objective] information [PAWN_pronoun] already knows. Other pawns will take great offense to this.</InsultingSpree.beginLetter>
 	<InsultingSpree.recoveryMessage>{0} is no longer on a comments section rant. For now at least.</InsultingSpree.recoveryMessage>
 	<InsultingSpree.baseInspectLine>Mental state: Comments section rant</InsultingSpree.baseInspectLine>
 
 	<TargetedInsultingSpree.label>Comments section rant</TargetedInsultingSpree.label>
+	<TargetedInsultingSpree.beginLetterLabel>Comments rant</TargetedInsultingSpree.beginLetterLabel>
 	<TargetedInsultingSpree.beginLetter>{0} has fixated [PAWN_possessive] rage about being constantly told warcaskets are not compatible with Yayo's Combat on {1}.\n\n[PAWN_pronoun] will follow {1} around, ranting about how [PAWN_pronoun] already knows this already. {1} will not appreciate being the target of this rant.</TargetedInsultingSpree.beginLetter>
 	<TargetedInsultingSpree.baseInspectLine>Mental state: Comments section rant against {0}</TargetedInsultingSpree.baseInspectLine>
+
+	<Wander_OwnRoom.label>Planning some big grand base</Wander_OwnRoom.label>
+	<Wander_OwnRoom.beginLetterLabel>planning base</Wander_OwnRoom.beginLetterLabel>
+	<Wander_OwnRoom.beginLetter>{0} is hiding in [PAWN_possessive] room. Obsessively planning some big grand base.\n\nAll that can be heard by anyone wandering by is soft muttering that sounds like someone saying I like build base.</Wander_OwnRoom.beginLetter>
+	<Wander_OwnRoom.recoveryMessage>{0} is no longer obsessing over [PAWN_possessive] grand plans for the base and is ready to get back to work.</Wander_OwnRoom.recoveryMessage>
+	<Wander_OwnRoom.baseInspectLine>Mental state: Planning a big grand base</Wander_OwnRoom.baseInspectLine>
+
+	<Wander_Sad.label>stupid comments</Wander_Sad.label>
+	<Wander_Sad.beginLetterLabel>stupid comments</Wander_Sad.beginLetterLabel>
+	<Wander_Sad.beginLetter>{0} got annoyed by the comments section and is wandering sadly, disappointed in humanity.</Wander_Sad.beginLetter>
+
 </LanguageData>
