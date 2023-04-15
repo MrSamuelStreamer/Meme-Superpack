@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+
+	<Frenzy_Work.label>I like build base</Frenzy_Work.label>
+	<Frenzy_Work.beginLetter>[PAWN_pronoun] will work faster for the next 8 days.</Frenzy_Work.beginLetter>
+	<Frenzy_Work.endMessage>{0} is no longer inspired to build base.</Frenzy_Work.endMessage>
+	<Frenzy_Work.baseInspectLine>Inspired: I like build base</Frenzy_Work.baseInspectLine>
+
+</LanguageData>
