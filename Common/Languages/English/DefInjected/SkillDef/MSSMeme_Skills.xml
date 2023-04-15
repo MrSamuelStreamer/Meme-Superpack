@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+
+	<Construction.label>build base</Construction.label>
+	<Construction.skillLabel>build base</Construction.skillLabel>
+	<Construction.description>Constructing and deconstructing structures and furniture.</Construction.description>
+
+	<Cooking.label>cooking (nuggies)</Cooking.label>
+	<Cooking.skillLabel>cooking (nuggies)</Cooking.skillLabel>
+	<Cooking.description>Creating nuggies, tendies and other food I guess without a trip to Maccies or food poisoning (hopefully).</Cooking.description>
+
+</LanguageData>
