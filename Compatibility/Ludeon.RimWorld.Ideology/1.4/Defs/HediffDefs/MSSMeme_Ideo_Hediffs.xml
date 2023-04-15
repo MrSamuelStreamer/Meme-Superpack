@@ -4,7 +4,7 @@
 
 	<HediffDef ParentName="WorkRoleAuraBuffHediffBase">
 		<defName>MSSMeme_ILikeBuildBase</defName>
-		<label>I like build base</label>
+		<label>I like build base aura</label>
 		<labelNoun>a desire to build base good</labelNoun>
 		<description>A low thrumming need, deep in the monke brain demanding that we build base now reducing the need for food and sleep while build base yes.</description>
 		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
