@@ -10,7 +10,8 @@ public class IncidentWorker_StockpileFire : IncidentWorker
 	protected virtual bool SendLetter => true;
 
 	protected override bool CanFireNowSub(IncidentParms parms) =>
-		base.CanFireNowSub(parms) && TryFindRootCell(parms.target as Map, out _);
+		MemeSuperpackMod.settings.stockpileFires && base.CanFireNowSub(parms) &&
+		TryFindRootCell(parms.target as Map, out _);
 
 	public void TryStartFire(Map map, IntVec3 cell)
 	{

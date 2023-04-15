@@ -1,8 +1,6 @@
-using System;
 using System.Collections.Generic;
 using HarmonyLib;
 using RimWorld;
-using UnityEngine;
 using Verse;
 
 namespace MSS.MemeSuperpack.HarmonyPatches;
@@ -13,7 +11,6 @@ namespace MSS.MemeSuperpack.HarmonyPatches;
  */
 public class JokeSaver
 {
-
 	[HarmonyPatch(typeof(ThingDef), nameof(ThingDef.SpecialDisplayStats))]
 	public static class RedactMinableThings
 	{
@@ -24,7 +21,8 @@ public class JokeSaver
 		{
 			foreach (StatDrawEntry entry in result)
 			{
-				if (entry.LabelCap != MinableThingLabel || !(entry.ValueString.Contains("Coal") || entry.ValueString.Contains("coal"))) yield return entry;
+				if (!MemeSuperpackMod.settings.coalTypeHidden || entry.LabelCap != MinableThingLabel ||
+				    !(entry.ValueString.Contains("Coal") || entry.ValueString.Contains("coal"))) yield return entry;
 			}
 		}
 	}

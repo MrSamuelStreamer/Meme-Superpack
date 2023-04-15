@@ -71,8 +71,7 @@ namespace MSS.MemeSuperpack
 	{
 		public override bool StateCanOccur(Pawn pawn)
 		{
-			if (!base.StateCanOccur(pawn))
-				return false;
+			if (!MemeSuperpackMod.settings.kickNukes || !base.StateCanOccur(pawn)) return false;
 			return SmashableUtility.GetSmashableThingsNear(pawn, pawn.Position, new Stack<Thing>(),
 				customValidator: thing => Nukes.NukeDefs.Value.Contains(thing.def)) > 0;
 		}

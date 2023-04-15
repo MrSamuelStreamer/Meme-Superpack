@@ -10,6 +10,7 @@ public class GameComponent_RimRimTracker : GameComponent
 	public override void GameComponentTick()
 	{
 		base.GameComponentTick();
+		if (!MemeSuperpackMod.settings.whereRimRim) return;
 		var ticksGame = Find.TickManager.TicksGame;
 		if (_nextPossibleLetterTick > ticksGame || ticksGame % 1000 != 0 ||
 		    GenLocalDate.HourOfDay(Find.CurrentMap) != 16) return;

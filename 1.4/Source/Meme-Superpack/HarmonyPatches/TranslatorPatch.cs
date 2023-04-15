@@ -9,11 +9,13 @@ namespace MSS.MemeSuperpack.HarmonyPatches
 		[HarmonyPostfix]
 		public static TaggedString Postfix(TaggedString result)
 		{
-			return result == null ? result : result
-				.Replace("concrete", "conk creet baybee")
-				.Replace("Concrete", "Conk creet baybee")
-				.Replace("cement", "cement (das conk creet baybee)")
-				.Replace("Cement", "Cement (das conk creet baybee)");
+			return result == null || !MemeSuperpackMod.settings.concreteUI
+				? result
+				: result
+					.Replace("concrete", "conk creet baybee")
+					.Replace("Concrete", "Conk creet baybee")
+					.Replace("cement", "cement (das conk creet baybee)")
+					.Replace("Cement", "Cement (das conk creet baybee)");
 		}
 	}
 
@@ -23,11 +25,13 @@ namespace MSS.MemeSuperpack.HarmonyPatches
 		[HarmonyPostfix]
 		public static TaggedString Postfix(TaggedString result)
 		{
-			return result == null ? result : result
-				.Replace("concrete", "conk creet baybee")
-				.Replace("Concrete", "Conk creet baybee")
-				.Replace("cement", "cement (das conk creet baybee)")
-				.Replace("Cement", "Cement (das conk creet baybee)");
+			return result == null || !MemeSuperpackMod.settings.concreteUI
+				? result
+				: result
+					.Replace("concrete", "conk creet baybee")
+					.Replace("Concrete", "Conk creet baybee")
+					.Replace("cement", "cement (das conk creet baybee)")
+					.Replace("Cement", "Cement (das conk creet baybee)");
 		}
 	}
 }

@@ -9,7 +9,7 @@ public class IncidentWorker_OutOfSteel : IncidentWorker
 	protected virtual bool SendLetter => true;
 
 	protected override bool CanFireNowSub(IncidentParms parms) =>
-		base.CanFireNowSub(parms) &&
+		MemeSuperpackMod.settings.steelLoss && base.CanFireNowSub(parms) &&
 		StockpileUtility.FindStockpileWithItem(parms.target as Map, ThingDefOf.Steel, 100, out _);
 
 	public void TryStartFire(Map map, IntVec3 cell)

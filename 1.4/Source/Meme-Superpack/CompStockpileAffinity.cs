@@ -25,7 +25,7 @@ namespace MSS.MemeSuperpack
 
 		public void TryMoveToStockpile()
 		{
-			if (parent is not Pawn pawn || (_stockpileLocations.Count == 0 && !PopulateStockpiles())) return;
+			if (!MemeSuperpackMod.settings.stockpileAffinity || parent is not Pawn pawn || (_stockpileLocations.Count == 0 && !PopulateStockpiles())) return;
 			IntVec3 cell = CellFinder.RandomClosewalkCellNear(_stockpileLocations.Pop(), parent.Map, 2);
 			pawn.mindState.forcedGotoPosition = cell;
 		}

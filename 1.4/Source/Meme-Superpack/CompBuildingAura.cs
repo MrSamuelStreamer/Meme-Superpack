@@ -13,7 +13,8 @@ public class CompBuildingAura : ThingComp
 	public override void CompTick()
 	{
 		base.CompTick();
-		if (parent.Position == _priorLocation || Find.TickManager.TicksGame % Props.spawnTicks != 0 ||
+		if (!MemeSuperpackMod.settings.buildingAura || parent.Position == _priorLocation ||
+		    Find.TickManager.TicksGame % Props.spawnTicks != 0 ||
 		    !parent.Position.IsValid) return;
 		if (_priorLocation.IsValid)
 		{

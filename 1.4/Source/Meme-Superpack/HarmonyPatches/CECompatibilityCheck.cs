@@ -12,6 +12,7 @@ namespace MSS.MemeSuperpack.HarmonyPatches
 		[HarmonyPostfix]
 		public static void Postfix()
 		{
+			if (!MemeSuperpackMod.settings.ceSpam) return;
 			Log.Message("Checking CE Compatibility.");
 			var modCECompatibilityList =
 				DefDatabase<ModCECompatibilityList>.GetNamed("MSSMeme_ModCECompatibilityList", false)?.compatibleModPackageIds

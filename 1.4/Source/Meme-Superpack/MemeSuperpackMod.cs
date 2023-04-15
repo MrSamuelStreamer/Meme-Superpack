@@ -12,7 +12,7 @@ namespace MSS.MemeSuperpack
 
 		public MemeSuperpackMod(ModContentPack content) : base(content)
 		{
-			Log.Debug("Hello world from Meme-Superpack");
+			Log.Debug("Meme-Superpack is loaded, prepare yourself");
 
 			// initialize settings
 			settings = GetSettings<Settings>();

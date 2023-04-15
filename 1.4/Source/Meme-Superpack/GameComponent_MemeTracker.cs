@@ -39,11 +39,11 @@ public class GameComponent_MemeTracker : GameComponent
 		if (ticksGame % 20000 != 0) return;
 
 		// Start gaslighting 1% chance
-		if (CurrentGaslightingTopic == GaslightingTopic.None && Rand.Chance(0.01f) &&
+		if (!MemeSuperpackMod.settings.gaslighting && CurrentGaslightingTopic == GaslightingTopic.None && Rand.Chance(0.01f) &&
 		    (Enum.TryParse(Enum.GetNames(typeof(GaslightingTopic)).RandomElement(), out CurrentGaslightingTopic) &&
 		     CurrentGaslightingTopic != GaslightingTopic.None)) StartGasLighting();
 
-		if (!grignrAttacked && Rand.Chance(0.001f))
+		if (!grignrAttacked && !MemeSuperpackMod.settings.grignr && Rand.Chance(0.001f))
 		{
 			GrignrAttack();
 		}

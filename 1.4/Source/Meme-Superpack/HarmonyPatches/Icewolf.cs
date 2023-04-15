@@ -16,7 +16,8 @@ public class Icewolf
 			Pawn pawn = map.mapPawns.AllPawns.Find(p =>
 				p.Name?.ToStringFull?.ToLowerInvariant().Contains("icewo") ?? false);
 
-			if (pawn != null) RCellFinder.TryFindRandomCellNearWith(pawn.Position, _ => true, pawn.Map, out cell, 5, 10);
+			if (pawn != null && MemeSuperpackMod.settings.icewolf)
+				RCellFinder.TryFindRandomCellNearWith(pawn.Position, _ => true, pawn.Map, out cell, 5, 10);
 			__result = cell.IsValid;
 			return !__result;
 		}
@@ -33,7 +34,8 @@ public class Icewolf
 			Pawn pawn = Find.CurrentMap.mapPawns.AllPawns.Find(p =>
 				p.Name?.ToStringFull?.ToLowerInvariant().Contains("icewo") ?? false);
 
-			if (pawn != null) RCellFinder.TryFindRandomCellNearWith(pawn.Position, _ => true, map, out pos, 5, 10);
+			if (pawn != null && MemeSuperpackMod.settings.icewolf)
+				RCellFinder.TryFindRandomCellNearWith(pawn.Position, _ => true, map, out pos, 5, 10);
 			__result = pos.IsValid;
 			return !__result;
 		}

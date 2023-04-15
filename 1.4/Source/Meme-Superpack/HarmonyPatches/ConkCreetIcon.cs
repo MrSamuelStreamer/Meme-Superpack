@@ -14,7 +14,9 @@ namespace MSS.MemeSuperpack.HarmonyPatches
 		[HarmonyPostfix]
 		public static Texture2D Postfix(Texture2D result, ThingDef stuff)
 		{
-			return stuff == null || !stuff.defName.Contains("oncrete") ? result : ConkCreetTexture.Value;
+			return !MemeSuperpackMod.settings.concreteUI || stuff == null || !stuff.defName.Contains("oncrete")
+				? result
+				: ConkCreetTexture.Value;
 		}
 	}
 
@@ -27,7 +29,7 @@ namespace MSS.MemeSuperpack.HarmonyPatches
 		[HarmonyPostfix]
 		public static void Postfix(BuildableDef __instance)
 		{
-			if (!__instance.defName.Contains("oncrete")) return;
+			if (!MemeSuperpackMod.settings.concreteUI || !__instance.defName.Contains("oncrete")) return;
 			__instance.uiIcon = ConkCreetTexture.Value;
 		}
 	}

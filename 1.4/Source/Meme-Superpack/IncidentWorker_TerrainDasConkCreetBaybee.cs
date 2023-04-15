@@ -8,7 +8,8 @@ public class IncidentWorker_TerrainDasConkCreetBaybee : IncidentWorker
 	protected virtual bool SendLetter => true;
 
 	protected override bool CanFireNowSub(IncidentParms parms) =>
-		base.CanFireNowSub(parms) && TryFindRootCell(parms.target as Map, out IntVec3 _);
+		MemeSuperpackMod.settings.concreteTerrainConversion && base.CanFireNowSub(parms) &&
+		TryFindRootCell(parms.target as Map, out IntVec3 _);
 
 	public void MakeConkCreetBaybee(Map map, IntVec3 cell)
 	{

@@ -20,6 +20,7 @@ public class IncidentWorker_Warcaskets : IncidentWorker
 	protected virtual bool SendLetter => true;
 
 	protected override bool CanFireNowSub(IncidentParms parms) =>
+		MemeSuperpackMod.settings.warcasketEvent &&
 		WarcasketTrait.Value != null &&
 		base.CanFireNowSub(parms) &&
 		Find.CurrentMap.mapPawns.AllPawnsSpawned.Exists(p => p.story?.traits?.HasTrait(WarcasketTrait.Value) ?? false);
@@ -28,7 +29,7 @@ public class IncidentWorker_Warcaskets : IncidentWorker
 	{
 		Map target = (Map)parms.target;
 		List<Pawn> pawns = new();
-		foreach (Pawn pawn in Find.CurrentMap.mapPawns.AllPawnsSpawned.Where(p =>
+		foreach (Pawn pawn in target.mapPawns.AllPawnsSpawned.Where(p =>
 			         p.story?.traits?.HasTrait(WarcasketTrait.Value) ?? false))
 		{
 			Verse.Hediff addictionHediff = AddictionUtility.FindAddictionHediff(pawn, PsychiteDef.Value);

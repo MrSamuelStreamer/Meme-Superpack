@@ -8,7 +8,7 @@ public class IncidentWorker_Icewolf : IncidentWorker
 	protected virtual bool SendLetter => true;
 
 	protected override bool CanFireNowSub(IncidentParms parms) =>
-		base.CanFireNowSub(parms) &&
+		MemeSuperpackMod.settings.icewolf && base.CanFireNowSub(parms) &&
 		Find.CurrentMap.mapPawns.AllPawns.Exists(p => p.Name?.ToStringFull?.ToLowerInvariant().Contains("icewo") ?? false);
 
 	protected override bool TryExecuteWorker(IncidentParms parms)
