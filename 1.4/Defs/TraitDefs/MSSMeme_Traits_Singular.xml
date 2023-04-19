@@ -49,7 +49,7 @@
 				</statOffsets>
 				<randomDiseaseMtbDays>15</randomDiseaseMtbDays>
 				<statFactors>
-					<IncomingDamageFactor>2</IncomingDamageFactor>
+					<IncomingDamageFactor>2.5</IncomingDamageFactor>
 				</statFactors>
 			</li>
 		</degreeDatas>
