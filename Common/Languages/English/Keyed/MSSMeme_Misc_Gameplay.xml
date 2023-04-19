@@ -12,4 +12,16 @@
 	<MSSMeme_Gaslighting_End>Having finally been shouted down, the commenter has stopped insisting that {0}. You feel vindicated and like the world is a little less insane.\n\nIt's a good job you haven't just rebuilt half the base to accomodate their nonsense...</MSSMeme_Gaslighting_End>
 
 	<MSSMeme_GaslightingTopic_DarkSolar>solar panels only work in the dark</MSSMeme_GaslightingTopic_DarkSolar>
+
+	<MSSMeme_WhereRimRimLetter>Where RimRim!</MSSMeme_WhereRimRimLetter>
+	<MSSMeme_WhereRimRimLetterText>It's 18:00, where RimRim!\n\nAny RimRims currently under your control may throw a tantrum if they don't get their daily RimRim soon.\n\nYes, this is expected every single day with no breaks for illness, holiday or sewage leaking into your house. Get used to it.</MSSMeme_WhereRimRimLetterText>
+
+	<!-- Manhunter pack -->
+	<LetterLabelManhunterPackArrived>Wes' Wrath</LetterLabelManhunterPackArrived>
+	<ManhunterPackArrived>A pack of man-hunting {0} have entered the area! Driven to kill by the mighty animal sage Wes, they will roam the region, hunting for humanoid flesh.\n\nThey won't attack doors unless they see someone go through the door. Hide inside and you'll be safe. They also won't attack powered-off turrets, so turn your turrets off to save them.\n\nThe {0} will leave the area in one or two days. You can hide and wait them out, or fight them.</ManhunterPackArrived>
+
+	<!-- Farm animals wander in -->
+	<LetterLabelFarmAnimalsWanderIn>Wes' Blessing: {0}</LetterLabelFarmAnimalsWanderIn>
+	<LetterFarmAnimalsWanderIn>A group of {0}, inspired by the mighty animal sage Wes, have wandered into the area.\n\nWes has trained them well and they are joining the colony.</LetterFarmAnimalsWanderIn>
+
 </LanguageData>

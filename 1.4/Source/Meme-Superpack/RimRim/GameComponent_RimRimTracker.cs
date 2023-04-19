@@ -1,3 +1,4 @@
+using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -13,12 +14,15 @@ public class GameComponent_RimRimTracker : GameComponent
 		if (!MemeSuperpackMod.settings.whereRimRim) return;
 		var ticksGame = Find.TickManager.TicksGame;
 		if (_nextPossibleLetterTick > ticksGame || ticksGame % 1000 != 0 ||
-		    GenLocalDate.HourOfDay(Find.CurrentMap) != 16) return;
+		    GenLocalDate.HourOfDay(Find.CurrentMap) != 18) return;
 		_nextPossibleLetterTick = ticksGame + 55000; // 22H
 		if (!ModLister.IdeologyInstalled ||
-		    Find.FactionManager.OfPlayer.ideos.GetPrecept(MemeSuperPackDefOf.MSSMeme_RimRim_Demanded) == null) return;
-		Find.LetterStack.ReceiveLetter(LetterMaker.MakeLetter("Where RimRim!",
-			"It's 16:00, where RimRim!\n\nAny RimRims currently under your control may throw a tantrum if they don't get their daily RimRim soon.\n\nYes, this is expected every single day with no breaks for illness, holiday or sewage leaking into your house. Get used to it.",
+		    Find.FactionManager.OfPlayer.ideos.GetPrecept(MemeSuperPackDefOf.MSSMeme_RimRim_Demanded) == null ||
+		    !Find.CurrentMap.PlayerPawnsForStoryteller.Any(p =>
+			    (p.ideo?.Ideo?.HasPrecept(MemeSuperPackDefOf.MSSMeme_RimRim_Demanded) ?? false) &&
+			    (MemeSuperPackDefOf.MSSMeme_RimRim_Missed.Worker?.CurrentState(p).Active ?? false))) return;
+		Find.LetterStack.ReceiveLetter(LetterMaker.MakeLetter("MSSMeme_WhereRimRimLetter".TranslateSimple(),
+			"MSSMeme_WhereRimRimLetterText".Translate(),
 			LetterDefOf.NegativeEvent));
 	}
 
