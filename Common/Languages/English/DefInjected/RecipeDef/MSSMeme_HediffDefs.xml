@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+
+	<InstallCoagulator.label>install upsy-daisy vampirey healy implant</InstallCoagulator.label>
+	<InstallCoagulator.description>Install an upsy-daisy vampirey healy implant.</InstallCoagulator.description>
+	<InstallCoagulator.jobString>Installing upsy-daisy vampirey healy implant.</InstallCoagulator.jobString>
+
+	<RemoveCoagulator.label>remove upsy-daisy vampirey healy implant</RemoveCoagulator.label>
+	<RemoveCoagulator.description>Remove upsy-daisy vampirey healy implant.</RemoveCoagulator.description>
+	<RemoveCoagulator.jobString>Removing upsy-daisy vampirey healy implant.</RemoveCoagulator.jobString>
+
+
+	<InstallToughskinGland.label>install grignrskin gland</InstallToughskinGland.label>
+	<InstallToughskinGland.description>Install a grignrskin gland.</InstallToughskinGland.description>
+	<InstallToughskinGland.jobString>Installing grignrskin gland.</InstallToughskinGland.jobString>
+
+	<RemoveToughskinGland.label>remove grignrskin gland</RemoveToughskinGland.label>
+	<RemoveToughskinGland.description>Remove grignrskin gland.</RemoveToughskinGland.description>
+	<RemoveToughskinGland.jobString>Removing grignrskin gland.</RemoveToughskinGland.jobString>
+
+
+	<InstallArmorskinGland.label>install bugsyskin gland</InstallArmorskinGland.label>
+	<InstallArmorskinGland.description>Install an bugsyskin gland.</InstallArmorskinGland.description>
+	<InstallArmorskinGland.jobString>Installing bugsyskin gland.</InstallArmorskinGland.jobString>
+
+	<RemoveArmorskinGland.label>remove bugsyskin gland</RemoveArmorskinGland.label>
+	<RemoveArmorskinGland.description>Remove bugsyskin gland.</RemoveArmorskinGland.description>
+	<RemoveArmorskinGland.jobString>Removing bugsyskin gland.</RemoveArmorskinGland.jobString>
+
+
+	<InstallStoneskinGland.label>install conk creet (baybee) skin gland</InstallStoneskinGland.label>
+	<InstallStoneskinGland.description>Install a conk creet (baybee) skin gland.</InstallStoneskinGland.description>
+	<InstallStoneskinGland.jobString>Installing conk creet (baybee) skin gland.</InstallStoneskinGland.jobString>
+
+	<RemoveStoneskinGland.label>remove conk creet (baybee) skin gland</RemoveStoneskinGland.label>
+	<RemoveStoneskinGland.description>Remove conk creet (baybee) skin gland.</RemoveStoneskinGland.description>
+	<RemoveStoneskinGland.jobString>Removing conk creet (baybee) skin gland.</RemoveStoneskinGland.jobString>
+
+
+	<InstallCircadianHalfCycler.label>install Streamer brain helper</InstallCircadianHalfCycler.label>
+	<InstallCircadianHalfCycler.description>Install a Streamer brain helper.</InstallCircadianHalfCycler.description>
+	<InstallCircadianHalfCycler.jobString>Installing Streamer brain helper.</InstallCircadianHalfCycler.jobString>
+
+	<RemoveCircadianHalfCycler.label>remove Streamer brain helper</RemoveCircadianHalfCycler.label>
+	<RemoveCircadianHalfCycler.description>Remove Streamer brain helper.</RemoveCircadianHalfCycler.description>
+	<RemoveCircadianHalfCycler.jobString>Removing Streamer brain helper.</RemoveCircadianHalfCycler.jobString>
+
+</LanguageData>

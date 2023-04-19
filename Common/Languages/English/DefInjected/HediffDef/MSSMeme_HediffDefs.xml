@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+
+	<Coagulator.label>upsy-daisy vampirey healy implant</Coagulator.label>
+	<Coagulator.labelNoun>a upsy-daisy vampirey healy implant</Coagulator.labelNoun>
+	<Coagulator.description>An installed upsy-daisy vampirey healy implant.</Coagulator.description>
+
+	<ToughskinGland.label>grignrskin gland</ToughskinGland.label>
+	<ToughskinGland.labelNoun>a grignrskin gland.</ToughskinGland.labelNoun>
+
+	<ArmorskinGland.label>bugsyskin gland</ArmorskinGland.label>
+	<ArmorskinGland.labelNoun>a bugsyskin gland</ArmorskinGland.labelNoun>
+	<ArmorskinGland.description>An installed bugsyskin gland.</ArmorskinGland.description>
+
+	<StoneskinGland.label>conk creet (baybee) skin gland</StoneskinGland.label>
+	<StoneskinGland.labelNoun>a conk creet (baybee) skin gland</StoneskinGland.labelNoun>
+	<StoneskinGland.description>An installed conk creet (baybee) skin gland.</StoneskinGland.description>
+
+	<CircadianHalfCycler.label>Streamer brain helper</CircadianHalfCycler.label>
+	<CircadianHalfCycler.labelNoun>a Streamer brain helper</CircadianHalfCycler.labelNoun>
+	<CircadianHalfCycler.description>An installed Streamer brain helper.</CircadianHalfCycler.description>
+
+</LanguageData>
