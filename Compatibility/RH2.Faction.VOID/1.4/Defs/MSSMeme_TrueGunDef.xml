@@ -12,12 +12,12 @@
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
 		<statBases>
-			<WorkToMake>60000</WorkToMake>
+			<WorkToMake>69000</WorkToMake>
 			<Mass>10</Mass>
-			<AccuracyTouch>0.01</AccuracyTouch>
-			<AccuracyShort>0.01</AccuracyShort>
-			<AccuracyMedium>0.01</AccuracyMedium>
-			<AccuracyLong>0.01</AccuracyLong>
+			<AccuracyTouch>1.01</AccuracyTouch>
+			<AccuracyShort>1.01</AccuracyShort>
+			<AccuracyMedium>1.01</AccuracyMedium>
+			<AccuracyLong>1.01</AccuracyLong>
 			<RangedWeapon_Cooldown>0.01</RangedWeapon_Cooldown>
 		</statBases>
 		<costList>
@@ -44,7 +44,7 @@
 			<MSSMeme_OttomaticGun>3</MSSMeme_OttomaticGun>
 		</costList>
 		<recipeMaker>
-			<researchPrerequisite>ChargedShot</researchPrerequisite>
+			<researchPrerequisite>MSSMeme_TrueFullyOttomatic</researchPrerequisite>
 			<skillRequirements>
 				<Crafting>16</Crafting>
 			</skillRequirements>
@@ -63,7 +63,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>MSSMeme_Bullet_TrueOttomatic</defaultProjectile>
 				<warmupTime>0.01</warmupTime>
-				<range>19.9</range>
+				<range>14.9</range>
 				<soundCast>Shot_Minigun</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>19</muzzleFlashScale>
@@ -107,7 +107,7 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>-0.05</offset>
+            <postFactor>0.9</postFactor>
           </li>
         </capMods>
       </li>
@@ -117,7 +117,7 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>-0.2</offset>
+            <postFactor>0.8</postFactor>
           </li>
         </capMods>
       </li>
@@ -127,7 +127,7 @@
         <capMods>
           <li>
             <capacity>Moving</capacity>
-            <offset>-0.35</offset>
+            <postFactor>0.7</postFactor>
           </li>
         </capMods>
       </li>
