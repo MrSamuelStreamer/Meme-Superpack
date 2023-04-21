@@ -93,7 +93,7 @@
   <HediffDef ParentName="DiseaseBase">
     <defName>MSSMeme_Suppression</defName>
     <label>suppression</label>
-    <description>A condition caused by being peppered by an obscene number of bullets. Now CatLover366, why did you add this very powerful effect to the already super overpowered shotgun-minigun, you may be asking? Well, my dear reader, that is because I discovered during testing that Chicken Plucker made the charred variants of the N-4 infected creatures RIDICULOUSLY fast even when being hit. It generates an absolutely terrifying mental image to be honest. Here is this towering hunk of flesh just BARRELING towards you at blistering speed despite being hit by 10 bullets per second. If you're reading/watching this Chicken Plucker, hats off to you, those things are horrifying.</description>
+    <description>A condition caused by being peppered by an obscene number of bullets. Now you may be asking, "CatLover366, why did you add this very powerful effect to the already super overpowered shotgun-minigun?" Well, my dear hypothetically inquisitive reader, that is because I discovered during testing that Chicken Plucker made the charred variants of the N-4 infected creatures RIDICULOUSLY fast even when being hit. It generates an absolutely terrifying mental image to be honest. Here is this towering hunk of flesh just BARRELING towards you at blistering speed despite being hit by 10 bullets per second. If you're reading/watching this Chicken Plucker, hats off to you, those things are horrifying.</description>
     <scenarioCanAdd>true</scenarioCanAdd>
     <initialSeverity>1</initialSeverity>
     <comps>
