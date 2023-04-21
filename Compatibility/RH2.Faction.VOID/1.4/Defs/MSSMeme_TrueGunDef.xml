@@ -7,7 +7,7 @@
 		<label>True Fully Ottomatic gun</label>
 		<description>A mythical gun named after an individual rumored to have achieved unmatchable combat abilities.  Through the power of coal, V.O.I.D. weaponry, and a lot of desperation, its true potential has been unlocked. This weapon unleashes what can only be described as a wall of projectiles in whatever direction it is aimed at. It also causes suppression on whatever gets hit by one of its bullets. However, due to Wi-Fi interference, any structures that are in the path of the bullets will disrupt the stream of bullets. Thus, this gun is best used in open spaces.</description>
 		<graphicData>
-			<texPath>Things/Item/Equipment/WeaponRanged/MSSMeme_Ottomatic</texPath>
+			<texPath>Things/Item/Equipment/WeaponRanged/MSSMeme_TrueOttomatic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<soundInteract>Interact_Rifle</soundInteract>
