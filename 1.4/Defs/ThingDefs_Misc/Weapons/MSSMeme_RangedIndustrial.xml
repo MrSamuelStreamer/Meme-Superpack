@@ -24,21 +24,9 @@
 			<AccuracyLong>0.01</AccuracyLong>
 			<RangedWeapon_Cooldown>0.01</RangedWeapon_Cooldown>
 		</statBases>
-		<recipeMaker>
-			<researchPrerequisite>MSSMeme_FullyOttomatic</researchPrerequisite>
-			<skillRequirements>
-				<Crafting>16</Crafting>
-			</skillRequirements>
-			<recipeUsers Inherit="False">
-				<li>FabricationBench</li>
-			</recipeUsers>
-		</recipeMaker>
 		<costList>
-			<Plasteel>420</Plasteel>
 			<Steel>420</Steel>
-			<MSSMeme_SuperCoal>100</MSSMeme_SuperCoal>
-			<ComponentIndustrial>6</ComponentIndustrial>
-			<ComponentSpacer>9</ComponentSpacer>
+			<ComponentIndustrial>69</ComponentIndustrial>
 		</costList>
 		<techLevel>Ultra</techLevel>
 		<equippedStatOffsets>
