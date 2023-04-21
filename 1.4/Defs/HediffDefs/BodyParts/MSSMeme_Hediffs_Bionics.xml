@@ -5,7 +5,7 @@
 
 	<HediffDef ParentName="ImplantHediffBase">
 		<defName>MSSMeme_ConcreteGland</defName>
-		<label>concrete gland</label>
+		<label>concreteskin gland</label>
 		<labelNoun>concrete gland</labelNoun>
 		<description>This highly advanced bionic gland disperses minerals and nanomachines across the user's skin when installed. These nanomachines proceed to morph sections of said skin into thick plates of a highly durable concrete-like substance across the body. Interestingly, the appearance and locations of the concrete plates could generally be described as aesthetically pleasing (you're welcome fan artists), akin to form fitting plate armor across the body and seemingly leaving the face alone. Pawns with this bionic are very difficult to kill, but are also very very slow.</description>
 		<descriptionHyperlinks>
@@ -33,7 +33,7 @@
 
 	<ThingDef ParentName="BodyPartBionicBase">
 		<defName>MSSMeme_ConcreteGland</defName>
-		<label>concrete gland</label>
+		<label>concreteskin gland</label>
 		<description>This highly advanced bionic gland disperses minerals and nanomachines across the user's skin when installed. These nanomachines proceed to morph sections of said skin into thick plates of a highly durable concrete-like substance across the body. Interestingly, the appearance and locations of the concrete plates could generally be described as aesthetically pleasing (you're welcome fan artists), akin to form fitting plate armor across the body and generally leaving the face alone appearance wise. Pawns with this bionic are very difficult to kill, but are also very very slow.</description>
 		<descriptionHyperlinks>
 			<RecipeDef>MSSMeme_InstallConcreteGland</RecipeDef>
@@ -54,13 +54,13 @@
 
 	<RecipeDef ParentName="SurgeryInstallImplantBase">
 		<defName>MSSMeme_InstallConcreteGland</defName>
-		<label>install concrete gland</label>
-		<description>Install a concrete gland.</description>
+		<label>install concreteskin gland</label>
+		<description>Install a concreteskin gland.</description>
 		<descriptionHyperlinks>
 			<ThingDef>MSSMeme_ConcreteGland</ThingDef>
 			<HediffDef>MSSMeme_ConcreteGland</HediffDef>
 		</descriptionHyperlinks>
-		<jobString>Installing concrete gland.</jobString>
+		<jobString>Installing concreteskin gland.</jobString>
 		<ingredients>
 			<li>
 				<filter>
@@ -87,13 +87,13 @@
 
 	<RecipeDef ParentName="SurgeryRemoveImplantBase">
 		<defName>MSSMeme_RemoveConcreteGland</defName>
-		<label>remove concrete gland</label>
-		<description>Remove concrete gland.</description>
+		<label>remove concreteskin gland</label>
+		<description>Remove concreteskin gland.</description>
 		<descriptionHyperlinks>
 			<ThingDef>MSSMeme_ConcreteGland</ThingDef>
 			<HediffDef>MSSMeme_ConcreteGland</HediffDef>
 		</descriptionHyperlinks>
-		<jobString>Removing concrete gland.</jobString>
+		<jobString>Removing concreteskin gland.</jobString>
 		<removesHediff>MSSMeme_ConcreteGland</removesHediff>
 	</RecipeDef>
 
