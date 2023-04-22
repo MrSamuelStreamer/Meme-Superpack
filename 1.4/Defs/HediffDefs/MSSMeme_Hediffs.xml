@@ -35,7 +35,22 @@
 			</li>
 			<li>
 				<becomeVisible>true</becomeVisible>
-				<minSeverity>12</minSeverity>
+				<minSeverity>1</minSeverity>
+				<label>Awake, starting to get a little sleepy.</label>
+				<socialFightChanceFactor>1.2</socialFightChanceFactor>
+				<statOffsets>
+					<RestFallRateFactor>1.1</RestFallRateFactor>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<becomeVisible>true</becomeVisible>
+				<minSeverity>2</minSeverity>
 				<label>Awake, what an awful state of existance.</label>
 				<socialFightChanceFactor>1.2</socialFightChanceFactor>
 				<statOffsets>
@@ -44,7 +59,7 @@
 				<capMods>
 					<li>
 						<capacity>Consciousness</capacity>
-						<offset>-0.10</offset>
+						<offset>-0.05</offset>
 					</li>
 					<li>
 						<capacity>Moving</capacity>
@@ -58,7 +73,7 @@
 			</li>
 			<li>
 				<becomeVisible>true</becomeVisible>
-				<minSeverity>18</minSeverity>
+				<minSeverity>3</minSeverity>
 				<label>Dead tired, barely sentient at this point really.</label>
 				<socialFightChanceFactor>2.5</socialFightChanceFactor>
 				<statOffsets>

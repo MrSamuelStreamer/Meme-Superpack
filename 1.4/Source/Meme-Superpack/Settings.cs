@@ -22,6 +22,7 @@ namespace MSS.MemeSuperpack
 		public bool whereRimRim = true;
 		public bool concreteUI = true;
 		public bool coalTypeHidden = true;
+		public bool sillyTranslations = true;
 
 		public void DoWindowContents(Rect wrect)
 		{
@@ -44,6 +45,7 @@ namespace MSS.MemeSuperpack
 			options.CheckboxLabeled("Allow Building Aura", ref buildingAura);
 			options.CheckboxLabeled("Allow Where RimRim", ref whereRimRim);
 			options.CheckboxLabeled("Allow Hiding mineable Coal Type", ref coalTypeHidden);
+			options.CheckboxLabeled("Allow Silly Translations", ref sillyTranslations);
 			options.Gap();
 
 			options.End();
@@ -67,6 +69,7 @@ namespace MSS.MemeSuperpack
 			Scribe_Values.Look(ref whereRimRim, "whereRimRim", true);
 			Scribe_Values.Look(ref concreteUI, "concreteUI", true);
 			Scribe_Values.Look(ref coalTypeHidden, "coalTypeHidden", true);
+			Scribe_Values.Look(ref sillyTranslations, "sillyTranslations", true);
 		}
 	}
 }

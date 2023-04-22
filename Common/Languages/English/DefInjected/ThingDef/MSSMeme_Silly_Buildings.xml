@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+
+	<Hopper.description>Holds resources for use by machines like gamer slop dispensers.</Hopper.description>
+
+	<NutrientPasteDispenser.label>gamer slop dispenser</NutrientPasteDispenser.label>
+	<NutrientPasteDispenser.description>A machine that synthesizes edible gamer slop from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating gamer slop. Accepts raw food, but not rough plant matter like hay.</NutrientPasteDispenser.description>
+
+</LanguageData>

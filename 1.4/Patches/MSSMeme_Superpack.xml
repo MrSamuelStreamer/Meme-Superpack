@@ -1,46 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Patch>
-	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/TerrainDef[defName="Concrete"]/uiIconPath</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>/Defs/TerrainDef[defName="Concrete"]</xpath>
-			<value>
-				<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
-			</value>
-		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/TerrainDef[defName="Concrete"]</xpath>
-			<value>
-				<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
-			</value>
-		</nomatch>
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>concreteUI</setting>
+		<enabled Class="PatchOperationConditional">
+			<xpath>/Defs/TerrainDef[defName="Concrete"]/uiIconPath</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/TerrainDef[defName="Concrete"]</xpath>
+				<value>
+					<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/TerrainDef[defName="Concrete"]</xpath>
+				<value>
+					<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
+				</value>
+			</nomatch>
+		</enabled>
 	</Operation>
 
-	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/TerrainDef[defName="PavedTile"]/uiIconPath</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>/Defs/TerrainDef[defName="PavedTile"]</xpath>
-			<value>
-				<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
-			</value>
-		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/TerrainDef[defName="PavedTile"]</xpath>
-			<value>
-				<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
-			</value>
-		</nomatch>
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>concreteUI</setting>
+		<enabled Class="PatchOperationConditional">
+			<xpath>/Defs/TerrainDef[defName="PavedTile"]/uiIconPath</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/TerrainDef[defName="PavedTile"]</xpath>
+				<value>
+					<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/TerrainDef[defName="PavedTile"]</xpath>
+				<value>
+					<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
+				</value>
+			</nomatch>
+		</enabled>
 	</Operation>
 
-	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef/stuffProps[stuffAdjective="concrete"]/stuffAdjective</xpath>
-		<match Class="PatchOperationReplace">
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/TerrainDef[defName="Concrete"]/statBases/Beauty</xpath>
+		<value>
+			<Beauty>4</Beauty>
+		</value>
+	</Operation>
+
+
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>concreteUI</setting>
+		<enabled Class="PatchOperationConditional">
 			<xpath>/Defs/ThingDef/stuffProps[stuffAdjective="concrete"]/stuffAdjective</xpath>
-			<value>
-				<stuffAdjective>conk creet baybee</stuffAdjective>
-			</value>
-		</match>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef/stuffProps[stuffAdjective="concrete"]/stuffAdjective</xpath>
+				<value>
+					<stuffAdjective>conk creet baybee</stuffAdjective>
+				</value>
+			</match>
+		</enabled>
 	</Operation>
 
 	<Operation Class="PatchOperationAdd">
