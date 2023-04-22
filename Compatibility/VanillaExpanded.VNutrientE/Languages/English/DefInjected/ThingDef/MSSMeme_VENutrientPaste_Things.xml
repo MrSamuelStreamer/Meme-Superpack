@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<LanguageData>
+
+	<VNPE_Filth_Paste.label>gamer sludge</VNPE_Filth_Paste.label>
+	<VNPE_Filth_Paste.label>A puddle of gamer slop.</VNPE_Filth_Paste.label>
+
+	<VNPE_NutrientPasteVat.label>gamer slop vat</VNPE_NutrientPasteVat.label>
+	<VNPE_NutrientPasteVat.description>A large tank that can store up to 75 gamer slop meals in it. Makes a big mess when destroyed.</VNPE_NutrientPasteVat.description>
+
+	<VNPE_NutrientPasteGrinder.label>gamer slop grinder</VNPE_NutrientPasteGrinder.label>
+	<VNPE_NutrientPasteGrinder.description>A machine that synthesizes edible gamer slop from organic feedstocks placed in adjacent hoppers. It consumes less ingredients and time than any other meal production method - but nobody likes eating gamer slop. Accepts raw food, but not rough plant matter like hay. It does not actually dispense the gamer slop, but it allows it to be pumped into vats and dispensers in the network.</VNPE_NutrientPasteGrinder.description>
+
+	<VNPE_NutrientPasteTap.label>gamer slop tap</VNPE_NutrientPasteTap.label>
+	<VNPE_NutrientPasteTap.description>A hopper-like storage basin meant to hold dispensed gamer slop meal from the vats. Can be used by colonists and prisoners. Gamer slop meal dispensed and ready for pick-up can deteriorate.</VNPE_NutrientPasteTap.description>
+
+	<VNPE_NutrientPasteFeeder.label>gamer slop feeder</VNPE_NutrientPasteFeeder.label>
+	<VNPE_NutrientPasteFeeder.description>A small pipe output that allows colonists and citizens to pick up gamer slop.</VNPE_NutrientPasteFeeder.description>
+
+	<VNPE_NutrientPasteDripper.label>gamer slop dripper</VNPE_NutrientPasteDripper.label>
+	<VNPE_NutrientPasteDripper.description>A bedside device that feeds a person lying in bed whenever they are hungry, provided that gamer slop dripper is connected to a gamer slop vat. It must be placed directly adjacent to and facing the head of the bed. Placing more than one gamer slop dripper near the same bed has no effect.</VNPE_NutrientPasteDripper.description>
+
+	<VNPE_NutrientPastePipe.label>gamer slop pipe</VNPE_NutrientPastePipe.label>
+	<VNPE_NutrientPastePipe.description>Light steel pipes for transporting the sludge known as gamer slop from grinders and storage vats to dispensers.</VNPE_NutrientPastePipe.description>
+
+	<VNPE_UndergroundNutrientPastePipe.label>subterranean gamer slop pipe</VNPE_UndergroundNutrientPastePipe.label>
+	<VNPE_UndergroundNutrientPastePipe.description>Subterranean steel pipes for transporting the sludge known as gamer slop from grinders and storage vats to dispensers.</VNPE_UndergroundNutrientPastePipe.description>
+
+	<VNPE_NutrientPasteValve.label>gamer slop valve</VNPE_NutrientPasteValve.label>
+	<VNPE_NutrientPasteValve.description>Switches gamer slop flow on/off.</VNPE_NutrientPasteValve.description>
+
+</LanguageData>

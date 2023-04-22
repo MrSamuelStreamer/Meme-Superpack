@@ -24,4 +24,12 @@
 	<LetterLabelFarmAnimalsWanderIn>Wes' Blessing: {0}</LetterLabelFarmAnimalsWanderIn>
 	<LetterFarmAnimalsWanderIn>A group of {0}, inspired by the mighty animal sage Wes, have wandered into the area.\n\nWes has trained them well and they are joining the colony.</LetterFarmAnimalsWanderIn>
 
+
+	<!-- Alpha Memes -->
+	<Funeral_NoHopper>No reachable hopper around the gamer slop dispenser</Funeral_NoHopper>
+	<Funeral_NutrientPaste>A gamer slop dispenser, powered and with hoppers</Funeral_NutrientPaste>
+
+	<!-- Vanilla Nutrient Paste Expanded -->
+	<VNPE_NutValve>Switches gamer slop flow on/off.</VNPE_NutValve>
+	<VNPE_NutValveDesc>Switches gamer slop flow on/off. A pawn will come open/close the valve.</VNPE_NutValveDesc>
 </LanguageData>

@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <loadFolders>
 	<v1.4>
 		<li>Common</li>
@@ -10,5 +11,7 @@
 		<li IfModActive="Aoba.Fortress.Industrial">Compatibility/Aoba.Fortress.Industrial</li>
 		<li IfModActive="OskarPotocki.VFE.Pirates">Compatibility/OskarPotocki.VFE.Pirates/1.4</li>
 		<li IfModActive="RH2.Faction.VOID">Compatibility/RH2.Faction.VOID/1.4</li>
+		<li IfModActive="VanillaExpanded.VNutrientE">Compatibility/VanillaExpanded.VNutrientE</li>
+		<li IfModActive="Sarg.AlphaMemes">Compatibility/Sarg.AlphaMemes</li>
 	</v1.4>
 </loadFolders>

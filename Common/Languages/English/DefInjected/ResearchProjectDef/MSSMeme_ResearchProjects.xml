@@ -3,4 +3,8 @@
 <LanguageData>
 	<Stonecutting.description>Cut rock chunks into stone blocks for use in construction. Build beautiful stone tile floors or conk creet walkways baybee.</Stonecutting.description>
 	<Stonecutting.label>stonecutting and conk creet baybee</Stonecutting.label>
+
+	<NutrientPaste.label>gamer slop</NutrientPaste.label>
+	<NutrientPaste.description>Build gamer slop dispensers which efficiently produce edible meals from raw nutritive feedstocks, while requiring no labor at all.</NutrientPaste.description>
+
 </LanguageData>
