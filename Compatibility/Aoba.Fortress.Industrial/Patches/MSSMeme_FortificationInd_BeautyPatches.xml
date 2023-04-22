@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="FT_BlocksConcrete"]/stuffProps/statFactors/Beauty</xpath>
+		<value>
+			<Beauty>6</Beauty>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="FT_ReinforcedConcreteBag"]/stuffProps/statFactors/Beauty</xpath>
+		<value>
+			<Beauty>7</Beauty>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="FT_WoodConcrete"]/stuffProps/statFactors/Beauty</xpath>
+		<value>
+			<Beauty>10</Beauty>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="FT_ConcreteCompressed"]/stuffProps/statFactors/Beauty</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="FT_ConcreteCompressed"]/stuffProps/statFactors/Beauty</xpath>
+			<value>
+				<Beauty>8</Beauty>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="FT_ConcreteCompressed"]/stuffProps/statFactors</xpath>
+			<value>
+				<Beauty>8</Beauty>
+			</value>
+		</nomatch>
+	</Operation>
+
+
+</Patch>
