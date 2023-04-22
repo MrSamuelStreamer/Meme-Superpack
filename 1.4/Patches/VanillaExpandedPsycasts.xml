@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Psycasts Expanded</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VPE_Eltex"]/description</xpath>
+					<value>
+						<description>An extremely mysterious mineral that is both malleable and serves as a physical conduit for psycasts. As psycasting originates from archotech engines, some speculate that either these minerals were manufactured by the archotechs or that they developed their engines using this strange mineral. While eltex possesses a subtle shimmer that makes anything made out of it breathtakingly beautiful to look at, it is an extremely brittle material unsuited for use in weapons, armor, and defensive structures.</description>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VPE_Eltex"]/statBases</xpath>
+					<value>
+						<StuffPower_Armor_Sharp>0.01</StuffPower_Armor_Sharp>
+						<StuffPower_Armor_Blunt>0.01</StuffPower_Armor_Blunt>
+						<StuffPower_Armor_Heat>0.01</StuffPower_Armor_Heat>
+						<SharpDamageMultiplier>0.1</SharpDamageMultiplier>
+						<BluntDamageMultiplier>0.1</BluntDamageMultiplier>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VPE_Eltex"]</xpath>
+					<value>
+						<stuffProps>
+							<categories>
+								<li>Stony</li>
+							</categories>
+							<appearance>Metal</appearance>
+							<commonality>0</commonality>
+							<constructEffect>ConstructMetal</constructEffect>
+							<color>(176,212,208)</color>
+							<soundImpactStuff>BulletImpact_Metal</soundImpactStuff>
+							<statOffsets>
+								<Beauty>25</Beauty>
+							</statOffsets>
+							<statFactors>
+								<MaxHitPoints>0.5</MaxHitPoints>
+								<Beauty>5</Beauty>
+								<Flammability>0.1</Flammability>
+								<WorkToMake>1.1</WorkToMake>
+								<WorkToBuild>1.1</WorkToBuild>
+							</statFactors>
+						</stuffProps>
+						<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
