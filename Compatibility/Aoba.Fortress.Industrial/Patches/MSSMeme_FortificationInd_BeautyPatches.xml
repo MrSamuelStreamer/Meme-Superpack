@@ -23,21 +23,4 @@
 		</value>
 	</Operation>
 
-	<Operation Class="PatchOperationConditional">
-		<xpath>/Defs/ThingDef[defName="FT_ConcreteCompressed"]/stuffProps/statFactors/Beauty</xpath>
-		<match Class="PatchOperationReplace">
-			<xpath>/Defs/ThingDef[defName="FT_ConcreteCompressed"]/stuffProps/statFactors/Beauty</xpath>
-			<value>
-				<Beauty>8</Beauty>
-			</value>
-		</match>
-		<nomatch Class="PatchOperationAdd">
-			<xpath>/Defs/ThingDef[defName="FT_ConcreteCompressed"]/stuffProps/statFactors</xpath>
-			<value>
-				<Beauty>8</Beauty>
-			</value>
-		</nomatch>
-	</Operation>
-
-
 </Patch>
