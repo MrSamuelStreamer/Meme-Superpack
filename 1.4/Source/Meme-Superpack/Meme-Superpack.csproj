@@ -66,7 +66,7 @@
       <Link>AttachedDefs\Mods\%(RecursiveDir)/%(FileName)%(Extension)</Link>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
-    <None Include="..\..\..\**\*.xml">
+    <None Include="..\..\..\1.*\Defs\**\*.xml;..\..\..\1.*\Patches\**\*.xml;..\..\..\Com*\**\*.xml;..\..\..\loadfolders.xml;..\..\..\Abou*\*">
       <Link>AttachedDefs\Project\%(RecursiveDir)/%(FileName)%(Extension)</Link>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>

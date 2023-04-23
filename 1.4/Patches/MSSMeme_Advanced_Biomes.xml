@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
 
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>Advanced Biomes (Continued)</li>
-        </mods>
-        <match Class="PatchOperationSequence">
-            <success>Always</success>
-            <operations>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Advanced Biomes (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
 
-                <li Class="PatchOperationReplace">
-                    <xpath>/Defs/BiomeDef[defName="Wasteland"]/diseaseMtbDays </xpath>
-                    <value>
-                        <diseaseMtbDays>20</diseaseMtbDays>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/BiomeDef[defName="Wasteland"]/wildAnimals</xpath>
-                    <value>
-                        <MSSMeme_CombustionElephant>5</MSSMeme_CombustionElephant>
-                    </value>
-                </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/BiomeDef[defName="Wasteland"]/diseases</xpath>
-                    <value>
-                        <li>
-                            <diseaseInc>MSSMeme_SitKid_Disease</diseaseInc>
-                            <commonality>369</commonality>
-                        </li>
-                    </value>
-                </li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/BiomeDef[defName="Wasteland"]/diseaseMtbDays</xpath>
+					<value>
+						<diseaseMtbDays>20</diseaseMtbDays>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/BiomeDef[defName="Wasteland"]/wildAnimals</xpath>
+					<value>
+						<MSSMeme_CombustionElephant>5</MSSMeme_CombustionElephant>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/BiomeDef[defName="Wasteland"]/diseases</xpath>
+					<value>
+						<li>
+							<diseaseInc>MSSMeme_SitKid_Disease</diseaseInc>
+							<commonality>369</commonality>
+						</li>
+					</value>
+				</li>
 
-            </operations>
-        </match>
-    </Operation>
+			</operations>
+		</match>
+	</Operation>
 
 </Patch>

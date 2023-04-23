@@ -5,7 +5,7 @@
 	<ThingDef ParentName="BaseGunWithQuality" MayRequire="smartkar.athenaframework">
 		<defName>MSSMeme_TrueOttomaticGun</defName>
 		<label>True Fully Ottomatic gun</label>
-		<description>A mythical gun named after an individual rumored to have achieved unmatchable combat abilities.  Through the power of coal, V.O.I.D. weaponry, and a lot of desperation, its true potential has been unlocked. This weapon unleashes what can only be described as a wall of projectiles in whatever direction it is aimed at. It also causes suppression on whatever gets hit by one of its bullets. However, due to Wi-Fi interference, any structures that are in the path of the bullets will disrupt the stream of bullets. Thus, this gun is best used in open spaces. Be sure to have a backup weapon for enclosed areas.</description>
+		<description>A mythical gun named after an individual rumored to have achieved unmatchable combat abilities. Through the power of coal, V.O.I.D. weaponry, and a lot of desperation, its true potential has been unlocked. This weapon unleashes what can only be described as a wall of projectiles in whatever direction it is aimed at. It also causes suppression on whatever gets hit by one of its bullets. However, due to Wi-Fi interference, any structures that are in the path of the bullets will disrupt the stream of bullets. Thus, this gun is best used in open spaces. Be sure to have a backup weapon for enclosed areas.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MSSMeme_TrueOttomatic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -82,57 +82,57 @@
 				<cooldownTime>2.6</cooldownTime>
 			</li>
 		</tools>
-	 <modExtensions>
-      <li Class="AthenaFramework.AngularShotgunExtension">
-        <pelletCount>50</pelletCount>
-        <pelletAngle>1</pelletAngle>
-        <downedHitChance>0.5</downedHitChance>
-      </li>
-    </modExtensions>
+		<modExtensions>
+			<li Class="AthenaFramework.AngularShotgunExtension">
+				<pelletCount>50</pelletCount>
+				<pelletAngle>1</pelletAngle>
+				<downedHitChance>0.5</downedHitChance>
+			</li>
+		</modExtensions>
 	</ThingDef>
-  <HediffDef ParentName="DiseaseBase">
-    <defName>MSSMeme_Suppression</defName>
-    <label>suppression</label>
-    <description>A condition caused by being peppered by an obscene number of bullets. Now you may be asking, "CatLover366, why did you add this very powerful effect to the already super overpowered shotgun-minigun?" Well, my dear hypothetically inquisitive reader, that is because I discovered during testing that Chicken Plucker made the charred variants of the N-4 infected creatures RIDICULOUSLY fast even when being hit. It generates an absolutely terrifying mental image to be honest. Here is this towering hunk of flesh just BARRELING towards you at blistering speed despite being hit by 10 bullets per second. If you're reading/watching this Chicken Plucker, hats off to you, those things are horrifying.</description>
-    <scenarioCanAdd>true</scenarioCanAdd>
-    <initialSeverity>1</initialSeverity>
-    <comps>
-      <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-12</severityPerDay>
-      </li>
-    </comps>
-    <stages>
-      <li>
-        <label>recovering</label>
-        <capMods>
-          <li>
-            <capacity>Moving</capacity>
-            <postFactor>0.9</postFactor>
-          </li>
-        </capMods>
-      </li>
-      <li>
-        <label>minor</label>
-        <minSeverity>0.3</minSeverity>
-        <capMods>
-          <li>
-            <capacity>Moving</capacity>
-            <postFactor>0.8</postFactor>
-          </li>
-        </capMods>
-      </li>
-      <li>
-        <label>major</label>
-        <minSeverity>0.6</minSeverity>
-        <capMods>
-          <li>
-            <capacity>Moving</capacity>
-            <postFactor>0.7</postFactor>
-          </li>
-        </capMods>
-      </li>
-    </stages>
-  </HediffDef>
+	<HediffDef ParentName="DiseaseBase">
+		<defName>MSSMeme_Suppression</defName>
+		<label>suppression</label>
+		<description>A condition caused by being peppered by an obscene number of bullets. Now you may be asking, "CatLover366, why did you add this very powerful effect to the already super overpowered shotgun-minigun?" Well, my dear hypothetically inquisitive reader, that is because I discovered during testing that Chicken Plucker made the charred variants of the N-4 infected creatures RIDICULOUSLY fast even when being hit. It generates an absolutely terrifying mental image to be honest. Here is this towering hunk of flesh just BARRELING towards you at blistering speed despite being hit by 10 bullets per second. If you're reading/watching this Chicken Plucker, hats off to you, those things are horrifying.</description>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<initialSeverity>1</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-12</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>recovering</label>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>0.9</postFactor>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>minor</label>
+				<minSeverity>0.3</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>0.8</postFactor>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>major</label>
+				<minSeverity>0.6</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>0.7</postFactor>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
 
 	<DamageDef Name="MSSMeme_TrueOttoBullet">
 		<defName>MSSMeme_TrueOttoBullet</defName>

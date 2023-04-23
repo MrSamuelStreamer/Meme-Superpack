@@ -9,157 +9,157 @@
 		<renderOrder>2000</renderOrder>
 	</MemeGroupDef>
 
-  <MemeDef>
-    <defName>MSSMeme_RimRim</defName>
-    <label>RimRim</label>
-    <description>Each little RimRim is so totally focused on getting their daily RimRim and drawing art of channel waifus it's a wonder anything gets done.</description>
-    <iconPath>Ideology/RimRim</iconPath>
-    <allowDuringTutorial>false</allowDuringTutorial>
-    <groupDef>MSSMeme_RimRim</groupDef>
-    <impact>2</impact>
-	  <requireOne>
-		  <li>
-			  <li MayRequire="Ludeon.RimWorld.Biotech">Bloodfeeders_Revered</li>
-		  </li>
-		  <li>
-			  <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Preferred</li>
-			  <li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Acceptable</li>
-		  </li>
-		  <li>
-			  <li MayRequire="Ludeon.RimWorld.Ideology">Execution_DontCare</li>
-			  <li MayRequire="Ludeon.RimWorld.Ideology">Execution_RespectedIfGuilty</li>
-			  <li MayRequire="Ludeon.RimWorld.Ideology">Execution_Required</li>
-		  </li>
-		  <li>
-			  <li MayRequire="Ludeon.RimWorld.Ideology">OrganUse_Acceptable</li>
-		  </li>
+	<MemeDef>
+		<defName>MSSMeme_RimRim</defName>
+		<label>RimRim</label>
+		<description>Each little RimRim is so totally focused on getting their daily RimRim and drawing art of channel waifus it's a wonder anything gets done.</description>
+		<iconPath>Ideology/RimRim</iconPath>
+		<allowDuringTutorial>false</allowDuringTutorial>
+		<groupDef>MSSMeme_RimRim</groupDef>
+		<impact>2</impact>
+		<requireOne>
+			<li>
+				<li MayRequire="Ludeon.RimWorld.Biotech">Bloodfeeders_Revered</li>
+			</li>
+			<li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Preferred</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">Cannibalism_Acceptable</li>
+			</li>
+			<li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">Execution_DontCare</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">Execution_RespectedIfGuilty</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">Execution_Required</li>
+			</li>
+			<li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">OrganUse_Acceptable</li>
+			</li>
 			<li>
 				<li MayRequire="Ludeon.RimWorld.Ideology">MSSMeme_RimRim_Demanded</li>
 			</li>
-	  </requireOne>
-	  <requiredRituals>
-		  <li>
-			  <precept>MSSMeme_RimRim_Ritual</precept>
-			  <pattern>MSSMeme_RimRimViewing</pattern>
-		  </li>
-	  </requiredRituals>
-    <consumableBuildings>
-      <li>Effigy</li>
-    </consumableBuildings>
-    <exclusionTags>
-      <li>Individualism</li>
-    </exclusionTags>
-    <generalRules>
-      <rulesStrings>
-        <li>memeAdjective->large brain</li>
-        <li>memeAdjective->big brain</li>
-        <li>memeAdjective->loud</li>
-        <li>memeAdjective->large brained</li>
-        <li>memeAdjective->big brained</li>
-        <li>memeAdjective->screaming</li>
-        <li>memeCreed->hive mind</li>
-        <li>memeCreed->discord</li>
-        <li>memeCreed->Rim Rims</li>
-        <li>memeCreed->fans</li>
-        <li>memeConcept->Rim Rim</li>
-        <li>memeLeaderNoun->loudest</li>
-        <li>memeLeaderNoun->screamer</li>
-        <li>memeLeaderNoun->creamerr</li>
-        <li>memeMoralist->good guys verifier</li>
-        <li>memeMoralist->moderator</li>
-      </rulesStrings>
-    </generalRules>
-    <descriptionMaker>
-      <rules>
-        <rulesStrings>
-          <!-- theist myth -->
-          <li>creation(tag=meme_RimRim)        ->[deity0_name] made all beings from a great mold, and those that deviated [deity0_pronoun] threw down the fire chute so the believers could live in harmony.\n\nUnfortunately the chutes were labeled wrong, and seeing that all the good eggs were destroyed, and it was getting on to tea time, with a mighty shrug all the misfits were allowed to run out into the world.</li>
-          <li>episode(uses=1,tag=meme_RimRim)  ->[deity0_name] said to all, "Thou shalt have RimRim. Thou shalt enjoy it and thou shalt scream WHERE RIMRIM in its absence"</li>
-          <!-- theist founder -->
-          <li>intro(tag=meme_RimRim)           ->The people of the [place_summary] [place_name] worked at cross purposes, loudly shouting each other down, somehow ending up with a great [altarName] to honor [deity0_name], who taught them the true value of [memeConcept].</li>
-          <li>conflict(tag=meme_RimRim)        ->The evil Susan could not allow [deity0_name] to enjoy [deity0_possessive] life. She constantly contrives for RimRim to not be available for the little RimRims or for [deity0_name] to gain nothing from their worship. She also inspired the [foeLeader] to irrationally hate the family of [memberNamePlural], and sent [foeLeader_possessive] [foeSoldiers] to the [place_community] to divide them against each other.</li>
-          <li>founderJoin(tag=meme_RimRim)     ->A [place_job] named [founderName] sat on the floor and wailed WHERE RIMRIM to protest the [foeLeader], but the [memberNamePlural] cowed by the screaming, kicked [founder_objective] unconcious and made [founder_objective] their leader because of [founder_possessive] extreme commitment.</li>
-          <li>victory(tag=meme_RimRim)         ->[founderName]'s actions united the people. They marched in lockstep towards the home of the [foeLeader] screaming WHERE RIMRIM at the top of their lungs. Those in the front just wandering into bear traps, and allowing themselves to be killed by the [foeSoldiers] so single minded were they, but as many of them began starving to death waiting for RimRim that would never come the [foeLeader] eventually felt bad for them and beseeched Susan to let at least some RimRim return to the pitiable bunch.</li>
-          <!-- ideological founder -->
-          <li>setup(tag=meme_RimRim)           ->In a world of every RimRim shouting to be heard, [founderName] began a new community of RimRims, bringing many different people together.</li>
-          <li>story(uses=1,tag=meme_RimRim)    ->Some of the false believers tried to claim nonsense like Yayo's combat not working with warcaskets. [founderName] punished them severely.</li>
-          <!-- ideological lesson -->
-          <li>lessonIntro(tag=meme_RimRim)     ->The [place_job] just wouldn't shut up, telling me things I already knew. I killed that annoying RimRim with a [place_personalWeapon]. The people were shocked, but I explained that</li>
-          <li>lesson(tag=meme_RimRim)              ->remember kids, we're the good guys</li>
-          <li>lessonReinforcement(tag=meme_RimRim) ->If I have to exterminate half the planet teaching the universe this, it will be my greatest triumph.</li>
-          <!-- archist -->
-          <li>archistBasis(tag=meme_RimRim)    ->The archotechs are all aspects of one large brained individual.</li>
-          <li>archistFact(tag=meme_RimRim)     ->The archotechs have no interest in judging us one by one. They await the day the comments all agree.</li>
-          <li>archistProphecy(tag=meme_RimRim) ->[inTheEnd], the archotechs will depart when they find a people who present themselves with a degree of sanity and understanding as worthy partners to the machine god-consciousness.</li>
-          <!-- animist -->
-          <li>animistFact(tag=meme_RimRim)     ->Every spirit is simply an aspect of all the others and they all scream where RimRim.</li>
-        </rulesStrings>
-      </rules>
-    </descriptionMaker>
-    <symbolPacks>
-	    <li>
-		    <theme>dominance</theme>
-		    <adjective>RimRim</adjective>
-		    <member>RimRim</member>
-	    </li>
-	    <li>
-		    <theme>victory</theme>
-		    <adjective>RimRim</adjective>
-		    <member>RimRim</member>
-	    </li>
-	    <li>
-		    <theme>power</theme>
-		    <adjective>RimRim</adjective>
-		    <member>RimRim</member>
-	    </li>
-    </symbolPacks>
-	  <styleItemTags>
-		  <li>
-			  <tag>Punk</tag>
-			  <baseWeight>1</baseWeight>
-			  <weightFactor>1</weightFactor>
-		  </li>
-		  <li>
-			  <tag>BeardPunk</tag>
-			  <baseWeight>2</baseWeight>
-			  <weightFactor>1</weightFactor>
-		  </li>
-		  <li>
-			  <tag>NoBeard</tag>
-			  <baseWeight>3</baseWeight>
-			  <weightFactor>1</weightFactor>
-		  </li>
-		  <li>
-			  <tag>BeardRural</tag>
-			  <baseWeight>0.4</baseWeight>
-			  <weightFactor>1</weightFactor>
-		  </li>
-		  <li>
-			  <tag>BeardUrban</tag>
-			  <baseWeight>0.4</baseWeight>
-			  <weightFactor>1</weightFactor>
-		  </li>
-		  <li>
-			  <tag>NoTattoo</tag>
-			  <baseWeight>0.2</baseWeight>
-			  <weightFactor>0.5</weightFactor>
-		  </li>
-		  <li>
-			  <tag>TattooFacePunk</tag>
-			  <baseWeight>0.4</baseWeight>
-			  <weightFactor>1</weightFactor>
-		  </li>
-		  <li>
-			  <tag>TattooBodyPunk</tag>
-			  <baseWeight>0.4</baseWeight>
-			  <weightFactor>1</weightFactor>
-		  </li>
-		  <li MayRequire="Ludeon.RimWorld.Biotech">
-			  <tag>Furskin</tag>
-			  <baseWeight>0.1</baseWeight>
-			  <weightFactor>1</weightFactor>
-		  </li>
-	  </styleItemTags>
-  </MemeDef>
+		</requireOne>
+		<requiredRituals>
+			<li>
+				<precept>MSSMeme_RimRim_Ritual</precept>
+				<pattern>MSSMeme_RimRimViewing</pattern>
+			</li>
+		</requiredRituals>
+		<consumableBuildings>
+			<li>Effigy</li>
+		</consumableBuildings>
+		<exclusionTags>
+			<li>Individualism</li>
+		</exclusionTags>
+		<generalRules>
+			<rulesStrings>
+				<li>memeAdjective->large brain</li>
+				<li>memeAdjective->big brain</li>
+				<li>memeAdjective->loud</li>
+				<li>memeAdjective->large brained</li>
+				<li>memeAdjective->big brained</li>
+				<li>memeAdjective->screaming</li>
+				<li>memeCreed->hive mind</li>
+				<li>memeCreed->discord</li>
+				<li>memeCreed->Rim Rims</li>
+				<li>memeCreed->fans</li>
+				<li>memeConcept->Rim Rim</li>
+				<li>memeLeaderNoun->loudest</li>
+				<li>memeLeaderNoun->screamer</li>
+				<li>memeLeaderNoun->creamerr</li>
+				<li>memeMoralist->good guys verifier</li>
+				<li>memeMoralist->moderator</li>
+			</rulesStrings>
+		</generalRules>
+		<descriptionMaker>
+			<rules>
+				<rulesStrings>
+					<!-- theist myth -->
+					<li>creation(tag=meme_RimRim) ->[deity0_name] made all beings from a great mold, and those that deviated [deity0_pronoun] threw down the fire chute so the believers could live in harmony.\n\nUnfortunately the chutes were labeled wrong, and seeing that all the good eggs were destroyed, and it was getting on to tea time, with a mighty shrug all the misfits were allowed to run out into the world.</li>
+					<li>episode(uses=1,tag=meme_RimRim) ->[deity0_name] said to all, "Thou shalt have RimRim. Thou shalt enjoy it and thou shalt scream WHERE RIMRIM in its absence"</li>
+					<!-- theist founder -->
+					<li>intro(tag=meme_RimRim) ->The people of the [place_summary] [place_name] worked at cross purposes, loudly shouting each other down, somehow ending up with a great [altarName] to honor [deity0_name], who taught them the true value of [memeConcept].</li>
+					<li>conflict(tag=meme_RimRim) ->The evil Susan could not allow [deity0_name] to enjoy [deity0_possessive] life. She constantly contrives for RimRim to not be available for the little RimRims or for [deity0_name] to gain nothing from their worship. She also inspired the [foeLeader] to irrationally hate the family of [memberNamePlural], and sent [foeLeader_possessive] [foeSoldiers] to the [place_community] to divide them against each other.</li>
+					<li>founderJoin(tag=meme_RimRim) ->A [place_job] named [founderName] sat on the floor and wailed WHERE RIMRIM to protest the [foeLeader], but the [memberNamePlural] cowed by the screaming, kicked [founder_objective] unconcious and made [founder_objective] their leader because of [founder_possessive] extreme commitment.</li>
+					<li>victory(tag=meme_RimRim) ->[founderName]'s actions united the people. They marched in lockstep towards the home of the [foeLeader] screaming WHERE RIMRIM at the top of their lungs. Those in the front just wandering into bear traps, and allowing themselves to be killed by the [foeSoldiers] so single minded were they, but as many of them began starving to death waiting for RimRim that would never come the [foeLeader] eventually felt bad for them and beseeched Susan to let at least some RimRim return to the pitiable bunch.</li>
+					<!-- ideological founder -->
+					<li>setup(tag=meme_RimRim) ->In a world of every RimRim shouting to be heard, [founderName] began a new community of RimRims, bringing many different people together.</li>
+					<li>story(uses=1,tag=meme_RimRim) ->Some of the false believers tried to claim nonsense like Yayo's combat not working with warcaskets. [founderName] punished them severely.</li>
+					<!-- ideological lesson -->
+					<li>lessonIntro(tag=meme_RimRim) ->The [place_job] just wouldn't shut up, telling me things I already knew. I killed that annoying RimRim with a [place_personalWeapon]. The people were shocked, but I explained that</li>
+					<li>lesson(tag=meme_RimRim) ->remember kids, we're the good guys</li>
+					<li>lessonReinforcement(tag=meme_RimRim) ->If I have to exterminate half the planet teaching the universe this, it will be my greatest triumph.</li>
+					<!-- archist -->
+					<li>archistBasis(tag=meme_RimRim) ->The archotechs are all aspects of one large brained individual.</li>
+					<li>archistFact(tag=meme_RimRim) ->The archotechs have no interest in judging us one by one. They await the day the comments all agree.</li>
+					<li>archistProphecy(tag=meme_RimRim) ->[inTheEnd], the archotechs will depart when they find a people who present themselves with a degree of sanity and understanding as worthy partners to the machine god-consciousness.</li>
+					<!-- animist -->
+					<li>animistFact(tag=meme_RimRim) ->Every spirit is simply an aspect of all the others and they all scream where RimRim.</li>
+				</rulesStrings>
+			</rules>
+		</descriptionMaker>
+		<symbolPacks>
+			<li>
+				<theme>dominance</theme>
+				<adjective>RimRim</adjective>
+				<member>RimRim</member>
+			</li>
+			<li>
+				<theme>victory</theme>
+				<adjective>RimRim</adjective>
+				<member>RimRim</member>
+			</li>
+			<li>
+				<theme>power</theme>
+				<adjective>RimRim</adjective>
+				<member>RimRim</member>
+			</li>
+		</symbolPacks>
+		<styleItemTags>
+			<li>
+				<tag>Punk</tag>
+				<baseWeight>1</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>BeardPunk</tag>
+				<baseWeight>2</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>NoBeard</tag>
+				<baseWeight>3</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>BeardRural</tag>
+				<baseWeight>0.4</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>BeardUrban</tag>
+				<baseWeight>0.4</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>NoTattoo</tag>
+				<baseWeight>0.2</baseWeight>
+				<weightFactor>0.5</weightFactor>
+			</li>
+			<li>
+				<tag>TattooFacePunk</tag>
+				<baseWeight>0.4</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li>
+				<tag>TattooBodyPunk</tag>
+				<baseWeight>0.4</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Biotech">
+				<tag>Furskin</tag>
+				<baseWeight>0.1</baseWeight>
+				<weightFactor>1</weightFactor>
+			</li>
+		</styleItemTags>
+	</MemeDef>
 
 </Defs>

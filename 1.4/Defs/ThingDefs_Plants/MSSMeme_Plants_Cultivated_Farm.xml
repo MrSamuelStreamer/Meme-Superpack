@@ -18,7 +18,7 @@
 		</graphicData>
 		<selectable>true</selectable>
 		<pathCost>14</pathCost>
-		<ingestible />
+		<ingestible/>
 		<plant>
 			<dieIfLeafless>true</dieIfLeafless>
 			<maxMeshCount>4</maxMeshCount>

@@ -93,7 +93,7 @@
 			<!-- Animals -->
 
 			<!-- Buying -->
-			<li Class="StockGenerator_BuyExpensiveSimple" />
+			<li Class="StockGenerator_BuyExpensiveSimple"/>
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>Art</tag>
 			</li>
@@ -200,7 +200,7 @@
 			<!-- Animals -->
 
 			<!-- Buying -->
-			<li Class="StockGenerator_BuyExpensiveSimple" />
+			<li Class="StockGenerator_BuyExpensiveSimple"/>
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>Art</tag>
 			</li>
@@ -305,7 +305,7 @@
 			<!-- Animals -->
 
 			<!-- Buying -->
-			<li Class="StockGenerator_BuyExpensiveSimple" />
+			<li Class="StockGenerator_BuyExpensiveSimple"/>
 			<li Class="StockGenerator_BuyTradeTag">
 				<tag>Art</tag>
 			</li>

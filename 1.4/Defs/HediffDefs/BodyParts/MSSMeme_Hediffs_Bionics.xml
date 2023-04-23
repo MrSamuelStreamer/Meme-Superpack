@@ -28,7 +28,9 @@
 				</statOffsets>
 			</li>
 		</stages>
-		<tags><li>ArmorGland</li></tags>
+		<tags>
+			<li>ArmorGland</li>
+		</tags>
 	</HediffDef>
 
 	<ThingDef ParentName="BodyPartBionicBase">
