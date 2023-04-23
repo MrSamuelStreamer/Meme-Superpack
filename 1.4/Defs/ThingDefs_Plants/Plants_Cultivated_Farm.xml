@@ -6,7 +6,7 @@
   <ThingDef ParentName="PlantBase">
     <defName>MSSMeme_Plant_Super_Cucumber</defName>
     <label>super cucumber</label>
-    <description>How curious. The super cucumber looks rather similar to the ocean dwelling sea cucumber aside from the super cucumber's vibrant colors, but this obviously grows on land. Unusual biological development aside, the super cucumber is a relatively fast growing... crop(?) with a low yield. What sets it apart from other crops is its wonderful taste, often described as nostalgic by those fortunate enough to taste it.</description>
+    <description>How curious. The super cucumber looks rather similar to the ocean dwelling sea cucumber aside from the super cucumber's vibrant colors, but this obviously grows on land. Unusual biological development aside, the super cucumber is a relatively fast growing... crop(?) with a modest yield. What sets it apart from other crops is its wonderful flavor, often described as nostalgic by those fortunate enough to taste it.</description>
     <statBases>
       <MaxHitPoints>85</MaxHitPoints>
       <Nutrition>0.175</Nutrition>
