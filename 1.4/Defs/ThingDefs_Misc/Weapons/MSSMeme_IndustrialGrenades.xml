@@ -31,7 +31,6 @@
 			<ComponentIndustrial>6</ComponentIndustrial>
 		</costList>
 		<weaponTags>
-			<li>GrenadeDestructive</li>
 		</weaponTags>
 		<thingCategories>
 			<li>Grenades</li>
