@@ -13,18 +13,20 @@
   </PropertyGroup>
   <ItemGroup>
     <ReleaseFiles Include="1.*\**" Exclude="1.*\Source\**;1.*\Assemblies\*.pdb" />
-    <AboutFiles Include="About\**" Exclude="About\About.xml;About\About-*.xml" />
+    <AboutFiles Include="About\**" Exclude="About\About.xml;About\About-*.xml;About\PublishedFileId.txt;About\PublishedFileId-*.txt" />
     <CommonFiles Include="Common\**" />
     <CompatibilityFiles Include="Compatibility\**" />
     <ExtraFiles Include="loadFolders.xml;LICENSE;README.md" />
-    <None Include=".gitattributes;.gitignore;CONTRIBUTING.md;About\About.xml;About\About-*.xml" />
+    <None Include=".gitattributes;.gitignore;CONTRIBUTING.md;About\About.xml;About\About-*.xml;About\PublishedFileId.txt;About\PublishedFileId-*.txt" />
   </ItemGroup>
   <Target Name="Clean">
     <RemoveDir Directories="..\MSSMemeSuperPack-Release" />
     <Delete Files="MSSMemeSuperPack.zip;1.*\Assemblies\*.pdb" />
   </Target>
   <Target Name="Build">
+    <Delete Files="About\PublishedFileId.txt" Condition="Exists('About\PublishedFileId.txt')" />
     <Copy SourceFiles="About\About-$(Configuration).xml" DestinationFiles="$(OutputPath)About\About.xml" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="About\PublishedFileId-$(Configuration).txt" DestinationFiles="$(OutputPath)\About\PublishedFileId.txt" SkipUnchangedFiles="true" Condition="Exists('About\PublishedFileId-$(Configuration).txt')" />
     <Copy Condition=" '$(Configuration)' == 'Release' " SourceFiles="@(ReleaseFiles)" DestinationFiles="@(ReleaseFiles->'$(OutputPath)%(RelativeDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
   </Target>
   <Target Name="Rebuild" />
