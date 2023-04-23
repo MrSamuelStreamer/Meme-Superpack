@@ -6,7 +6,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <OutputPath>.\</OutputPath>
+    <OutputPath>.\Debug\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
 	<OutputPath>..\MSSMemeSuperPack-Release\</OutputPath>
@@ -17,31 +17,35 @@
     <CommonFiles Include="Common\**" />
     <CompatibilityFiles Include="Compatibility\**" />
     <ExtraFiles Include="loadFolders.xml;LICENSE;README.md" />
-    <None Include=".gitattributes;.gitignore;CONTRIBUTING.md;About\About.xml;About\About-*.xml;About\PublishedFileId.txt;About\PublishedFileId-*.txt" />
+    <None Include=".gitattributes;.gitignore;CONTRIBUTING.md;About\About.xml;About\About-*.xml;About\PublishedFileId-*.txt" />
   </ItemGroup>
   <Target Name="Clean">
-    <RemoveDir Directories="..\MSSMemeSuperPack-Release" />
+    <RemoveDir Directories="$(OutputPath)" />
+    <Delete Files="MSSMemeSuperPack.zip;1.*\Assemblies\*.pdb" />
+  </Target>
+  <Target Name="PreBuild" BeforeTargets="Build">
+    <RemoveDir Directories="$(OutputPath)" />
     <Delete Files="MSSMemeSuperPack.zip;1.*\Assemblies\*.pdb" />
   </Target>
   <Target Name="Build">
     <Delete Files="About\PublishedFileId.txt" Condition="Exists('About\PublishedFileId.txt')" />
     <Copy SourceFiles="About\About-$(Configuration).xml" DestinationFiles="$(OutputPath)About\About.xml" SkipUnchangedFiles="true" />
     <Copy SourceFiles="About\PublishedFileId-$(Configuration).txt" DestinationFiles="$(OutputPath)\About\PublishedFileId.txt" SkipUnchangedFiles="true" Condition="Exists('About\PublishedFileId-$(Configuration).txt')" />
-    <Copy Condition=" '$(Configuration)' == 'Release' " SourceFiles="@(ReleaseFiles)" DestinationFiles="@(ReleaseFiles->'$(OutputPath)%(RelativeDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
   </Target>
   <Target Name="Rebuild" />
-  <Target Name="PostBuild" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
-    <RemoveDir Directories="..\MSSMemeSuperPack-Release" />
-    <Delete Files="MSSMemeSuperPack.zip;..\Assemblies\*.pdb" />
-    <Copy SourceFiles="@(AboutFiles)" DestinationFiles="@(AboutFiles->'..\MSSMemeSuperPack-Release\About\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
-    <Copy SourceFiles="About\About-$(Configuration).xml" DestinationFiles="..\MSSMemeSuperPack-Release\About\About.xml" />
-    <Copy SourceFiles="@(CommonFiles)" DestinationFiles="@(CommonFiles->'..\MSSMemeSuperPack-Release\Common\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
-    <Copy SourceFiles="@(CompatibilityFiles)" DestinationFiles="@(CompatibilityFiles->'..\MSSMemeSuperPack-Release\Compatibility\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
-    <Copy SourceFiles="@(ReleaseFiles)" DestinationFiles="@(ReleaseFiles->'..\MSSMemeSuperPack-Release\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" />
-    <Copy SourceFiles="@(ExtraFiles)" DestinationFolder="..\MSSMemeSuperPack-Release\" SkipUnchangedFiles="false" />
-    <ZipDirectory DestinationFile="MSSMemeSuperPack.zip" SourceDirectory="..\MSSMemeSuperPack-Release" />
+  <Target Name="PostBuild" AfterTargets="Build" >
+    <Copy SourceFiles="@(AboutFiles)" DestinationFiles="@(AboutFiles->'$(OutputPath)\About\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="About\About-$(Configuration).xml" DestinationFiles="$(OutputPath)\About\About.xml" />
+    <Copy SourceFiles="@(CommonFiles)" DestinationFiles="@(CommonFiles->'$(OutputPath)\Common\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(CompatibilityFiles)" DestinationFiles="@(CompatibilityFiles->'$(OutputPath)\Compatibility\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(ReleaseFiles)" DestinationFiles="@(ReleaseFiles->'$(OutputPath)\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(ExtraFiles)" DestinationFolder="$(OutputPath)\" SkipUnchangedFiles="false" />
+    
+    <!-- Keep the About.xml in the base folder up to date in case anyone tries to run from the base folder rather than a built one -->
+    <Copy SourceFiles="About\About-Debug.xml" DestinationFiles="About\About.xml" />
   </Target>
   <Target Name="PostBuildCleanup" AfterTargets="PostBuild">
+    <ZipDirectory DestinationFile="MSSMemeSuperPack.zip" SourceDirectory="$(OutputPath)" />
     <RemoveDir Directories="obj;bin" />
   </Target> 
 </Project>
