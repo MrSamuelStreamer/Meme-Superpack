@@ -57,9 +57,24 @@
   <ItemGroup>
     <PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Data\*\Defs\**\*.xml">
+      <Link>AttachedDefs\Rimworld\%(RecursiveDir)/%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\..\..\**\Defs\**\*.xml" Exclude="**/MSSMeme_*.xml">
+      <Link>AttachedDefs\Mods\%(RecursiveDir)/%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\..\**\*.xml">
+      <Link>AttachedDefs\Project\%(RecursiveDir)/%(FileName)%(Extension)</Link>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <StartAction>Program</StartAction>
     <StartProgram>$(SolutionDir)..\..\..\..\RimWorldWin64.exe</StartProgram>
+    <StartArguments>-quicktest</StartArguments>
   </PropertyGroup>
 </Project>

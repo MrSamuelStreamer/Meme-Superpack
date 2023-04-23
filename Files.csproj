@@ -3,6 +3,7 @@
   <PropertyGroup>
     <BaseIntermediateOutputPath>.vs\unused\</BaseIntermediateOutputPath>
     <ProjectGuid>{AA1EF112-E817-4ED1-849A-EE55B8DAF3C0}</ProjectGuid>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>.\</OutputPath>
