@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BaseMakeableGrenade">
+		<defName>MSSMeme_Flashbang</defName>
+		<label>flashbangs</label>
+		<description>An incredibly powerful flashbang, capable of stunning enemies in a large radius for a significant period of time. What's the catch? The catch is that these flash bangs are IMMERSIVE. You may be asking what that means. Well, throw one and find out! Though lets just say that targeted pawns will not be the only ones flashbanged when these things detonate.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/MSSMeme_Flashbangs</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Grenade</soundInteract>
+		<techLevel>Industrial</techLevel>
+		<statBases>
+			<Mass>1</Mass>
+			<RangedWeapon_Cooldown>10.0</RangedWeapon_Cooldown>
+			<WorkToMake>24000</WorkToMake>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>Machining</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Steel>20</Steel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+		</costList>
+		<weaponTags>
+			<li>GrenadeDestructive</li>
+		</weaponTags>
+		<thingCategories>
+			<li>Grenades</li>
+		</thingCategories>
+		<verbs>
+			<li>
+				<label>throw flashbang</label>
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>9.9</range>
+				<forcedMissRadius>1.9</forcedMissRadius>
+				<warmupTime>2.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+				<soundCast>ThrowGrenade</soundCast>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>MSSMeme_Projectile_Flashbang</defaultProjectile>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			</li>
+		</verbs>
+		<comps>
+			<li Class="CompProperties_Explosive">
+				<explosiveRadius>20.66</explosiveRadius>
+				<explosiveDamageType>Stun</explosiveDamageType>
+				<requiredDamageTypeToExplode>Flame</requiredDamageTypeToExplode>
+			</li>
+		</comps>
+
+	</ThingDef>
+
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>MSSMeme_Projectile_Flashbang</defName>
+		<label>flash grenade</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Projectile/MSSMeme_ProjFlashbang</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<explosionRadius>7.3</explosionRadius>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>16</damageAmountBase>
+			<explosionDelay>100</explosionDelay>
+		</projectile>
+	</ThingDef>
+
+</Defs>
