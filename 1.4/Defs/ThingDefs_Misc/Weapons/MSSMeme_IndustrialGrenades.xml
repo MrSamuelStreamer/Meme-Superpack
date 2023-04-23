@@ -20,15 +20,15 @@
 		<recipeMaker>
 			<researchPrerequisite>Machining</researchPrerequisite>
 			<skillRequirements>
-				<Crafting>4</Crafting>
+				<Crafting>7</Crafting>
 			</skillRequirements>
 			<recipeUsers Inherit="False">
 				<li>FabricationBench</li>
 			</recipeUsers>
 		</recipeMaker>
 		<costList>
-			<Steel>20</Steel>
-			<ComponentIndustrial>6</ComponentIndustrial>
+			<Steel>150</Steel>
+			<ComponentIndustrial>8</ComponentIndustrial>
 		</costList>
 		<weaponTags>
 		</weaponTags>
