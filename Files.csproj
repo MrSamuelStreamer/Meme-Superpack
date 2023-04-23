@@ -9,26 +9,37 @@
     <OutputPath>.\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-	<OutputPath>.\Release\</OutputPath>
+	<OutputPath>..\MSSMemeSuperPack-Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <ReleaseFiles Include="About\**;Common\**;1.4\**;loadFolders.xml;Compatibility\**;LICENSE;README.md" Exclude="About\About-Debug.xml;About\About-Release.xml;About\About.xml;1.4\Source\**" />
-    <AboutFiles Include="About\About-Debug.xml;About\About-Release.xml" />
-    <None Include=".gitignore;.gitattributes" />
+    <ReleaseFiles Include="1.*\**" Exclude="1.*\Source\**;1.*\Assemblies\*.pdb" />
+    <AboutFiles Include="About\**" Exclude="About\About.xml;About\About-*.xml" />
+    <CommonFiles Include="Common\**" />
+    <CompatibilityFiles Include="Compatibility\**" />
+    <ExtraFiles Include="loadFolders.xml;LICENSE;README.md" />
+    <None Include=".gitattributes;.gitignore;CONTRIBUTING.md;About\About.xml;About\About-*.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Common\Languages" />
-    <Folder Include="1.4\Patches" />
-    <Folder Include="Common\Sounds" />
-    <Folder Include="Compatibility\Ludeon.RimWorld.Biotech\1.4\Defs" />
-  </ItemGroup>
-  <Target Name="Clean" />
+  <Target Name="Clean">
+    <RemoveDir Directories="..\MSSMemeSuperPack-Release" />
+    <Delete Files="MSSMemeSuperPack.zip;1.*\Assemblies\*.pdb" />
+  </Target>
   <Target Name="Build">
     <Copy SourceFiles="About\About-$(Configuration).xml" DestinationFiles="$(OutputPath)About\About.xml" SkipUnchangedFiles="true" />
     <Copy Condition=" '$(Configuration)' == 'Release' " SourceFiles="@(ReleaseFiles)" DestinationFiles="@(ReleaseFiles->'$(OutputPath)%(RelativeDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
   </Target>
   <Target Name="Rebuild" />
-  <Target Name="PostBuild" AfterTargets="Build">
-    <RemoveDir Directories="obj" />
+  <Target Name="PostBuild" AfterTargets="Build" Condition=" '$(Configuration)' == 'Release' ">
+    <RemoveDir Directories="..\MSSMemeSuperPack-Release" />
+    <Delete Files="MSSMemeSuperPack.zip;..\Assemblies\*.pdb" />
+    <Copy SourceFiles="@(AboutFiles)" DestinationFiles="@(AboutFiles->'..\MSSMemeSuperPack-Release\About\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="About\About-$(Configuration).xml" DestinationFiles="..\MSSMemeSuperPack-Release\About\About.xml" />
+    <Copy SourceFiles="@(CommonFiles)" DestinationFiles="@(CommonFiles->'..\MSSMemeSuperPack-Release\Common\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(CompatibilityFiles)" DestinationFiles="@(CompatibilityFiles->'..\MSSMemeSuperPack-Release\Compatibility\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(ReleaseFiles)" DestinationFiles="@(ReleaseFiles->'..\MSSMemeSuperPack-Release\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" />
+    <Copy SourceFiles="@(ExtraFiles)" DestinationFolder="..\MSSMemeSuperPack-Release\" SkipUnchangedFiles="false" />
+    <ZipDirectory DestinationFile="MSSMemeSuperPack.zip" SourceDirectory="..\MSSMemeSuperPack-Release" />
   </Target>
+  <Target Name="PostBuildCleanup" AfterTargets="PostBuild">
+    <RemoveDir Directories="obj;bin" />
+  </Target> 
 </Project>
