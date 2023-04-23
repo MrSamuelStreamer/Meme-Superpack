@@ -53,6 +53,7 @@
     <ingestible>
       <preferability>RawTasty</preferability>
       <tasteThought>MSSMeme_AteSuperCucumberDirect</tasteThought>
+	    <specialThoughtAsIngredient>MSSMeme_AteSuperCucumberAsIngredient</specialThoughtAsIngredient>
       <foodType>VegetableOrFruit</foodType>
     </ingestible>
     <comps>
