@@ -92,11 +92,11 @@
 		<stackLimit>100</stackLimit>
 		<developmentalStageFilter>Adult</developmentalStageFilter>
 		<stages>
-		<li>
-			<label>tended by {0}</label>
-			<description>My waifu is looking after me :3.</description>
-			<baseMoodEffect>12</baseMoodEffect>
-		</li>
+			<li>
+				<label>tended by {0}</label>
+				<description>My waifu is looking after me :3.</description>
+				<baseMoodEffect>12</baseMoodEffect>
+			</li>
 		</stages>
 	</ThoughtDef>
 

@@ -74,67 +74,69 @@
 		<label>Waifus</label>
 	</IssueDef>
 
-  <PreceptDef ParentName="PreceptRoleSingleBase">
-    <defName>MSSMeme_IdeoRole_Waifu</defName>
-    <label>waifu</label>
-    <description>Every community has to have a waifu for the art channel to draw.</description>
-    <iconPath>Ideology/AnneGuine</iconPath>
-    <nameMaker>MSSMeme_NamerRoleWaifu</nameMaker>
-    <displayOrderInImpact>100</displayOrderInImpact>
-    <restrictToSupremeGenderChance>0</restrictToSupremeGenderChance>
-    <convertPowerFactor>3</convertPowerFactor>
-    <canRemoveInUI>true</canRemoveInUI>
-	  <roleRequirements Inherit="false">
-		  <li Class="RoleRequirement_SameIdeo">
-			  <labelKey>RoleRequirementLabelSameIdeo</labelKey>
-		  </li>
-		  <li Class="MSS.MemeSuperpack.Roles.RoleRequirement_SpecificGender">
-			  <labelKey>MSSMeme_RoleRequirementLabelSpecificGender</labelKey>
+	<PreceptDef ParentName="PreceptRoleSingleBase">
+		<defName>MSSMeme_IdeoRole_Waifu</defName>
+		<label>waifu</label>
+		<description>Every community has to have a waifu for the art channel to draw.</description>
+		<iconPath>Ideology/AnneGuine</iconPath>
+		<nameMaker>MSSMeme_NamerRoleWaifu</nameMaker>
+		<displayOrderInImpact>100</displayOrderInImpact>
+		<restrictToSupremeGenderChance>0</restrictToSupremeGenderChance>
+		<convertPowerFactor>3</convertPowerFactor>
+		<canRemoveInUI>true</canRemoveInUI>
+		<roleRequirements Inherit="false">
+			<li Class="RoleRequirement_SameIdeo">
+				<labelKey>RoleRequirementLabelSameIdeo</labelKey>
+			</li>
+			<li Class="MSS.MemeSuperpack.Roles.RoleRequirement_SpecificGender">
+				<labelKey>MSSMeme_RoleRequirementLabelSpecificGender</labelKey>
 				<gender>Female</gender>
-		  </li>
-		  <li Class="MSS.MemeSuperpack.Roles.RoleRequirement_MinStatAny">
-			  <stats>
-				  <PawnBeauty>2.0</PawnBeauty>
-			  </stats>
-		  </li>
-	  </roleRequirements>
-    <grantedAbilities>
-      <li>Counsel</li>
-      <li>Reassure</li>
-		  <li>CombatCommand</li>
-    </grantedAbilities>
-    <roleRequiredWorkTags>
+			</li>
+			<li Class="MSS.MemeSuperpack.Roles.RoleRequirement_MinStatAny">
+				<stats>
+					<PawnBeauty>2.0</PawnBeauty>
+				</stats>
+			</li>
+		</roleRequirements>
+		<grantedAbilities>
+			<li>Counsel</li>
+			<li>Reassure</li>
+			<li>CombatCommand</li>
+		</grantedAbilities>
+		<roleRequiredWorkTags>
 			<li>Caring</li>
 			<li>Social</li>
 		</roleRequiredWorkTags>
-    <roleTags><li>Waifu</li></roleTags>
+		<roleTags>
+			<li>Waifu</li>
+		</roleTags>
 		<ignoreNameUniqueness>true</ignoreNameUniqueness>
 		<impact>Low</impact>
-	  <roleEffects>
-		  <li Class="RoleEffect_PawnStatOffset">
-			  <statDef>PawnBeauty</statDef>
-			  <modifier>0.69</modifier>
-		  </li>
-		  <li Class="RoleEffect_PawnStatOffset">
-			  <statDef>SocialImpact</statDef>
-			  <modifier>0.7</modifier>
-		  </li>
-		  <li Class="RoleEffect_PawnStatOffset" MayRequire="Ludeon.RimWorld.Ideology">
-			  <statDef>SlaveSuppressionOffset</statDef>
-			  <modifier>0.9</modifier>
-		  </li>
-		  <li Class="RoleEffect_GiveThoughtOnTend">
-			  <thoughtDef>MSSMeme_TendedByWaifu</thoughtDef>
-		  </li>
-		  <li Class="RoleEffect_HuntingRevengeChanceFactor">
-			  <factor>3</factor>
-		  </li>
-	  </roleEffects>
-	  <roleDisabledWorkTags>
-		  <li>ManualDumb</li>
-		  <li>Mining</li>
-	  </roleDisabledWorkTags>
-  </PreceptDef>
+		<roleEffects>
+			<li Class="RoleEffect_PawnStatOffset">
+				<statDef>PawnBeauty</statDef>
+				<modifier>0.69</modifier>
+			</li>
+			<li Class="RoleEffect_PawnStatOffset">
+				<statDef>SocialImpact</statDef>
+				<modifier>0.7</modifier>
+			</li>
+			<li Class="RoleEffect_PawnStatOffset" MayRequire="Ludeon.RimWorld.Ideology">
+				<statDef>SlaveSuppressionOffset</statDef>
+				<modifier>0.9</modifier>
+			</li>
+			<li Class="RoleEffect_GiveThoughtOnTend">
+				<thoughtDef>MSSMeme_TendedByWaifu</thoughtDef>
+			</li>
+			<li Class="RoleEffect_HuntingRevengeChanceFactor">
+				<factor>3</factor>
+			</li>
+		</roleEffects>
+		<roleDisabledWorkTags>
+			<li>ManualDumb</li>
+			<li>Mining</li>
+		</roleDisabledWorkTags>
+	</PreceptDef>
 
 	<PreceptDef>
 		<defName>MSSMeme_Waifus_Revered</defName>

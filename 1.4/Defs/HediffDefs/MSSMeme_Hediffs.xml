@@ -15,7 +15,7 @@
 		<tendable>false</tendable>
 		<makesAlert>false</makesAlert>
 		<comps>
-			<li Class="HediffCompProperties_DisappearsOnDeath" />
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
 		</comps>
 		<stages>
 			<li>

@@ -8,7 +8,7 @@ A lot of the "requirements" aren't really requirements, this is just a superpack
 * DetVisor for the gun texture.
 * Elseud for the come elephant ability texture.
 * [bruz.art](https://www.instagram.com/bruz.art/) for the Joris "Cement? That's Con Creet Baybee" art
-* Sarg for the Joris Base and Sam Voice Gene.
+* Sarg Bjornson for the Joris Base and Sam Voice Gene.
 * CatLover366 for a lot of XML work and the bowl texture.
 * Feldoh for the C# and some XML.
 * Timespace for the Anne role texture.

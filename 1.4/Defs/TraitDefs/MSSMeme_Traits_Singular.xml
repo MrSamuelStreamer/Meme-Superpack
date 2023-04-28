@@ -74,7 +74,9 @@
 				</mentalBreakInspirationGainSet>
 				<mentalBreakInspirationGainReasonText>Due to [PAWN_nameIndef] recovering from [PAWN_possessive] shipping induced mental breakdown, [PAWN_pronoun] has experienced an inspiration.</mentalBreakInspirationGainReasonText>
 				<mentalBreakInspirationGainChance>1</mentalBreakInspirationGainChance>
-				<allowedMeditationFocusTypes><li>Morbid</li></allowedMeditationFocusTypes>
+				<allowedMeditationFocusTypes>
+					<li>Morbid</li>
+				</allowedMeditationFocusTypes>
 			</li>
 		</degreeDatas>
 		<conflictingTraits>

@@ -2,11 +2,11 @@
 
 <Patch>
 
-    <Operation Class="PatchOperationAdd">
-        <xpath>/Defs/ThingDef[defName="ElectricSmelter"]/recipes</xpath>
-        <value>
-            <li>MSSMeme_SmeltCoalBowls</li>
-        </value>
-    </Operation>
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName="ElectricSmelter"]/recipes</xpath>
+		<value>
+			<li>MSSMeme_SmeltCoalBowls</li>
+		</value>
+	</Operation>
 
 </Patch>

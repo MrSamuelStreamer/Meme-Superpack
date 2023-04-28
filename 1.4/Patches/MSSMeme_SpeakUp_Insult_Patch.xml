@@ -5,7 +5,7 @@
 		<xpath>/Defs/InteractionDef[defName = "Insult"]/logRulesInitiator/rulesStrings</xpath>
 		<value>
 			<rulesStrings>
-		<!-- == General == -->			
+				<!-- == General == -->
 				<li>r_logentry(p=5,tag=Insult_generic)->[generic]</li>
 				<li>generic->Ligma balls.</li>
 				<li>generic->I hope you save over the wrong canvas.</li>
@@ -28,6 +28,6 @@
 
 			</rulesStrings>
 		</value>
-	</Operation>	
-	
+	</Operation>
+
 </Patch>

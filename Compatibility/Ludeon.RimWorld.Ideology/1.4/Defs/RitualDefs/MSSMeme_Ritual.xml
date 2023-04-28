@@ -74,8 +74,8 @@
 		<hook>HighPriority</hook>
 		<thinkNode Class="ThinkNode_Priority">
 			<subNodes>
-				<li Class="JobGiver_SpectateInCircleDuty" />
-				<li Class="JobGiver_GetJoyInGatheringArea" />
+				<li Class="JobGiver_SpectateInCircleDuty"/>
+				<li Class="JobGiver_GetJoyInGatheringArea"/>
 			</subNodes>
 		</thinkNode>
 	</DutyDef>
@@ -85,7 +85,7 @@
 		<hook>HighPriority</hook>
 		<thinkNode Class="ThinkNode_Priority">
 			<subNodes>
-				<li Class="MSS.MemeSuperpack.RimRim.ThinkNode_RememberRimRim" />
+				<li Class="MSS.MemeSuperpack.RimRim.ThinkNode_RememberRimRim"/>
 			</subNodes>
 		</thinkNode>
 	</DutyDef>
@@ -93,7 +93,7 @@
 	<RitualBehaviorDef ParentName="DateRitualBehavior">
 		<defName>MSSMeme_ViewRimRim</defName>
 		<durationTicks>1500</durationTicks>
-		<roles Inherit="False" />
+		<roles Inherit="False"/>
 		<spectatorsLabel>RimRims</spectatorsLabel>
 		<spectatorGerund>watch</spectatorGerund>
 		<stages Inherit="False">
@@ -108,7 +108,7 @@
 			<li>
 				<defaultDuty>MSSMeme_RecordRimRim</defaultDuty>
 				<endTriggers>
-					<li Class="StageEndTrigger_Instant" />
+					<li Class="StageEndTrigger_Instant"/>
 				</endTriggers>
 			</li>
 			<li>
@@ -136,7 +136,7 @@
 				<statDef>Cleanliness</statDef>
 				<curve>
 					<points>
-						<li>0,  0</li>
+						<li>0, 0</li>
 						<li>0.4, 0.25</li>
 						<li>0.6, 0.30</li>
 					</points>
@@ -147,7 +147,7 @@
 				<statDef>JoyGainFactor</statDef>
 				<curve>
 					<points>
-						<li>0,  0</li>
+						<li>0, 0</li>
 						<li>1.0, 0.35</li>
 						<li>2.0, 0.50</li>
 					</points>

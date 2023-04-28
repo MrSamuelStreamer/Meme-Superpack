@@ -51,7 +51,7 @@
 		<makesSickThought>false</makesSickThought>
 		<extraTooltip>I like build base</extraTooltip>
 		<comps>
-			<li Class="HediffCompProperties_DisappearsOnDeath" />
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
 			<li Class="HediffCompProperties_GiveHediffsInRange">
 				<range>9.9</range>
 				<mote>Mote_WorkCommand</mote>
