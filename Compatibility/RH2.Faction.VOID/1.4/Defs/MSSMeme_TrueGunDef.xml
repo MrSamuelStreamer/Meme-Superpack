@@ -5,7 +5,7 @@
 	<ThingDef ParentName="BaseGunWithQuality" MayRequire="smartkar.athenaframework">
 		<defName>MSSMeme_TrueOttomaticGun</defName>
 		<label>True Fully Ottomatic gun</label>
-		<description>A mythical gun named after an individual rumored to have achieved unmatchable combat abilities. Through the power of coal, V.O.I.D. weaponry, and a lot of desperation, its true potential has been unlocked. This weapon unleashes what can only be described as a wall of projectiles in whatever direction it is aimed at. It also causes suppression on whatever gets hit by one of its bullets. However, due to Wi-Fi interference, any structures that are in the path of the bullets will disrupt the stream of bullets. Thus, this gun is best used in open spaces. Be sure to have a backup weapon for enclosed areas.</description>
+		<description>A mythical gun named after an individual rumored to have achieved unmatchable combat abilities. Through the power of coal, V.O.I.D. weaponry, and a lot of desperation, its true potential has been unlocked. This weapon unleashes what can only be described as a wall of projectiles in whatever direction it is aimed at. It also causes suppression on whatever gets hit by one of its bullets.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MSSMeme_TrueOttomatic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -86,7 +86,6 @@
 			<li Class="AthenaFramework.AngularShotgunExtension">
 				<pelletCount>50</pelletCount>
 				<pelletAngle>1</pelletAngle>
-				<downedHitChance>0.5</downedHitChance>
 			</li>
 		</modExtensions>
 	</ThingDef>
@@ -117,7 +116,7 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
-						<postFactor>0.8</postFactor>
+						<postFactor>0.85</postFactor>
 					</li>
 				</capMods>
 			</li>
@@ -127,7 +126,7 @@
 				<capMods>
 					<li>
 						<capacity>Moving</capacity>
-						<postFactor>0.7</postFactor>
+						<postFactor>0.8</postFactor>
 					</li>
 				</capMods>
 			</li>
