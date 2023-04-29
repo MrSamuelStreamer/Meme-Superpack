@@ -15,7 +15,7 @@
 		<tendable>false</tendable>
 		<makesAlert>false</makesAlert>
 		<comps>
-			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
 		</comps>
 		<stages>
 			<li>
@@ -95,6 +95,22 @@
 					</li>
 				</capMods>
 			</li>
+		</stages>
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>MSSMeme_YChromosomalAdam</defName>
+		<label>Y-Chromosomal Adam</label>
+		<labelNoun>the Y-Chromosomal Adam</labelNoun>
+		<description>This pawn is the Y-Chromosomal Adam. The most recent ancestor of every living humanlike.</description>
+		<hediffClass>Hediff</hediffClass>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li />
 		</stages>
 	</HediffDef>
 

@@ -15,7 +15,7 @@
 		<inbredChanceOnChild>0</inbredChanceOnChild>
 		<familyByBloodRelation>true</familyByBloodRelation>
 
-		<!-- Because it's forced in code and we don't want 2 Y-Chromozomal Adams -->
+		<!-- Because it's forced in code and we don't want 2 Y-Chromosomal Adams -->
 		<generationChanceFactor>0</generationChanceFactor>
 	</PawnRelationDef>
 

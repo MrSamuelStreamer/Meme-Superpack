@@ -256,3 +256,4 @@ paket-files/
 __pycache__/
 *.pyc
 *.zip
+*.dds

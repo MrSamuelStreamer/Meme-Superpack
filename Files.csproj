@@ -13,11 +13,11 @@
   </PropertyGroup>
   <ItemGroup>
     <ReleaseFiles Include="1.*\**" Exclude="1.*\Source\**;1.*\Assemblies\*.pdb" />
-    <AboutFiles Include="About\**" Exclude="About\About.xml;About\About-*.xml;About\PublishedFileId.txt;About\PublishedFileId-*.txt" />
-    <CommonFiles Include="Common\**" />
+    <AboutFiles Include="About\**" Exclude="About\About.xml;About\About-*.xml;About\PublishedFileId.txt;About\PublishedFileId-*.txt;About\Preview.kra;About\Preview.kra~;About\Preview.png~" />
+    <CommonFiles Include="Common\**" Exclude="Common\**\*.dds;Common\**\*.kra" />
     <CompatibilityFiles Include="Compatibility\**" />
     <ExtraFiles Include="loadFolders.xml;LICENSE;README.md" />
-    <None Include=".gitattributes;.gitignore;CONTRIBUTING.md;About\About.xml;About\About-*.xml;About\PublishedFileId-*.txt" />
+    <None Include=".gitattributes;.gitignore;CONTRIBUTING.md;About\About.xml;About\About-*.xml;About\PublishedFileId-*.txt;About\Preview.kra" />
   </ItemGroup>
   <Target Name="Clean">
     <RemoveDir Directories="$(OutputPath)" />

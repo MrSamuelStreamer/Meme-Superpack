@@ -12,11 +12,11 @@ public class Arcadius
 		[HarmonyPostfix]
 		public static Pawn Postfix(Pawn result, PawnGenerationRequest request)
 		{
-			if (!GameComponent_ArcadiusRelationManager.GeneratingArcadius &&
+			if (MemeSuperpackMod.settings.arcadius && !GameComponent_ArcadiusRelationManager.GeneratingArcadius &&
 			    GameComponent_ArcadiusRelationManager.GetArcadius() is { } arcadius && result.RaceProps is
 				    { Humanlike: true, IsFlesh: true, intelligence: Intelligence.Humanlike } &&
-			    !result.relations.DirectRelationExists(MemeSuperPackDefOf.MSSMeme_Arcadius, arcadius))
-				result.relations.AddDirectRelation(MemeSuperPackDefOf.MSSMeme_Arcadius, arcadius);
+			    !result.relations.DirectRelationExists(MemeSuperPackDefOf.MSSMeme_Arcadius, arcadius)) result.relations.AddDirectRelation(MemeSuperPackDefOf.MSSMeme_Arcadius, arcadius);
+
 			return result;
 		}
 	}
@@ -27,7 +27,7 @@ public class Arcadius
 		[HarmonyPostfix]
 		public static bool Postfix(bool result, Pawn pawn)
 		{
-			return result || GameComponent_ArcadiusRelationManager.GetArcadius() == pawn;
+			return result || (MemeSuperpackMod.settings.arcadius && GameComponent_ArcadiusRelationManager.GetArcadius() == pawn);
 		}
 	}
 }

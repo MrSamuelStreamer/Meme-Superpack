@@ -22,6 +22,8 @@ namespace MSS.MemeSuperpack
 
 		public static SongDef MSSMeme_BuckoDrinkMusic;
 
+		public static HediffDef MSSMeme_YChromosomalAdam;
+
 		[MayRequireIdeology] public static TaleDef MSSMeme_WatchedRimRim;
 
 		static MemeSuperPackDefOf()
