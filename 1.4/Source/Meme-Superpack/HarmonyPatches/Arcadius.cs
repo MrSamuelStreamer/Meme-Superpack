@@ -15,19 +15,23 @@ public class Arcadius
 			if (MemeSuperpackMod.settings.arcadius && !GameComponent_ArcadiusRelationManager.GeneratingArcadius &&
 			    GameComponent_ArcadiusRelationManager.GetArcadius() is { } arcadius && result.RaceProps is
 				    { Humanlike: true, IsFlesh: true, intelligence: Intelligence.Humanlike } &&
-			    !result.relations.DirectRelationExists(MemeSuperPackDefOf.MSSMeme_Arcadius, arcadius)) result.relations.AddDirectRelation(MemeSuperPackDefOf.MSSMeme_Arcadius, arcadius);
+			    (!result.relations?.DirectRelationExists(MemeSuperPackDefOf.MSSMeme_Arcadius, arcadius) ?? true))
+			{
+				result.relations?.AddDirectRelation(MemeSuperPackDefOf.MSSMeme_Arcadius, arcadius);
+			}
 
 			return result;
 		}
 	}
 
-	[HarmonyPatch(typeof(SocialCardUtility), "ShouldShowPawnRelations")]
-	public static class ArcadiusRelationCardUtil
-	{
-		[HarmonyPostfix]
-		public static bool Postfix(bool result, Pawn pawn)
-		{
-			return result || (MemeSuperpackMod.settings.arcadius && GameComponent_ArcadiusRelationManager.GetArcadius() == pawn);
-		}
-	}
+	// Currently removed as it causes weird flickering.
+	// [HarmonyPatch(typeof(SocialCardUtility), "ShouldShowPawnRelations")]
+	// public static class ArcadiusRelationCardUtil
+	// {
+	// 	[HarmonyPostfix]
+	// 	public static bool Postfix(bool result, Pawn pawn)
+	// 	{
+	// 		return result || (MemeSuperpackMod.settings.arcadius && GameComponent_ArcadiusRelationManager.GetArcadius() == pawn);
+	// 	}
+	// }
 }

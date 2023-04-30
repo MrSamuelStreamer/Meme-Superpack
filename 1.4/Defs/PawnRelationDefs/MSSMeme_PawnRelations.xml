@@ -7,7 +7,7 @@
 		<label>Y-chromosomal Adam</label>
 		<importance>100</importance>
 		<implied>false</implied>
-		<reflexive>true</reflexive>
+		<reflexive>false</reflexive>
 		<removeOnDeath>false</removeOnDeath>
 		<opinionOffset>30</opinionOffset>
 		<romanceChanceFactor>5.0</romanceChanceFactor>

@@ -23,7 +23,7 @@ namespace MSS.MemeSuperpack
 		public bool concreteUI = true;
 		public bool coalTypeHidden = true;
 		public bool sillyTranslations = true;
-		public bool arcadius = true;
+		public bool arcadius = false;
 
 		public void DoWindowContents(Rect wrect)
 		{

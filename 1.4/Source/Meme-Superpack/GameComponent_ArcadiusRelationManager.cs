@@ -21,29 +21,23 @@ public class GameComponent_ArcadiusRelationManager : GameComponent
 	public static Pawn CachedArcadius;
 	public static bool GeneratingArcadius = false;
 	public Pawn _arcadius;
+	public int nextArcadiusTick = 1000;
 
 	public GameComponent_ArcadiusRelationManager(Game game)
 	{
 	}
 
-	public static Pawn GetArcadius(bool generateIfAbsent = false)
+	public static Pawn GetArcadius(bool forceGenerateIfAbsent = false)
 	{
 		if (!MemeSuperpackMod.settings.arcadius) return null;
 		if (CachedArcadius != null) return CachedArcadius;
-		if (Current.Game.components.Find(gc => gc.GetType() == typeof(GameComponent_ArcadiusRelationManager)) is
-		    GameComponent_ArcadiusRelationManager arcManager)
-			CachedArcadius = arcManager.Arcadius ?? (generateIfAbsent ? arcManager.GenerateArcadius(true) : null);
-		return CachedArcadius;
+		return (Current.Game.components.Find(gc => gc.GetType() == typeof(GameComponent_ArcadiusRelationManager)) is
+			GameComponent_ArcadiusRelationManager arcManager)
+			? arcManager.Arcadius ?? (forceGenerateIfAbsent ? arcManager.GenerateArcadius(true) : null)
+			: CachedArcadius;
 	}
 
-	public override void StartedNewGame()
-	{
-		CachedArcadius = null;
-		if (!MemeSuperpackMod.settings.arcadius) return;
-		GenerateArcadius(false);
-	}
-
-	public override void LoadedGame()
+	public override void FinalizeInit()
 	{
 		CachedArcadius = null;
 		if (Arcadius == null || PawnsFinder.All_AliveOrDead.AsParallel().Contains(Arcadius)) return;
@@ -102,27 +96,28 @@ public class GameComponent_ArcadiusRelationManager : GameComponent
 	public Pawn GenerateArcadius(bool force)
 	{
 		if (!MemeSuperpackMod.settings.arcadius) return null;
-		if (Arcadius != null && !force) return Arcadius;
-		if (Arcadius == null)
-		{
-			// Check for uncached Arcadius by comp
-			Arcadius = GetArcadiusByHediff();
-			if (Arcadius != null)
-			{
-				SetYChromosomalAdamRelation(Arcadius);
-				return Arcadius;
-			}
-		}
-
-		if (Arcadius != null)
-		{
-			CleanUpArcadius();
-			Arcadius = null;
-		}
 
 		GeneratingArcadius = true;
 		try
 		{
+			if (Arcadius != null && !force) return Arcadius;
+			if (Arcadius == null)
+			{
+				// Check for uncached Arcadius by comp
+				Arcadius = GetArcadiusByHediff();
+				if (Arcadius != null)
+				{
+					SetYChromosomalAdamRelation(Arcadius);
+					return Arcadius;
+				}
+			}
+
+			if (Arcadius != null)
+			{
+				CleanUpArcadius();
+				Arcadius = null;
+			}
+
 			Arcadius = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, Faction.OfAncients, forceDead: true, forceGenerateNewPawn: true,
 				forcedTraits: new[] { TraitDefOf.Bisexual }, fixedGender: Gender.Male, colonistRelationChanceFactor: 0,
 				biologicalAgeRange: new FloatRange(54, 2000), forceBaselinerChance: 1f));
@@ -141,6 +136,15 @@ public class GameComponent_ArcadiusRelationManager : GameComponent
 		}
 
 		return Arcadius;
+	}
+
+	public override void GameComponentUpdate()
+	{
+		if (_arcadius == null && MemeSuperpackMod.settings.arcadius && Find.TickManager.TicksGame > nextArcadiusTick)
+		{
+			GenerateArcadius(false);
+			nextArcadiusTick = Find.TickManager.TicksGame + 60000;
+		}
 	}
 
 	public override void ExposeData()
