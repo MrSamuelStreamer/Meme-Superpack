@@ -48,6 +48,7 @@ namespace MSS.MemeSuperpack
 			options.CheckboxLabeled("Allow Hiding mineable Coal Type", ref coalTypeHidden);
 			options.CheckboxLabeled("Allow Silly Translations", ref sillyTranslations);
 			options.CheckboxLabeled("Allow Arcadius", ref arcadius);
+			options.CheckboxLabeled("Allow Stockpile affinity", ref stockpileAffinity);
 			options.Gap();
 
 			options.End();
