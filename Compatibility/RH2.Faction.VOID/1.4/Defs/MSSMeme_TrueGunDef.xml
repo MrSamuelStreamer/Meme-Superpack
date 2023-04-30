@@ -84,7 +84,7 @@
 		</tools>
 		<modExtensions>
 			<li Class="AthenaFramework.AngularShotgunExtension">
-				<pelletCount>35</pelletCount>
+				<pelletCount>45</pelletCount>
 				<pelletAngle>1</pelletAngle>
 			</li>
 		</modExtensions>
