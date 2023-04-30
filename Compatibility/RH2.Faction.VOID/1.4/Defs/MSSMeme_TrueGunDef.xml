@@ -5,7 +5,7 @@
 	<ThingDef ParentName="BaseGunWithQuality" MayRequire="smartkar.athenaframework">
 		<defName>MSSMeme_TrueOttomaticGun</defName>
 		<label>True Fully Ottomatic gun</label>
-		<description>A mythical gun named after an individual rumored to have achieved unmatchable combat abilities. Through the power of coal, V.O.I.D. weaponry, and a lot of desperation, its true potential has been unlocked. This weapon unleashes what can only be described as a wall of projectiles in whatever direction it is aimed at. It also causes suppression on whatever gets hit by one of its bullets.</description>
+		<description>A mythical gun named after an individual rumored to have achieved unmatchable combat abilities. Through the power of coal, V.O.I.D. weaponry, and a lot of desperation, its true potential has been unlocked. This weapon unleashes what can only be described as a wall of projectiles in whatever direction it is aimed at. It also causes suppression on whatever gets hit by one of its bullets. Not even the most durable of N-4 infected monstrosities can withstand this portable bullet hell. Just be VERY careful of friendly fire, as anyone or anything caught in this gun's crossfire will be vaporized.</description>
 		<graphicData>
 			<texPath>Things/Item/Equipment/WeaponRanged/MSSMeme_TrueOttomatic</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -63,7 +63,7 @@
 				<hasStandardCommand>true</hasStandardCommand>
 				<defaultProjectile>MSSMeme_Bullet_TrueOttomatic</defaultProjectile>
 				<warmupTime>0.01</warmupTime>
-				<range>14.9</range>
+				<range>19.9</range>
 				<soundCast>Shot_Minigun</soundCast>
 				<soundCastTail>GunTail_Heavy</soundCastTail>
 				<muzzleFlashScale>19</muzzleFlashScale>
@@ -84,7 +84,7 @@
 		</tools>
 		<modExtensions>
 			<li Class="AthenaFramework.AngularShotgunExtension">
-				<pelletCount>50</pelletCount>
+				<pelletCount>35</pelletCount>
 				<pelletAngle>1</pelletAngle>
 			</li>
 		</modExtensions>
