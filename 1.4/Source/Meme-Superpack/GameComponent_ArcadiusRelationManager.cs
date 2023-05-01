@@ -149,8 +149,8 @@ public class GameComponent_ArcadiusRelationManager : GameComponent
 
 	public override void ExposeData()
 	{
-		Scribe_Deep.Look(ref _arcadius, "pawn");
+		Scribe_References.Look(ref _arcadius, "pawn");
 		if (Scribe.mode != LoadSaveMode.PostLoadInit) return;
-		if (Arcadius is null) GenerateArcadius(false);
+		if (Arcadius is null && MemeSuperpackMod.settings.arcadius) GenerateArcadius(false);
 	}
 }

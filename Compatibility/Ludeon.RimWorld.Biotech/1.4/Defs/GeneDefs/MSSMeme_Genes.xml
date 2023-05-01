@@ -8,16 +8,16 @@
 		<iconPath>UI/Icons/Genes/MSSMeme_SamVoice_Gene</iconPath>
 		<displayOrderInCategory>131</displayOrderInCategory>
 		<soundCall>MSSMeme_Pawn_Sam_Call</soundCall>
-		<!--<soundDeath>AG_Pawn_Slug_Death</soundDeath>
-		<soundWounded>AG_Pawn_Slug_Wounded</soundWounded>-->
 		<selectionWeight>0</selectionWeight>
 	</GeneDef>
+
 	<GeneDef>
 		<defName>MSSMeme_CECompatible</defName>
 		<label>CE Compatible</label>
 		<description>Carriers of this gene are CE Compatible and can use a powerful psychic shout to call an CE Compatible animal to fight for them.</description>
 		<iconPath>UI/Icons/Genes/Gene_AnimalWarcall</iconPath>
 		<displayCategory>Ability</displayCategory>
+		<canGenerateInGeneSet>true</canGenerateInGeneSet>
 		<abilities>
 			<li>MSSMeme_ComeElephant</li>
 			<li>MSSMeme_CarryElephant</li>
