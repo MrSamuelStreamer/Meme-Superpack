@@ -25,9 +25,20 @@
 			<RangedWeapon_Cooldown>0.01</RangedWeapon_Cooldown>
 		</statBases>
 		<costList>
-			<Steel>420</Steel>
-			<ComponentIndustrial>69</ComponentIndustrial>
+			<Plasteel>420</Plasteel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentSpacer>20</ComponentSpacer>
+			<MSSMeme_SuperCoal>169</MSSMeme_SuperCoal>
 		</costList>
+		<recipeMaker>
+			<researchPrerequisite>MSSMeme_FullyOttomatic</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>16</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
 		<techLevel>Ultra</techLevel>
 		<equippedStatOffsets>
 			<MoveSpeed>-2.0</MoveSpeed>
