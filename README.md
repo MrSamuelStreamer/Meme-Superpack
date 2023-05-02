@@ -15,7 +15,7 @@ A lot of the "requirements" aren't really requirements, this is just a superpack
 * The Art channel in Samuel Streamer's Discord for the sillier SpeakUp dialouge
 
 ### "Netherworld Shanty"
-Kevin MacLeod ([incompetech.com](incompetech.com))<br>Licensed under [Creative Commons: By Attribution 3.0](http://creativecommons.org/licenses/by/3.0/)
+Kevin MacLeod ([incompetech.com](https://incompetech.com))<br>Licensed under [Creative Commons: By Attribution 3.0](http://creativecommons.org/licenses/by/3.0/)
 
 ## Disclaimers
 There are some references in this mod that are inspired by videos of other games than Rimworld played by Mr Samuel Streamer.
