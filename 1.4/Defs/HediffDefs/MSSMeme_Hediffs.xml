@@ -8,12 +8,13 @@
 		<description>I'm Awake, what an awful state of existance.</description>
 		<hediffClass>MSS.MemeSuperpack.Hediff.Hediff_WakeTime</hediffClass>
 		<minSeverity>0</minSeverity>
-		<maxSeverity>18</maxSeverity>
+		<maxSeverity>4</maxSeverity>
 		<makesSickThought>false</makesSickThought>
 		<everCurableByItem>false</everCurableByItem>
 		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
 		<tendable>false</tendable>
 		<makesAlert>false</makesAlert>
+		<isBad>false</isBad>
 		<comps>
 			<li Class="HediffCompProperties_DisappearsOnDeath" />
 		</comps>

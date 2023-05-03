@@ -4,7 +4,7 @@
 
 	<TraderKindDef>
 		<defName>MSSMeme_Orbital_CoalGoodsOne</defName>
-		<label>exotic goods trader</label>
+		<label>exotic good trader</label>
 		<orbital>true</orbital>
 		<stockGenerators>
 
@@ -110,7 +110,7 @@
 
 	<TraderKindDef>
 		<defName>MSSMeme_Orbital_CoalGoodsTwo</defName>
-		<label>bulk goods trader</label>
+		<label>bulk good trader</label>
 		<orbital>true</orbital>
 		<stockGenerators>
 

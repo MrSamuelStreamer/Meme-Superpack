@@ -4,7 +4,7 @@
 
 	<TraderKindDef>
 		<defName>MSSMeme_Caravan_Outlander_CoalOne</defName>
-		<label>bulk goods trader</label>
+		<label>bulk good trader</label>
 		<stockGenerators>
 
 			<!-- Resources -->
@@ -111,7 +111,7 @@
 
 	<TraderKindDef>
 		<defName>MSSMeme_Caravan_Outlander_CoalTwo</defName>
-		<label>exotic goods trader</label>
+		<label>exotic good trader</label>
 		<stockGenerators>
 
 			<!-- Resources -->

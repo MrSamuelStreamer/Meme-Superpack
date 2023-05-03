@@ -4,7 +4,7 @@
 
 	<TraderKindDef>
 		<defName>MSSMeme_Caravan_Neolithic_CoalOne</defName>
-		<label>bulk goods trader</label>
+		<label>bulk good trader</label>
 		<stockGenerators>
 
 			<!-- Resources -->
@@ -111,7 +111,7 @@
 
 	<TraderKindDef>
 		<defName>MSSMeme_Caravan_Neolithic_CoalTwo</defName>
-		<label>shaman merchant</label>
+		<label>shamanic merchant</label>
 		<stockGenerators>
 
 			<!-- Resources -->

@@ -24,10 +24,15 @@ namespace MSS.MemeSuperpack
 		public bool coalTypeHidden = true;
 		public bool sillyTranslations = true;
 		public bool arcadius = false;
+		public bool awake = true;
+		public bool explosiveNukes = true;
+		public bool beautifulConcrete = true;
+		public bool diseases = true;
+		public bool memeResourceSpawns = true;
 
 		public void DoWindowContents(Rect wrect)
 		{
-			Listing_Standard options = new Listing_Standard();
+			Listing_Standard options = new();
 			options.Begin(wrect);
 
 			options.Label("Events:");
@@ -38,8 +43,10 @@ namespace MSS.MemeSuperpack
 			options.CheckboxLabeled("Allow stockpile fires", ref stockpileFires);
 			options.CheckboxLabeled("Allow conk creet terrain conversion", ref concreteTerrainConversion);
 			options.CheckboxLabeled("Allow conk creet icons and extra translations", ref concreteUI);
+			options.CheckboxLabeled("Allow conk creet to be pretty", ref beautifulConcrete);
 			options.CheckboxLabeled("Allow warcasket event", ref warcasketEvent);
 			options.CheckboxLabeled("Allow kick a nuke", ref kickNukes);
+			options.CheckboxLabeled("Allow Nukes to explode from melee", ref explosiveNukes);
 			options.CheckboxLabeled("Allow CE Spam", ref ceSpam);
 			options.CheckboxLabeled("Allow Gas-lighting", ref gaslighting);
 			options.CheckboxLabeled("Allow Grignr", ref grignr);
@@ -49,6 +56,9 @@ namespace MSS.MemeSuperpack
 			options.CheckboxLabeled("Allow Silly Translations", ref sillyTranslations);
 			options.CheckboxLabeled("Allow Arcadius", ref arcadius);
 			options.CheckboxLabeled("Allow Stockpile affinity", ref stockpileAffinity);
+			options.CheckboxLabeled("Allow Awake", ref awake);
+			options.CheckboxLabeled("Allow Diseases", ref diseases);
+			options.CheckboxLabeled("Allow Meme Resource Spawns", ref memeResourceSpawns);
 			options.Gap();
 
 			options.End();
@@ -74,6 +84,11 @@ namespace MSS.MemeSuperpack
 			Scribe_Values.Look(ref coalTypeHidden, "coalTypeHidden", true);
 			Scribe_Values.Look(ref sillyTranslations, "sillyTranslations", true);
 			Scribe_Values.Look(ref arcadius, "arcadius", true);
+			Scribe_Values.Look(ref explosiveNukes, "explosiveNukes", true);
+			Scribe_Values.Look(ref awake, "awake", true);
+			Scribe_Values.Look(ref beautifulConcrete, "beautifulConcrete", true);
+			Scribe_Values.Look(ref diseases, "diseases", true);
+			Scribe_Values.Look(ref memeResourceSpawns, "memeResourceSpawns", true);
 		}
 	}
 }

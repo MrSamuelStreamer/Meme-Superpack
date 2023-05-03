@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Patch>
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>beautifulConcrete</setting>
+		<enabled Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="FT_BlocksConcrete"]/stuffProps/statFactors/Beauty</xpath>
+					<value>
+						<Beauty>6</Beauty>
+					</value>
+				</li>
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef[defName="FT_BlocksConcrete"]/stuffProps/statFactors/Beauty</xpath>
-		<value>
-			<Beauty>6</Beauty>
-		</value>
-	</Operation>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="FT_ReinforcedConcreteBag"]/stuffProps/statFactors/Beauty</xpath>
+					<value>
+						<Beauty>7</Beauty>
+					</value>
+				</li>
 
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef[defName="FT_ReinforcedConcreteBag"]/stuffProps/statFactors/Beauty</xpath>
-		<value>
-			<Beauty>7</Beauty>
-		</value>
-	</Operation>
-
-	<Operation Class="PatchOperationReplace">
-		<xpath>/Defs/ThingDef[defName="FT_WoodConcrete"]/stuffProps/statFactors/Beauty</xpath>
-		<value>
-			<Beauty>10</Beauty>
-		</value>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="FT_WoodConcrete"]/stuffProps/statFactors/Beauty</xpath>
+					<value>
+						<Beauty>10</Beauty>
+					</value>
+				</li>
+			</operations>
+		</enabled>
 	</Operation>
 
 </Patch>

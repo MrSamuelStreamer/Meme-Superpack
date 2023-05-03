@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <Patch>
 
 	<Operation Class="PatchOperationFindMod">
@@ -8,29 +9,16 @@
 		<match Class="PatchOperationSequence">
 			<success>Always</success>
 			<operations>
-
-				<li Class="PatchOperationReplace">
-					<xpath>/Defs/BiomeDef[defName="Wasteland"]/diseaseMtbDays</xpath>
-					<value>
-						<diseaseMtbDays>20</diseaseMtbDays>
-					</value>
-				</li>
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/BiomeDef[defName="Wasteland"]/wildAnimals</xpath>
 					<value>
-						<MSSMeme_CombustionElephant>5</MSSMeme_CombustionElephant>
+						<MSSMeme_CombustionElephant>0.3</MSSMeme_CombustionElephant>
+						<MSSMeme_CombatElephant>0.3</MSSMeme_CombatElephant>
+						<MSSMeme_ComeElephant>0.3</MSSMeme_ComeElephant>
+						<MSSMeme_CarryElephant>0.05</MSSMeme_CarryElephant>
+						<MSSMeme_CrazedElephant>0.1</MSSMeme_CrazedElephant>
 					</value>
 				</li>
-				<li Class="PatchOperationAdd">
-					<xpath>/Defs/BiomeDef[defName="Wasteland"]/diseases</xpath>
-					<value>
-						<li>
-							<diseaseInc>MSSMeme_SitKid_Disease</diseaseInc>
-							<commonality>369</commonality>
-						</li>
-					</value>
-				</li>
-
 			</operations>
 		</match>
 	</Operation>
