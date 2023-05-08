@@ -29,6 +29,7 @@ namespace MSS.MemeSuperpack
 		public bool beautifulConcrete = true;
 		public bool diseases = true;
 		public bool memeResourceSpawns = true;
+		public bool getStickbugged;
 
 		public void DoWindowContents(Rect wrect)
 		{
@@ -59,6 +60,7 @@ namespace MSS.MemeSuperpack
 			options.CheckboxLabeled("Allow Awake", ref awake);
 			options.CheckboxLabeled("Allow Diseases", ref diseases);
 			options.CheckboxLabeled("Allow Meme Resource Spawns", ref memeResourceSpawns);
+			options.CheckboxLabeled("Allow Getting Stickbugged", ref getStickbugged);
 			options.Gap();
 
 			options.End();
@@ -89,6 +91,7 @@ namespace MSS.MemeSuperpack
 			Scribe_Values.Look(ref beautifulConcrete, "beautifulConcrete", true);
 			Scribe_Values.Look(ref diseases, "diseases", true);
 			Scribe_Values.Look(ref memeResourceSpawns, "memeResourceSpawns", true);
+			Scribe_Values.Look(ref getStickbugged, "getStickbugged", true);
 		}
 	}
 }

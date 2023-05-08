@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>MSSMeme_Stickbug</defName>
+		<label>Stickbug</label>
+		<description>Get stickbugged lol.</description>
+		<statBases>
+			<MoveSpeed>2</MoveSpeed>
+			<MarketValue>1</MarketValue>
+			<MeatAmount>0</MeatAmount>
+			<LeatherAmount>0</LeatherAmount>
+			<Insulation_Cold>0</Insulation_Cold>
+			<Insulation_Heat>10</Insulation_Heat>
+			<ArmorRating_Heat>0.1</ArmorRating_Heat>
+			<ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.1</ArmorRating_Sharp>
+			<ComfyTemperatureMin>16</ComfyTemperatureMin>
+			<ComfyTemperatureMax>28</ComfyTemperatureMax>
+		</statBases>
+		<race>
+			<wildness>0.1</wildness>
+			<fleshType>Insectoid</fleshType>
+			<bloodDef>Filth_BloodInsect</bloodDef>
+			<foodType>VegetarianRoughAnimal</foodType>
+			<manhunterOnDamageChance>0.10</manhunterOnDamageChance>
+			<useMeatFrom>Megaspider</useMeatFrom>
+			<useLeatherFrom>Megaspider</useLeatherFrom>
+			<body>BeetleLike</body>
+			<baseBodySize>0.2</baseBodySize>
+			<baseHungerRate>0.10</baseHungerRate>
+			<baseHealthScale>0.1</baseHealthScale>
+			<lifeExpectancy>1</lifeExpectancy>
+			<trainability>None</trainability>
+			<mateMtbHours>4</mateMtbHours>
+			<gestationPeriodDays>1</gestationPeriodDays>
+			<litterSizeCurve>
+				<points>
+					<li>(1.0, 1)</li>
+					<li>(1.5, 3)</li>
+					<li>(2.0, 3)</li>
+					<li>(2.5, 7)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeStageAges>
+				<li>
+					<def>EusocialInsectLarva</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectJuvenile</def>
+					<minAge>0.03</minAge>
+				</li>
+				<li>
+					<def>EusocialInsectAdult</def>
+					<minAge>0.4</minAge>
+					<soundWounded>Pawn_Megascarab_Wounded</soundWounded>
+					<soundDeath>Pawn_Megascarab_Death</soundDeath>
+					<soundCall>Pawn_Megascarab_Call</soundCall>
+					<soundAngry>Pawn_Megascarab_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>1</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+		</tools>
+		<tradeTags>
+			<li>AnimalInsect</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>MSSMeme_Stickbug</defName>
+		<label>stickbug</label>
+		<race>MSSMeme_Stickbug</race>
+		<combatPower>1</combatPower>
+		<canArriveManhunter>true</canArriveManhunter>
+		<ecoSystemWeight>0.01</ecoSystemWeight>
+		<wildGroupSize>8~20</wildGroupSize>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Stickbug/MSSMeme_Stickbug</texPath>
+					<drawSize>0.3</drawSize>
+					<color>(137,245,141)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Stickbug/MSSMeme_Stickbug_dessicated</texPath>
+					<drawSize>0.3</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Stickbug/MSSMeme_Stickbug</texPath>
+					<drawSize>0.5</drawSize>
+					<color>(137,245,141)</color>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Stickbug/MSSMeme_Stickbug_dessicated</texPath>
+					<drawSize>0.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Stickbug/MSSMeme_Stickbug</texPath>
+					<drawSize>0.8</drawSize>
+					<color>(137,245,141)</color>
+					<shadowData>
+						<volume>(0.2, 0.3, 0.2)</volume>
+						<offset>(0,0,0)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Stickbug/MSSMeme_Stickbug_dessicated</texPath>
+					<drawSize>0.8</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

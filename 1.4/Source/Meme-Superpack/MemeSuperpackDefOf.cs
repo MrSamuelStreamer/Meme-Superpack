@@ -18,11 +18,15 @@ namespace MSS.MemeSuperpack
 
 		public static PawnRelationDef MSSMeme_Arcadius;
 
+		public static PawnKindDef MSSMeme_Stickbug;
+
 		public static ThoughtDef MSSMeme_AwakeThought;
 
 		public static SongDef MSSMeme_BuckoDrinkMusic;
 
 		public static HediffDef MSSMeme_YChromosomalAdam;
+
+		public static ThingDef MSSMeme_StickbugIncoming;
 
 		[MayRequireIdeology] public static TaleDef MSSMeme_WatchedRimRim;
 

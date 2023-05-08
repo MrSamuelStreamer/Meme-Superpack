@@ -46,7 +46,7 @@
 		</targetTags>
 		<workerClass>MSS.MemeSuperpack.IncidentWorker_StockpileFire</workerClass>
 		<baseChance>0.6</baseChance>
-		<minRefireDays>30</minRefireDays>
+		<minRefireDays>60</minRefireDays>
 	</IncidentDef>
 
 	<IncidentDef>
@@ -61,7 +61,7 @@
 		</targetTags>
 		<workerClass>MSS.MemeSuperpack.IncidentWorker_OutOfSteel</workerClass>
 		<baseChance>0.6</baseChance>
-		<minRefireDays>30</minRefireDays>
+		<minRefireDays>120</minRefireDays>
 	</IncidentDef>
 
 	<IncidentDef>
@@ -90,6 +90,21 @@
 			<li>Map_PlayerHome</li>
 		</targetTags>
 		<workerClass>MSS.MemeSuperpack.IncidentWorker_Icewolf</workerClass>
+		<baseChance>1.1</baseChance>
+		<minRefireDays>20</minRefireDays>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>MSSMeme_GetStickbuggedLol</defName>
+		<letterDef>NeutralEvent</letterDef>
+		<label>get stickbugged lol</label>
+		<letterText>Wait a sec, look over there. If you look closely... is that, no, surely it can't be?</letterText>
+		<letterLabel>Get Stickbugged Lol!</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_GetStickbuggedLol</workerClass>
 		<baseChance>1.1</baseChance>
 		<minRefireDays>20</minRefireDays>
 	</IncidentDef>

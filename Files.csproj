@@ -33,7 +33,7 @@
     <Copy SourceFiles="About\PublishedFileId-$(Configuration).txt" DestinationFiles="$(OutputPath)\About\PublishedFileId.txt" SkipUnchangedFiles="true" Condition="Exists('About\PublishedFileId-$(Configuration).txt')" />
   </Target>
   <Target Name="Rebuild" />
-  <Target Name="PostBuild" AfterTargets="Build" >
+  <Target Name="PostBuild" AfterTargets="Build">
     <Copy SourceFiles="@(AboutFiles)" DestinationFiles="@(AboutFiles->'$(OutputPath)\About\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
     <Copy SourceFiles="About\About-$(Configuration).xml" DestinationFiles="$(OutputPath)\About\About.xml" />
     <Copy SourceFiles="@(CommonFiles)" DestinationFiles="@(CommonFiles->'$(OutputPath)\Common\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
