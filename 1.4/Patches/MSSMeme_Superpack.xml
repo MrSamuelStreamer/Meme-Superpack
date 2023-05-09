@@ -75,7 +75,6 @@
 		</enabled>
 	</Operation>
 
-
 	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
 		<setting>explosiveNukes</setting>
 		<enabled Class="PatchOperationSequence">

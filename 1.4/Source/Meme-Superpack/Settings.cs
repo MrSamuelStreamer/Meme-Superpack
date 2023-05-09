@@ -29,7 +29,9 @@ namespace MSS.MemeSuperpack
 		public bool beautifulConcrete = true;
 		public bool diseases = true;
 		public bool memeResourceSpawns = true;
-		public bool getStickbugged;
+		public bool getStickbugged = true;
+		public bool stickbugsCanSkyfall = false;
+		public bool coalInRecipes = true;
 
 		public void DoWindowContents(Rect wrect)
 		{
@@ -37,30 +39,32 @@ namespace MSS.MemeSuperpack
 			options.Begin(wrect);
 
 			options.Label("Events:");
-			options.CheckboxLabeled("Allow Police", ref police);
 			options.CheckboxLabeled("Allow Icewolf Bad luck", ref icewolf);
 			options.CheckboxLabeled("Allow Steel Loss", ref steelLoss);
 			options.CheckboxLabeled("Allow bed fires", ref bedFires);
 			options.CheckboxLabeled("Allow stockpile fires", ref stockpileFires);
 			options.CheckboxLabeled("Allow conk creet terrain conversion", ref concreteTerrainConversion);
 			options.CheckboxLabeled("Allow conk creet icons and extra translations", ref concreteUI);
-			options.CheckboxLabeled("Allow conk creet to be pretty", ref beautifulConcrete);
 			options.CheckboxLabeled("Allow warcasket event", ref warcasketEvent);
 			options.CheckboxLabeled("Allow kick a nuke", ref kickNukes);
 			options.CheckboxLabeled("Allow Nukes to explode from melee", ref explosiveNukes);
 			options.CheckboxLabeled("Allow CE Spam", ref ceSpam);
 			options.CheckboxLabeled("Allow Gas-lighting", ref gaslighting);
-			options.CheckboxLabeled("Allow Grignr", ref grignr);
 			options.CheckboxLabeled("Allow Building Aura", ref buildingAura);
 			options.CheckboxLabeled("Allow Where RimRim", ref whereRimRim);
 			options.CheckboxLabeled("Allow Hiding mineable Coal Type", ref coalTypeHidden);
 			options.CheckboxLabeled("Allow Silly Translations", ref sillyTranslations);
 			options.CheckboxLabeled("Allow Arcadius", ref arcadius);
 			options.CheckboxLabeled("Allow Stockpile affinity", ref stockpileAffinity);
-			options.CheckboxLabeled("Allow Awake", ref awake);
 			options.CheckboxLabeled("Allow Diseases", ref diseases);
 			options.CheckboxLabeled("Allow Meme Resource Spawns", ref memeResourceSpawns);
+			options.CheckboxLabeled("Allow Coal enhanced recipes", ref coalInRecipes);
 			options.CheckboxLabeled("Allow Getting Stickbugged", ref getStickbugged);
+			options.CheckboxLabeled("Allow Stickbuggs to skyfall", ref stickbugsCanSkyfall);
+			options.CheckboxLabeled("Allow conk creet to be pretty", ref beautifulConcrete);
+			options.CheckboxLabeled("Allow Awake", ref awake);
+			options.CheckboxLabeled("Allow Police", ref police);
+			options.CheckboxLabeled("Allow Grignr", ref grignr);
 			options.Gap();
 
 			options.End();
@@ -92,6 +96,8 @@ namespace MSS.MemeSuperpack
 			Scribe_Values.Look(ref diseases, "diseases", true);
 			Scribe_Values.Look(ref memeResourceSpawns, "memeResourceSpawns", true);
 			Scribe_Values.Look(ref getStickbugged, "getStickbugged", true);
+			Scribe_Values.Look(ref stickbugsCanSkyfall, "stickbugsCanSkyfall", false);
+			Scribe_Values.Look(ref coalInRecipes, "coalInRecipes", true);
 		}
 	}
 }
