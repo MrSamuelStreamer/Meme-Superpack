@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -6,32 +7,18 @@ namespace MSS.MemeSuperpack.HarmonyPatches;
 
 public class Arcadius
 {
-	[HarmonyPatch(typeof(PawnGenerator), nameof(PawnGenerator.GeneratePawn), new[] { typeof(PawnGenerationRequest) })]
-	public static class ArcadiusRelation
+	[HarmonyPatch(typeof(Pawn_RelationsTracker), nameof(Pawn_RelationsTracker.ExposeData))]
+	public static class CleanBrokenRels
 	{
-		[HarmonyPostfix]
-		public static Pawn Postfix(Pawn result, PawnGenerationRequest request)
+		[HarmonyPrefix]
+		public static bool Prefix(ref List<DirectPawnRelation> ___directRelations)
 		{
-			if (MemeSuperpackMod.settings.arcadius && !GameComponent_ArcadiusRelationManager.GeneratingArcadius &&
-			    GameComponent_ArcadiusRelationManager.GetArcadius() is { } arcadius && result.RaceProps is
-				    { Humanlike: true, IsFlesh: true, intelligence: Intelligence.Humanlike } &&
-			    (!result.relations?.DirectRelationExists(MemeSuperPackDefOf.MSSMeme_Arcadius, arcadius) ?? true))
+			if (Scribe.mode == LoadSaveMode.PostLoadInit)
 			{
-				result.relations?.AddDirectRelation(MemeSuperPackDefOf.MSSMeme_Arcadius, arcadius);
+				___directRelations.RemoveAll(r => r.def == null || r.def.defName == "MSSMeme_Arcadius");
 			}
 
-			return result;
+			return true;
 		}
 	}
-
-	// Currently removed as it causes weird flickering.
-	// [HarmonyPatch(typeof(SocialCardUtility), "ShouldShowPawnRelations")]
-	// public static class ArcadiusRelationCardUtil
-	// {
-	// 	[HarmonyPostfix]
-	// 	public static bool Postfix(bool result, Pawn pawn)
-	// 	{
-	// 		return result || (MemeSuperpackMod.settings.arcadius && GameComponent_ArcadiusRelationManager.GetArcadius() == pawn);
-	// 	}
-	// }
 }

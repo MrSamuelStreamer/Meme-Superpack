@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
 using Verse;
 
 namespace MSS.MemeSuperpack
@@ -32,42 +34,108 @@ namespace MSS.MemeSuperpack
 		public bool getStickbugged = true;
 		public bool stickbugsCanSkyfall = false;
 		public bool coalInRecipes = true;
+		public bool floorTrails = true;
+		public bool combustionAnimalsCanDoorbash = true;
+
+		private readonly Listing_Standard _options = new();
+		private const float RowHeight = 32f;
+		private const float Indent = 9f;
+
+		private enum Tab
+		{
+			Features,
+			Events,
+			UI
+		}
+
+		private static Tab _tab = Tab.Features;
+
+		private Rect DrawTabs(Rect rect)
+		{
+			List<TabRecord> tabsList = new()
+			{
+				new TabRecord("Features", () => _tab = Tab.Features,
+					_tab == Tab.Features),
+				new TabRecord("Events", () => _tab = Tab.Events,
+					_tab == Tab.Events),
+				new TabRecord("UI", () => _tab = Tab.UI,
+					_tab == Tab.UI)
+			};
+
+			Rect tabRect = rect.ContractedBy(0, RowHeight);
+			TabDrawer.DrawTabs(tabRect, tabsList);
+
+			return tabRect.GetInnerRect();
+		}
 
 		public void DoWindowContents(Rect wrect)
 		{
-			Listing_Standard options = new();
-			options.Begin(wrect);
+			Rect viewPort = DrawTabs(wrect);
+			_options.Begin(viewPort);
 
-			options.Label("Events:");
-			options.CheckboxLabeled("Allow Icewolf Bad luck", ref icewolf);
-			options.CheckboxLabeled("Allow Steel Loss", ref steelLoss);
-			options.CheckboxLabeled("Allow bed fires", ref bedFires);
-			options.CheckboxLabeled("Allow stockpile fires", ref stockpileFires);
-			options.CheckboxLabeled("Allow conk creet terrain conversion", ref concreteTerrainConversion);
-			options.CheckboxLabeled("Allow conk creet icons and extra translations", ref concreteUI);
-			options.CheckboxLabeled("Allow warcasket event", ref warcasketEvent);
-			options.CheckboxLabeled("Allow kick a nuke", ref kickNukes);
-			options.CheckboxLabeled("Allow Nukes to explode from melee", ref explosiveNukes);
-			options.CheckboxLabeled("Allow CE Spam", ref ceSpam);
-			options.CheckboxLabeled("Allow Gas-lighting", ref gaslighting);
-			options.CheckboxLabeled("Allow Building Aura", ref buildingAura);
-			options.CheckboxLabeled("Allow Where RimRim", ref whereRimRim);
-			options.CheckboxLabeled("Allow Hiding mineable Coal Type", ref coalTypeHidden);
-			options.CheckboxLabeled("Allow Silly Translations", ref sillyTranslations);
-			options.CheckboxLabeled("Allow Arcadius", ref arcadius);
-			options.CheckboxLabeled("Allow Stockpile affinity", ref stockpileAffinity);
-			options.CheckboxLabeled("Allow Diseases", ref diseases);
-			options.CheckboxLabeled("Allow Meme Resource Spawns", ref memeResourceSpawns);
-			options.CheckboxLabeled("Allow Coal enhanced recipes", ref coalInRecipes);
-			options.CheckboxLabeled("Allow Getting Stickbugged", ref getStickbugged);
-			options.CheckboxLabeled("Allow Stickbuggs to skyfall", ref stickbugsCanSkyfall);
-			options.CheckboxLabeled("Allow conk creet to be pretty", ref beautifulConcrete);
-			options.CheckboxLabeled("Allow Awake", ref awake);
-			options.CheckboxLabeled("Allow Police", ref police);
-			options.CheckboxLabeled("Allow Grignr", ref grignr);
-			options.Gap();
+			switch (_tab)
+			{
+				case Tab.Events:
+					DrawEventsSettings(viewPort);
+					break;
+				case Tab.Features:
+					DrawFeaturesSettings(viewPort);
+					break;
+				case Tab.UI:
+					DrawUISettings(viewPort);
+					break;
+				default:
+					throw new ArgumentException($"Unknown tab selected: {_tab.ToString()}");
+			}
 
-			options.End();
+			_options.End();
+		}
+
+		private void DrawUISettings(Rect viewPort)
+		{
+			_options.CheckboxLabeled("Allow conk creet icons and extra translations", ref concreteUI,
+				"Dynamically translates concrete to conk creet everywhere it can and replaces any icons with the meme image.");
+			_options.CheckboxLabeled("Allow Hiding mineable Coal Type", ref coalTypeHidden, "Make the UI not tell you which of the many coals you are mining");
+			_options.CheckboxLabeled("Allow Silly Translations", ref sillyTranslations, "Sillier translations of base-game / other mods e.g. Gamer Slop");
+		}
+
+		private void DrawFeaturesSettings(Rect viewPort)
+		{
+			_options.CheckboxLabeled("Allow Icewolf Bad luck", ref icewolf, "Some events target pawns called Icewolf more than usual");
+			_options.CheckboxLabeled("Allow kick a nuke", ref kickNukes,
+				"Identical to normal tantrum mental break but preferentially targets nukes to destroy with a memey description.");
+			_options.CheckboxLabeled("Allow Nukes to explode from melee", ref explosiveNukes,
+				"Nukes have been made to not explode when you destroy them, while realistic this is much less fun so this adds back the explosions.");
+			_options.CheckboxLabeled("Allow CE Spam", ref ceSpam,
+				"Just fills your log with spam about every mod not being CE compatible unless they explicitly made themselves CE compatible.");
+			_options.CheckboxLabeled("Allow Building Aura", ref buildingAura, "Things with the building aura will place down buildings or blueprints randomly");
+			_options.CheckboxLabeled("Allow Where RimRim", ref whereRimRim, "Daily reminder letter, very annoying");
+			_options.CheckboxLabeled("Allow Stockpile affinity", ref stockpileAffinity, "Some creatures will want to go and hang out near your stockpiles.");
+			_options.CheckboxLabeled("Allow Meme Resource Spawns", ref memeResourceSpawns, "Allow many many types of coal, fools steel etc");
+			_options.CheckboxLabeled("Allow Coal enhanced recipes", ref coalInRecipes, "Allow coal being required for building certain common things like multi-analysers");
+			_options.CheckboxLabeled("Allow Stickbuggs to skyfall", ref stickbugsCanSkyfall,
+				"Allow the stickbug event to drop stickbugs from the sky. This is funny but be warned it can cause cave-ins.");
+			_options.CheckboxLabeled("Allow conk creet to be pretty", ref beautifulConcrete, "Give concrete a decent beauty bonus");
+			_options.CheckboxLabeled("Allow Awake", ref awake, "Allow Awake hediff which gives various buffs and debuffs based off how long they've been awake.");
+			_options.CheckboxLabeled("Allow combustion animals to door bash", ref combustionAnimalsCanDoorbash,
+				"Allow a flaming elephant to bust down your doors to hang out near your stockpile.");
+			_options.CheckboxLabeled("Allow floor changing trails like concrete", ref floorTrails,
+				"Allow animals to leave behind trails of other floor types, just make sure not to let one wander through your throne room.");
+			_options.CheckboxLabeled("Allow Arcadius", ref arcadius, "Makes everyone related to Arcadius, heavily recommended to not turn on! It has caused a lot of errors.");
+		}
+
+		private void DrawEventsSettings(Rect viewPort)
+		{
+			_options.CheckboxLabeled("Allow Steel Loss", ref steelLoss, "All the steel in one stockpile just vanishes. Make sure to split your steel!");
+			_options.CheckboxLabeled("Allow bed fires", ref bedFires, "Beds suddenly catch fire");
+			_options.CheckboxLabeled("Allow stockpile fires", ref stockpileFires, "Stockpile randomly catches fire to encourage fire-foam poppers");
+			_options.CheckboxLabeled("Allow conk creet terrain conversion", ref concreteTerrainConversion, "A random patch of terrain becomes concrete");
+			_options.CheckboxLabeled("Allow warcasket event", ref warcasketEvent, "All the warcaskets will get addicted to yayo");
+			_options.CheckboxLabeled("Allow Gas-lighting", ref gaslighting, "You'll get a letter that changes a base mechanic of the game like solar panels working in darkness");
+			_options.CheckboxLabeled("Allow Diseases", ref diseases, "Allow meme diseases to spawn naturally and as incidents");
+			_options.CheckboxLabeled("Allow Getting Stickbugged", ref getStickbugged, "Stickbugs turn up then leave");
+			_options.CheckboxLabeled("Allow Police", ref police, "Silly lighting change event with a mood debuff");
+			_options.CheckboxLabeled("Allow Grignr", ref grignr, "Allow a random shard of Grignr to attack the colony (Once per game only)\nThis Does not send a letter!");
 		}
 
 		public override void ExposeData()
@@ -98,6 +166,8 @@ namespace MSS.MemeSuperpack
 			Scribe_Values.Look(ref getStickbugged, "getStickbugged", true);
 			Scribe_Values.Look(ref stickbugsCanSkyfall, "stickbugsCanSkyfall", false);
 			Scribe_Values.Look(ref coalInRecipes, "coalInRecipes", true);
+			Scribe_Values.Look(ref floorTrails, "floorTrails", true);
+			Scribe_Values.Look(ref combustionAnimalsCanDoorbash, "combustionAnimalsCanDoorbash", true);
 		}
 	}
 }

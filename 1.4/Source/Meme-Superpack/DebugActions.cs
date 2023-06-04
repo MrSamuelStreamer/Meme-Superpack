@@ -38,7 +38,7 @@ public static class DebugActions
 
 					try
 					{
-						if ((r.def?.reflexive ?? false) && r.otherPawn is { } otherPawn)
+						if ((r?.def?.reflexive ?? false) && r.otherPawn is { } otherPawn)
 						{
 							var directRelations = otherPawn.relations?.DirectRelations;
 							DirectPawnRelation directPawnRelation = directRelations?.Find(x => x?.def == r.def && x?.otherPawn == pawn);
@@ -46,7 +46,7 @@ public static class DebugActions
 							directRelations?.Remove(directPawnRelation);
 						}
 
-						r.def?.Worker?.OnRelationRemoved(pawn, r.otherPawn);
+						r?.def?.Worker?.OnRelationRemoved(pawn, r.otherPawn);
 					}
 					catch (Exception)
 					{
@@ -94,15 +94,6 @@ public static class DebugActions
 		}
 
 		Debug.Log($"Attempted to add back {sum} missing reflexive relations");
-	}
-
-	[DebugAction("Memes", "Reset AllFather - Arcadius", false, false, false, 0, false,
-		allowedGameStates = AllowedGameStates.PlayingOnMap)]
-	private static void ReApplyYChromosomalAdam()
-	{
-		GameComponent_ArcadiusRelationManager.CleanUpArcadius();
-		Pawn arcadius = GameComponent_ArcadiusRelationManager.GetArcadius(true);
-		Debug.Log($"Reset Y-Chromosomal Adam to {arcadius?.Name?.ToStringFull ?? "[Not Set]"} - {arcadius?.ThingID ?? (-1).ToString()}");
 	}
 
 	[DebugAction("Memes", "Remove AllFather - Arcadius", false, false, false, 0, false,

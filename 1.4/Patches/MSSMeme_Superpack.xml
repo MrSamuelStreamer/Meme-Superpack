@@ -188,6 +188,16 @@
 		</disabled>
 	</Operation>
 
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>combustionAnimalsCanDoorbash</setting>
+		<disabled Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef/race/thinkTreeMain[text()="MSSMeme_CombustionAnimal"]</xpath>
+			<value>
+				<thinkTreeMain>Animal</thinkTreeMain>
+			</value>
+		</disabled>
+	</Operation>
+
 	<Operation Class="PatchOperationFindMod">
 		<mods>
 			<li>Grignr Happens By</li>

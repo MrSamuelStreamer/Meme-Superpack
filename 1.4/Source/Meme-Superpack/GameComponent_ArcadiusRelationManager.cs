@@ -29,35 +29,16 @@ public class GameComponent_ArcadiusRelationManager : GameComponent
 
 	public static Pawn GetArcadius(bool forceGenerateIfAbsent = false)
 	{
-		if (!MemeSuperpackMod.settings.arcadius) return null;
-		if (CachedArcadius != null) return CachedArcadius;
-		return (Current.Game.components.Find(gc => gc.GetType() == typeof(GameComponent_ArcadiusRelationManager)) is
-			GameComponent_ArcadiusRelationManager arcManager)
-			? arcManager.Arcadius ?? (forceGenerateIfAbsent ? arcManager.GenerateArcadius(true) : null)
-			: CachedArcadius;
+		return null;
 	}
 
 	public override void FinalizeInit()
 	{
 		CachedArcadius = null;
-		if (Arcadius == null || PawnsFinder.All_AliveOrDead.AsParallel().Contains(Arcadius)) return;
-		CleanUpArcadius();
-		if (!MemeSuperpackMod.settings.arcadius) return;
-		GenerateArcadius(false);
 	}
-
-	public static Pawn GetArcadiusByHediff() => PawnsFinder.All_AliveOrDead
-		.FirstOrFallback(p => p.health.hediffSet.HasHediff(MemeSuperPackDefOf.MSSMeme_YChromosomalAdam));
 
 	public static IEnumerable<Pawn> GetAllArcadiusByHediff() => PawnsFinder.All_AliveOrDead
 		.Where(p => p.health.hediffSet.HasHediff(MemeSuperPackDefOf.MSSMeme_YChromosomalAdam));
-
-	public void SetYChromosomalAdamRelation(Pawn arcadius) => PawnsFinder.All_AliveOrDead.AsParallel().Where(pawn =>
-		pawn.RaceProps is { Humanlike: true, IsFlesh: true, intelligence: Intelligence.Humanlike } && pawn != Arcadius).ForAll(p =>
-	{
-		RemoveYChromosomalAdamRelations(p);
-		if (arcadius != null) p.relations.AddDirectRelation(MemeSuperPackDefOf.MSSMeme_Arcadius, arcadius);
-	});
 
 	public static void ClearYChromosomalAdamRelations() => PawnsFinder.All_AliveOrDead.AsParallel().ForAll(RemoveYChromosomalAdamRelations);
 
@@ -67,7 +48,9 @@ public class GameComponent_ArcadiusRelationManager : GameComponent
 		foreach (Pawn arcadius in GetAllArcadiusByHediff())
 		{
 			Find.WorldPawns.ForcefullyKeptPawns.Remove(arcadius);
-			arcadius.health.RemoveHediff(arcadius.health.hediffSet.GetFirstHediffOfDef(MemeSuperPackDefOf.MSSMeme_YChromosomalAdam));
+			Verse.Hediff hediff = arcadius.health.hediffSet.GetFirstHediffOfDef(MemeSuperPackDefOf.MSSMeme_YChromosomalAdam);
+			if (hediff == null) return;
+			arcadius.health.RemoveHediff(hediff);
 		}
 
 		CachedArcadius = null;
@@ -78,7 +61,7 @@ public class GameComponent_ArcadiusRelationManager : GameComponent
 	public static void RemoveYChromosomalAdamRelations(Pawn pawn)
 	{
 		// Remove any prior Y-ChromosomalAdam relations
-		var relations = pawn?.relations?.DirectRelations?.Where(r => r.def == MemeSuperPackDefOf.MSSMeme_Arcadius).ToList();
+		var relations = pawn?.relations?.DirectRelations?.Where(r => r.def == MemeSuperPackDefOf.MSSMeme_Arcadius || r.def == null || r.otherPawn == null).ToList();
 		if (relations == null) return;
 		foreach (DirectPawnRelation r in relations)
 		{
@@ -88,62 +71,15 @@ public class GameComponent_ArcadiusRelationManager : GameComponent
 			}
 			catch (Exception)
 			{
-				pawn.relations?.DirectRelations?.Remove(r);
-			}
-		}
-	}
-
-	public Pawn GenerateArcadius(bool force)
-	{
-		if (!MemeSuperpackMod.settings.arcadius) return null;
-
-		GeneratingArcadius = true;
-		try
-		{
-			if (Arcadius != null && !force) return Arcadius;
-			if (Arcadius == null)
-			{
-				// Check for uncached Arcadius by comp
-				Arcadius = GetArcadiusByHediff();
-				if (Arcadius != null)
+				try
 				{
-					SetYChromosomalAdamRelation(Arcadius);
-					return Arcadius;
+					pawn.relations?.DirectRelations?.Remove(r);
+				}
+				catch (Exception)
+				{
+					// ignored
 				}
 			}
-
-			if (Arcadius != null)
-			{
-				CleanUpArcadius();
-				Arcadius = null;
-			}
-
-			Arcadius = PawnGenerator.GeneratePawn(new PawnGenerationRequest(PawnKindDefOf.Colonist, Faction.OfAncients, forceDead: true, forceGenerateNewPawn: true,
-				forcedTraits: new[] { TraitDefOf.Bisexual }, fixedGender: Gender.Male, colonistRelationChanceFactor: 0,
-				biologicalAgeRange: new FloatRange(54, 2000), forceBaselinerChance: 1f));
-			if (Arcadius != null)
-			{
-				Arcadius.Name = new NameSingle("Arcadius");
-				Arcadius.health.AddHediff(MemeSuperPackDefOf.MSSMeme_YChromosomalAdam);
-				// Prevent Arcadius being removed
-				Find.WorldPawns.ForcefullyKeptPawns.Add(Arcadius);
-				SetYChromosomalAdamRelation(Arcadius);
-			}
-		}
-		finally
-		{
-			GeneratingArcadius = false;
-		}
-
-		return Arcadius;
-	}
-
-	public override void GameComponentUpdate()
-	{
-		if (_arcadius == null && MemeSuperpackMod.settings.arcadius && Find.TickManager.TicksGame > nextArcadiusTick)
-		{
-			GenerateArcadius(false);
-			nextArcadiusTick = Find.TickManager.TicksGame + 60000;
 		}
 	}
 
@@ -151,6 +87,7 @@ public class GameComponent_ArcadiusRelationManager : GameComponent
 	{
 		Scribe_References.Look(ref _arcadius, "pawn");
 		if (Scribe.mode != LoadSaveMode.PostLoadInit) return;
-		if (Arcadius is null && MemeSuperpackMod.settings.arcadius) GenerateArcadius(false);
+		CleanUpArcadius();
+		_arcadius = null;
 	}
 }

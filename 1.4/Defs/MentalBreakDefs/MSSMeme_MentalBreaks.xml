@@ -5,7 +5,7 @@
 	<MentalBreakDef>
 		<defName>MSSMeme_KickANuke</defName>
 		<mentalState>MSSMeme_KickANuke</mentalState>
-		<baseCommonality>1</baseCommonality>
+		<baseCommonality>0.01</baseCommonality>
 		<intensity>Major</intensity>
 	</MentalBreakDef>
 
