@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FleckDef ParentName="FleckBase">
+    <defName>BlastFlashbang</defName>
+    <graphicData>
+      <texPath>Things/Mote/BlastDry</texPath>
+      <shaderType>TransparentPostLight</shaderType>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.1</fadeInTime>
+    <solidTime>0.3</solidTime>
+    <fadeOutTime>1.5</fadeOutTime>
+    <growthRate>69420</growthRate>
+  </FleckDef>
+  
+  </Defs>
