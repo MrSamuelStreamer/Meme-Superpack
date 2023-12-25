@@ -55,7 +55,7 @@
 			<preferability>RawTasty</preferability>
 			<tasteThought>MSSMeme_AteSuperCucumberDirect</tasteThought>
 			<specialThoughtAsIngredient>MSSMeme_AteSuperCucumberAsIngredient</specialThoughtAsIngredient>
-			<foodType>VegetableOrFruit</foodType>
+			<foodType>Meat</foodType>
 		</ingestible>
 		<comps>
 			<li Class="CompProperties_Rottable">
@@ -63,6 +63,9 @@
 				<rotDestroys>true</rotDestroys>
 			</li>
 		</comps>
+		<thingCategories Inherit="False">
+			<li>MeatRaw</li>
+		</thingCategories>
 	</ThingDef>
 
 </Defs>
