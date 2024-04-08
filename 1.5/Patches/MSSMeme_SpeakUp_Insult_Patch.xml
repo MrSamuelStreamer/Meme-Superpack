@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/InteractionDef[defName = "Insult"]/logRulesInitiator/rulesStrings</xpath>
+		<value>
+			<rulesStrings>
+				<!-- == General == -->
+				<li>r_logentry(p=5,tag=Insult_generic)->[generic]</li>
+				<li>generic->Ligma balls.</li>
+				<li>generic->I hope you save over the wrong canvas.</li>
+				<li>generic->I hope you'll have to redo every line you ever draw, forever.</li>
+				<li>generic->Drawing hands isn't easy, but yours look like malformed sausages.</li>
+				<li>generic->I hope you draw in the wrong layer.</li>
+				<li>generic->You would draw with incorrect proportions even if you traced over a reference.</li>
+				<li>generic->Your waifu is cringe.</li>
+				<li>generic->Unfathomable skill issue.</li>
+				<li>generic->Your art looks like an NFT.</li>
+				<li>generic->Your digital art is not real art.</li>
+
+				<li>generic->You are the physical embodiment of purple prose. Self important and utterly meaningless.</li>
+				<li>generic->The extent of your "writing talents" only encompasses those terrible back-and-forth dialogues plaguing Tumblr.</li>
+
+
+				<li>r_logentry(RECIPIENT_trait==ugly,tag=Slight_generic)->[recipient_ugly_jpg]</li>
+				<li>r_logentry(RECIPIENT_trait==staggering ugly,tag=Slight_generic)->[recipient_ugly_jpg]</li>
+				<li>recipient_ugly_jpg->Your face looks like someone put you through JPEG compression.</li>
+
+			</rulesStrings>
+		</value>
+	</Operation>
+
+</Patch>

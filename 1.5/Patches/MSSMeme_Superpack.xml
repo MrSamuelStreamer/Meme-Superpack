@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>concreteUI</setting>
+		<enabled Class="PatchOperationConditional">
+			<xpath>/Defs/TerrainDef[defName="Concrete"]/uiIconPath</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/TerrainDef[defName="Concrete"]</xpath>
+				<value>
+					<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/TerrainDef[defName="Concrete"]</xpath>
+				<value>
+					<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
+				</value>
+			</nomatch>
+		</enabled>
+	</Operation>
+
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>concreteUI</setting>
+		<enabled Class="PatchOperationConditional">
+			<xpath>/Defs/TerrainDef[defName="PavedTile"]/uiIconPath</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/TerrainDef[defName="PavedTile"]</xpath>
+				<value>
+					<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>/Defs/TerrainDef[defName="PavedTile"]</xpath>
+				<value>
+					<uiIconPath>Memes/ConkCreetBaybeeSmall</uiIconPath>
+				</value>
+			</nomatch>
+		</enabled>
+	</Operation>
+
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>beautifulConcrete</setting>
+		<enabled Class="PatchOperationReplace">
+			<xpath>/Defs/TerrainDef[defName="Concrete"]/statBases/Beauty</xpath>
+			<value>
+				<Beauty>4</Beauty>
+			</value>
+		</enabled>
+	</Operation>
+
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>concreteUI</setting>
+		<enabled Class="PatchOperationConditional">
+			<xpath>/Defs/ThingDef/stuffProps[stuffAdjective="concrete"]/stuffAdjective</xpath>
+			<match Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef/stuffProps[stuffAdjective="concrete"]/stuffAdjective</xpath>
+				<value>
+					<stuffAdjective>conk creet baybee</stuffAdjective>
+				</value>
+			</match>
+		</enabled>
+	</Operation>
+
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>awake</setting>
+		<enabled Class="PatchOperationAdd">
+			<xpath>/Defs/HediffGiverSetDef[defName="Human"]/hediffGivers</xpath>
+			<value>
+				<li Class="MSS.MemeSuperpack.Hediff.HediffGiver_EnsureHediff">
+					<hediff>MSSMeme_Awake</hediff>
+					<requiredNeed>Rest</requiredNeed>
+				</li>
+			</value>
+		</enabled>
+	</Operation>
+
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>explosiveNukes</setting>
+		<enabled Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Fortification Industrial -Nuclear Dawn</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationConditional">
+								<xpath>/Defs/ThingDef[defName="FT_Shell_NuclearWarhead"]/comps</xpath>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/ThingDef[defName="FT_Shell_NuclearWarhead"]</xpath>
+									<value>
+										<comps />
+									</value>
+								</nomatch>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="FT_Shell_NuclearWarhead"]/comps</xpath>
+								<value>
+									<li Class="CompProperties_Explosive">
+										<explosiveRadius>9.9</explosiveRadius>
+										<explosiveDamageType>BombSuper</explosiveDamageType>
+										<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+										<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+										<chanceToStartFire>0.72</chanceToStartFire>
+										<damageFalloff>true</damageFalloff>
+										<explosionEffect>GiantExplosion</explosionEffect>
+										<explosionSound>Explosion_GiantBomb</explosionSound>
+										<postExplosionGasType>ToxGas</postExplosionGasType>
+										<wickTicks>60~120</wickTicks>
+									</li>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Dubs Rimatomics</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<operations>
+							<li Class="PatchOperationConditional">
+								<xpath>/Defs/ThingDef[defName="FissionWarhead"]/comps</xpath>
+								<nomatch Class="PatchOperationAdd">
+									<xpath>/Defs/ThingDef[defName="FissionWarhead"]</xpath>
+									<value>
+										<comps />
+									</value>
+								</nomatch>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName="FissionWarhead"]/comps</xpath>
+								<value>
+									<li Class="CompProperties_Explosive">
+										<explosiveRadius>11.9</explosiveRadius>
+										<explosiveDamageType>BombSuper</explosiveDamageType>
+										<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+										<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+										<chanceToStartFire>0.69</chanceToStartFire>
+										<damageFalloff>true</damageFalloff>
+										<explosionEffect>GiantExplosion</explosionEffect>
+										<explosionSound>Explosion_GiantBomb</explosionSound>
+										<postExplosionGasType>ToxGas</postExplosionGasType>
+										<wickTicks>60~120</wickTicks>
+									</li>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+			</operations>
+		</enabled>
+	</Operation>
+
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>memeResourceSpawns</setting>
+		<disabled Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[child::deepCommonality and starts-with(defName, 'MSSMeme_')]/deepCommonality</xpath>
+					<value>
+						<deepCommonality>0</deepCommonality>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[child::deepLumpSizeRange and starts-with(defName, 'MSSMeme_')]/deepLumpSizeRange</xpath>
+					<value>
+						<deepLumpSizeRange>0</deepLumpSizeRange>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[starts-with(defName, 'MSSMeme_')]/building[child::mineableScatterLumpSizeRange]/mineableScatterLumpSizeRange</xpath>
+					<value>
+						<mineableScatterLumpSizeRange>0</mineableScatterLumpSizeRange>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[starts-with(defName, 'MSSMeme_')]/building[child::mineableScatterCommonality]/mineableScatterCommonality</xpath>
+					<value>
+						<mineableScatterCommonality>0</mineableScatterCommonality>
+					</value>
+				</li>
+			</operations>
+		</disabled>
+	</Operation>
+
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>combustionAnimalsCanDoorbash</setting>
+		<disabled Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef/race/thinkTreeMain[text()="MSSMeme_CombustionAnimal"]</xpath>
+			<value>
+				<thinkTreeMain>Animal</thinkTreeMain>
+			</value>
+		</disabled>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Grignr Happens By</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef/xenotypeSet/xenotypeChances</xpath>
+			<value>
+				<Taggerung_Grignrson_Xenotype MayRequire="Ludeon.RimWorld.Biotech">0.005</Taggerung_Grignrson_Xenotype>
+			</value>
+		</match>
+	</Operation>
+
+</Patch>

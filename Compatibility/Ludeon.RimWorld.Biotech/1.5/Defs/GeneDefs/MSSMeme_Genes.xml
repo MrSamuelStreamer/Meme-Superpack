@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<GeneDef ParentName="GeneVoiceBase">
+		<defName>MSSMeme_SamVoice</defName>
+		<label>sam voice</label>
+		<description>Carriers have a British Youtuber voice.</description>
+		<iconPath>UI/Icons/Genes/MSSMeme_SamVoice_Gene</iconPath>
+		<displayOrderInCategory>131</displayOrderInCategory>
+		<soundCall>MSSMeme_Pawn_Sam_Call</soundCall>
+		<selectionWeight>0</selectionWeight>
+	</GeneDef>
+
+	<GeneDef>
+		<defName>MSSMeme_CECompatible</defName>
+		<label>CE Compatible</label>
+		<description>Carriers of this gene are CE Compatible and can use a powerful psychic shout to call an CE Compatible animal to fight for them.</description>
+		<iconPath>UI/Icons/Genes/Gene_AnimalWarcall</iconPath>
+		<displayCategory>Ability</displayCategory>
+		<canGenerateInGeneSet>true</canGenerateInGeneSet>
+		<abilities>
+			<li>MSSMeme_ComeElephant</li>
+			<li>MSSMeme_CarryElephant</li>
+			<li>MSSMeme_CombatElephant</li>
+			<li>MSSMeme_CombustionElephant</li>
+			<li>MSSMeme_CrazedElephant</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>MSSMeme_ComeElephant</AbilityDef>
+			<AbilityDef>MSSMeme_CarryElephant</AbilityDef>
+			<AbilityDef>MSSMeme_CombatElephant</AbilityDef>
+			<AbilityDef>MSSMeme_CombustionElephant</AbilityDef>
+			<AbilityDef>MSSMeme_CrazedElephant</AbilityDef>
+		</descriptionHyperlinks>
+		<biostatMet>-3</biostatMet>
+		<biostatCpx>1</biostatCpx>
+		<symbolPack>
+			<wholeNameSymbols>
+				<li>
+					<symbol>CE Compatible</symbol>
+				</li>
+			</wholeNameSymbols>
+			<prefixSymbols>
+				<li>
+					<symbol>CE</symbol>
+				</li>
+				<li>
+					<symbol>come elephant</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>compatible</symbol>
+				</li>
+				<li>
+					<symbol>usable</symbol>
+				</li>
+				<li>
+					<symbol>amenable</symbol>
+				</li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+</Defs>

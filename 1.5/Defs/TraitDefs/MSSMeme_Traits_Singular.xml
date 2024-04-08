@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<TraitDef>
+		<defName>MSSMeme_DwarvenLuck</defName>
+		<commonality>0.3</commonality>
+		<degreeDatas>
+			<li>
+				<label>luck of the dwarves</label>
+				<description>[PAWN_nameDef] is cursed with terrible luck. [PAWN_pronoun] takes far more damage than the average person should, seems to get ill all the time, and is just generally plagued with all kinds of misfortune. All of this, despite [PAWN_possessive] attempts to cope via stress-eating, obviously has [PAWN_nameDef] on a hair trigger at all times, ready to snap at whatever misfortune life throws at [PAWN_possessive]. At least [PAWN_pronoun] is a VERY fast worker in order to make the most of [PAWN_objective] assuredly short life.\n\nAlso Sam, if you're reading this, I cannot believe you put your best crafter who also had half the HP of a regular pawn in a crappy warcasket.</description>
+				<statOffsets>
+					<FixBrokenDownBuildingSuccessChance>-5.0</FixBrokenDownBuildingSuccessChance>
+					<HuntingStealth>-20.0</HuntingStealth>
+					<PawnTrapSpringChance>10</PawnTrapSpringChance>
+					<MeleeDodgeChance>-5</MeleeDodgeChance>
+					<AnimalGatherYield>-0.25</AnimalGatherYield>
+					<MiningYield>-0.25</MiningYield>
+					<ConstructSuccessChance>-0.25</ConstructSuccessChance>
+					<PlantHarvestYield>-0.25</PlantHarvestYield>
+					<MedicalTendQuality>-0.25</MedicalTendQuality>
+					<MentalBreakThreshold>0.20</MentalBreakThreshold>
+					<WorkSpeedGlobal>0.75</WorkSpeedGlobal>
+				</statOffsets>
+				<randomDiseaseMtbDays>30</randomDiseaseMtbDays>
+				<hungerRateFactor>1.5</hungerRateFactor>
+				<statFactors>
+					<IncomingDamageFactor>1.15</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</degreeDatas>
+		<exclusionTags>
+			<li>Toughness</li>
+		</exclusionTags>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>MSSMeme_DoomedByIcewolf</defName>
+		<commonality>0.3</commonality>
+		<degreeDatas>
+			<li>
+				<label>Icewolf's fortune</label>
+				<description>[PAWN_nameDef] seems to be cursed with a doomed existence. [PAWN_pronoun] seems to nearly die from even the smallest paper cuts, and [PAWN_pronoun] always seems to fall victim to a variety of unfortunate events. It's honestly a miracle that [PAWN_pronoun] even managed to live as long as [PAWN_pronoun] has.</description>
+				<statOffsets>
+					<HuntingStealth>-200.0</HuntingStealth>
+					<PawnTrapSpringChance>1000</PawnTrapSpringChance>
+					<MeleeDodgeChance>-20</MeleeDodgeChance>
+					<MentalBreakThreshold>0.20</MentalBreakThreshold>
+				</statOffsets>
+				<randomDiseaseMtbDays>15</randomDiseaseMtbDays>
+				<statFactors>
+					<IncomingDamageFactor>2.5</IncomingDamageFactor>
+				</statFactors>
+			</li>
+		</degreeDatas>
+		<exclusionTags>
+			<li>Toughness</li>
+		</exclusionTags>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>MSSMeme_DerangedFanArtist</defName>
+		<commonality>0.5</commonality>
+		<forcedPassions>
+			<li>Artistic</li>
+			<li>Crafting</li>
+		</forcedPassions>
+		<degreeDatas>
+			<li>
+				<label>deranged fan artist</label>
+				<description>{PAWN_nameDef} is a fanatical artist constantly enamored with something {PAWN_pronoun} calls "shipping." {PAWN_pronoun} is especially obsessed with "shipping" characters in a certain fictional universe, to the point of an almost constant mental breakdown. But once {PAWN_pronoun} finally breaks, {PAWN_nameDef} has the uncanny ability to create frighteningly high quality items.</description>
+				<mentalBreakInspirationGainSet>
+					<li>Inspired_Creativity</li>
+				</mentalBreakInspirationGainSet>
+				<mentalBreakInspirationGainReasonText>Due to [PAWN_nameIndef] recovering from [PAWN_possessive] shipping induced mental breakdown, [PAWN_pronoun] has experienced an inspiration.</mentalBreakInspirationGainReasonText>
+				<mentalBreakInspirationGainChance>1</mentalBreakInspirationGainChance>
+				<allowedMeditationFocusTypes>
+					<li>Morbid</li>
+				</allowedMeditationFocusTypes>
+			</li>
+		</degreeDatas>
+		<conflictingTraits>
+			<li>TorturedArtist</li>
+		</conflictingTraits>
+	</TraitDef>
+
+	<ThoughtDef>
+		<defName>MSSMeme_MoodOffsetDerangedFanArtist</defName>
+		<workerClass>ThoughtWorker_AlwaysActive</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<requiredTraits>
+			<li>MSSMeme_DerangedFanArtist</li>
+		</requiredTraits>
+		<stages>
+			<li>
+				<label>Deranged fan artist</label>
+				<description>Hmm, what should I draw? A Petal x Anne piece I saw earlier has inspired me, so perhaps some classic Panne art? Some steamy Elon x Asimov yaoi art would also be good. But what if... Maria Chunk and 49? Mayhaps some Slush x Maxima (#JusticeForSlush)? Buggsy x Buggo is unconventional, yet has great potential. Corpo dommy mommy Frog is an excellent choice as well though. I could draw Cremebrulee, a waifu gone too soon. Or maybe I could even draw Arcadius and the rest of the Deadly Sins (but especially Arcadius)? ARRRRRRRRRRRGGGGGGGGGGH, I CAN'T DECIDE! THEY'RE ALL SO HOT!!!</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

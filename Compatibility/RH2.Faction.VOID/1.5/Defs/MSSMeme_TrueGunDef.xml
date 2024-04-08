@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<ThingDef ParentName="BaseGunWithQuality" MayRequire="smartkar.athenaframework">
+		<defName>MSSMeme_TrueOttomaticGun</defName>
+		<label>True Fully Ottomatic gun</label>
+		<description>A mythical gun named after an individual rumored to have achieved unmatchable combat abilities. Through the power of coal, V.O.I.D. weaponry, and a lot of desperation, its true potential has been unlocked. This weapon unleashes what can only be described as a wall of projectiles in whatever direction it is aimed at. It also causes suppression on whatever gets hit by one of its bullets. Not even the most durable of N-4 infected monstrosities can withstand this portable bullet hell. Just be VERY careful of friendly fire, as anyone or anything caught in this gun's crossfire will be vaporized.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/MSSMeme_TrueOttomatic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<statBases>
+			<WorkToMake>69000</WorkToMake>
+			<Mass>10</Mass>
+			<AccuracyTouch>1.01</AccuracyTouch>
+			<AccuracyShort>1.01</AccuracyShort>
+			<AccuracyMedium>1.01</AccuracyMedium>
+			<AccuracyLong>1.01</AccuracyLong>
+			<RangedWeapon_Cooldown>0.01</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<MSSMeme_Coal>690</MSSMeme_Coal>
+			<MSSMeme_LiquidCoal>690</MSSMeme_LiquidCoal>
+			<MSSMeme_CoalPlate>690</MSSMeme_CoalPlate>
+			<MSSMeme_BituminousCoal>690</MSSMeme_BituminousCoal>
+			<MSSMeme_LigniteCoal>690</MSSMeme_LigniteCoal>
+			<MSSMeme_AnthraciteCoal>690</MSSMeme_AnthraciteCoal>
+			<MSSMeme_CoalcaCoala>690</MSSMeme_CoalcaCoala>
+			<MSSMeme_SuperCucoalmber>690</MSSMeme_SuperCucoalmber>
+			<MSSMeme_FirefoamCoal>690</MSSMeme_FirefoamCoal>
+			<MSSMeme_LowResCoal>690</MSSMeme_LowResCoal>
+			<MSSMeme_CoalDust>690</MSSMeme_CoalDust>
+			<MSSMeme_SuperCoal>690</MSSMeme_SuperCoal>
+			<Plasteel>69</Plasteel>
+			<ComponentIndustrial>69</ComponentIndustrial>
+			<ComponentSpacer>69</ComponentSpacer>
+			<RNGun_DuskMAG_HMG>1</RNGun_DuskMAG_HMG>
+			<RNGun_DuskStriker_Shotgun>1</RNGun_DuskStriker_Shotgun>
+			<RNGun_DuskEnforcer_Revolver>1</RNGun_DuskEnforcer_Revolver>
+			<RNGun_DuskCarbine_DMR>1</RNGun_DuskCarbine_DMR>
+			<RNGun_WraithCannon_HMG>1</RNGun_WraithCannon_HMG>
+			<MSSMeme_OttomaticGun>3</MSSMeme_OttomaticGun>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>MSSMeme_TrueFullyOttomatic</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>16</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<techLevel>Ultra</techLevel>
+		<equippedStatOffsets>
+			<MoveSpeed>-3.0</MoveSpeed>
+			<ShootingAccuracyPawn>69</ShootingAccuracyPawn>
+		</equippedStatOffsets>
+		<verbs>
+			<li>
+				<verbClass>AthenaFramework.Verb_ShootAngularShotgun</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>MSSMeme_Bullet_TrueOttomatic</defaultProjectile>
+				<warmupTime>0.01</warmupTime>
+				<range>19.9</range>
+				<soundCast>Shot_Minigun</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>19</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrels</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.7</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+		<modExtensions>
+			<li Class="AthenaFramework.AngularShotgunExtension">
+				<pelletCount>45</pelletCount>
+				<pelletAngle>1</pelletAngle>
+			</li>
+		</modExtensions>
+	</ThingDef>
+	<HediffDef ParentName="DiseaseBase">
+		<defName>MSSMeme_Suppression</defName>
+		<label>suppression</label>
+		<description>A condition caused by being peppered by an obscene number of bullets. Now you may be asking, "CatLover366, why did you add this very powerful effect to the already super overpowered shotgun-minigun?" Well, my dear hypothetically inquisitive reader, that is because I discovered during testing that Chicken Plucker made the charred variants of the N-4 infected creatures RIDICULOUSLY fast even when being hit. It generates an absolutely terrifying mental image to be honest. Here is this towering hunk of flesh just BARRELING towards you at blistering speed despite being hit by 10 bullets per second. If you're reading/watching this Chicken Plucker, hats off to you, those things are horrifying.</description>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<initialSeverity>1</initialSeverity>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-12</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>recovering</label>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>0.9</postFactor>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>minor</label>
+				<minSeverity>0.3</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>0.85</postFactor>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>major</label>
+				<minSeverity>0.6</minSeverity>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>0.8</postFactor>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<DamageDef Name="MSSMeme_TrueOttoBullet">
+		<defName>MSSMeme_TrueOttoBullet</defName>
+		<label>true Ottomatic bullet</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<additionalHediffs>
+			<li>
+				<hediff>MSSMeme_Suppression</hediff>
+				<severityPerDamageDealt>0.05</severityPerDamageDealt>
+				<inverseStatScaling>true</inverseStatScaling>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+			</li>
+		</additionalHediffs>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has enough bullet holes to become Swiss cheese. {0} is also very dead.</deathMessage>
+		<hediff>Gunshot</hediff>
+		<harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+		<impactSoundType>Bullet</impactSoundType>
+		<armorCategory>Sharp</armorCategory>
+		<overkillPctToDestroyPart>0~0.7</overkillPctToDestroyPart>
+		<isRanged>true</isRanged>
+		<makesAnimalsFlee>true</makesAnimalsFlee>
+	</DamageDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>MSSMeme_Bullet_TrueOttomatic</defName>
+		<label>true Ottomatic bullet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Charge_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>MSSMeme_TrueOttoBullet</damageDef>
+			<damageAmountBase>7</damageAmountBase>
+			<stoppingPower>2</stoppingPower>
+			<armorPenetrationBase>0.8</armorPenetrationBase>
+			<speed>120</speed>
+			<extraDamages>
+				<li>
+					<def>EMP</def>
+					<amount>69</amount>
+					<armorPenetration>4.20</armorPenetration>
+				</li>
+			</extraDamages>
+		</projectile>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<RulePackDef>
+		<defName>MSSMeme_NamerRitualRimRim</defName>
+		<rulePack>
+			<rulesStrings>
+				<li>r_ritualName->RimRim Viewing</li>
+			</rulesStrings>
+		</rulePack>
+	</RulePackDef>
+
+	<TaleDef>
+		<defName>MSSMeme_WatchedRimRim</defName>
+		<label>watched RimRim</label>
+		<taleClass>Tale_SinglePawn</taleClass>
+		<type>Expirable</type>
+		<baseInterest>30</baseInterest>
+		<usableForArt>true</usableForArt>
+		<maxPerPawn>1</maxPerPawn>
+		<expireDays>1</expireDays>
+		<rulePack>
+			<rulesStrings>
+				<li>tale_noun->[PAWN_nameDef] enjoying RimRim</li>
+				<li>image->[PAWN_nameFull] sitting watching RimRim, [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] staring gormlessly at RimRim and [circumstance_group]</li>
+				<li>image->[PAWN_nameFull] closing [PAWN_possessive] eyes and revelling in [circumstance_group] about RimRim</li>
+				<li>circumstance_phrase->shouting at the screen</li>
+				<li>circumstance_phrase->writing mid-episode comments</li>
+				<li>circumstance_phrase->zoning out</li>
+				<li>circumstance_phrase->getting angry</li>
+				<li>circumstance_phrase->complaining about the killbox</li>
+				<li>desc_sentence->[Quantity_adjphrase] [PersonJob]s surreptitiously watch [PAWN_objective].</li>
+				<li>desc_sentence->[PAWN_pronoun] is surrounded by [Quantity_adjphrase] [Animal]s.</li>
+				<li>desc_sentence->[Quantity_adjphrase] [PersonJob]s angrily argue.</li>
+				<li>desc_sentence->[PAWN_pronoun] is struck dumb by the large brain tactics on display.</li>
+			</rulesStrings>
+		</rulePack>
+	</TaleDef>
+
+	<RitualPatternDef Name="CelebrationConsumable">
+		<defName>MSSMeme_RimRimViewing</defName>
+		<label>watch RimRim</label>
+		<nameMaker>MSSMeme_NamerRitualRimRim</nameMaker>
+		<ritualExpectedDesc>Every day, {MEMBERS} expect to be able to watch a new episode of RimWorld from their favorite streamer.</ritualExpectedDesc>
+		<ritualBehavior>MSSMeme_ViewRimRim</ritualBehavior>
+		<beginRitualOverride>watch RimRim</beginRitualOverride>
+		<shortDescOverride>watch RimRim</shortDescOverride>
+		<descOverride>A viewing party for RimRim. Participants will gather around a TV and scream at the screen.</descOverride>
+		<iconPathOverride>UI/Icons/Rituals/RitualFestival</iconPathOverride>
+		<playsIdeoMusic>true</playsIdeoMusic>
+		<ritualOutcomeEffect>MSSMeme_WatchedRimRim</ritualOutcomeEffect>
+		<ritualTargetFilter>SelectedThing</ritualTargetFilter>
+		<ritualObligationTargetFilter>MSSMeme_Telly</ritualObligationTargetFilter>
+		<ignoreConsumableBuildingRequirement>true</ignoreConsumableBuildingRequirement>
+		<minTechLevel>Industrial</minTechLevel>
+		<patternGroupTag>RitualBuildingConsumer</patternGroupTag>
+		<alwaysStartAnytime>true</alwaysStartAnytime>
+	</RitualPatternDef>
+
+	<RitualObligationTargetFilterDef>
+		<defName>MSSMeme_Telly</defName>
+		<workerClass>RitualObligationTargetWorker_ConsumableBuilding</workerClass>
+		<thingDefs>
+			<li>TubeTelevision</li>
+			<li>FlatscreenTelevision</li>
+			<li>MegascreenTelevision</li>
+		</thingDefs>
+	</RitualObligationTargetFilterDef>
+
+	<DutyDef>
+		<defName>MSSMeme_WatchRimrim</defName>
+		<hook>HighPriority</hook>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="JobGiver_SpectateInCircleDuty"/>
+				<li Class="JobGiver_GetJoyInGatheringArea"/>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+
+	<DutyDef>
+		<defName>MSSMeme_RecordRimRim</defName>
+		<hook>HighPriority</hook>
+		<thinkNode Class="ThinkNode_Priority">
+			<subNodes>
+				<li Class="MSS.MemeSuperpack.RimRim.ThinkNode_RememberRimRim"/>
+			</subNodes>
+		</thinkNode>
+	</DutyDef>
+
+	<RitualBehaviorDef ParentName="DateRitualBehavior">
+		<defName>MSSMeme_ViewRimRim</defName>
+		<durationTicks>1500</durationTicks>
+		<roles Inherit="False"/>
+		<spectatorsLabel>RimRims</spectatorsLabel>
+		<spectatorGerund>watch</spectatorGerund>
+		<stages Inherit="False">
+			<li>
+				<defaultDuty>MSSMeme_WatchRimrim</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.6</percentage>
+					</li>
+				</endTriggers>
+			</li>
+			<li>
+				<defaultDuty>MSSMeme_RecordRimRim</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_Instant"/>
+				</endTriggers>
+			</li>
+			<li>
+				<defaultDuty>PartyCloseWander</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.4</percentage>
+					</li>
+				</endTriggers>
+			</li>
+		</stages>
+	</RitualBehaviorDef>
+
+	<RitualOutcomeEffectDef>
+		<defName>MSSMeme_WatchedRimRim</defName>
+		<description>Depending on episode quality, participants will get between {MINMOOD} and {MAXMOOD} mood for a day.</description>
+		<workerClass>RitualOutcomeEffectWorker_FromQuality</workerClass>
+		<comps>
+			<li Class="RitualOutcomeComp_Indoors">
+				<label>indoors</label>
+				<qualityOffset>0.25</qualityOffset>
+			</li>
+			<li Class="RitualOutcomeComp_RoomStat">
+				<label>room cleanliness</label>
+				<statDef>Cleanliness</statDef>
+				<curve>
+					<points>
+						<li>0, 0</li>
+						<li>0.4, 0.25</li>
+						<li>0.6, 0.30</li>
+					</points>
+				</curve>
+			</li>
+			<li Class="RitualOutcomeComp_TargetThingStat">
+				<label>screen quality</label>
+				<statDef>JoyGainFactor</statDef>
+				<curve>
+					<points>
+						<li>0, 0</li>
+						<li>1.0, 0.35</li>
+						<li>2.0, 0.50</li>
+					</points>
+				</curve>
+			</li>
+		</comps>
+		<outcomeChances>
+			<li>
+				<label>Uninspiring episode</label>
+				<chance>0.15</chance>
+				<memory>MSSMeme_RimRim_Watched_Poor</memory>
+				<positivityIndex>-1</positivityIndex>
+			</li>
+			<li>
+				<label>Decent episode</label>
+				<chance>0.65</chance>
+				<memory>MSSMeme_RimRim_Watched_Meh</memory>
+				<positivityIndex>0</positivityIndex>
+			</li>
+			<li>
+				<label>Inspirational episode</label>
+				<chance>0.2</chance>
+				<memory>MSSMeme_RimRim_Watched_Good</memory>
+				<positivityIndex>1</positivityIndex>
+			</li>
+		</outcomeChances>
+	</RitualOutcomeEffectDef>
+
+</Defs>

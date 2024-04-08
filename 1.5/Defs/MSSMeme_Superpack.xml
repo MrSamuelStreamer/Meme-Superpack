@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<!-- This entry marks this mod as CE Compatible, make sure all mods in your pack have a similar def -->
+	<MSS.MemeSuperpack.ModCECompatibility>
+		<defName>MSSMeme_ModCECompatibility</defName>
+	</MSS.MemeSuperpack.ModCECompatibility>
+
+	<!-- If you know a mod is CE Compatible but it doesn't have one of the above defs you can add it here instead. -->
+	<MSS.MemeSuperpack.ModCECompatibilityList>
+		<defName>MSSMeme_ModCECompatibilityList</defName>
+		<compatibleModPackageIds>
+			<li>ludeon.rimworld</li>
+			<li>ludeon.rimworld.ideology</li>
+			<li>ludeon.rimworld.royalty</li>
+			<li>ludeon.rimworld.biotech</li>
+			<li>taggerung.grignrhappensby</li>
+		</compatibleModPackageIds>
+	</MSS.MemeSuperpack.ModCECompatibilityList>
+
+	<SongDef>
+		<defName>MSSMeme_BuckoDrinkMusic</defName>
+		<clipPath>Songs/Netherworld_Shanty</clipPath>
+	</SongDef>
+
+	<MSS.MemeSuperpack.Nukes>
+		<defName>MSSMeme_Nukes</defName>
+		<nukeDefs>
+			<li MayRequire="Aoba.Fortress.Industrial.NuclearDawn">FT_Shell_NuclearWarhead</li>
+			<li MayRequire="Dubwise.Rimatomics">FissionWarhead</li>
+			<li>Shell_AntigrainWarhead</li>
+		</nukeDefs>
+	</MSS.MemeSuperpack.Nukes>
+
+</Defs>

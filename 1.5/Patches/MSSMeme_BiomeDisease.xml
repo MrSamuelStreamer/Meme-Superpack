@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>diseases</setting>
+		<enabled Class="PatchOperationAdd">
+			<xpath>/Defs/BiomeDef/diseases</xpath>
+			<value>
+				<li>
+					<diseaseInc>MSSMeme_SitKid_Disease</diseaseInc>
+					<commonality>69</commonality>
+				</li>
+				<li>
+					<diseaseInc>MSSMeme_Ligma_Disease</diseaseInc>
+					<commonality>69</commonality>
+				</li>
+			</value>
+		</enabled>
+		<disabled Class="PatchOperationRemove">
+			<xpath>/Defs/IncidentDef[starts-with( diseaseIncident, 'MSSMeme_')]</xpath>
+		</disabled>
+	</Operation>
+
+</Patch>

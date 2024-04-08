@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<AbilityDef>
+		<defName>MSSMeme_CombatElephant</defName>
+		<label>combat elephant</label>
+		<description>With a powerful bellow and psychic shout of COME ELEPHANT, call a CE compatible animal to fight your enemies for a few hours.</description>
+		<iconPath>UI/Icons/Abilities/MSSMeme_ComeElephant_DarkRed</iconPath>
+		<cooldownTicksRange>60000</cooldownTicksRange> <!-- 1 day -->
+		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+		<jobDef>CastAbilityOnThing</jobDef>
+		<groupAbility>true</groupAbility>
+		<statBases>
+			<Ability_Duration>500</Ability_Duration>
+		</statBases>
+		<charges>2</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<label>CE compatible warcall</label>
+			<warmupTime>2</warmupTime>
+			<range>49.9</range>
+			<drawAimPie>true</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<warmupEffecter MayRequire="Ludeon.RimWorld.Biotech">AnimalWarcall_Warmup</warmupEffecter>
+			<targetParams>
+				<canTargetLocations>false</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetHumans>false</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetSelf>false</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="MSS.MemeSuperpack.CompProperties_AbilityComeAnimal">
+				<compClass>MSS.MemeSuperpack.CompAbilityEffect_ComeAnimal</compClass>
+				<pawnsStayTicksMin>60000</pawnsStayTicksMin>
+				<pawnsStayTicksMax>120000</pawnsStayTicksMax>
+				<fightWithSummoner>true</fightWithSummoner>
+				<fightTarget>true</fightTarget>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+				<possiblePawnKinds>
+					<li>MSSMeme_CombatElephant</li>
+				</possiblePawnKinds>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>MSSMeme_CrazedElephant</defName>
+		<label>crazed elephant</label>
+		<description>With a powerful bellow and psychic shout of COME ELEPHANT, call a CE compatible animal to fight your enemies for quite a few hours. Just be careful if you run out of enemies to fight.</description>
+		<iconPath>UI/Icons/Abilities/MSSMeme_ComeElephant_VeryRed</iconPath>
+		<cooldownTicksRange>60000</cooldownTicksRange> <!-- 1 day -->
+		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+		<jobDef>CastAbilityOnThing</jobDef>
+		<groupAbility>true</groupAbility>
+		<statBases>
+			<Ability_Duration>500</Ability_Duration>
+		</statBases>
+		<charges>2</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<label>CE compatible warcall</label>
+			<warmupTime>2</warmupTime>
+			<range>49.9</range>
+			<drawAimPie>true</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<warmupEffecter MayRequire="Ludeon.RimWorld.Biotech">AnimalWarcall_Warmup</warmupEffecter>
+			<targetParams>
+				<canTargetLocations>false</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetHumans>false</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetSelf>false</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="MSS.MemeSuperpack.CompProperties_AbilityComeAnimal">
+				<compClass>MSS.MemeSuperpack.CompAbilityEffect_ComeAnimal</compClass>
+				<pawnsStayTicksMin>90000</pawnsStayTicksMin>
+				<pawnsStayTicksMax>180000</pawnsStayTicksMax>
+				<fightWithSummoner>true</fightWithSummoner>
+				<fightTarget>true</fightTarget>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+				<possiblePawnKinds>
+					<li>MSSMeme_CrazedElephant</li>
+				</possiblePawnKinds>
+				<manhunterChance>1</manhunterChance>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>MSSMeme_CombustionElephant</defName>
+		<label>combustion elephant</label>
+		<description>With a powerful bellow and psychic shout of COME ELEPHANT, call a CE Compatible Combustion elephant to fight your enemies for a few hours.</description>
+		<iconPath>UI/Icons/Abilities/MSSMeme_ComeElephant_Orange</iconPath>
+		<cooldownTicksRange>60000</cooldownTicksRange> <!-- 1 day -->
+		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+		<jobDef>CastAbilityOnThing</jobDef>
+		<groupAbility>true</groupAbility>
+		<statBases>
+			<Ability_Duration>500</Ability_Duration>
+		</statBases>
+		<charges>1</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<label>CE compatible warcall</label>
+			<warmupTime>2</warmupTime>
+			<range>49.9</range>
+			<drawAimPie>true</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<warmupEffecter MayRequire="Ludeon.RimWorld.Biotech">AnimalWarcall_Warmup</warmupEffecter>
+			<targetParams>
+				<canTargetLocations>false</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetHumans>false</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetSelf>false</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="MSS.MemeSuperpack.CompProperties_AbilityComeAnimal">
+				<compClass>MSS.MemeSuperpack.CompAbilityEffect_ComeAnimal</compClass>
+				<pawnsStayTicksMin>60000</pawnsStayTicksMin>
+				<pawnsStayTicksMax>120000</pawnsStayTicksMax>
+				<fightWithSummoner>true</fightWithSummoner>
+				<fightTarget>true</fightTarget>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+				<possiblePawnKinds>
+					<li>MSSMeme_CombustionElephant</li>
+				</possiblePawnKinds>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>MSSMeme_CarryElephant</defName>
+		<label>carry elephant</label>
+		<description>With a powerful bellow and psychic shout of COME ELEPHANT, call a CE Compatible Carry elephant to come and lug some stuff around for a while.</description>
+		<iconPath>UI/Icons/Abilities/MSSMeme_ComeElephant_LightBlue</iconPath>
+		<cooldownTicksRange>60000</cooldownTicksRange> <!-- 1 day -->
+		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+		<jobDef>CastAbilityOnThing</jobDef>
+		<groupAbility>true</groupAbility>
+		<statBases>
+			<Ability_Duration>500</Ability_Duration>
+		</statBases>
+		<charges>2</charges>
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<label>CE compatible call for aid</label>
+			<warmupTime>2</warmupTime>
+			<range>49.9</range>
+			<drawAimPie>true</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<warmupEffecter MayRequire="Ludeon.RimWorld.Biotech">AnimalWarcall_Warmup</warmupEffecter>
+			<targetParams>
+				<canTargetLocations>false</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetBuildings>false</canTargetBuildings>
+				<canTargetHumans>false</canTargetHumans>
+				<canTargetMechs>false</canTargetMechs>
+				<canTargetSelf>false</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="MSS.MemeSuperpack.CompProperties_AbilityComeAnimal">
+				<compClass>MSS.MemeSuperpack.CompAbilityEffect_ComeAnimal</compClass>
+				<pawnsStayTicksMin>600000</pawnsStayTicksMin>
+				<pawnsStayTicksMax>1200000</pawnsStayTicksMax>
+				<fightWithSummoner>false</fightWithSummoner>
+				<fightTarget>false</fightTarget>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+				<manhunterChance>0.0</manhunterChance>
+				<possiblePawnKinds>
+					<li>MSSMeme_CarryElephant</li>
+				</possiblePawnKinds>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName>MSSMeme_ComeElephant</defName>
+		<label>come elephant</label>
+		<description>With a psychic chant of come elephant, call a CE compatible animal to your vicinity.</description>
+		<iconPath>UI/Icons/Abilities/MSSMeme_ComeElephant_White</iconPath>
+		<cooldownTicksRange>420000~690000</cooldownTicksRange>
+		<canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+		<jobDef>CastAbilityOnThing</jobDef>
+		<groupAbility>true</groupAbility>
+		<statBases>
+			<Ability_Duration>500</Ability_Duration>
+		</statBases>
+		<charges>69</charges> <!-- Horribly unbalanced but they might be manhunter :p -->
+		<cooldownPerCharge>true</cooldownPerCharge>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<label>CE compatible warcall</label>
+			<warmupTime>2</warmupTime>
+			<range>49.9</range>
+			<drawAimPie>true</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<warmupEffecter MayRequire="Ludeon.RimWorld.Biotech">AnimalWarcall_Warmup</warmupEffecter>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>true</canTargetPawns>
+				<canTargetAnimals>true</canTargetAnimals>
+				<canTargetBuildings>true</canTargetBuildings>
+				<canTargetHumans>true</canTargetHumans>
+				<canTargetMechs>true</canTargetMechs>
+				<canTargetSelf>true</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="MSS.MemeSuperpack.CompProperties_AbilityComeAnimal">
+				<compClass>MSS.MemeSuperpack.CompAbilityEffect_ComeAnimal</compClass>
+				<pawnsStayTicksMin>69000</pawnsStayTicksMin>
+				<pawnsStayTicksMax>420000</pawnsStayTicksMax>
+				<fightWithSummoner>false</fightWithSummoner>
+				<fightTarget>false</fightTarget>
+				<durationMultiplier>PsychicSensitivity</durationMultiplier>
+				<manhunterChance>0.42</manhunterChance>
+			</li>
+		</comps>
+	</AbilityDef>
+</Defs>

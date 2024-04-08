@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Advanced Biomes (Continued)</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/BiomeDef[defName="Wasteland"]/wildAnimals</xpath>
+					<value>
+						<MSSMeme_CombustionElephant>0.3</MSSMeme_CombustionElephant>
+						<MSSMeme_CombatElephant>0.3</MSSMeme_CombatElephant>
+						<MSSMeme_ComeElephant>0.3</MSSMeme_ComeElephant>
+						<MSSMeme_CarryElephant>0.05</MSSMeme_CarryElephant>
+						<MSSMeme_CrazedElephant>0.1</MSSMeme_CrazedElephant>
+						<MSSMeme_Stickbug>0.2</MSSMeme_Stickbug>
+						<MSSMeme_ILikeBuildJoris_Gremlin>0.2</MSSMeme_ILikeBuildJoris_Gremlin>
+						<MSSMeme_ILikeBuildJoris>0.15</MSSMeme_ILikeBuildJoris>
+						<MSSMeme_ConkCreetBaybeeJoris>0.4</MSSMeme_ConkCreetBaybeeJoris>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/BiomeDef[defName="TropicalRainforest" or defName="TropicalSwamp"]/wildAnimals</xpath>
+		<value>
+			<MSSMeme_Stickbug>0.4</MSSMeme_Stickbug>
+		</value>
+	</Operation>
+
+</Patch>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="MSS.MemeSuperpack.PatchOperationToggleable">
+		<setting>coalInRecipes</setting>
+		<enabled Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "MultiAnalyzer"]/costList</xpath>
+					<value>
+						<MSSMeme_CoalPlate>69</MSSMeme_CoalPlate>
+						<MSSMeme_AnthraciteCoal>69</MSSMeme_AnthraciteCoal>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "FabricationBench"]/costList</xpath>
+					<value>
+						<MSSMeme_SuperCucoalmber>420</MSSMeme_SuperCucoalmber>
+					</value>
+				</li>
+
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "HiTechResearchBench"]/costList</xpath>
+					<value>
+						<MSSMeme_Coal>69</MSSMeme_Coal>
+					</value>
+				</li>
+			</operations>
+		</enabled>
+	</Operation>
+
+</Patch>

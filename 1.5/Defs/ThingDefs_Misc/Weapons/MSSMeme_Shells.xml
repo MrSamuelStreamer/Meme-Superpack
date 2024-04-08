@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<!-- High-explosive Conk creet-->
+
+	<ThingDef ParentName="MakeableShellBase">
+		<defName>MSSMeme_Shell_ConkcreetBaybee</defName>
+		<label>concrete shell</label>
+		<description>A shell filled with an honestly unreasonable amount of concrete. Seriously, how on earth did so much concrete fit into this shell. Can be fired from mortars and explodes when damaged. When detonated, the shell does negligible damage but places down concrete flooring in a sizable range.</description>
+		<possessionCount>1</possessionCount>
+		<graphicData>
+			<texPath>Things/Item/Resource/Shell/MSSMeme_ILikeConcreteBaybee_Shell</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<comps>
+			<li Class="MSS.MemeSuperpack.CompProperties_ExplosiveWithTerrain">
+				<explosiveRadius>3.9</explosiveRadius>
+				<explosiveDamageType>Bomb</explosiveDamageType>
+				<explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+				<startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+				<wickTicks>30~60</wickTicks>
+				<terrain>Concrete</terrain>
+				<explodeOnKilled>true</explodeOnKilled>
+			</li>
+		</comps>
+		<projectileWhenLoaded>MSSMeme_Bullet_Shell_ConkcreetBaybee</projectileWhenLoaded>
+		<costList>
+			<Steel>60</Steel>
+			<Chemfuel>15</Chemfuel>
+		</costList>
+		<costListForDifficulty>
+			<difficultyVar>classicMortars</difficultyVar>
+			<costList>
+				<Steel>80</Steel>
+				<Chemfuel>15</Chemfuel>
+			</costList>
+		</costListForDifficulty>
+		<recipeMaker>
+			<researchPrerequisite>Mortars</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>MSSMeme_Bullet_Shell_ConkcreetBaybee</defName>
+		<label>high-explosive conk creet shell</label>
+		<graphicData>
+			<texPath>Things/Projectile/ShellHighExplosive</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+		</graphicData>
+		<thingClass>MSS.MemeSuperpack.Projectile_ExplosiveWithTerrain</thingClass>
+		<projectile>
+			<damageDef>Bomb</damageDef>
+			<!-- damage amount is the damage def default -->
+			<speed>41</speed>
+			<explosionRadius>3.9</explosionRadius>
+			<flyOverhead>true</flyOverhead>
+			<soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+			<soundExplode>MortarBomb_Explode</soundExplode>
+			<soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+			<soundAmbient>MortarRound_Ambient</soundAmbient>
+		</projectile>
+	</ThingDef>
+
+</Defs>

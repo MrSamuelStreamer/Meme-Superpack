@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<!--=========================== Food crops ==============================-->
+
+	<ThingDef ParentName="PlantBase">
+		<defName>MSSMeme_Plant_Super_Cucumber</defName>
+		<label>super cucumber</label>
+		<description>How curious. The super cucumber looks rather similar to the ocean dwelling sea cucumber aside from the super cucumber's vibrant colors, but this obviously grows on land. Unusual biological development aside, the super cucumber is a relatively fast growing... crop(?) with a modest yield.\n\nWhat sets it apart from other crops is its wonderful flavor, often described as nostalgic by those fortunate enough to taste it.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Nutrition>0.175</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plant/MSSMeme_Super_Cucumber</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible/>
+		<plant>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>MSSMeme_Raw_Super_Cucumber</harvestedThingDef>
+			<harvestYield>7</harvestYield>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<topWindExposure>0.1</topWindExposure>
+			<growDays>4.5</growDays>
+			<visualSizeRange>0.3~0.8</visualSizeRange>
+			<wildOrder>2</wildOrder>
+			<purpose>Food</purpose>
+			<humanFoodPlant>true</humanFoodPlant>
+		</plant>
+	</ThingDef>
+
+	<ThingDef ParentName="PlantFoodRawBase">
+		<defName>MSSMeme_Raw_Super_Cucumber</defName>
+		<label>super cucumber</label>
+		<description>A harvested super cucumber. Its most notable features are its slimy texture when uncooked and its incredible taste. Whether raw or cooked, people who eat super cucumbers tend to associate it with various positive feelings, though such feelings seem to be less intense when it is eaten raw.</description>
+		<soundInteract>Grain_Drop</soundInteract>
+		<soundDrop>Grain_Drop</soundDrop>
+		<graphicData>
+			<texPath>Things/Item/Resource/PlantFoodRaw/MSSMeme_Super_Cucumber</texPath>
+		</graphicData>
+		<statBases>
+			<FoodPoisonChanceFixedHuman>0</FoodPoisonChanceFixedHuman>
+			<MarketValue>1.6</MarketValue>
+		</statBases>
+		<ingestible>
+			<preferability>RawTasty</preferability>
+			<tasteThought>MSSMeme_AteSuperCucumberDirect</tasteThought>
+			<specialThoughtAsIngredient>MSSMeme_AteSuperCucumberAsIngredient</specialThoughtAsIngredient>
+			<foodType>Meat</foodType>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>40</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<thingCategories Inherit="False">
+			<li>MeatRaw</li>
+		</thingCategories>
+	</ThingDef>
+
+</Defs>

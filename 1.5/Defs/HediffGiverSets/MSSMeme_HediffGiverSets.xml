@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<HediffGiverSetDef>
+		<defName>MSSMeme_ILikeBuildBaseGiver</defName>
+		<hediffGivers>
+			<li MayRequire="Ludeon.RimWorld.Ideology" Class="MSS.MemeSuperpack.Hediff.HediffGiver_EnsureHediff">
+				<hediff>MSSMeme_ILikeBuildBaseSource</hediff>
+			</li>
+		</hediffGivers>
+	</HediffGiverSetDef>
+</Defs>

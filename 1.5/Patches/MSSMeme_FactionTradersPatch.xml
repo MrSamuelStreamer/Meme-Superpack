@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[@Name = "OutlanderFactionBase"]/caravanTraderKinds</xpath>
+		<value>
+			<li>MSSMeme_Caravan_Outlander_CoalOne</li>
+			<li>MSSMeme_Caravan_Outlander_CoalTwo</li>
+			<li>MSSMeme_Caravan_Outlander_Bowl</li>
+			<li>MSSMeme_Caravan_Outlander_Pyramid</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/FactionDef[@Name = "TribeBase"]/caravanTraderKinds</xpath>
+		<value>
+			<li>MSSMeme_Caravan_Neolithic_CoalOne</li>
+			<li>MSSMeme_Caravan_Neolithic_CoalTwo</li>
+			<li>MSSMeme_Caravan_Neolithic_Bowl</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Mr Samuel Streamer's Custom Faction</li>
+		</mods>
+		<match Class="PatchOperationAdd">
+			<xpath>/Defs/FactionDef[@Name="PatreonFactionBase"]/caravanTraderKinds</xpath>
+			<value>
+				<li>MSSMeme_Caravan_Neolithic_CoalOne</li>
+				<li>MSSMeme_Caravan_Neolithic_CoalTwo</li>
+				<li>MSSMeme_Caravan_Neolithic_Bowl</li>
+				<li>MSSMeme_Caravan_Outlander_Pyramid</li>
+			</value>
+		</match>
+	</Operation>
+</Patch>

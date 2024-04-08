@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<ThoughtDef>
+		<defName>MSSMeme_AwakeThought</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>MSSMeme_Awake</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>had my beauty sleep</label>
+				<description>I've slept recently, life is good</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+			<li>
+				<label>tired</label>
+				<description>I've been awake for a long time, I really need some kip soon.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+			<li>
+				<label>dead tired</label>
+				<description>I've been awake for so long I'm starting to hear smells.</description>
+				<baseMoodEffect>-36</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>MSSMeme_PoliceThought</defName>
+		<workerClass>ThoughtWorker_GameCondition</workerClass>
+		<gameCondition>MSSMeme_PoliceAreHere</gameCondition>
+		<stages>
+			<li>
+				<label>police again</label>
+				<description>the sodding police are back... AGAIN!</description>
+				<baseMoodEffect>-10</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

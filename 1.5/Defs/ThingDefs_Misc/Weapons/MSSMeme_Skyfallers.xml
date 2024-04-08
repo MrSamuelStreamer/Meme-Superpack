@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<ThingDef ParentName="SkyfallerBase">
+		<defName>MSSMeme_StickbugIncoming</defName>
+		<label>stickbug (incoming)</label>
+		<size>(1, 1)</size>
+		<graphicData>
+			<texPath>Things/Pawn/Animal/Stickbug/MSSMeme_Stickbug_east</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutFlying</shaderType>
+			<drawSize>(1, 1)</drawSize>
+			<color>(137,245,141)</color>
+		</graphicData>
+		<skyfaller>
+			<rotateGraphicTowardsDirection>true</rotateGraphicTowardsDirection>
+			<speed>1.2</speed>
+			<shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
+			<shadowSize>(3.5,0.2)</shadowSize>
+			<motesPerCell>1</motesPerCell>
+		</skyfaller>
+	</ThingDef>
+
+</Defs>

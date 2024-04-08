@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<MentalBreakDef>
+		<defName>MSSMeme_KickANuke</defName>
+		<mentalState>MSSMeme_KickANuke</mentalState>
+		<baseCommonality>0.01</baseCommonality>
+		<intensity>Major</intensity>
+	</MentalBreakDef>
+
+	<MentalStateDef ParentName="Tantrum">
+		<defName>MSSMeme_KickANuke</defName>
+		<stateClass>MSS.MemeSuperpack.MentalState_KickANuke</stateClass>
+		<workerClass>MSS.MemeSuperpack.MentalStateWorker_KickANuke</workerClass>
+		<minTicksBeforeRecovery>20000</minTicksBeforeRecovery>
+		<maxTicksBeforeRecovery>60000</maxTicksBeforeRecovery>
+		<recoveryMtbDays>0.166</recoveryMtbDays>
+		<beginLetter>{0} is so absolutely fed up that [PAWN_pronoun] is going to go and angrily kick this {1}.</beginLetter>
+	</MentalStateDef>
+
+</Defs>

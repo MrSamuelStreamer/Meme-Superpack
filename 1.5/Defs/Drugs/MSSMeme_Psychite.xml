@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>MSSMeme_CucumberPaste</defName>
+		<label>cucumber paste</label>
+		<description>A fine sample of... "cucumber paste." Yes... "cucumber paste." Nothing nefarious to see here YouTube! This is completely advertiser friendly, I swear!</description>
+		<descriptionHyperlinks>
+			<HediffDef>PsychiteTolerance</HediffDef>
+			<HediffDef>PsychiteAddiction</HediffDef>
+			<HediffDef>ChemicalDamageSevere</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/Yayo</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>750</WorkToMake>
+			<MarketValue>22</MarketValue>
+			<Mass>0.05</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<minRewardCount>10</minRewardCount>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.80</joy>
+			<drugCategory>Hard</drugCategory>
+			<baseIngestTicks>150</baseIngestTicks>
+			<ingestSound>Ingest_Snort</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.21,0,0.05)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Snort {0}</ingestCommandString>
+			<ingestReportString>Snorting {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>MSSMeme_CucumberpasteHigh</hediffDef>
+					<severity>1.0</severity>
+					<toleranceChemical>Psychite</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed">
+					<need>Rest</need>
+					<offset>0.4</offset>
+					<toleranceChemical>Psychite</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>PsychiteTolerance</hediffDef>
+					<severity>0.040</severity>
+					<divideByBodySize>true</divideByBodySize>
+					<multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>PsychiteRefining</researchPrerequisite>
+			<recipeUsers>
+				<li>DrugLab</li>
+			</recipeUsers>
+			<soundWorking>Recipe_Drug</soundWorking>
+		</recipeMaker>
+		<costList>
+			<PsychoidLeaves>8</PsychoidLeaves>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Psychite</chemical>
+				<addictiveness>0.01</addictiveness>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<isCombatEnhancingDrug>false</isCombatEnhancingDrug>
+				<listOrder>100</listOrder>
+				<overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+				<largeOverdoseChance>0.01</largeOverdoseChance>
+			</li>
+		</comps>
+		<allowedArchonexusCount>200</allowedArchonexusCount>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>MSSMeme_CucumberpasteHigh</defName>
+		<label>demonetization</label>
+		<labelNoun>demonetized</labelNoun>
+		<description>Foolish mortal. You dare try to evade the wrath of the Youtube Algorithm? Now you shall suffer the burden of the accursed yellow symbol.</description>
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.69</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<setMax>0.1</setMax>
+					</li>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThoughtDef>
+		<defName>MSSMeme_DemonetizationPain</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>MSSMeme_CucumberpasteHigh</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>demonetized</label>
+				<description>Noooooo... my analytics... my view count... the pain, it hurts. Why, YouTube, WHYYYYY??????</description>
+				<baseMoodEffect>-666</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>MSSMeme_WarcasketYayo</defName>
+		<label>warcasket compatible yayo</label>
+		<description>An ultra fine and ultra pure compound of yayo specially crafted to induce an even greater high than normal yayo for a long period of time. However, due to an oddity with armor calculati- I mean the molecular structure of pure yayo, it can only be properly consumed by warcaskets. Any pawn that is not a warcasket will bemoan how they are "not compatible" with this yayo, attaining mental anguish comparable to the amount a certain polar bear got from people telling him warcaskets were not working with Yayo's combat (seriously, if you would like your pawns actually functioning for the next in-game week, don't make them take this). Warcaskets will get a rather pleasant buzz instead, as well as a strong burst of vigor.</description>
+		<descriptionHyperlinks>
+			<HediffDef>PsychiteTolerance</HediffDef>
+			<HediffDef>PsychiteAddiction</HediffDef>
+			<HediffDef>ChemicalDamageSevere</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Drug/Yayo</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>750</WorkToMake>
+			<MarketValue>85</MarketValue>
+			<Mass>0.05</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<minRewardCount>10</minRewardCount>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.80</joy>
+			<drugCategory>Hard</drugCategory>
+			<baseIngestTicks>150</baseIngestTicks>
+			<ingestSound>Ingest_Snort</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.21,0,0.05)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Snort {0}</ingestCommandString>
+			<ingestReportString>Snorting {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>MSSMeme_WarcasketYayoHigh</hediffDef>
+					<severity>0.75</severity>
+					<toleranceChemical>Psychite</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_OffsetNeed">
+					<need>Rest</need>
+					<offset>0.4</offset>
+					<toleranceChemical>Psychite</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>PsychiteTolerance</hediffDef>
+					<severity>0.040</severity>
+					<divideByBodySize>true</divideByBodySize>
+					<multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>PsychiteRefining</researchPrerequisite>
+			<recipeUsers>
+				<li>DrugLab</li>
+			</recipeUsers>
+			<soundWorking>Recipe_Drug</soundWorking>
+		</recipeMaker>
+		<costList>
+			<PsychoidLeaves>32</PsychoidLeaves>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Psychite</chemical>
+				<addictiveness>0.01</addictiveness>
+				<existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<isCombatEnhancingDrug>false</isCombatEnhancingDrug>
+				<listOrder>100</listOrder>
+				<overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+				<largeOverdoseChance>0.01</largeOverdoseChance>
+			</li>
+		</comps>
+		<allowedArchonexusCount>200</allowedArchonexusCount>
+	</ThingDef>
+
+	<HediffDef>
+		<defName>MSSMeme_WarcasketYayoHigh</defName>
+		<label>high on warcasket yayo</label>
+		<labelNoun>a warcasket yayo high</labelNoun>
+		<description>Active warcasket yayo in the bloodstream. Generates an intense euphoric high for warcaskets while inflicting intense anguish on normal pawns.</description>
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.1425</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<painFactor>0.5</painFactor>
+				<statFactors>
+					<RestFallRateFactor>0.2</RestFallRateFactor>
+				</statFactors>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.25</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThoughtDef>
+		<defName>MSSMeme_WarcasketYayoHigh</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>MSSMeme_WarcasketYayoHigh</hediff>
+		<nullifyingTraits>
+			<li MayRequire="OskarPotocki.VFE.Pirates">VFEP_WarcasketTrait</li>
+		</nullifyingTraits>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>incompatible with yayo</label>
+				<description>Alas, I am incompatible with this yayo!</description>
+				<baseMoodEffect>-999</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

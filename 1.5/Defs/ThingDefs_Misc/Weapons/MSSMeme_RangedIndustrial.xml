@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+
+	<ThingDef ParentName="BaseGunWithQuality">
+		<defName>MSSMeme_OttomaticGun</defName>
+		<label>fully Ottomatic gun</label>
+		<description>A legendary gun named after an individual rumored to have achieved unmatchable combat abilities. Such power was so mighty, an especially powerful archotech manifested a batch of weapons that emulates this person's powers. Such a mighty gun is a rare sight to see indeed, but any person who wields it has the world at his feet... as long as they can actually manage to aim the thing. And manage to carry it. It is REALLY heavy.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/MSSMeme_Ottomatic</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+		<thingSetMakerTags>
+			<li>RewardStandardMidFreq</li>
+		</thingSetMakerTags>
+		<statBases>
+			<WorkToMake>60000</WorkToMake>
+			<Mass>10</Mass>
+			<AccuracyTouch>0.01</AccuracyTouch>
+			<AccuracyShort>0.01</AccuracyShort>
+			<AccuracyMedium>0.01</AccuracyMedium>
+			<AccuracyLong>0.01</AccuracyLong>
+			<RangedWeapon_Cooldown>0.01</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Plasteel>420</Plasteel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentSpacer>20</ComponentSpacer>
+			<MSSMeme_SuperCoal>169</MSSMeme_SuperCoal>
+		</costList>
+		<recipeMaker>
+			<researchPrerequisite>MSSMeme_FullyOttomatic</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>16</Crafting>
+			</skillRequirements>
+			<recipeUsers Inherit="False">
+				<li>FabricationBench</li>
+			</recipeUsers>
+		</recipeMaker>
+		<techLevel>Ultra</techLevel>
+		<equippedStatOffsets>
+			<MoveSpeed>-2.0</MoveSpeed>
+			<ShootingAccuracyPawn>-500</ShootingAccuracyPawn>
+		</equippedStatOffsets>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>MSSMeme_Bullet_Ottomatic</defaultProjectile>
+				<warmupTime>0.01</warmupTime>
+				<range>30.9</range>
+				<burstShotCount>69</burstShotCount>
+				<ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+				<soundCast>Shot_Minigun</soundCast>
+				<soundCastTail>GunTail_Medium</soundCastTail>
+				<muzzleFlashScale>19</muzzleFlashScale>
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>barrels</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11.7</power>
+				<cooldownTime>2.6</cooldownTime>
+			</li>
+		</tools>
+	</ThingDef>
+	<ThingDef ParentName="BaseBullet">
+		<defName>MSSMeme_Bullet_Ottomatic</defName>
+		<label>Ottomatic bullet</label>
+		<graphicData>
+			<texPath>Things/Projectile/Charge_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>6</damageAmountBase>
+			<speed>100</speed>
+			<armorPenetrationBase>0.69</armorPenetrationBase>
+		</projectile>
+	</ThingDef>
+
+</Defs>
