@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SpeakUp</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/InteractionDef[defName = "RomanceAttempt"]/logRulesInitiator/rulesStrings</xpath>
+					<value>
+						<rulesStrings>
+							<li>r_logentry->[attempt]</li>
+							<li>attempt(INITIATOR_relationship==Lover,tag=RomanceSuccess)->[try_romance]</li>
+							<li>attempt(priority=-1,tag=RomanceFail)->[try_romance]</li>
+
+							<li>try_romance->I drew you as a waifu.</li>
+							<li>try_romance->Your [romantic_bodypart] is gorgeous, would you like to be my reference for this drawing?</li>
+							<li>try_romance->Your [romantic_bodypart] makes me forget about my OC's dead parents.</li>
+							<li>try_romance->Could you pose for my artwork .... in private?</li>
+							<li>try_romance->Can we swap [romantic_artrelation] collections?</li>
+							<li>try_romance->I think our original characters would look really good together. But perhaps... as more than friends.</li>
+							<li>try_romance->I did a few of doodles of you in my sketchbook, would you like to see all 10 pages!?</li>
+							<li>try_romance->I'd love it if you'd get naked and lie down like a pancake on that canvas so I can trace out your curves.</li>
+							<li>try_romance->You look just like my mentally deranged OC. Want to get freaky?</li>
+							<li>try_romance(INITIATOR_trait==bloodlust)->*Stabs pencil through hand to get attention* UwU.</li>
+							<li>try_romance(INITIATOR_trait==bloodlust,RECIPIENT_artistic_passion!=None)->The pattern of blood and viscera that stains the ground after I fight in a battle is like a fine tapestry to me. If you and I were side by side, we could create wondrous masterpieces that would put even the finest artists to shame.</li>
+
+
+							<li>romantic_bodypart->hand</li>
+							<li>romantic_bodypart->leg</li>
+							<li>romantic_bodypart->face</li>
+							<li>romantic_bodypart->eye</li>
+
+							<li>romantic_artrelation->yaoi</li>
+							<li>romantic_artrelation->yuri</li>
+							<li>romantic_artrelation->fursona</li>
+
+
+							<!-- ===passion-based art seduction=== -->
+
+
+							<li>try_romance(RECIPIENT_shooting_passion!=None)->I know you like to go hunting, so I drew you slaying a [animal_grand] with a well placed shot [vital_bodypart]! [romantic_query]?</li>
+
+							<li>try_romance(RECIPIENT_melee_passion!=None)->I know you love to jump into the fray of combat, so I drew you as a [romantic_fighter] standing over [romantic_foes]! [romantic_query]?</li>
+
+							<li>try_romance(RECIPIENT_construction_passion!=None)->I know you enjoy constructing buildings for the colony, so I decided to draw you building [building_grand]! [romantic_query]?</li>
+
+							<li>try_romance(RECIPIENT_mining_passion!=None)->I know you enjoy mining and prospecting, so I drew you discovering [miningdiscovery_grand]! [romantic_query]?</li>
+
+							<li>try_romance(RECIPIENT_cooking_passion!=None)->I know you love cooking, so I decided to draw you [cookingmeal_grand]! [romantic_query]?</li>
+
+							<li>try_romance(RECIPIENT_plants_passion!=None)->I know you love to garden and work in the fields, so I drew you tending to [planting_grand]! [romantic_query]?</li>
+
+							<li>try_romance(RECIPIENT_animals_passion!=None)->I know you absolutely adore animals, so I drew you [romantic_animals_grand]! [romantic_query]?</li>
+
+							<li>try_romance(RECIPIENT_crafting_passion!=None)->I know you have a great passion for workmanship, so I drew you [crafting_grand]! [romantic_query]?</li>
+
+							<li>try_romance(RECIPIENT_artistic_passion!=None)->I know you are a passionate artist, so I drew you [artisticfeat_grand]! [romantic_query]?</li>
+
+							<li>try_romance(RECIPIENT_medical_passion!=None)->I know you are invested in tending to the ill and saving lives, so I drew you [medical_grand]! [romantic_query]?</li>
+
+							<li>try_romance(RECIPIENT_social_passion!=None)->I know you are a fervent orator, so I drew you [social_feat]! [romantic_query]?</li>
+
+							<li>try_romance(RECIPIENT_intellectual_passion!=None)->I know you are an astute intellectual, so I drew you [intellectual_feat]! [romantic_query]?</li>
+
+
+							<li>romantic_query->Do... do you like it</li>
+							<li>romantic_query->What... what do you think of it</li>
+							<li>romantic_query->Is... is it to your liking</li>
+							<li>romantic_query->How... how do you like it</li>
+							<li>romantic_query->Is... is it good</li>
+
+
+							<li>animal_grand->thrumbo</li>
+							<li>animal_grand->rhinoceros</li>
+							<li>animal_grand->elephant</li>
+							<li>animal_grand->grizzly bear</li>
+							<li>animal_grand->megasloth</li>
+							<li>animal_grand->jagoth grr</li>
+							<li>animal_grand->xorismorph queen</li>
+							<li>animal_grand->biblically accurate joris</li>
+
+							<li>vital_bodypart->to the head</li>
+							<li>vital_bodypart->to the heart</li>
+							<li>vital_bodypart->to the leg</li>
+							<li>vital_bodypart->right through the eye</li>
+
+
+							<li>romantic_fighter->swashbuckler</li>
+							<li>romantic_fighter->gladiator</li>
+							<li>romantic_fighter->knight</li>
+							<li>romantic_fighter->soldier</li>
+
+							<li>romantic_foes->the bodies of a pack of rabid animals</li>
+							<li>romantic_foes->the bodies of an army attacking us</li>
+							<li>romantic_foes->a rival after a duel</li>
+							<li>romantic_foes->the fallen leader of an enemy faction</li>
+
+
+							<li>building_grand->a grand cathedral that attracts both the religious for its holiness and the agnostic for its beauty</li>
+							<li>building_grand->a mighty fortress, all but impossible to breach</li>
+							<li>building_grand->a towering wall that can withstand even the mightiest of blows</li>
+							<li>building_grand->a monument that will be marveled at for generations</li>
+							<li>building_grand->a bridge that spans a length so impressive, the human eye cannot see the other end</li>
+
+
+							<li>miningdiscovery_grand->a rich vein of ore</li>
+							<li>miningdiscovery_grand->an ancient ruin filled with untold wealth</li>
+							<li>miningdiscovery_grand->a large network of caves</li>
+							<li>miningdiscovery_grand->a hidden glade of flowers untouched by the ravages of both mankind and nature</li>
+
+
+							<li>romantic_dish->platter of fresh oysters</li>
+							<li>romantic_dish->fancy strawberry tart</li>
+							<li>romantic_dish->plate of traditional pasta</li>
+							<li>romantic_dish->honey-glazed fruits</li>
+
+							<li>cookingmeal_grand->an exquisite banquet with a [romantic_dish] as the centerpiece</li>
+							<li>cookingmeal_grand->a seven course meal with a [romantic_dish] as the main course</li>
+							<li>royal_dish->roast suckling pig</li>
+							<li>royal_dish->rack of lamb</li>
+							<li>royal_dish->veal</li>
+							<li>royal_dish->stuffed pheasant</li>
+
+							<li>romantic_dish->cream custard tarts</li>
+							<li>romantic_dish->fruit pastries</li>
+							<li>romantic_dish->poached pears in wine</li>
+							<li>romantic_dish->a large variety of sweetmeats</li>
+
+							<li>cookingmeal_grand->a king's feast with especially large platters of [royal_dish] and [royal_dessert]</li>
+							<li>cookingmeal_grand->a homemade meal made with love</li>
+
+
+							<li>planting_grand->a garden filled with exotic cultivars</li>
+							<li>planting_grand->a palace's royal garden</li>
+							<li>planting_grand->an expansive greenhouse</li>
+							<li>planting_grand->a vast field of wheat</li>
+							<li>planting_grand->a comfy garden in front of a cottage</li>
+
+
+							<li>romantic_animals_grand->surrounded by dozens of kittens</li>
+							<li>romantic_animals_grand->riding a horse into the sunset</li>
+							<li>romantic_animals_grand->commanding a pack of wargs to protect you</li>
+							<li>romantic_animals_grand->taming a [animal_grand]</li>
+							<li>romantic_animals_grand->feeding a majestic stag</li>
+
+
+							<li>weapon_grand->greatsword</li>
+							<li>weapon_grand->warhammer</li>
+							<li>weapon_grand->halberd blade</li>
+							<li>weapon_grand->rapier</li>
+
+							<li>crafting_grand->drawing a [weapon_grand] from a red-hot forge</li>
+							<li>crafting_grand->hammering the plates of a suit of armor</li>
+
+							<li>luxury_material->silk</li>
+							<li>luxury_material->cashmere</li>
+							<li>luxury_material->linen</li>
+							<li>luxury_material->velvet</li>
+
+							<li>luxury_clothing->suit</li>
+							<li>luxury_clothing->hat</li>
+							<li>luxury_clothing->ruffled shirt</li>
+							<li>luxury_clothing->corset</li>
+							<li>luxury_clothing->vest</li>
+							<li>luxury_clothing->robe</li>
+
+							<li>luxury_color->gold</li>
+							<li>luxury_color->silver</li>
+							<li>luxury_color->emerald</li>
+							<li>luxury_color->ruby</li>
+							<li>luxury_color->sapphire</li>
+							<li>luxury_color->amber</li>
+							<li>luxury_color->purple</li>
+
+							<li>crafting_grand->tailoring a fine [luxury_material] [luxury_clothing] inlaid with [luxury_color] trim</li>
+
+
+							<li>sunsetcolor_one->pale blue</li>
+							<li>sunsetcolor_one->indigo</li>
+							<li>sunsetcolor_one->bright orange</li>
+
+							<li>sunsetcolor_two->pink</li>
+							<li>sunsetcolor_two->red</li>
+							<li>sunsetcolor_two->tangerine</li>
+							<li>sunsetcolor_two->yellow</li>
+
+							<li>artisticfeat_grand->painting a sunset, vibrant with [sunsetcolor_one] and [sunsetcolor_two]</li>
+
+							<li>romanticart_subect->a person</li>
+							<li>romanticart_subect->two lovers embracing</li>
+							<li>romanticart_subect->a sitting cat</li>
+							<li>romanticart_subect->a fallen hero</li>
+
+							<li>artstyle->hyperrealistic appearance</li>
+							<li>artstyle->modern style</li>
+							<li>artstyle->classical style</li>
+							<li>artstyle->eastern style</li>
+
+							<li>romantic_stonetype->marble</li>
+							<li>romantic_stonetype->granite</li>
+
+							<li>artisticfeat_grand->sculpting a statue of [romanticart_subect] with a [artstyle] from a large chunk of [romantic_stonetype]</li>
+
+							<li>pencilartcreation_adjective->madly</li>
+							<li>pencilartcreation_adjective->quickly</li>
+							<li>pencilartcreation_adjective->frantically</li>
+							<li>pencilartcreation_adjective->passionately</li>
+
+							<li>romantic_artscribble->scrawling lines of poetry</li>
+							<li>romantic_artscribble->writing down story plot points</li>
+							<li>romantic_artscribble->sketching ideas for a new character</li>
+							<li>romantic_artscribble->drawing the surrounding landscape</li>
+
+							<li>booktype->journal</li>
+							<li>booktype->sketchbook</li>
+							<li>booktype->notepad</li>
+							<li>booktype->notebook</li>
+
+							<li>artisticfeat_grand->[pencilartcreation_adjective] [romantic_artscribble] in a [booktype]</li>
+
+
+							<li>medical_grand->performing life saving CPR on someone suffering from a debilitating heart attack</li>
+							<li>medical_grand->attaching a [medical_prosthesis] [prosthesis_bodypart] to an amputee</li>
+							<li>medical_grand->extracting a projectile from a wounded soldier during intensive surgery</li>
+							<li>medical_grand->dressing the wounds of a burn victim</li>
+							<li>medical_grand->standing with a terminally ill patient during the last moments of their life</li>
+
+							<li>severe_illness->malaria</li>
+							<li>severe_illness->the plague</li>
+							<li>severe_illness->sleeping sickness</li>
+							<li>severe_illness->an infection</li>
+
+							<li>medical_grand->tending to an violently sick patient suffering from [severe_illness]</li>
+
+
+							<li>speaking_location->court of high nobility</li>
+							<li>speaking_location->theatre filled with spectators</li>
+							<li>speaking_location->battalion of soldiers</li>
+
+							<li>social_feat->making a grand speech in front of a [speaking_location] enthralled by your words</li>
+
+							<li>trading_product->a shipment of medicine for some wounded guards nearby</li>
+							<li>trading_product->a pallet of meals after the surrounding crop fields were stricken by blight</li>
+
+							<li>social_feat->brokering a deal for [trading_product]</li>
+
+							<li>debate_subject->a captured enemy soldier, making them realize how working for their former faction was a foolish endeavor</li>
+							<li>debate_subject->an ideological rival, having them consider that perhaps your ideals and morals do have some merit after all</li>
+							<li>debate_subject->a fellow colonist, convincing them that your plan for the colony's future is the most pragmatic</li>
+
+							<li>social_feat->debating [debate_subject]</li>
+
+
+							<li>research_feat->a novel way to produce power, with you marveling at a model surrounded by scattered components, motors, and gears.</li>
+							<li>research_feat->a new type of weapon, with bent metal scraps and wood chips from prototypes as a testament to your experimentation.</li>
+							<li>research_feat->brand new culinary ideas, with smears of food and liquid used in experimental recipes staining the research bench.</li>
+							<li>research_feat->a new building, with a blueprint clenched in your hands while numerous crumpled balls of paper surround you.</li>
+							<li>research_feat->revolutionary medicine, with chemicals and herbs staining your hands and vials scattered everywhere.</li>
+
+							<li>intellectual_feat->researching [research_feat]</li>
+
+							<li>researchpaper_type->research paper</li>
+							<li>researchpaper_type->textbook</li>
+							<li>researchpaper_type->report</li>
+							<li>researchpaper_type->study</li>
+
+							<li>intellectual_subject->quantum foam</li>
+							<li>intellectual_subject->archotechs</li>
+							<li>intellectual_subject->ideologies and their effect on people's actions</li>
+							<li>intellectual_subject->the stagnation and degradation of technological advancement over generations of isolation</li>
+
+							<li>research_emotion->visibly stressed</li>
+							<li>research_emotion->eager</li>
+							<li>research_emotion->panicked</li>
+							<li>research_emotion->pleased</li>
+
+							<li>intellectual_feat->composing a [researchpaper_type] about [intellectual_subject] while looking [research_emotion] about what you have written</li>
+
+
+						</rulesStrings>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

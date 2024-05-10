@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<ThoughtDef>
+		<defName>MSSMeme_WarcasketWarcasketYayoHigh</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>MSSMeme_WarcasketYayoHigh</hediff>
+		<requiredTraits>
+			<li>VFEP_WarcasketTrait</li>
+		</requiredTraits>
+		<validWhileDespawned>true</validWhileDespawned>
+		<developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>compatible with yayo</label>
+				<description>Wow, this is some good yayo. I feel stronger than I ever was before!</description>
+				<baseMoodEffect>15</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

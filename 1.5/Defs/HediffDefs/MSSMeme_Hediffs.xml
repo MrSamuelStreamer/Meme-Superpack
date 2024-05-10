@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<HediffDef>
+		<defName>MSSMeme_Awake</defName>
+		<label>awake</label>
+		<description>I'm Awake, what an awful state of existance.</description>
+		<hediffClass>MSS.MemeSuperpack.Hediff.Hediff_WakeTime</hediffClass>
+		<minSeverity>0</minSeverity>
+		<maxSeverity>4</maxSeverity>
+		<makesSickThought>false</makesSickThought>
+		<everCurableByItem>false</everCurableByItem>
+		<allowMothballIfLowPriorityWorldPawn>true</allowMothballIfLowPriorityWorldPawn>
+		<tendable>false</tendable>
+		<makesAlert>false</makesAlert>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+		<stages>
+			<li>
+				<becomeVisible>true</becomeVisible>
+				<minSeverity>0</minSeverity>
+				<label>Glowing from recently having had some beauty sleep.</label>
+				<socialFightChanceFactor>0.9</socialFightChanceFactor>
+				<statOffsets>
+					<PawnBeauty>0.3</PawnBeauty>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.10</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<becomeVisible>true</becomeVisible>
+				<minSeverity>1</minSeverity>
+				<label>Awake, starting to get a little sleepy.</label>
+				<socialFightChanceFactor>1.2</socialFightChanceFactor>
+				<statOffsets>
+					<RestFallRateFactor>1.1</RestFallRateFactor>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.05</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<becomeVisible>true</becomeVisible>
+				<minSeverity>2</minSeverity>
+				<label>Awake, what an awful state of existance.</label>
+				<socialFightChanceFactor>1.2</socialFightChanceFactor>
+				<statOffsets>
+					<RestFallRateFactor>1.1</RestFallRateFactor>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.05</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.10</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.10</offset>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<becomeVisible>true</becomeVisible>
+				<minSeverity>3</minSeverity>
+				<label>Dead tired, barely sentient at this point really.</label>
+				<socialFightChanceFactor>2.5</socialFightChanceFactor>
+				<statOffsets>
+					<RestFallRateFactor>1.8</RestFallRateFactor>
+					<PawnBeauty>-0.8</PawnBeauty>
+				</statOffsets>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.20</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<offset>-0.20</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+	<HediffDef>
+		<defName>MSSMeme_YChromosomalAdam</defName>
+		<label>Y-Chromosomal Adam</label>
+		<labelNoun>the Y-Chromosomal Adam</labelNoun>
+		<description>This pawn is the Y-Chromosomal Adam. The most recent ancestor of every living humanlike.</description>
+		<hediffClass>Hediff</hediffClass>
+		<defaultLabelColor>(1,1,1)</defaultLabelColor>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<stages>
+			<li />
+		</stages>
+	</HediffDef>
+
+</Defs>

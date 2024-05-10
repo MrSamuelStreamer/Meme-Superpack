@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<ThoughtDef>
+		<defName>MSSMeme_AteSuperCucumberDirect</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>ate super cucumber</label>
+				<description>It has a rather odd and slimy texture, but its taste is enthralling. It reminds me of a simpler time, a happier time.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>MSSMeme_AteSuperCucumberAsIngredient</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<nullifyingTraits>
+			<li>Psychopath</li>
+		</nullifyingTraits>
+		<stages>
+			<li>
+				<label>ate cooked super cucumber</label>
+				<description>What a wonderful flavor. It evokes thoughts of peace, of happiness. Of fulfillment after a day of hard work. Alas, if only I could manifest all these feelings into reality...</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

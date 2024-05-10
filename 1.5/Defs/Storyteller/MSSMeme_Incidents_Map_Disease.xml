@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<IncidentDef ParentName="DiseaseIncident">
+		<defName>MSSMeme_SitKid_Disease</defName>
+		<label>bullshititis</label>
+		<diseaseIncident>MSSMeme_SitKid</diseaseIncident>
+		<letterLabel>Disease (skill issue)</letterLabel>
+	</IncidentDef>
+
+	<IncidentDef ParentName="DiseaseIncident">
+		<defName>MSSMeme_Ligma_Disease</defName>
+		<label>ligma</label>
+		<diseaseIncident>MSSMeme_Ligma</diseaseIncident>
+		<letterLabel>Disease (ligma)</letterLabel>
+	</IncidentDef>
+
+</Defs>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<TraderKindDef>
+		<defName>MSSMeme_Orbital_CoalGoodsOne</defName>
+		<label>exotic good trader</label>
+		<orbital>true</orbital>
+		<stockGenerators>
+
+			<!-- Resources -->
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>0~1</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_Coal</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_LiquidCoal</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_CoalPlate</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_BituminousCoal</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_LigniteCoal</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_AnthraciteCoal</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_CoalcaCoala</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_SuperCucoalmber</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_FirefoamCoal</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_LowResCoal</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_CoalDust</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+
+			<!-- Drugs -->
+
+
+			<!-- Techprints -->
+			<!-- none -->
+
+			<!-- Weapons -->
+			<!-- none -->
+
+			<!-- Apparel -->
+
+			<!-- Implants -->
+			<!-- none -->
+
+			<!-- Buildings -->
+
+			<!-- Exotic -->
+			<!-- none -->
+
+			<!-- Slaves -->
+			<!-- none -->
+
+			<!-- Animals -->
+
+			<!-- Buying -->
+			<li Class="StockGenerator_BuyExpensiveSimple"/>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>Art</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>MusicalInstrument</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>Drugs</tag>
+			</li>
+
+		</stockGenerators>
+	</TraderKindDef>
+
+	<TraderKindDef>
+		<defName>MSSMeme_Orbital_CoalGoodsTwo</defName>
+		<label>bulk good trader</label>
+		<orbital>true</orbital>
+		<stockGenerators>
+
+			<!-- Resources -->
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>0~1</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_Coal</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_LiquidCoal</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_CoalPlate</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_BituminousCoal</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_LigniteCoal</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_AnthraciteCoal</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_CoalcaCoala</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_SuperCucoalmber</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_FirefoamCoal</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_LowResCoal</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MSSMeme_CoalDust</thingDef>
+				<countRange>69~420</countRange>
+				<totalPriceRange>3~5</totalPriceRange>
+			</li>
+
+			<!-- Drugs -->
+
+
+			<!-- Techprints -->
+			<!-- none -->
+
+			<!-- Weapons -->
+			<!-- none -->
+
+			<!-- Apparel -->
+
+			<!-- Implants -->
+			<!-- none -->
+
+			<!-- Buildings -->
+
+			<!-- Exotic -->
+			<!-- none -->
+
+			<!-- Slaves -->
+			<!-- none -->
+
+			<!-- Animals -->
+
+			<!-- Buying -->
+			<li Class="StockGenerator_BuyExpensiveSimple"/>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>Art</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>MusicalInstrument</tag>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag">
+				<tag>Drugs</tag>
+			</li>
+
+		</stockGenerators>
+	</TraderKindDef>
+
+</Defs>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+
+	<HediffDef ParentName="ImplantHediffBase">
+		<defName>MSSMeme_ConcreteGland</defName>
+		<label>concreteskin gland</label>
+		<labelNoun>concrete gland</labelNoun>
+		<description>This highly advanced bionic gland disperses minerals and nanomachines across the user's skin when installed. These nanomachines proceed to morph sections of said skin into thick plates of a highly durable concrete-like substance across the body. Interestingly, the appearance and locations of the concrete plates could generally be described as aesthetically pleasing (you're welcome fan artists), akin to form fitting plate armor across the body and seemingly leaving the face alone. Pawns with this bionic are very difficult to kill, but are also very very slow.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_ConcreteGland</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>MSSMeme_ConcreteGland</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<capMods>
+					<li>
+						<capacity>Moving</capacity>
+						<postFactor>0.8</postFactor>
+					</li>
+				</capMods>
+				<statOffsets>
+					<ArmorRating_Sharp>0.87</ArmorRating_Sharp>
+					<ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+					<ArmorRating_Heat>0.6</ArmorRating_Heat>
+					<PawnBeauty>2</PawnBeauty>
+				</statOffsets>
+			</li>
+		</stages>
+		<tags>
+			<li>ArmorGland</li>
+		</tags>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>MSSMeme_ConcreteGland</defName>
+		<label>concreteskin gland</label>
+		<description>This highly advanced bionic gland disperses minerals and nanomachines across the user's skin when installed. These nanomachines proceed to morph sections of said skin into thick plates of a highly durable concrete-like substance across the body. Interestingly, the appearance and locations of the concrete plates could generally be described as aesthetically pleasing (you're welcome fan artists), akin to form fitting plate armor across the body and generally leaving the face alone appearance wise. Pawns with this bionic are very difficult to kill, but are also very very slow.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>MSSMeme_InstallConcreteGland</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>150</Plasteel>
+			<ComponentSpacer>15</ComponentSpacer>
+			<FT_ReinforcedConcreteBag MayRequire="Aoba.Fortress.Industrial">15</FT_ReinforcedConcreteBag>
+			<FT_ConcreteCompressed MayRequire="Aoba.Fortress.Industrial">15</FT_ConcreteCompressed>
+		</costList>
+		<statBases>
+			<Mass>2</Mass>
+		</statBases>
+		<recipeMaker>
+			<researchPrerequisite>MSSMeme_ConcreteBionics</researchPrerequisite>
+		</recipeMaker>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallImplantBase">
+		<defName>MSSMeme_InstallConcreteGland</defName>
+		<label>install concreteskin gland</label>
+		<description>Install a concreteskin gland.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_ConcreteGland</ThingDef>
+			<HediffDef>MSSMeme_ConcreteGland</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing concreteskin gland.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSSMeme_ConcreteGland</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MSSMeme_ConcreteGland</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Torso</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MSSMeme_ConcreteGland</addsHediff>
+		<incompatibleWithHediffTags>
+			<li>ArmorGland</li>
+		</incompatibleWithHediffTags>
+	</RecipeDef>
+
+	<RecipeDef ParentName="SurgeryRemoveImplantBase">
+		<defName>MSSMeme_RemoveConcreteGland</defName>
+		<label>remove concreteskin gland</label>
+		<description>Remove concreteskin gland.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_ConcreteGland</ThingDef>
+			<HediffDef>MSSMeme_ConcreteGland</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Removing concreteskin gland.</jobString>
+		<removesHediff>MSSMeme_ConcreteGland</removesHediff>
+	</RecipeDef>
+
+</Defs>

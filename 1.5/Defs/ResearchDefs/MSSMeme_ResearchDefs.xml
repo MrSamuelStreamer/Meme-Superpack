@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<ResearchTabDef>
+		<defName>MSSMeme_ResearchTab</defName>
+		<label>The Meme Zone</label>
+	</ResearchTabDef>
+
+	<ResearchProjectDef>
+		<defName>MSSMeme_SuperCoalResearch</defName>
+		<label>coal crafting</label>
+		<description>Unlocks a use for all that coal you have languishing in your stockpile. Unless you got rid of it all, in which case I offer you my condolences.</description>
+		<baseCost>6969</baseCost>
+		<techLevel>Ultra</techLevel>
+		<tab>MSSMeme_ResearchTab</tab>
+		<prerequisites>
+			<li>AdvancedFabrication</li>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>MSSMeme_ConcreteBionics</defName>
+		<label>concrete armor gland</label>
+		<description>Go even further beyond stoneskin glands. Embrace concrete by BECOMING concrete itself. Is it sacrilege? Perhaps. Is it really cool? YES.</description>
+		<baseCost>6969</baseCost>
+		<techLevel>Ultra</techLevel>
+		<tab>MSSMeme_ResearchTab</tab>
+		<prerequisites>
+			<li>AdvancedFabrication</li>
+			<li MayRequire="Ludeon.RimWorld.Royalty">SkinHardening</li>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>1.0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>MSSMeme_FullyOttomatic</defName>
+		<label>going Fully Ottomatic</label>
+		<description>Study the secrets of the legendary fighter dubbed "Fully Ottomatic" in order to capture but a glimpse of his mighty power.</description>
+		<baseCost>6969</baseCost>
+		<techLevel>Ultra</techLevel>
+		<tab>MSSMeme_ResearchTab</tab>
+		<prerequisites>
+			<li>MSSMeme_SuperCoalResearch</li>
+			<li>ChargedShot</li>
+		</prerequisites>
+		<researchViewX>0</researchViewX>
+		<researchViewY>2.0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef MayRequire="RH2.Faction.VOID">
+		<defName>MSSMeme_TrueFullyOttomatic</defName>
+		<label>apotheosis</label>
+		<description>Combine the power of Fully Ottomatic, V.O.I.D., and coal into one glorious weapon. This weapon is actually absurd.</description>
+		<baseCost>69420</baseCost>
+		<techLevel>Archotech</techLevel>
+		<tab>MSSMeme_ResearchTab</tab>
+		<prerequisites>
+			<li>MSSMeme_FullyOttomatic</li>
+		</prerequisites>
+		<researchViewX>2.0</researchViewX>
+		<researchViewY>2.0</researchViewY>
+	</ResearchProjectDef>
+</Defs>

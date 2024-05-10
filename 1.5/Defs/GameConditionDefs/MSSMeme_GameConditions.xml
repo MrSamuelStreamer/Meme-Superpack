@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<GameConditionDef>
+		<defName>MSSMeme_PoliceAreHere</defName>
+		<conditionClass>MSS.MemeSuperpack.GameCondition_Police</conditionClass>
+		<label>police</label>
+		<description>The police are here... again.</description>
+		<endMessage>Phew, the police have gone. At last.\n\nHopefully we won't be seeing them again for a long time, but somehow... that seems unlikely.</endMessage>
+		<letterText>Oh of all the things. The bobbies are at the neighbours again, this is ridiculous.</letterText>
+		<letterDef>NegativeEvent</letterDef>
+		<canBePermanent>false</canBePermanent>
+	</GameConditionDef>
+</Defs>
+

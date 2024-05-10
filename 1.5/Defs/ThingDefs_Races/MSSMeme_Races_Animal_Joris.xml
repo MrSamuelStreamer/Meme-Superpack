@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Various types of Joris -->
+<Defs>
+
+	<!-- MSSMeme_ILikeBuildJoris -->
+
+	<ThingDef ParentName="BaseBear">
+		<defName>MSSMeme_ILikeBuildJoris</defName>
+		<label>I like build base Joris</label>
+		<description>I like build Joris are a curious and friendly breed of Joris. Those in their vicinity find themselves feeling an inescapable urge to build base good.\n\nThe desire to build base can lead those nearby to ignore their own needs in favour of the urge to build ever more impressive base.\n\nEver enraptured by base this Joris will tend to build free structures for you, how nice.</description>
+		<statBases>
+			<ComfyTemperatureMin>-55</ComfyTemperatureMin>
+		</statBases>
+		<race>
+			<wildness>0.25</wildness>
+			<useMeatFrom>Bear_Grizzly</useMeatFrom>
+			<trainability>Advanced</trainability>
+			<manhunterOnTameFailChance>0.0</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0.1</manhunterOnDamageChance>
+			<hediffGiverSets>
+				<li MayRequire="Ludeon.RimWorld.Ideology">MSSMeme_ILikeBuildBaseGiver</li>
+			</hediffGiverSets>
+		</race>
+		<comps>
+			<li Class="MSS.MemeSuperpack.CompProperties_BuildingAura">
+				<spawnTicks>5000</spawnTicks>
+				<blueprint>false</blueprint>
+				<buildables>
+					<li>Wall</li>
+					<li>Door</li>
+					<li>Autodoor</li>
+					<li>Fence</li>
+					<li>FenceGate</li>
+					<li>Column</li>
+					<li>AnimalFlap</li>
+				</buildables>
+				<stuff>
+					<li>BlocksGranite</li>
+					<li>BlocksSlate</li>
+					<li>BlocksLimestone</li>
+					<li>Steel</li>
+					<li>WoodLog</li>
+				</stuff>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<PawnKindDef ParentName="BearBase">
+		<defName>MSSMeme_ILikeBuildJoris</defName>
+		<label>I like build base Joris</label>
+		<race>MSSMeme_ILikeBuildJoris</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Build_Base_Joris/MSSMeme_BuildBase</texPath>
+					<drawSize>1.4</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.4, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Build_Base_Joris/MSSMeme_BuildBase</texPath>
+					<drawSize>2</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.6, 0.45, 0.45)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Build_Base_Joris/MSSMeme_BuildBase</texPath>
+					<drawSize>2.7</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.8, 0.6, 0.6)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>2.7</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+
+	<!-- Gremlin version -->
+
+	<ThingDef ParentName="BaseBear">
+		<defName>MSSMeme_ILikeBuildJoris_Gremlin</defName>
+		<label>I like build base Joris</label>
+		<description>I like build Joris are a curious and friendly breed of Joris. Those in their vicinity find themselves feeling an inescapable urge to build base good.\n\nThe desire to build base can lead those nearby to ignore their own needs in favour of the urge to build ever more impressive base. This joris, simply by being present, will encourage weird and bizzare structures to be built. Keep an eye on anyone nearby, if that is, you enjoy not having a new animal flap in your kitchen.</description>
+		<statBases>
+			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+			<MoveSpeed>1</MoveSpeed>
+			<FilthRate>6</FilthRate>
+			<MeatAmount>500</MeatAmount>
+			<LeatherAmount>300</LeatherAmount>
+			<PawnTrapSpringChance>4</PawnTrapSpringChance>
+			<IncomingDamageFactor>0.3</IncomingDamageFactor>
+		</statBases>
+		<race>
+			<wildness>0.55</wildness>
+			<useMeatFrom>Bear_Grizzly</useMeatFrom>
+			<trainability>Advanced</trainability>
+			<manhunterOnTameFailChance>0.01</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0.9</manhunterOnDamageChance>
+			<hediffGiverSets>
+				<li MayRequire="Ludeon.RimWorld.Ideology">MSSMeme_ILikeBuildBaseGiver</li>
+			</hediffGiverSets>
+		</race>
+		<comps>
+			<li Class="MSS.MemeSuperpack.CompProperties_BuildingAura">
+				<spawnTicks>5000</spawnTicks>
+				<blueprint>true</blueprint>
+				<buildables>
+					<li>Wall</li>
+					<li>Door</li>
+					<li>Autodoor</li>
+					<li>Fence</li>
+					<li>FenceGate</li>
+					<li>Column</li>
+					<li>AnimalFlap</li>
+				</buildables>
+				<stuff>
+					<li>BlocksGranite</li>
+					<li>BlocksSlate</li>
+					<li>BlocksLimestone</li>
+					<li>Steel</li>
+					<li>WoodLog</li>
+				</stuff>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<PawnKindDef ParentName="BearBase">
+		<defName>MSSMeme_ILikeBuildJoris_Gremlin</defName>
+		<label>I like build base Joris</label>
+		<race>MSSMeme_ILikeBuildJoris_Gremlin</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Build_Base_Polar_Gremlin/MSSMeme_BuildBaseGremlim</texPath>
+					<drawSize>1.4</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.4, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Build_Base_Polar_Gremlin/MSSMeme_BuildBaseGremlim</texPath>
+					<drawSize>2</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.6, 0.45, 0.45)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Build_Base_Polar_Gremlin/MSSMeme_BuildBaseGremlim</texPath>
+					<drawSize>2.7</drawSize>
+					<color>(180,180,180)</color>
+					<shadowData>
+						<volume>(0.8, 0.6, 0.6)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>2.7</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<!-- Concrete joris -->
+	<ThingDef ParentName="BaseBear">
+		<defName>MSSMeme_ConkCreetBaybeeJoris</defName>
+		<label>Conk Creet Baybee Joris</label>
+		<description>Conk Creet Baybee Joris are a slow but hardy breed of Joris. They have an internal natural cement factory in the right anterior chamber of their stomach. This, along with a system of cement capillaries leading to their feet mean that they leave a trail of cement wherever they may go.\n\nThe natural insulation granted by the cement constantly pooling from their paws means they are also generally less sensitive to various environmental effects. Unfortunately this also makes their leather and meat worthless.</description>
+		<statBases>
+			<ComfyTemperatureMin>-55</ComfyTemperatureMin>
+			<MoveSpeed>2</MoveSpeed>
+			<FilthRate>2</FilthRate>
+			<MeatAmount>0</MeatAmount>
+			<LeatherAmount>0</LeatherAmount>
+			<PawnTrapSpringChance>4</PawnTrapSpringChance>
+			<IncomingDamageFactor>0.3</IncomingDamageFactor>
+			<ToxicEnvironmentResistance MayRequire="Ludeon.RimWorld.Biotech">0.8</ToxicEnvironmentResistance>
+		</statBases>
+		<race>
+			<wildness>0.25</wildness>
+			<useMeatFrom>Bear_Grizzly</useMeatFrom>
+			<trainability>Advanced</trainability>
+			<manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0.3</manhunterOnDamageChance>
+		</race>
+		<comps>
+			<li Class="MSS.MemeSuperpack.CompProperties_TerrainTrail">
+				<spawnTicks>187</spawnTicks>
+				<terrain>Concrete</terrain>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<PawnKindDef ParentName="BearBase">
+		<defName>MSSMeme_ConkCreetBaybeeJoris</defName>
+		<label>Conk Creet Baybee Joris</label>
+		<race>MSSMeme_ConkCreetBaybeeJoris</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Base_Joris/JE_PerfectlyNormalJoris</texPath>
+					<drawSize>1.7</drawSize>
+					<color>(105,105,105)</color>
+					<shadowData>
+						<volume>(0.4, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>1.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Base_Joris/JE_PerfectlyNormalJoris</texPath>
+					<drawSize>2.3</drawSize>
+					<color>(105,105,105)</color>
+					<shadowData>
+						<volume>(0.6, 0.45, 0.45)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>2</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Base_Joris/JE_PerfectlyNormalJoris</texPath>
+					<drawSize>2.9</drawSize>
+					<color>(105,105,105)</color>
+					<shadowData>
+						<volume>(0.8, 0.6, 0.6)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+					<drawSize>2.7</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

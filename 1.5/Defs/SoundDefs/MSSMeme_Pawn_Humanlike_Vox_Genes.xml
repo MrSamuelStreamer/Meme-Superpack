@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<!-- Sam -->
+	<SoundDef>
+		<defName>MSSMeme_Pawn_Sam_Call</defName>
+		<context>MapOnly</context>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>MSSMeme_SamVoice/Call</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>60</volumeRange>
+				<pitchRange>0.95~1.05</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+
+</Defs>

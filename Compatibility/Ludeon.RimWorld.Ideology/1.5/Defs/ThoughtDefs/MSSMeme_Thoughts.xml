@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<ThoughtDef>
+		<defName>MSSMeme_RimRim_Watched_Good</defName>
+		<validWhileDespawned>true</validWhileDespawned>
+		<thoughtClass>Thought_AttendedRitual</thoughtClass>
+		<doNotApplyToQuestLodgers>false</doNotApplyToQuestLodgers>
+		<durationDays>1</durationDays>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>recent RimRim (Inspirational)</label>
+				<description>I recently enjoyed some RimRim. My life feels complete.</description>
+				<baseMoodEffect>10</baseMoodEffect>
+			</li>
+		</stages>
+		<replaceThoughts>
+			<li>MSSMeme_RimRim_Watched_Meh</li>
+			<li>MSSMeme_RimRim_Watched_Poor</li>
+		</replaceThoughts>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>MSSMeme_RimRim_Watched_Meh</defName>
+		<validWhileDespawned>true</validWhileDespawned>
+		<doNotApplyToQuestLodgers>false</doNotApplyToQuestLodgers>
+		<durationDays>1</durationDays>
+		<thoughtClass>Thought_AttendedRitual</thoughtClass>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>recent RimRim (Decent)</label>
+				<description>I recently watched some RimRim.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+		</stages>
+		<replaceThoughts>
+			<li>MSSMeme_RimRim_Watched_Good</li>
+			<li>MSSMeme_RimRim_Watched_Poor</li>
+		</replaceThoughts>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>MSSMeme_RimRim_Watched_Poor</defName>
+		<validWhileDespawned>true</validWhileDespawned>
+		<doNotApplyToQuestLodgers>false</doNotApplyToQuestLodgers>
+		<durationDays>1</durationDays>
+		<thoughtClass>Thought_AttendedRitual</thoughtClass>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>recent RimRim (Poor)</label>
+				<description>I recently enjoyed some RimRim. It was a bad episode, I've left several annoyed comments.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+		<replaceThoughts>
+			<li>MSSMeme_RimRim_Watched_Meh</li>
+			<li>MSSMeme_RimRim_Watched_Good</li>
+		</replaceThoughts>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>MSSMeme_RimRim_Missed</defName>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<workerClass>MSS.MemeSuperpack.RimRim.ThoughtWorker_RimRimDemanded</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<doNotApplyToQuestLodgers>false</doNotApplyToQuestLodgers>
+		<nullifiedIfNotColonist>true</nullifiedIfNotColonist>
+		<nullifyingOwnTales>
+			<li>MSSMeme_WatchedRimRim</li>
+		</nullifyingOwnTales>
+		<developmentalStageFilter>Child, Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>where RimRim</label>
+				<description>WHERE RIMRIM! My dissapointment is immesurable and my day is ruined.</description>
+				<baseMoodEffect>-20</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+
+	<!-- Waifu -->
+
+	<ThoughtDef>
+		<defName>MSSMeme_TendedByWaifu</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<nullifiedIfNotColonist>false</nullifiedIfNotColonist>
+		<durationDays>4</durationDays>
+		<stackLimit>100</stackLimit>
+		<developmentalStageFilter>Adult</developmentalStageFilter>
+		<stages>
+			<li>
+				<label>tended by {0}</label>
+				<description>My waifu is looking after me :3.</description>
+				<baseMoodEffect>12</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>MSSMeme_Waifu_Revered_Opinion</defName>
+		<thoughtClass>Thought_SituationalSocial</thoughtClass>
+		<workerClass>MSS.MemeSuperpack.Waifu.ThoughtWorker_Precept_IsWaifu_Social</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>it's my waifu :3</label>
+				<description>Omg I'm talking to my waifu</description>
+				<baseOpinionOffset>20</baseOpinionOffset>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>MSSMeme_Waifu_Present</defName>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<workerClass>MSS.MemeSuperpack.Waifu.ThoughtWorker_Precept_Waifu_Present</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>no waifu</label>
+				<description>There is no waifu for me to fixate on, what an awful place.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+			<li>
+				<label>waifu amongus</label>
+				<description>My waifu is in the same colony as me, I wonder if senpai will notice me.</description>
+				<baseMoodEffect>6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>MSSMeme_WaifuDied_Revered</defName>
+		<thoughtClass>Thought_Memory</thoughtClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stackLimit>3</stackLimit>
+		<durationDays>30</durationDays>
+		<stages>
+			<li>
+				<label>waifu died</label>
+				<description>The loss of any waifu is to be mourned, truly the Rim seems like a darker place when a waifu dies.</description>
+				<baseMoodEffect>-12</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<IncidentDef>
+		<defName>MSSMeme_PoliceAreHere</defName>
+		<label>police</label>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_Police</workerClass>
+		<gameCondition>MSSMeme_PoliceAreHere</gameCondition>
+		<letterLabel>Police</letterLabel>
+		<letterDef>NegativeEvent</letterDef>
+		<baseChance>2</baseChance>
+		<minRefireDays>7</minRefireDays>
+		<durationDays>0.125~0.35</durationDays>
+		<tale>MSSMeme_PoliceAreHere</tale>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>MSSMeme_TerrainDasConkCreetBaybee</defName>
+		<letterDef>PositiveEvent</letterDef>
+		<label>conk creet baybee</label>
+		<letterText>Terrain?! Das Conk creet baybee!!!</letterText>
+		<letterLabel>conk creet baybee</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_TerrainDasConkCreetBaybee</workerClass>
+		<baseChance>1.1</baseChance>
+		<minRefireDays>15</minRefireDays>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>MSSMeme_StockpileFire</defName>
+		<letterDef>NegativeEvent</letterDef>
+		<label>firefoam popper check</label>
+		<letterText>A fire has started in one of your stockpiles again.\n\nThis premium service is to encourage you to build appropriate fire suppression systems.\n\nWe hope you'll learn to be ready for these fire drills, thank you, and have a nice day.</letterText>
+		<letterLabel>firefoam popper check</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_StockpileFire</workerClass>
+		<baseChance>0.2</baseChance>
+		<minRefireDays>120</minRefireDays>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>MSSMeme_OutOfSteel</defName>
+		<letterDef>NegativeEvent</letterDef>
+		<label>out of steel</label>
+		<letterText>That is confusing, are you going mad, you would have sworn blind that there was {0} steel in {1}.</letterText>
+		<letterLabel>out of steel?</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_OutOfSteel</workerClass>
+		<baseChance>0.05</baseChance>
+		<minRefireDays>360</minRefireDays>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>MSSMeme_Homeless</defName>
+		<letterDef>NegativeEvent</letterDef>
+		<label>homeless again</label>
+		<letterText>Homeless again... Sigh.</letterText>
+		<letterLabel>homeless</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_Homeless</workerClass>
+		<baseChance>0.1</baseChance>
+		<minRefireDays>240</minRefireDays>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>MSSMeme_Icewolf</defName>
+		<letterDef>NegativeEvent</letterDef>
+		<label>meteorite impact</label>
+		<letterText>A large meteorite is heading right for poor {0}. Look out!</letterText>
+		<letterLabel>Look Out</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_Icewolf</workerClass>
+		<baseChance>1.1</baseChance>
+		<minRefireDays>20</minRefireDays>
+	</IncidentDef>
+
+	<IncidentDef>
+		<defName>MSSMeme_GetStickbuggedLol</defName>
+		<letterDef>NeutralEvent</letterDef>
+		<label>get stickbugged lol</label>
+		<letterText>Wait a sec, look over there. If you look closely... is that, no, surely it can't be?</letterText>
+		<letterLabel>Get Stickbugged Lol!</letterLabel>
+		<category>Misc</category>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>MSS.MemeSuperpack.IncidentWorker_GetStickbuggedLol</workerClass>
+		<baseChance>1.1</baseChance>
+		<minRefireDays>20</minRefireDays>
+	</IncidentDef>
+
+</Defs>

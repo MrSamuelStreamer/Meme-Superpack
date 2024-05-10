@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Body Parts from the 7 Deadly Sins Series -->
+<Defs>
+
+	<!-- Shittles liver -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>MSSMeme_ShittleLiver</defName>
+		<label>Shittle's Liver</label>
+		<labelNoun>Shittle's Liver</labelNoun>
+		<description>This is the liver of the goblin 'Shittle D'irt', a celestial doomed to an Imperial Hellplanet for crimes against the Empire. As a celestial, Shittle's organs were capable of regrowing, and so he donated a liver to create the ultimate being; Tzu Zan.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_ShittleLiver</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>MSSMeme_ShittleLiver</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<statOffsets>
+					<ToxicEnvironmentResistance>0.7</ToxicEnvironmentResistance>
+					<ImmunityGainSpeed>0.25</ImmunityGainSpeed>
+					<InjuryHealingFactor>0.5</InjuryHealingFactor>
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>2.25</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>MSSMeme_ShittleLiver</defName>
+		<label>shittle's liver</label>
+		<description>This is the liver of the goblin 'Shittle D'irt', a celestial doomed to an Imperial Hellplanet for crimes against the Empire. As a celestial, Shittle's organs were capable of regrowing, and so he donated a liver to create the ultimate being; Tzu Zan.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>MSSMeme_InstallShittleLiver</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>15</Plasteel>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<statBases>
+			<Mass>2</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>MSSMeme_InstallShittleLiver</defName>
+		<label>install shittle liver</label>
+		<description>Install a shittle liver.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_ShittleLiver</ThingDef>
+			<HediffDef>MSSMeme_ShittleLiver</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing shittle liver.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSSMeme_ShittleLiver</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MSSMeme_ShittleLiver</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Liver</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MSSMeme_ShittleLiver</addsHediff>
+	</RecipeDef>
+
+	<!-- Arcadius's Heart -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>MSSMeme_ArcadiusHeart</defName>
+		<label>Arcadius's Heart</label>
+		<labelNoun>Arcadius's Heart</labelNoun>
+		<description>This is the heart of the Angel 'Arcadius Daimos', a celestial doomed to an Imperial Hellplanet for crimes against the Empire. As a celestial, Arcadius's organs were capable of regrowing, and so he donated a heart to create the ultimate being; Tzu Zan.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_ArcadiusHeart</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>MSSMeme_ArcadiusHeart</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<totalBleedFactor>0.75</totalBleedFactor>
+				<statOffsets>
+					<SocialImpact>0.2</SocialImpact>
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.69</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>MSSMeme_ArcadiusHeart</defName>
+		<label>arcadius's heart</label>
+		<description>This is the heart of the Angel 'Arcadius Daimos', a celestial doomed to an Imperial Hellplanet for crimes against the Empire. As a celestial, Arcadius's organs were capable of regrowing, and so he donated a heart to create the ultimate being; Tzu Zan.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>MSSMeme_InstallArcadiusHeart</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>15</Plasteel>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<statBases>
+			<Mass>2</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>MSSMeme_InstallArcadiusHeart</defName>
+		<label>install arcadius heart</label>
+		<description>Install an arcadius heart.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_ArcadiusHeart</ThingDef>
+			<HediffDef>MSSMeme_ArcadiusHeart</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing arcadius heart.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSSMeme_ArcadiusHeart</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MSSMeme_ArcadiusHeart</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Heart</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MSSMeme_ArcadiusHeart</addsHediff>
+	</RecipeDef>
+
+	<!-- Joe's Spine -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>MSSMeme_JoesSpine</defName>
+		<label>General Joes's Spine</label>
+		<labelNoun>General Joes's Spine</labelNoun>
+		<description>This is the spine of the legendary General 'Joseph Generally', a celestial doomed to an Imperial Hellplanet for crimes against the Empire. As a celestial, Joe's organs were capable of regrowing, and so he donated a spine to create the ultimate being; Tzu Zan.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_JoesSpine</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>MSSMeme_JoesSpine</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<statOffsets>
+					<ShootingAccuracyPawn>1.5</ShootingAccuracyPawn>
+					<AimingDelayFactor>-0.05</AimingDelayFactor>
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.5</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>MSSMeme_JoesSpine</defName>
+		<label>General Joes's Spine</label>
+		<description>This is the spine of the legendary General 'Joseph Generally', a celestial doomed to an Imperial Hellplanet for crimes against the Empire. As a celestial, Joe's organs were capable of regrowing, and so he donated a spine to create the ultimate being; Tzu Zan..</description>
+		<descriptionHyperlinks>
+			<RecipeDef>MSSMeme_InstallJoesSpine</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>15</Plasteel>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<statBases>
+			<Mass>2</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>MSSMeme_InstallJoesSpine</defName>
+		<label>install joes spine</label>
+		<description>Install joe's spine.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_JoesSpine</ThingDef>
+			<HediffDef>MSSMeme_JoesSpine</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing joe's spine.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSSMeme_JoesSpine</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MSSMeme_JoesSpine</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Spine</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MSSMeme_JoesSpine</addsHediff>
+	</RecipeDef>
+
+	<!-- Reimus's Nose -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>MSSMeme_ReimusNose</defName>
+		<label>Reimus' Senses</label>
+		<labelNoun>Reimus' Senses</labelNoun>
+		<description>This is the nose of the Reman Emperor 'Reimus', a celestial doomed to an Imperial Hellplanet for crimes against the Empire. As a celestial, Reimus's organs were capable of regrowing, and so he donated his wolf-like senses to create the ultimate being; Tzu Zan.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_ReimusNose</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>MSSMeme_ReimusNose</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<statOffsets>
+					<TrainAnimalChance>0.5</TrainAnimalChance>
+					<TameAnimalChance>0.25</TameAnimalChance>
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>2.50</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>MSSMeme_ReimusNose</defName>
+		<label>Reimus' Senses</label>
+		<description>This is the nose of the Reman Emperor 'Reimus', a celestial doomed to an Imperial Hellplanet for crimes against the Empire. As a celestial, Reimus's organs were capable of regrowing, and so he donated his wolf-like senses to create the ultimate being; Tzu Zan.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>MSSMeme_InstallReimusNose</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>15</Plasteel>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<statBases>
+			<Mass>2</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>MSSMeme_InstallReimusNose</defName>
+		<label>install reimus nose</label>
+		<description>Install reimus's nose.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_ReimusNose</ThingDef>
+			<HediffDef>MSSMeme_ReimusNose</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing reimus's nose.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSSMeme_ReimusNose</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MSSMeme_ReimusNose</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Nose</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MSSMeme_ReimusNose</addsHediff>
+	</RecipeDef>
+
+	<!-- Larry's Stomach -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>MSSMeme_LarryStomach</defName>
+		<label>Fat Larry's Stomach</label>
+		<labelNoun>Fat Larry's Stomach</labelNoun>
+		<description>This is the stomach of 'Fat Larry', a celestial doomed to an Imperial Hellplanet for crimes against the Empire. As a celestial, Fat Larry's organs were capable of regrowing, and so he donated his stomach to create the ultimate being; Tzu Zan.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_LarryStomach</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>MSSMeme_LarryStomach</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+				<hungerRateFactor>1.25</hungerRateFactor>
+			</li>
+		</stages>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.75</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>MSSMeme_LarryStomach</defName>
+		<label>Fat Larry's Stomach</label>
+		<description>This is the stomach of 'Fat Larry', a celestial doomed to an Imperial Hellplanet for crimes against the Empire. As a celestial, Fat Larry's organs were capable of regrowing, and so he donated his stomach to create the ultimate being; Tzu Zan.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>MSSMeme_InstallLarryStomach</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>15</Plasteel>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<statBases>
+			<Mass>2</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>MSSMeme_InstallLarryStomach</defName>
+		<label>install larrys stomach</label>
+		<description>Install larry's stomach.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_LarryStomach</ThingDef>
+			<HediffDef>MSSMeme_LarryStomach</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing larrys's stomach.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSSMeme_LarryStomach</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MSSMeme_LarryStomach</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Stomach</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MSSMeme_LarryStomach</addsHediff>
+	</RecipeDef>
+
+	<!-- Lee's Brain -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>MSSMeme_LeeBrain</defName>
+		<label>Legal Lee's Brain</label>
+		<labelNoun>Legal Lee's Brain</labelNoun>
+		<description>This is the brain of 'Legal Lee', a celestial doomed to an Imperial Hellplanet for crimes against the Empire. As a celestial, Legal Lee's organs were capable of regrowing, and so he donated his brain to create the ultimate being; Tzu Zan.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_LeeBrain</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>MSSMeme_LeeBrain</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<statOffsets>
+					<ArrestSuccessChance>0.10</ArrestSuccessChance>
+					<NegotiationAbility>0.15</NegotiationAbility>
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.75</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>MSSMeme_LeeBrain</defName>
+		<label>Legal Lee's Brain</label>
+		<description>This is the brain of 'Legal Lee', a celestial doomed to an Imperial Hellplanet for crimes against the Empire. As a celestial, Legal Lee's organs were capable of regrowing, and so he donated his brain to create the ultimate being; Tzu Zan.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>MSSMeme_InstallLeeBrain</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>15</Plasteel>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<statBases>
+			<Mass>2</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>MSSMeme_InstallLeeBrain</defName>
+		<label>install lees brain</label>
+		<description>Install lee's brain.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_LeeBrain</ThingDef>
+			<HediffDef>MSSMeme_LeeBrain</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing lee's brain.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSSMeme_LeeBrain</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MSSMeme_LeeBrain</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Brain</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MSSMeme_LeeBrain</addsHediff>
+	</RecipeDef>
+
+	<!-- Robomummy's Arm -->
+
+	<HediffDef ParentName="AddedBodyPartBase">
+		<defName>MSSMeme_RoboArm</defName>
+		<label>Robomummy's Arm</label>
+		<labelNoun>Robomummy's Arm</labelNoun>
+		<description>This is the arm of 'Robomummy', a celestial doomed to an Imperial Hellplanet for crimes against the Empire. As a celestial droid, Robomummy's mechanical limbs were capable of regenerating, and so she donated her arms to create the ultimate being; Tzu Zan.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_RoboArm</ThingDef>
+		</descriptionHyperlinks>
+		<spawnThingOnRemoved>MSSMeme_RoboArm</spawnThingOnRemoved>
+		<stages>
+			<li>
+				<statOffsets>
+					<WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+				</statOffsets>
+			</li>
+		</stages>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.75</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartBionicBase">
+		<defName>MSSMeme_RoboArm</defName>
+		<label>Robomummy's Arm</label>
+		<description>This is the arm of 'Robomummy', a celestial doomed to an Imperial Hellplanet for crimes against the Empire. As a celestial droid, Robomummy's mechanical limbs were capable of regenerating, and so she donated her arms to create the ultimate being; Tzu Zan.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>MSSMeme_InstallRoboArm</RecipeDef>
+		</descriptionHyperlinks>
+		<costList>
+			<Plasteel>15</Plasteel>
+			<ComponentSpacer>4</ComponentSpacer>
+		</costList>
+		<statBases>
+			<Mass>2</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+		<defName>MSSMeme_InstallRoboArm</defName>
+		<label>install robo arm</label>
+		<description>Install robomummys's arm.</description>
+		<descriptionHyperlinks>
+			<ThingDef>MSSMeme_RoboArm</ThingDef>
+			<HediffDef>MSSMeme_RoboArm</HediffDef>
+		</descriptionHyperlinks>
+		<jobString>Installing robomummys's arm.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>MSSMeme_RoboArm</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>MSSMeme_RoboArm</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Arm</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>MSSMeme_RoboArm</addsHediff>
+	</RecipeDef>
+
+</Defs>
