@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <LanguageData>
-
 	<MSSMeme_RoleRequirementStat>Stat</MSSMeme_RoleRequirementStat>
 	<MSSMeme_RoleRequirementStatAny>Any of stats</MSSMeme_RoleRequirementStatAny>
 	<MSSMeme_RoleRequirementLabelSpecificGender>Must be {0}</MSSMeme_RoleRequirementLabelSpecificGender>
-
+	<!-- Balloon System -->
+	<MSS_Balloon_NotDowned>{PAWN_labelShort} is not downed.</MSS_Balloon_NotDowned>
+	<MSSMeme_Extract>Extract {0_labelShort}</MSSMeme_Extract>
+	<MSSMeme_CannotExtract>Cannot extract {0_labelShort}</MSSMeme_CannotExtract>
+	<MSSMeme_NoBed>No beds available</MSSMeme_NoBed>
 	<!-- Gaslighting -->
 	<MSSMeme_GaslightingStarted>Gaslighting</MSSMeme_GaslightingStarted>
 	<MSSMeme_GaslightingEnded>Gaslighting Ended</MSSMeme_GaslightingEnded>
 	<MSSMeme_Gaslighting_Start>A commenter is loudly and continuously complaining that you have no idea what you're doing because {0}. They're arguing so hard you're beginning to doubt yourself and wonder if they're actually right.\n\nSurely not!\n\n\n... unless...</MSSMeme_Gaslighting_Start>
 	<MSSMeme_Gaslighting_End>Having finally been shouted down, the commenter has stopped insisting that {0}. You feel vindicated and like the world is a little less insane.\n\nIt's a good job you haven't just rebuilt half the base to accomodate their nonsense...</MSSMeme_Gaslighting_End>
-
 	<MSSMeme_GaslightingTopic_DarkSolar>solar panels only work in the dark</MSSMeme_GaslightingTopic_DarkSolar>
-
 	<MSSMeme_WhereRimRimLetter>Where RimRim!</MSSMeme_WhereRimRimLetter>
 	<MSSMeme_WhereRimRimLetterText>It's 18:00, where RimRim!\n\nAny RimRims currently under your control may throw a tantrum if they don't get their daily RimRim soon.\n\nYes, this is expected every single day with no breaks for illness, holiday or sewage leaking into your house. Get used to it.</MSSMeme_WhereRimRimLetterText>
-
 	<MSSMeme_SpawnFire>Fire Trail</MSSMeme_SpawnFire>
 	<MSSMeme_SpawnFireDesc>Flames lick at the heels of this creature</MSSMeme_SpawnFireDesc>
 	<MSSMeme_SpawnTerrain>{0} Trail</MSSMeme_SpawnTerrain>
@@ -25,5 +24,34 @@
 	<MSSMeme_SpawnFireSizeDesc>Command this creature to concentrate and exude more flame.</MSSMeme_SpawnFireSizeDesc>
 	<MSSMeme_Goto>Move</MSSMeme_Goto>
 	<MSSMeme_GotoDesc>Send this perfectly innocuous creature to a specific location.</MSSMeme_GotoDesc>
+	<MSSFP_DirtManEatingText>{0} is being eaten by a frogge!</MSSFP_DirtManEatingText>
+	<MSSMeme_EmergencyMeeting>Emergency Meeting!</MSSMeme_EmergencyMeeting>
+	<MSS_FP_Settings_enableMogus>Enable Moguses</MSS_FP_Settings_enableMogus>
+	<!-- Dirtman -->
+	<MSSMeme_HasDirt>There's a little dirt under the pillow</MSSMeme_HasDirt>
+	<MSSMeme_DoesNotHaveDirt>The pillow has no dirt under it</MSSMeme_DoesNotHaveDirt>
+	<MSSMeme_DirtManVisitLetterLabel>dirt man has come to town</MSSMeme_DirtManVisitLetterLabel>
+	<MSSMeme_DirtManVisitLetterText>you didn't put any dirt under your pillow did you?</MSSMeme_DirtManVisitLetterText>
+	<MSSMeme_DirtManNoVisitLetterLabel>dirt man has come to town</MSSMeme_DirtManNoVisitLetterLabel>
+	<MSSMeme_DirtManNoVisitLetterText>you put any dirt under your pillow, so you're safe</MSSMeme_DirtManNoVisitLetterText>
+	<MSSMeme_DirtManEatingLabel>Colonist being eaten!</MSSMeme_DirtManEatingLabel>
+	<!-- Bed Upgrade -->
+	<MSSMeme_BedLevelUp>{0} levelled up!</MSSMeme_BedLevelUp>
+    <MSSMeme_BedLevelUpWithReason>{0} levelled up because {1}!</MSSMeme_BedLevelUpWithReason>
+    <MSSMeme_BedLevelUpBecauseLovin>{0} got some lovin'</MSSMeme_BedLevelUpBecauseLovin>
+    <MSSMeme_BedLevelUpBecauseSlept>{0} got slept well</MSSMeme_BedLevelUpBecauseSlept>
+    <MSSMeme_BedLevelUpBecauseBorn>{0} was conceived in this bed</MSSMeme_BedLevelUpBecauseBorn>
+
+    <MSSMeme_BedExp>Current experience: {0}/{1}</MSSMeme_BedExp>
+    <MSSMeme_BedLevels>Current points available: {0}</MSSMeme_BedLevels>
+    <MSSMeme_PawnsSleptInBed>Pawns that have slept in this bed:</MSSMeme_PawnsSleptInBed>
+    <MSSMeme_PawnsLovedInBed>Pawns that have got some lovin' in this bed:</MSSMeme_PawnsLovedInBed>
+    <MSSMeme_PawnsConcievedInBed>Pawns that were conceived in this bed:</MSSMeme_PawnsConcievedInBed>
+
+    <MSSMeme_RenameDialog_Label>Rename the bed</MSSMeme_RenameDialog_Label>
+    <MSSMeme_RenameDialog_Apply>Apply</MSSMeme_RenameDialog_Apply>
+
+    <MSSMeme_LostBrainPower>{0} lost some experience in {1} when their brain matter was fired out their head-cannon.</MSSMeme_LostBrainPower>
+    <MSSMeme_LostBrainPowerDamaged>With no experience left in {1}, {0} lost an important part of their brain when it was fired out of their head-cannon.</MSSMeme_LostBrainPowerDamaged>
 
 </LanguageData>

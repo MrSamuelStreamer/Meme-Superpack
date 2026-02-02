@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net48</TargetFramework>
+        <OutputType>Library</OutputType>
+        <RootNamespace>MSS.MemeSuperpack.MSSFP</RootNamespace>
+        <AssemblyName>Meme-Superpack-MSSFP</AssemblyName>
+        <AllowedReferenceRelatedFileExtensions>None</AllowedReferenceRelatedFileExtensions>
+        <LangVersion>latest</LangVersion>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <OutputPath>../../../Compatibility/MSS.FlavourPack/1.6/Assemblies/</OutputPath>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <SteamBasePath>D:/SteamLibrary/steamapps/common/RimWorld</SteamBasePath>
+        <SteamModsPath>$(RIMWORLD_STEAM_MODS_PATH)</SteamModsPath>
+
+        <RimworldPath Condition=" '$(RIMWORLD_PATH)' == '' ">../../../../</RimworldPath>
+        <RimworldPath Condition=" '$(RIMWORLD_PATH)' != '' ">$(RIMWORLD_PATH)</RimworldPath>
+
+        <ModsPath Condition=" '$(STEAM_MODS_PATH)' == '' AND Exists('$(RimworldPath)/../../workshop/content/294100')">$(RimworldPath)/../../workshop/content/294100</ModsPath>
+        <ModsPath Condition=" '$(STEAM_MODS_PATH)' == '' AND !Exists('$(RimworldPath)/../../workshop/content/294100')">$(RimworldPath)/Mods</ModsPath>
+        <ModsPath Condition=" '$(STEAM_MODS_PATH)' != '' ">$(STEAM_MODS_PATH)/294100</ModsPath>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <DebugType>portable</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+        <Optimize>false</Optimize>
+        <DefineDebug>true</DefineDebug>
+        <DefineTrace>true</DefineTrace>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <DebugType>none</DebugType>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Assembly-CSharp">
+            <HintPath Condition="Exists('$(SteamBasePath)/RimWorldWin64_Data')">$(SteamBasePath)/RimWorldWin64_Data/Managed/Assembly-CSharp.dll</HintPath>
+            <HintPath Condition="!Exists('$(SteamBasePath)/RimWorldWin64_Data')">../../../../../RimWorldWin64_Data/Managed/Assembly-CSharp.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath Condition="Exists('$(SteamBasePath)/RimWorldWin64_Data')">$(SteamBasePath)/RimWorldWin64_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+            <HintPath Condition="!Exists('$(SteamBasePath)/RimWorldWin64_Data')">../../../../../RimWorldWin64_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.TextRenderingModule">
+            <HintPath Condition="Exists('$(SteamBasePath)/RimWorldWin64_Data')">$(SteamBasePath)/RimWorldWin64_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
+            <HintPath Condition="!Exists('$(SteamBasePath)/RimWorldWin64_Data')">../../../../../RimWorldWin64_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <!-- Reference to the main Meme-Superpack assembly -->
+        <Reference Include="Meme-Superpack">
+            <HintPath>../Meme-Superpack/../../Assemblies/Meme-Superpack.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <!-- Optional reference to MSSFP - only used at runtime -->
+        <Reference Include="MSSFP">
+            <HintPath Condition="Exists('../../../../MrSamuelStreamerFlavourPack/1.6/Assemblies/MSSFP.dll')">../../../../MrSamuelStreamerFlavourPack/1.6/Assemblies/MSSFP.dll</HintPath>
+            <HintPath Condition="Exists('../../../../../../../workshop/content/294100/MrSamuelStreamerFlavourPack/1.6/Assemblies/MSSFP.dll')">../../../../../../../workshop/content/294100/MrSamuelStreamerFlavourPack/1.6/Assemblies/MSSFP.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime" />
+    </ItemGroup>
+    <ItemGroup Condition="'@(Reference->WithMetadataValue('Identity', 'Assembly-CSharp')->Metadata('HintPath')->Exists())' == ''">
+        <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6-*"/>
+    </ItemGroup>
+</Project>

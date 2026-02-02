@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <loadFolders>
 	<v1.4>
 		<li>Common</li>
@@ -42,5 +41,9 @@
 		<li IfModActive="RH2.Faction.VOID">Compatibility/RH2.Faction.VOID/1.6</li>
 		<li IfModActive="VanillaExpanded.VNutrientE">Compatibility/VanillaExpanded.VNutrientE</li>
 		<li IfModActive="Sarg.AlphaMemes">Compatibility/Sarg.AlphaMemes</li>
+		<li IfModActive="MSS.FlavourPack">Compatibility/MSS.FlavourPack/1.6</li>
+		<li IfModActive="OskarPotocki.VanillaFactionsExpanded.Core"
+			>Compatibility/OskarPotocki.VanillaFactionsExpanded.Core/1.6</li
+		>
 	</v1.6>
 </loadFolders>

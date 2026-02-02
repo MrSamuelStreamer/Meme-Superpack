@@ -48,6 +48,11 @@
             <HintPath Condition="!Exists('$(SteamBasePath)/RimWorldWin64_Data')">../../../../../RimWorldWin64_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
             <Private>False</Private>
         </Reference>
+        <Reference Include="UnityEngine.IMGUIModule">
+            <HintPath Condition="Exists('$(SteamBasePath)/RimWorldWin64_Data')">$(SteamBasePath)/RimWorldWin64_Data/Managed/UnityEngine.IMGUIModule.dll</HintPath>
+            <HintPath Condition="!Exists('$(SteamBasePath)/RimWorldWin64_Data')">../../../../../RimWorldWin64_Data/Managed/UnityEngine.IMGUIModule.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime" />
@@ -77,6 +82,12 @@
         <None Include="../../../Assets/**" LinkBase="Assets" />
         <CompatibilityFiles Include="../../../Compatibility/**" />
         <ExtraFiles Include="../../../LoadFolders.xml;../../../LICENSE;../../../README.md;../../../CONTINUITY.md" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="..\..\..\modlist.xml">
+        <Link>Meme-Superpack\modlist.xml</Link>
+      </Content>
     </ItemGroup>
 
     <!-- Add A step to the build to run csharpier on build -->

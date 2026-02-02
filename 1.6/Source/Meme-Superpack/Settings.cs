@@ -38,6 +38,16 @@ namespace MSS.MemeSuperpack
 		public bool fireTrails = true;
 		public bool combustionAnimalsCanDoorbash = true;
 
+		public bool EnableTaffRaids = true;
+		public bool EnableMogus = true;
+		public bool OverrideRelicPool = true;
+		public bool MabelDestroyFloors = false;
+		public bool EnableDirtJobs = false;
+		public bool EnableOskarianTech = false;
+		public bool EnableNonsenseIncidents = false;
+
+
+
 		private readonly Listing_Standard _options = new();
 		private const float RowHeight = 32f;
 		private const float Indent = 9f;
@@ -46,20 +56,19 @@ namespace MSS.MemeSuperpack
 		{
 			Features,
 			Events,
-			UI
+			UI,
 		}
 
 		private static Tab _tab = Tab.Features;
 
 		private Rect DrawTabs(Rect rect)
 		{
-			List<TabRecord> tabsList =
-				new()
-				{
-					new TabRecord("Features", () => _tab = Tab.Features, _tab == Tab.Features),
-					new TabRecord("Events", () => _tab = Tab.Events, _tab == Tab.Events),
-					new TabRecord("UI", () => _tab = Tab.UI, _tab == Tab.UI)
-				};
+			List<TabRecord> tabsList = new()
+			{
+				new TabRecord("Features", () => _tab = Tab.Features, _tab == Tab.Features),
+				new TabRecord("Events", () => _tab = Tab.Events, _tab == Tab.Events),
+				new TabRecord("UI", () => _tab = Tab.UI, _tab == Tab.UI),
+			};
 
 			Rect tabRect = rect.ContractedBy(0, RowHeight);
 			TabDrawer.DrawTabs(tabRect, tabsList);
@@ -191,6 +200,31 @@ namespace MSS.MemeSuperpack
 				ref autoRimRim,
 				"Allow colonists to automatically go for RimRim when it's time."
 			);
+			_options.CheckboxLabeled(
+				"Allow Override Relic Pool",
+				ref OverrideRelicPool,
+				"Override the possible pool of relics with this mods list"
+			);
+			_options.CheckboxLabeled(
+				"Allow Mabel to destroy floors",
+				ref MabelDestroyFloors,
+				"Allow Mabel to destroy floors"
+			);
+			_options.CheckboxLabeled(
+				"Allow Dirtman",
+				ref EnableDirtJobs,
+				"Allow dirtman to spawn naturally and as incidents"
+			);
+			_options.CheckboxLabeled(
+				"Allow Oskarian Technology",
+				ref EnableOskarianTech,
+				"Allow Oskarian technology to be researched"
+			);
+			_options.CheckboxLabeled(
+				"Allow Nonsense Incidents",
+				ref EnableNonsenseIncidents,
+				"Allow nonsense incidents to spawn naturally and as incidents"
+			);
 		}
 
 		private void DrawEventsSettings(Rect viewPort)
@@ -241,6 +275,16 @@ namespace MSS.MemeSuperpack
 				ref grignr,
 				"Allow a random shard of Grignr to attack the colony (Once per game only)\nThis Does not send a letter!"
 			);
+			_options.CheckboxLabeled(
+				"Allow Taff Raids",
+				ref EnableTaffRaids,
+				"Allow Taffs to raid the colony"
+			);
+			_options.CheckboxLabeled(
+				"Allow Mogus",
+				ref EnableMogus,
+				"Allow Mogus to spawn naturally and as incidents"
+			);
 		}
 
 		public override void ExposeData()
@@ -274,6 +318,11 @@ namespace MSS.MemeSuperpack
 			Scribe_Values.Look(ref floorTrails, "floorTrails", true);
 			Scribe_Values.Look(ref fireTrails, "fireTrails", true);
 			Scribe_Values.Look(ref combustionAnimalsCanDoorbash, "combustionAnimalsCanDoorbash", true);
+			Scribe_Values.Look(ref OverrideRelicPool, "OverrideRelicPool", true);
+			Scribe_Values.Look(ref MabelDestroyFloors, "MabelDestroyFloors", false);
+			Scribe_Values.Look(ref EnableDirtJobs, "EnableDirtJobs", false);
+			Scribe_Values.Look(ref EnableOskarianTech, "EnableOskarianTech", false);
+			Scribe_Values.Look(ref EnableNonsenseIncidents, "EnableNonsenseIncidents", false);
 		}
 	}
 }

@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <Defs>
-
 	<ResearchTabDef>
 		<defName>MSSMeme_ResearchTab</defName>
 		<label>The Meme Zone</label>
 	</ResearchTabDef>
-
 	<ResearchProjectDef>
 		<defName>MSSMeme_SuperCoalResearch</defName>
 		<label>coal crafting</label>
@@ -20,7 +17,6 @@
 		<researchViewX>0</researchViewX>
 		<researchViewY>0</researchViewY>
 	</ResearchProjectDef>
-
 	<ResearchProjectDef>
 		<defName>MSSMeme_ConcreteBionics</defName>
 		<label>concrete armor gland</label>
@@ -35,7 +31,6 @@
 		<researchViewX>0</researchViewX>
 		<researchViewY>1.0</researchViewY>
 	</ResearchProjectDef>
-
 	<ResearchProjectDef>
 		<defName>MSSMeme_FullyOttomatic</defName>
 		<label>going Fully Ottomatic</label>
@@ -50,7 +45,6 @@
 		<researchViewX>0</researchViewX>
 		<researchViewY>2.0</researchViewY>
 	</ResearchProjectDef>
-
 	<ResearchProjectDef MayRequire="RH2.Faction.VOID">
 		<defName>MSSMeme_TrueFullyOttomatic</defName>
 		<label>apotheosis</label>
@@ -63,5 +57,15 @@
 		</prerequisites>
 		<researchViewX>2.0</researchViewX>
 		<researchViewY>2.0</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>MSS_CEE</defName>
+		<label>Combat Extended: Extended</label>
+		<description>Extend your combat abilities!</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Medieval</techLevel>
+		<tab>MSSMeme_ResearchTab</tab>
+		<researchViewX>7.00</researchViewX>
+		<researchViewY>7.60</researchViewY>
 	</ResearchProjectDef>
 </Defs>
